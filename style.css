@@ -439,6 +439,24 @@ section {
     margin-bottom: 1rem;
 }
 
+/* Newsletter Signup */
+.newsletter-signup {
+    background: linear-gradient(135deg, #059669, #065f46);
+    color: white;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.newsletter-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* Footer */
 .footer {
     background: #1f2937;
