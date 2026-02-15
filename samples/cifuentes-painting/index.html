@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cifuentes Painting &amp; Services, Inc | Stuart, FL</title>
+<meta name="description" content="Professional painting services in Stuart, FL. Interior & exterior painting, pressure cleaning, epoxy floors. Licensed & insured. Free estimates. Call (561) 401-2777.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1B3A5C;--terra:#C75B39;--white:#FFFFFF;--off-white:#F8F7F4;--warm-gray:#E8E4DF;--dark-gray:#2D2D2D;--mid-gray:#6B6B6B;--light-gray:#B0ADA8;--font-heading:'DM Serif Display',serif;--font-body:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--dark-gray);line-height:1.6;overflow-x:hidden;background:var(--white)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* Fade-up animation */
+.fade-up{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Navigation */
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-family:var(--font-heading);font-size:1.15rem;color:var(--navy);letter-spacing:-.01em}
+.nav-brand span{color:var(--terra)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--mid-gray);transition:color .2s;letter-spacing:.02em;text-transform:uppercase}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--terra);color:var(--white) !important;padding:10px 22px;border-radius:6px;font-weight:600;transition:background .2s}
+.nav-cta:hover{background:#b5502f}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--navy);transition:all .3s}
+
+@media(max-width:768px){
+  .nav-links{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:var(--white);flex-direction:column;padding:80px 40px;gap:24px;transition:right .35s ease;box-shadow:-4px 0 30px rgba(0,0,0,.1)}
+  .nav-links.open{right:0}
+  .nav-links a{font-size:1rem}
+  .nav-toggle{display:flex}
+}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=1920&q=80') center/cover no-repeat;filter:brightness(.35)}
+.hero-content{position:relative;z-index:2;padding:24px;max-width:800px}
+.hero-content h1{font-family:var(--font-heading);font-size:clamp(2.4rem,6vw,4.2rem);color:var(--white);line-height:1.15;margin-bottom:16px}
+.hero-content h1 span{display:block;color:var(--terra)}
+.hero-tagline{font-size:clamp(1rem,2.5vw,1.35rem);color:rgba(255,255,255,.85);font-weight:300;letter-spacing:.04em;margin-bottom:12px}
+.hero-sub{font-size:.95rem;color:rgba(255,255,255,.6);margin-bottom:40px}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:8px;font-weight:600;font-size:.95rem;transition:all .25s;cursor:pointer;border:none;font-family:var(--font-body)}
+.btn-primary{background:var(--terra);color:var(--white)}
+.btn-primary:hover{background:#b5502f;transform:translateY(-2px);box-shadow:0 8px 25px rgba(199,91,57,.35)}
+.btn-secondary{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.4)}
+.btn-secondary:hover{border-color:var(--white);background:rgba(255,255,255,.1);transform:translateY(-2px)}
+
+/* Section base */
+section{padding:100px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
+.section-title{font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--navy);margin-bottom:16px;line-height:1.2}
+.section-desc{color:var(--mid-gray);font-size:1.05rem;max-width:600px;line-height:1.7}
+.section-header{text-align:center;margin-bottom:60px}
+.section-header .section-desc{margin:0 auto}
+
+/* Services */
+.services-section{background:var(--off-white)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.service-card{background:var(--white);border-radius:12px;padding:36px 28px;border:1px solid rgba(0,0,0,.04);transition:all .3s;position:relative;overflow:hidden}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--terra);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:48px;height:48px;border-radius:10px;background:rgba(27,58,92,.08);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.service-icon svg{width:24px;height:24px;stroke:var(--navy);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-family:var(--font-heading);font-size:1.25rem;color:var(--navy);margin-bottom:12px}
+.service-card p{font-size:.9rem;color:var(--mid-gray);line-height:1.65}
+.service-card ul{list-style:none;margin-top:12px}
+.service-card ul li{font-size:.85rem;color:var(--mid-gray);padding:4px 0;padding-left:16px;position:relative}
+.service-card ul li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--terra)}
+
+/* About */
+.about-section{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{border-radius:12px;overflow:hidden;position:relative}
+.about-img img{width:100%;height:400px;object-fit:cover}
+.about-img::after{content:'';position:absolute;bottom:-12px;right:-12px;width:120px;height:120px;border:3px solid var(--terra);border-radius:12px;z-index:-1}
+.about-text .section-desc{margin-bottom:24px}
+.about-stats{display:flex;gap:32px;margin-top:28px}
+.about-stat{text-align:center}
+.about-stat .num{font-family:var(--font-heading);font-size:2rem;color:var(--navy)}
+.about-stat .label{font-size:.8rem;color:var(--mid-gray);margin-top:2px}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:32px}.about-img img{height:280px}}
+
+/* Why Choose Us */
+.why-section{background:var(--navy);color:var(--white)}
+.why-section .section-label{color:var(--terra)}
+.why-section .section-title{color:var(--white)}
+.why-section .section-desc{color:rgba(255,255,255,.7)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.why-card{padding:28px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);transition:all .3s}
+.why-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.why-card svg{width:28px;height:28px;stroke:var(--terra);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:16px}
+.why-card h4{font-family:var(--font-heading);font-size:1.1rem;margin-bottom:8px}
+.why-card p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6}
+
+/* Service Areas */
+.areas-section{background:var(--off-white)}
+.areas-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+.areas-list span{background:var(--white);padding:12px 24px;border-radius:50px;font-size:.9rem;font-weight:500;color:var(--navy);border:1px solid rgba(0,0,0,.06);transition:all .25s}
+.areas-list span:hover{background:var(--navy);color:var(--white);transform:translateY(-2px)}
+
+/* Gallery */
+.gallery-section{background:var(--white)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.gallery-item{border-radius:12px;overflow:hidden;position:relative;height:300px}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item .gallery-label{position:absolute;bottom:16px;left:16px;background:rgba(27,58,92,.85);color:var(--white);padding:8px 16px;border-radius:6px;font-size:.8rem;font-weight:600;backdrop-filter:blur(4px)}
+
+/* Testimonials */
+.testimonials-section{background:var(--off-white)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.testimonial-card{background:var(--white);padding:32px;border-radius:12px;border:1px solid rgba(0,0,0,.04)}
+.testimonial-card .stars{color:var(--terra);font-size:1.1rem;margin-bottom:16px;letter-spacing:2px}
+.testimonial-card blockquote{font-size:.95rem;color:var(--mid-gray);line-height:1.7;font-style:italic;margin-bottom:20px}
+.testimonial-card .author{font-weight:600;color:var(--navy);font-size:.9rem}
+.testimonial-card .author span{font-weight:400;color:var(--light-gray);display:block;font-size:.8rem;margin-top:2px}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--navy) 0%,#264d73 100%);color:var(--white);text-align:center}
+.cta-section .section-title{color:var(--white)}
+.cta-section .section-desc{color:rgba(255,255,255,.75);margin:0 auto 36px}
+.cta-phone{font-family:var(--font-heading);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--terra);display:block;margin-bottom:28px}
+.cta-socials{display:flex;gap:16px;justify-content:center;margin-top:28px}
+.cta-socials a{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;transition:all .25s}
+.cta-socials a:hover{background:var(--terra);border-color:var(--terra);transform:translateY(-2px)}
+.cta-socials a svg{width:18px;height:18px;fill:var(--white)}
+
+/* Footer */
+footer{background:var(--dark-gray);color:rgba(255,255,255,.6);padding:60px 24px 30px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:var(--font-heading);font-size:1.2rem;color:var(--white);margin-bottom:12px}
+.footer-col h5{font-family:var(--font-heading);color:var(--white);font-size:1rem;margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px;font-size:.85rem}
+.footer-col ul li a:hover{color:var(--terra)}
+.footer-col p{font-size:.85rem;line-height:1.7}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;text-align:center;font-size:.8rem}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+<div class="nav-inner">
+<a href="#" class="nav-brand">Cifuentes <span>Painting</span></a>
+<div class="nav-links" id="navLinks">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#areas">Areas</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact" class="nav-cta">Free Estimate</a>
+</div>
+<button class="nav-toggle" id="navToggle" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-content">
+<p class="hero-tagline">Pride in the Work. Pride in the Finish.</p>
+<h1>Cifuentes Painting <span>&amp; Services, Inc</span></h1>
+<p class="hero-sub">Professional painting and finishing services for homes and businesses across Stuart and the Treasure Coast</p>
+<div class="hero-btns">
+<a href="tel:+15614012777" class="btn btn-primary">Call (561) 401-2777</a>
+<a href="#contact" class="btn btn-secondary">Get Free Estimate</a>
+</div>
+</div>
+</section>
+
+<!-- Services -->
+<section class="services-section" id="services">
+<div class="section-inner">
+<div class="section-header fade-up">
+<p class="section-label">What We Do</p>
+<h2 class="section-title">Our Services</h2>
+<p class="section-desc">From interior makeovers to complete exterior transformations, we deliver quality craftsmanship on every project -- residential and commercial.</p>
+</div>
+<div class="services-grid">
+<div class="service-card fade-up">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+<h3>Interior Painting</h3>
+<p>Transform your living spaces with flawless finishes and expert color selection.</p>
+<ul><li>Walls and ceilings</li><li>Trim and molding</li><li>Cabinet refinishing</li><li>Color consultation</li></ul>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 10V4a2 2 0 00-2-2H5a2 2 0 00-2 2v6"/><path d="M3 14v6a2 2 0 002 2h14a2 2 0 002-2v-6"/><line x1="12" y1="10" x2="12" y2="14"/></svg></div>
+<h3>Exterior Painting</h3>
+<p>Protect and beautify your property with durable, weather-resistant coatings.</p>
+<ul><li>Full exterior painting</li><li>Weatherproofing</li><li>Trim and accent work</li><li>Stucco and siding</li></ul>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+<h3>Pressure Cleaning</h3>
+<p>Restore surfaces to like-new condition with professional pressure washing.</p>
+<ul><li>Driveways and walkways</li><li>Patios and pool decks</li><li>Full house wash</li><li>Commercial surfaces</li></ul>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="18" x2="6" y2="22"/><line x1="18" y1="18" x2="18" y2="22"/></svg></div>
+<h3>Epoxy Floors</h3>
+<p>High-performance floor coatings that combine durability with striking aesthetics.</p>
+<ul><li>Garage floor coatings</li><li>Commercial applications</li><li>Decorative finishes</li><li>Industrial-grade epoxy</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About -->
+<section class="about-section" id="about">
+<div class="section-inner">
+<div class="about-grid">
+<div class="about-img fade-up">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Beautiful home exterior" loading="lazy">
+</div>
+<div class="about-text fade-up">
+<p class="section-label">About Us</p>
+<h2 class="section-title">Family-Owned. Quality-Driven.</h2>
+<p class="section-desc">Cifuentes Painting & Services, Inc is a family-owned and operated painting company proudly serving Stuart and the entire Treasure Coast of Florida. We bring professionalism, integrity, and an unwavering commitment to quality on every job we take on.</p>
+<p class="section-desc">Our experienced team treats every home and business as if it were our own. From careful surface preparation to the final brush stroke, we take pride in delivering results that exceed expectations.</p>
+<div class="about-stats">
+<div class="about-stat"><div class="num">100%</div><div class="label">Satisfaction Focus</div></div>
+<div class="about-stat"><div class="num">5-Star</div><div class="label">Quality Standard</div></div>
+<div class="about-stat"><div class="num">Local</div><div class="label">Family Owned</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-section">
+<div class="section-inner">
+<div class="section-header fade-up">
+<p class="section-label">The Difference</p>
+<h2 class="section-title">Why Choose Cifuentes Painting</h2>
+<p class="section-desc">We hold ourselves to the highest standard on every project, large or small.</p>
+</div>
+<div class="why-grid">
+<div class="why-card fade-up">
+<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+<h4>Licensed &amp; Insured</h4>
+<p>Fully licensed and insured for your complete peace of mind on every project.</p>
+</div>
+<div class="why-card fade-up">
+<svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+<h4>Free Estimates</h4>
+<p>No-obligation consultations and transparent pricing before any work begins.</p>
+</div>
+<div class="why-card fade-up">
+<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+<h4>Clean &amp; Professional</h4>
+<p>We respect your space -- arriving on time, keeping the site clean, and finishing on schedule.</p>
+</div>
+<div class="why-card fade-up">
+<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+<h4>Attention to Detail</h4>
+<p>Meticulous preparation and expert technique ensure a finish that lasts for years.</p>
+</div>
+<div class="why-card fade-up">
+<svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+<h4>Residential &amp; Commercial</h4>
+<p>From cozy homes to large commercial spaces, we have the experience and capacity to deliver.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Service Areas -->
+<section class="areas-section" id="areas">
+<div class="section-inner">
+<div class="section-header fade-up">
+<p class="section-label">Where We Work</p>
+<h2 class="section-title">Serving the Treasure Coast</h2>
+<p class="section-desc">Proudly providing professional painting services throughout Martin County and surrounding communities.</p>
+</div>
+<div class="areas-list fade-up">
+<span>Stuart</span>
+<span>Hobe Sound</span>
+<span>Jensen Beach</span>
+<span>Palm City</span>
+<span>Port St. Lucie</span>
+<span>Jupiter</span>
+<span>Martin County</span>
+</div>
+</div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery-section" id="gallery">
+<div class="section-inner">
+<div class="section-header fade-up">
+<p class="section-label">Our Work</p>
+<h2 class="section-title">Project Gallery</h2>
+<p class="section-desc">A sampling of the quality finishes and transformations we deliver for our clients.</p>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item fade-up">
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Modern interior painting" loading="lazy">
+<div class="gallery-label">Interior - Living Room</div>
+</div>
+<div class="gallery-item fade-up">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Exterior home painting" loading="lazy">
+<div class="gallery-label">Exterior - Full Home</div>
+</div>
+<div class="gallery-item fade-up">
+<img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=800&q=80" alt="Interior room transformation" loading="lazy">
+<div class="gallery-label">Interior - Bedroom</div>
+</div>
+<div class="gallery-item fade-up">
+<img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Beautiful home exterior" loading="lazy">
+<div class="gallery-label">Exterior - Residential</div>
+</div>
+<div class="gallery-item fade-up">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Modern kitchen interior" loading="lazy">
+<div class="gallery-label">Interior - Kitchen</div>
+</div>
+<div class="gallery-item fade-up">
+<img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Luxury home exterior" loading="lazy">
+<div class="gallery-label">Exterior - Luxury Home</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+<div class="section-inner">
+<div class="section-header fade-up">
+<p class="section-label">Client Reviews</p>
+<h2 class="section-title">What Our Clients Say</h2>
+</div>
+<div class="testimonials-grid">
+<div class="testimonial-card fade-up">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<blockquote>"Cifuentes Painting did an incredible job on our entire home interior. The attention to detail was remarkable -- every edge was crisp, every surface perfectly smooth. Highly recommend them to anyone in Stuart."</blockquote>
+<div class="author">Maria S.<span>Stuart, FL</span></div>
+</div>
+<div class="testimonial-card fade-up">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<blockquote>"We hired them for exterior painting and pressure cleaning. The house looks brand new. Professional crew, showed up on time every day, and left the property spotless. Outstanding service from start to finish."</blockquote>
+<div class="author">David R.<span>Palm City, FL</span></div>
+</div>
+<div class="testimonial-card fade-up">
+<div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<blockquote>"Jonathan and his team transformed our garage floor with a beautiful epoxy coating. The quality is exceptional and they walked us through every step of the process. True professionals who take pride in their work."</blockquote>
+<div class="author">Karen T.<span>Jensen Beach, FL</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA / Contact -->
+<section class="cta-section" id="contact">
+<div class="section-inner fade-up">
+<p class="section-label">Get Started</p>
+<h2 class="section-title">Ready to Transform Your Space?</h2>
+<p class="section-desc">Contact us today for a free, no-obligation estimate. We look forward to bringing your vision to life.</p>
+<a href="tel:+15614012777" class="cta-phone">(561) 401-2777</a>
+<div class="hero-btns">
+<a href="tel:+15614012777" class="btn btn-primary">Call Now</a>
+<a href="https://www.instagram.com/cifuentes_painting" target="_blank" class="btn btn-secondary">Follow on Instagram</a>
+</div>
+<div class="cta-socials">
+<a href="https://www.instagram.com/cifuentes_painting" target="_blank" aria-label="Instagram">
+<svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+</a>
+<a href="https://www.facebook.com/people/Cifuentes-Painting-services-Inc/61557261498498/" target="_blank" aria-label="Facebook">
+<svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-col">
+<div class="footer-brand">Cifuentes Painting &amp; Services, Inc</div>
+<p>Pride in the Work. Pride in the Finish. Professional painting and finishing services for homes and businesses across Stuart and the Treasure Coast of Florida.</p>
+</div>
+<div class="footer-col">
+<h5>Services</h5>
+<ul>
+<li>Interior Painting</li>
+<li>Exterior Painting</li>
+<li>Pressure Cleaning</li>
+<li>Epoxy Floors</li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Contact</h5>
+<ul>
+<li><a href="tel:+15614012777">(561) 401-2777</a></li>
+<li>4680 SE Salvatori Rd</li>
+<li>Stuart, FL 34997</li>
+<li><a href="https://www.instagram.com/cifuentes_painting" target="_blank">Instagram</a></li>
+<li><a href="https://www.facebook.com/people/Cifuentes-Painting-services-Inc/61557261498498/" target="_blank">Facebook</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>Copyright 2025 Cifuentes Painting &amp; Services, Inc. All rights reserved. | Stuart, FL | Hobe Sound | Jensen Beach | Palm City | Port St. Lucie | Jupiter</p>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile nav toggle
+const toggle=document.getElementById('navToggle'),links=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>{links.classList.toggle('open');});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+// Navbar scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50)});
+
+// Fade-up on scroll
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
