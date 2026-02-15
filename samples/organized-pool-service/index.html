@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organized Pool Service - Professional Pool Cleaning in Jupiter, FL</title>
+    <meta name="description" content="Organized Pool Service - Professional pool cleaning and maintenance in Jupiter, Florida. Weekly service, repairs, and chemical balancing. Get in touch today!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <style>
+        :root {
+            --primary-color: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary-color: #64748b;
+            --accent-color: #f59e0b;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --background-light: #f0f9ff;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --transition: all 0.2s ease-in-out;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-brand h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .feature {
+            margin-bottom: 1.5rem;
+        }
+
+        .feature h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .services {
+            background-color: var(--background-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            background-color: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-credit {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondary-color);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        .footer-credit a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .about-content { grid-template-columns: 1fr; }
+            .contact-content { grid-template-columns: 1fr; gap: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>Organized Pool Service</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="nav-cta">Get Quote</a>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <h1>Crystal Clear Pools, Organized Service</h1>
+            <p class="hero-subtitle">Professional pool cleaning and maintenance in Jupiter, Florida. Reliable, thorough, and organized service you can count on.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>About Organized Pool Service</h2>
+                    <p>At Organized Pool Service, we understand that your pool should be a source of relaxation and enjoyment, not stress and worry. That's why we provide comprehensive pool cleaning and maintenance services in Jupiter and surrounding areas.</p>
+                    
+                    <p>Our systematic approach ensures your pool stays crystal clear and swim-ready all year long.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <h4>✓ Reliable Weekly Service</h4>
+                            <p>Consistent, dependable pool maintenance on schedule</p>
+                        </div>
+                        <div class="feature">
+                            <h4>✓ Licensed & Insured</h4>
+                            <p>Fully licensed and insured for your peace of mind</p>
+                        </div>
+                        <div class="feature">
+                            <h4>✓ Local Jupiter Experts</h4>
+                            <p>We know the unique needs of South Florida pools</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://via.placeholder.com/500x400/0ea5e9/ffffff?text=Pool+Service" alt="Organized Pool Service team" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Pool Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏊‍♂️</div>
+                    <h3>Weekly Pool Cleaning</h3>
+                    <p>Comprehensive weekly cleaning including skimming, vacuuming, and brushing walls and steps.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚗️</div>
+                    <h3>Chemical Balancing</h3>
+                    <p>Professional water testing and chemical balancing to keep your pool safe and sparkling.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Equipment Maintenance</h3>
+                    <p>Regular maintenance and inspection of pumps, filters, and other pool equipment.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Pool Repairs</h3>
+                    <p>Quick and reliable repairs for pumps, filters, heaters, and other pool equipment.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Seasonal Services</h3>
+                    <p>Opening, closing, and seasonal maintenance to keep your pool in perfect condition.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Pool Inspections</h3>
+                    <p>Thorough inspections to identify and address potential issues before they become problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch Today</h2>
+            <div class="contact-content">
+                <div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@organizedpoolservice.com">info@organizedpoolservice.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Service Area</h4>
+                            <p>Jupiter, Florida and surrounding areas<br>
+                               Palm Beach Gardens • Tequesta • Stuart</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Service Schedule</h4>
+                            <p>Monday - Friday: 8:00am - 5:00pm<br>
+                               Saturday: 8:00am - 2:00pm<br>
+                               Emergency Service Available</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🏊‍♂️</div>
+                        <div>
+                            <h4>Pool Types</h4>
+                            <p>Residential and Commercial<br>
+                               Salt Water and Chlorine<br>
+                               All Pool Sizes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--background-light); padding: 2rem; border-radius: 12px;">
+                    <h3>Start Your Pool Service Today</h3>
+                    <p style="margin-bottom: 1.5rem;">Ready for crystal clear water and hassle-free pool maintenance? Contact us for a free quote and see why Jupiter homeowners trust Organized Pool Service.</p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="mailto:info@organizedpoolservice.com" class="btn btn-primary">Email for Quote</a>
+                        <p style="text-align: center; margin: 0; font-size: 0.9rem; color: var(--text-light);">
+                            Free estimates • Flexible scheduling • No long-term contracts required
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #dbeafe;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Service Package Includes:</h4>
+                        <ul style="text-align: left; font-size: 0.9rem; color: var(--text-light); padding-left: 1rem;">
+                            <li>Weekly cleaning and maintenance</li>
+                            <li>Chemical testing and balancing</li>
+                            <li>Equipment inspection and basic repairs</li>
+                            <li>Detailed service reports</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3>Organized Pool Service</h3>
+            <p>Professional pool cleaning and maintenance in Jupiter, FL</p>
+            <p>✉️ <a href="mailto:info@organizedpoolservice.com" style="color: white;">info@organizedpoolservice.com</a></p>
+            <p style="margin-top: 1rem;">Serving Jupiter • Palm Beach Gardens • Tequesta • Stuart</p>
+            
+            <div class="footer-credit">
+                <p>Professional website designed by <a href="https://robbiegetstoyouleads.com" target="_blank">RobbieGetsYouLeads.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

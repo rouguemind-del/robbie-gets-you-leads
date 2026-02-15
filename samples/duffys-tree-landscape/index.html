@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duffy's Tree & Landscape Services - Professional Tree & Landscaping in Lake Worth, FL</title>
+    <meta name="description" content="Duffy's Tree & Landscape Services - Established 1985. Professional tree trimming, landscaping, and yard maintenance in Lake Worth, Florida. Call (561) 433-0095.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <style>
+        :root {
+            --primary-color: #16a34a;
+            --primary-dark: #15803d;
+            --secondary-color: #64748b;
+            --accent-color: #f59e0b;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --background-light: #f0fdf4;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --transition: all 0.2s ease-in-out;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-brand h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background-color: var(--primary-color);
+            color: var(--white) !important;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .feature {
+            margin-bottom: 1.5rem;
+        }
+
+        .feature h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .services {
+            background-color: var(--background-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            background-color: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-credit {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondary-color);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .footer-credit a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .about-content { grid-template-columns: 1fr; }
+            .contact-content { grid-template-columns: 1fr; gap: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>Duffy's Tree & Landscape</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:5614330095" class="nav-cta">Call Now</a>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <h1>Professional Tree & Landscape Services Since 1985</h1>
+            <p class="hero-subtitle">Expert tree care and landscaping services in Lake Worth, Florida. Over 39 years of trusted, personalized service.</p>
+            <div class="hero-cta">
+                <a href="tel:5614330095" class="btn btn-primary">Call (561) 433-0095</a>
+                <a href="#contact" class="btn btn-secondary">Get Free Estimate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>About Duffy's Tree & Landscape Services</h2>
+                    <p>Established in 1985, we specialize in a broad range of landscaping techniques to bring you a well-rounded approach. We follow the philosophy that each landscape is unique and provide each client with a personalized plan to fit the landscapes' specific needs.</p>
+                    
+                    <p>With nearly four decades of experience, our team understands the unique challenges of South Florida landscaping and tree care.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <h4>✓ 39+ Years Experience (Est. 1985)</h4>
+                            <p>Nearly four decades of trusted service in Lake Worth</p>
+                        </div>
+                        <div class="feature">
+                            <h4>✓ Personalized Service</h4>
+                            <p>Each landscape gets a customized approach</p>
+                        </div>
+                        <div class="feature">
+                            <h4>✓ Licensed & Insured</h4>
+                            <p>Fully licensed and insured for your protection</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://via.placeholder.com/500x400/16a34a/ffffff?text=Tree+Care+Experts" alt="Duffy's Tree & Landscape team" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Tree & Landscape Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌳</div>
+                    <h3>Tree Trimming & Pruning</h3>
+                    <p>Expert tree trimming and pruning to maintain healthy, beautiful trees and ensure safety.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🪓</div>
+                    <h3>Tree Removal</h3>
+                    <p>Safe, professional tree removal services for dangerous, diseased, or unwanted trees.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Landscape Design</h3>
+                    <p>Custom landscape design and installation tailored to your property's unique needs.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h3>Lawn Maintenance</h3>
+                    <p>Regular lawn care services including mowing, edging, and seasonal maintenance.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌺</div>
+                    <h3>Planting & Installation</h3>
+                    <p>Professional planting of trees, shrubs, and flowers to enhance your landscape.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Property Maintenance</h3>
+                    <p>Comprehensive property maintenance to keep your landscape beautiful year-round.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:5614330095">(561) 433-0095</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📠</div>
+                        <div>
+                            <h4>Fax</h4>
+                            <p>(561) 433-0006</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:duffyslandscape@comcast.net">duffyslandscape@comcast.net</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>10190 52nd Place South<br>Lake Worth, FL 33449</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Monday - Friday: 8:00am - 5:00pm<br>
+                               Saturday - Sunday: By Appointment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: var(--background-light); padding: 2rem; border-radius: 12px;">
+                    <h3>Request a Free Estimate</h3>
+                    <p style="margin-bottom: 1.5rem;">Get a personalized quote for your tree care and landscaping needs. We provide detailed estimates at no cost!</p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="tel:5614330095" class="btn btn-primary">Call (561) 433-0095</a>
+                        <a href="mailto:duffyslandscape@comcast.net" class="btn btn-secondary">Send Email</a>
+                    </div>
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #dcfce7;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Service Areas</h4>
+                        <p style="font-size: 0.9rem; margin: 0;">Lake Worth • Boynton Beach • Delray Beach • Wellington • West Palm Beach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3>Duffy's Tree & Landscape Services</h3>
+            <p>Professional tree care and landscaping since 1985</p>
+            <p>📞 <a href="tel:5614330095" style="color: white;">(561) 433-0095</a> | ✉️ <a href="mailto:duffyslandscape@comcast.net" style="color: white;">duffyslandscape@comcast.net</a></p>
+            <p style="margin-top: 1rem;">10190 52nd Place South, Lake Worth, FL 33449 | Licensed & Insured</p>
+            
+            <div class="footer-credit">
+                <p>Professional website designed by <a href="https://robbiegetstoyouleads.com" target="_blank">RobbieGetsYouLeads.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
