@@ -228,7 +228,12 @@
 
         /* ── RESPONSIVE ── */
         @media(max-width:768px){
-            .nav-links { display: none; }
+            .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,.1); gap: 0; }
+            .nav-links.active { display: flex; }
+            .nav-links li { padding: .75rem 0; border-bottom: 1px solid #eee; }
+            .nav-links li:last-child { border: none; }
+            .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 10; }
+            .hamburger span { width: 25px; height: 3px; background: #1A2B4A; border-radius: 2px; transition: .3s; }
             .hero h1 { font-size: 2.4rem; }
             .hero-sub { font-size: 1.1rem; }
             .hero-cta { flex-direction: column; align-items: center; }
@@ -263,7 +268,10 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Robbie Gets You Leads</a>
-            <ul class="nav-links">
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" onclick="this.classList.remove('active')"
                 <li><a href="#services">Services</a></li>
                 <li><a href="#work">Portfolio</a></li>
                 <li><a href="#pricing">Pricing</a></li>
