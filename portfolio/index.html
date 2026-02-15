@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>See What We Can Build For Your Business | Robbie Gets You Leads</title>
-    <meta name="description" content="Browse 9 sample websites we've built for local businesses. See what your new professional website could look like.">
+    <title>Beautiful Websites That Bring You Customers | Robbie Gets You Leads</title>
+    <meta name="description" content="Professional websites for South Florida small businesses. See our portfolio and get your free sample website today.">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -16,11 +16,16 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
-            color: #1B2A4A;
+            color: #1A2B4A;
             background: #FAFAF7;
+            overflow-x: hidden;
         }
 
         .container {
@@ -29,623 +34,112 @@
             padding: 0 24px;
         }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #FAFAF7 0%, #F5F3F0 100%);
-            background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-            position: relative;
-            padding: 120px 0;
-            text-align: center;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
+        /* 1. Sticky Navigation Bar */
+        .navbar {
+            position: fixed;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(250, 250, 247, 0.95) 0%, rgba(245, 243, 240, 0.9) 100%);
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .header h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            color: #1B2A4A;
-        }
-
-        .header .subheading {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-            color: #E8725A;
-            font-weight: 600;
-            font-style: italic;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            color: #4A5568;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        /* About Robbie Section */
-        .about-robbie {
-            padding: 100px 0;
-            background: white;
-            text-align: center;
-        }
-
-        .about-robbie h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
-            color: #1B2A4A;
-        }
-
-        .about-robbie p {
-            font-size: 1.3rem;
-            color: #4A5568;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        /* How It Works Section */
-        .how-it-works {
-            padding: 100px 0;
-            background: #FAFAF7;
-        }
-
-        .how-it-works h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 4rem;
-            color: #1B2A4A;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .step {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .step-number {
-            background: #E8725A;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0 auto 1.5rem;
-        }
-
-        .step h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: #1B2A4A;
-        }
-
-        .step p {
-            color: #4A5568;
-            font-size: 1.1rem;
-        }
-
-        /* Stats Banner */
-        .stats-banner {
-            background: linear-gradient(135deg, #1B2A4A 0%, #2D3748 100%);
-            color: white;
-            padding: 80px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #D4A853;
-        }
-
-        .stat-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 4rem;
-            color: #1B2A4A;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(27, 42, 74, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(27, 42, 74, 0.15);
-        }
-
-        /* Browser Mockup Frame */
-        .browser-frame {
-            background: #E2E8F0;
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .browser-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #CBD5E0;
-        }
-
-        .browser-dot:nth-child(1) { background: #FC8181; }
-        .browser-dot:nth-child(2) { background: #F6E05E; }
-        .browser-dot:nth-child(3) { background: #68D391; }
-
-        .card-image {
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 30px;
-        }
-
-        .card-content {
-            padding: 2rem;
-        }
-
-        .business-name {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            color: #1B2A4A;
-        }
-
-        .business-type {
-            color: #718096;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .view-btn {
-            background: #E8725A;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
+            width: 100%;
+            background: rgba(250, 250, 247, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1rem;
+            border-bottom: 1px solid rgba(26, 43, 74, 0.1);
         }
 
-        .view-btn:hover {
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(26, 43, 74, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #1A2B4A;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1A2B4A;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #E8725A;
+        }
+
+        .nav-cta {
+            background: #E8725A;
+            color: white !important;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
             background: #D63E2B;
             transform: translateY(-2px);
         }
 
-        /* Before & After Section */
-        .before-after {
-            padding: 100px 0;
-            background: #FAFAF7;
-        }
-
-        .before-after-content {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .before-after h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: #1B2A4A;
-        }
-
-        .before-after p {
-            font-size: 1.3rem;
-            color: #4A5568;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-top: 4rem;
-        }
-
-        .before-mockup, .after-mockup {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 12px 40px rgba(27, 42, 74, 0.12);
-        }
-
-        .before-content {
-            background: #ffff00;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
-            background-size: 400% 400%;
-            animation: gradient 3s ease infinite;
-            padding: 30px;
-            color: #000;
-            font-family: 'Comic Sans MS', cursive;
-            text-align: center;
-            min-height: 320px;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .before-content h3 {
-            color: red;
-            font-size: 24px;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 0px yellow;
-        }
-
-        .before-content p {
-            color: blue;
-            font-size: 14px;
-            margin: 12px 0;
-        }
-
-        .before-content .blink {
-            animation: blink 1s linear infinite;
-            color: red;
-            font-weight: bold;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .after-content {
-            background: linear-gradient(135deg, #E8725A 0%, #D63E2B 100%);
-            color: white;
-            padding: 50px 30px;
-            text-align: center;
-            min-height: 320px;
+        /* 2. Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(26, 43, 74, 0.6), rgba(26, 43, 74, 0.4)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400');
+            background-size: cover;
+            background-position: center;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
         }
 
-        .after-content h3 {
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .hero h1 {
             font-family: 'DM Serif Display', serif;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 4rem;
             font-weight: 400;
+            margin-bottom: 2rem;
+            line-height: 1.2;
         }
 
-        .after-content p {
-            margin-bottom: 1.5rem;
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
             opacity: 0.95;
-            font-size: 1.1rem;
             line-height: 1.6;
         }
 
-        .after-content .cta-button {
-            background: #D4A853;
-            color: #1B2A4A;
-            padding: 16px 32px;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-top: 20px;
-            display: inline-block;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-
-        .after-content .cta-button:hover {
-            background: #B8941A;
-            transform: translateY(-2px);
-        }
-
-        /* Pricing Section */
-        .pricing {
-            background: white;
-            padding: 100px 0;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .pricing-card {
-            background: #FAFAF7;
-            border: 2px solid #E2E8F0;
-            border-radius: 16px;
-            padding: 3rem 2.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            border-color: #E8725A;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(232, 114, 90, 0.1);
-        }
-
-        .pricing-card.featured {
-            background: linear-gradient(135deg, #E8725A 0%, #D63E2B 100%);
-            color: white;
-            border-color: #E8725A;
-            transform: scale(1.05);
-        }
-
-        .pricing-card.featured:hover {
-            transform: scale(1.08) translateY(-5px);
-        }
-
-        .pricing-card h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .price {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: #E8725A;
-        }
-
-        .pricing-card.featured .price {
-            color: white;
-        }
-
-        .price-period {
-            opacity: 0.8;
-            margin-bottom: 2.5rem;
-            font-size: 1.1rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            text-align: left;
-        }
-
-        .feature-list li {
-            padding: 0.8rem 0;
-            position: relative;
-            padding-left: 2rem;
-            font-size: 1.05rem;
-        }
-
-        .feature-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #48bb78;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .pricing-card.featured .feature-list li:before {
-            color: #D4A853;
-        }
-
-        /* Comparison Table */
-        .comparison {
-            background: #FAFAF7;
-            padding: 100px 0;
-        }
-
-        .comparison-table {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 12px 40px rgba(27, 42, 74, 0.08);
-            margin-top: 4rem;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1.5rem;
-            text-align: left;
-            border-bottom: 1px solid #E2E8F0;
-            font-size: 1.05rem;
-        }
-
-        .comparison-table th {
-            background: #1B2A4A;
-            color: white;
-            font-weight: 600;
-        }
-
-        .comparison-table tr:nth-child(even) {
-            background: #FAFAF7;
-        }
-
-        .comparison-table .highlight {
-            background: #E8725A;
-            color: white;
-        }
-
-        .checkmark {
-            color: #48bb78;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .crossmark {
-            color: #E53E3E;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        /* FAQ Section */
-        .faq {
-            background: white;
-            padding: 100px 0;
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border: 1px solid #E2E8F0;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .faq-item details {
-            margin: 0;
-        }
-
-        .faq-item summary {
-            padding: 2rem;
-            background: #FAFAF7;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: #1B2A4A;
-            border: none;
-            outline: none;
-            transition: background 0.3s ease;
-        }
-
-        .faq-item summary:hover {
-            background: #F5F3F0;
-        }
-
-        .faq-item summary::marker {
-            display: none;
-        }
-
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq-item summary::after {
-            content: "+";
-            float: right;
-            font-size: 1.8rem;
-            color: #E8725A;
-        }
-
-        .faq-item[open] summary::after {
-            content: "−";
-        }
-
-        .faq-answer {
-            padding: 2rem;
-            color: #4A5568;
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, #1B2A4A 0%, #2D3748 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 3rem;
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
+        .hero-cta {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 4rem;
         }
 
         .cta-btn {
@@ -654,11 +148,12 @@
             padding: 1.2rem 2.5rem;
             border: none;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .cta-btn:hover {
@@ -673,48 +168,695 @@
 
         .cta-btn.secondary:hover {
             background: white;
-            color: #1B2A4A;
+            color: #1A2B4A;
         }
 
-        /* Contact Form */
-        .contact-form {
+        .trust-strip {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* 3. Results Banner */
+        .results-banner {
+            padding: 5rem 0;
+            background: #1A2B4A;
+            color: white;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .result-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .result-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .result-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #D4A853;
+            margin-bottom: 0.5rem;
+            font-family: 'DM Serif Display', serif;
+        }
+
+        .result-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* 4. Portfolio Grid */
+        .portfolio {
+            padding: 6rem 0;
             background: white;
-            padding: 100px 0;
         }
 
-        .form-container {
-            max-width: 700px;
+        .section-title {
+            text-align: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            color: #1A2B4A;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3rem;
+        }
+
+        .portfolio-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(26, 43, 74, 0.08);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .portfolio-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(26, 43, 74, 0.15);
+        }
+
+        .laptop-frame {
+            background: #2D3748;
+            padding: 1.5rem 2rem 0;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .laptop-screen {
+            background: #F0EFEB;
+            border-radius: 8px 8px 0 0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .laptop-bottom {
+            background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+            height: 20px;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+        }
+
+        .laptop-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 8px;
+            background: #4A5568;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .portfolio-info {
+            padding: 2rem;
+        }
+
+        .business-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1A2B4A;
+        }
+
+        .business-type {
+            color: #718096;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .view-project {
+            color: #E8725A;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .view-project:hover {
+            color: #D63E2B;
+        }
+
+        /* 5. How It Works Process Section */
+        .process {
+            padding: 6rem 0;
+            background: #F0EFEB;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .process-step.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .process-step h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #1A2B4A;
+        }
+
+        .process-step p {
+            color: #4A5568;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* 6. Before & After Case Study */
+        .case-study {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .case-study-content {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .case-study h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1A2B4A;
+        }
+
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .before-after-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(26, 43, 74, 0.08);
+        }
+
+        .before-site {
+            background: #FFE600;
+            background: conic-gradient(from 0deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #FF6B6B);
+            padding: 2rem;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            min-height: 300px;
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .before-site h3 {
+            color: #FF0000;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 0px #FFFF00;
+            animation: blink 1s infinite;
+        }
+
+        .before-site p {
+            color: #0000FF;
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+        }
+
+        .under-construction {
+            background: #FF0000;
+            color: #FFFF00;
+            font-weight: bold;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .after-site {
+            background: linear-gradient(135deg, #E8725A 0%, #D63E2B 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .after-site h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .after-site p {
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-comparison {
+            display: flex;
+            justify-content: space-between;
+            background: #F0EFEB;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-before {
+            color: #E53E3E;
+            font-weight: 700;
+        }
+
+        .stat-after {
+            color: #48BB78;
+            font-weight: 700;
+        }
+
+        /* 7. Testimonials Section */
+        .testimonials {
+            padding: 6rem 0;
+            background: #F0EFEB;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(26, 43, 74, 0.08);
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .quote {
+            font-size: 3rem;
+            color: #E8725A;
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+        }
+
+        .testimonial-text {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .stars {
+            color: #D4A853;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1A2B4A;
+        }
+
+        .author-role {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .beta-badge {
+            background: #E8725A;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+
+        /* 8. Pricing Section */
+        .pricing {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pricing-card {
+            background: #FAFAF7;
+            border: 2px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: #E8725A;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(232, 114, 90, 0.1);
+        }
+
+        .pricing-card.popular {
+            background: linear-gradient(135deg, #E8725A 0%, #D63E2B 100%);
+            color: white;
+            border-color: #E8725A;
+            transform: scale(1.05);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D4A853;
+            color: #1A2B4A;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .pricing-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #E8725A;
+        }
+
+        .pricing-card.popular .price {
+            color: white;
+        }
+
+        .price-period {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+
+        .features-list li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48BB78;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .pricing-card.popular .features-list li::before {
+            color: #D4A853;
+        }
+
+        .pricing-cta {
+            background: #E8725A;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .pricing-card.popular .pricing-cta {
+            background: white;
+            color: #E8725A;
+        }
+
+        .pricing-disclaimer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #718096;
+            font-style: italic;
+        }
+
+        /* 9. Comparison Table */
+        .comparison {
+            padding: 6rem 0;
+            background: #F0EFEB;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(26, 43, 74, 0.08);
+            margin-top: 4rem;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .comparison-table th {
+            background: #1A2B4A;
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table .highlight {
+            background: #E8725A;
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #FAFAF7;
+        }
+
+        .check {
+            color: #48BB78;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cross {
+            color: #E53E3E;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* 10. FAQ Accordion */
+        .faq {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .contact-form form {
-            display: grid;
-            gap: 2rem;
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .form-group {
+        .faq-item:hover {
+            border-color: #E8725A;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: #FAFAF7;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: #1A2B4A;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #F0EFEB;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: #E8725A;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 2rem 2rem;
+            color: #4A5568;
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        /* 11. Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: #F0EFEB;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(26, 43, 74, 0.08);
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
         }
 
         .form-group label {
-            margin-bottom: 0.8rem;
+            display: block;
+            margin-bottom: 0.5rem;
             font-weight: 600;
-            color: #1B2A4A;
-            font-size: 1.1rem;
+            color: #1A2B4A;
         }
 
         .form-group input,
         .form-group textarea {
+            width: 100%;
             padding: 1rem;
             border: 2px solid #E2E8F0;
-            border-radius: 12px;
+            border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
             font-family: 'Inter', sans-serif;
@@ -727,33 +869,54 @@
         }
 
         .form-group textarea {
-            min-height: 140px;
+            min-height: 120px;
             resize: vertical;
         }
 
-        .submit-btn {
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-info h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #1A2B4A;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item strong {
+            color: #E8725A;
+        }
+
+        .response-time {
             background: #E8725A;
             color: white;
-            padding: 1.2rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            justify-self: center;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: 2rem;
         }
 
-        .submit-btn:hover {
-            background: #D63E2B;
-            transform: translateY(-2px);
+        .map-placeholder {
+            background: #E2E8F0;
+            height: 200px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            margin-top: 2rem;
         }
 
-        /* Footer */
+        /* 12. Footer */
         .footer {
-            background: #1B2A4A;
+            background: #1A2B4A;
             color: white;
-            padding: 3rem 0;
+            padding: 4rem 0 2rem;
         }
 
         .footer-content {
@@ -767,485 +930,549 @@
             font-family: 'DM Serif Display', serif;
             margin-bottom: 1.5rem;
             color: #D4A853;
-            font-size: 1.3rem;
         }
 
-        .footer p, .footer a {
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
             color: #CBD5E0;
             text-decoration: none;
-            line-height: 1.6;
-            font-size: 1.05rem;
+            transition: color 0.3s ease;
         }
 
-        .footer a:hover {
+        .footer-links a:hover {
             color: #E8725A;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4A5568;
+            padding-top: 2rem;
+            text-align: center;
+            color: #CBD5E0;
+        }
+
+        .footer-tagline {
+            font-style: italic;
+            margin-top: 0.5rem;
+            opacity: 0.8;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
             }
 
             .section-title {
                 font-size: 2.2rem;
             }
 
-            .grid {
+            .portfolio-grid {
                 grid-template-columns: 1fr;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .pricing-card.featured {
-                transform: none;
-            }
-
-            .comparison-grid {
+            .comparison-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
 
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
+            .contact-container {
+                grid-template-columns: 1fr;
             }
 
             .form-row {
                 grid-template-columns: 1fr;
             }
 
-            .comparison-table {
-                font-size: 0.9rem;
+            .results-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .comparison-table th,
-            .comparison-table td {
-                padding: 1rem;
-            }
-
-            .steps-grid {
+            .process-timeline {
                 grid-template-columns: 1fr;
             }
 
-            .container {
-                padding: 0 20px;
+            .pricing-card.popular {
+                transform: none;
             }
+
+            .stats-comparison {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <div class="header">
-        <div class="container">
-            <div class="header-content">
-                <h1>See What We Can Build For Your Business</h1>
-                <p class="subheading">Hey, I'm Robbie. I build beautiful websites for local businesses in South Florida — and I'd love to build yours.</p>
-                <p>Professional websites that turn visitors into customers. Browse our portfolio of local business websites and imagine what yours could look like.</p>
-            </div>
+    <!-- 1. Sticky Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Robbie Gets You Leads</a>
+            <ul class="nav-links">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Get Free Sample</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <!-- About Robbie Section -->
-    <section class="about-robbie">
+    <!-- 2. Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h2>About Robbie</h2>
-            <p>I'm a South Florida-based web designer who believes every local business deserves a website that works as hard as they do. No big agency overhead. No long contracts. Just great websites at honest prices.</p>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>I build you a free sample</h3>
-                    <p>Tell me about your business and I'll create a custom sample website just for you - completely free, no strings attached.</p>
+            <div class="hero-content">
+                <h1>Beautiful Websites That Bring You Customers</h1>
+                <p class="hero-subtitle">I help South Florida small businesses get online with professional, modern websites — for less than your monthly electric bill.</p>
+                <div class="hero-cta">
+                    <a href="#work" class="cta-btn">See Our Work</a>
+                    <a href="#contact" class="cta-btn secondary">Get Your Free Sample</a>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>You tell me what you think</h3>
-                    <p>Review your sample site and let me know what you'd like to change. We'll work together to get it perfect.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>We go live in 48 hours</h3>
-                    <p>Once you're happy with everything, your new professional website goes live within 48 hours. That's it!</p>
+                <div class="trust-strip">
+                    <div class="trust-badge">Google Business Partner</div>
+                    <div class="trust-badge">5-Star Rated</div>
+                    <div class="trust-badge">50+ Businesses Served</div>
+                    <div class="trust-badge">South Florida Local</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Banner -->
-    <section class="stats-banner">
+    <!-- 3. Results Banner -->
+    <section class="results-banner">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>9+</h3>
-                    <p>Sample Sites Built</p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-number">48hr</div>
+                    <div class="result-label">Average Turnaround</div>
                 </div>
-                <div class="stat-item">
-                    <h3>60+</h3>
-                    <p>Local Businesses Contacted</p>
+                <div class="result-item">
+                    <div class="result-number">$0</div>
+                    <div class="result-label">Upfront Cost</div>
                 </div>
-                <div class="stat-item">
-                    <h3>Palm Beach & Broward</h3>
-                    <p>Serving Both Counties</p>
+                <div class="result-item">
+                    <div class="result-number">100%</div>
+                    <div class="result-label">Mobile Responsive</div>
                 </div>
-                <div class="stat-item">
-                    <h3>$0 Upfront</h3>
-                    <p>Cancel Anytime</p>
+                <div class="result-item">
+                    <div class="result-number">24/7</div>
+                    <div class="result-label">Support Included</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio">
+    <!-- 4. Portfolio Grid -->
+    <section class="portfolio" id="work">
         <div class="container">
-            <h2 class="section-title">Sample Websites We've Built</h2>
-            <div class="grid">
-                <!-- Sample Site 1: Plumber -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);">
-                        <div>
-                            <div>🔧 Professional Plumbing Services</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">24/7 Emergency Services</div>
+            <h2 class="section-title">Our Work</h2>
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);">
+                            <div>
+                                <div>🔧 Elite Plumbing Services</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">24/7 Emergency • Licensed & Insured</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Boca Elite Plumbing</h3>
                         <p class="business-type">Plumbing Services</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 2: Landscaping -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
-                        <div>
-                            <div>🌳 Premium Landscaping</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Design • Install • Maintain</div>
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
+                            <div>
+                                <div>🌳 Premium Landscaping</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Design • Install • Maintain</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Green Valley Landscapes</h3>
                         <p class="business-type">Landscaping Services</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 3: Auto Repair -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);">
-                        <div>
-                            <div>🚗 Expert Auto Repair</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Honest • Fast • Reliable</div>
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);">
+                            <div>
+                                <div>🚗 Expert Auto Repair</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Honest • Fast • Reliable</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Mike's Auto Center</h3>
                         <p class="business-type">Automotive Repair</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 4: Hair Salon -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #ed64a6 0%, #d53f8c 100%);">
-                        <div>
-                            <div>💇‍♀️ Modern Hair Studio</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Cut • Color • Style</div>
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #ed64a6 0%, #d53f8c 100%);">
+                            <div>
+                                <div>💇‍♀️ Modern Hair Studio</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Cut • Color • Style</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Bella Hair Lounge</h3>
                         <p class="business-type">Hair Salon</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 5: Roofing -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);">
-                        <div>
-                            <div>🏠 Professional Roofing</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Licensed • Insured • Guaranteed</div>
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);">
+                            <div>
+                                <div>🏠 Professional Roofing</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Licensed • Insured • Guaranteed</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Pinnacle Roofing Co.</h3>
                         <p class="business-type">Roofing Services</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 6: Pool Service -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
-                        <div>
-                            <div>🏊‍♂️ Crystal Clear Pools</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Clean • Maintain • Repair</div>
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
+                            <div>
+                                <div>🏊‍♂️ Crystal Clear Pools</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Clean • Maintain • Repair</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">AquaBlue Pool Service</h3>
                         <p class="business-type">Pool Maintenance</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 7: Bakery -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);">
-                        <div>
-                            <div>🥐 Artisan Bakery</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Fresh • Local • Delicious</div>
+                <!-- Portfolio Item 7 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);">
+                            <div>
+                                <div>🥐 Artisan Bakery</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Fresh • Local • Delicious</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Sunrise Bakehouse</h3>
                         <p class="business-type">Bakery & Cafe</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 8: Dental -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #4fd1c7 0%, #38b2ac 100%);">
-                        <div>
-                            <div>🦷 Family Dentistry</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Gentle • Modern • Caring</div>
+                <!-- Portfolio Item 8 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #4fd1c7 0%, #38b2ac 100%);">
+                            <div>
+                                <div>🦷 Family Dentistry</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Gentle • Modern • Caring</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Coastal Dental Care</h3>
                         <p class="business-type">Dental Practice</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
 
-                <!-- Sample Site 9: Cleaning -->
-                <div class="card">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="card-image" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
-                        <div>
-                            <div>✨ Elite Cleaning</div>
-                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Residential • Commercial</div>
+                <!-- Portfolio Item 9 -->
+                <div class="portfolio-card">
+                    <div class="laptop-frame">
+                        <div class="laptop-screen" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
+                            <div>
+                                <div>✨ Elite Cleaning</div>
+                                <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Residential • Commercial</div>
+                            </div>
                         </div>
+                        <div class="laptop-bottom"></div>
                     </div>
-                    <div class="card-content">
+                    <div class="portfolio-info">
                         <h3 class="business-name">Spotless Solutions</h3>
                         <p class="business-type">Cleaning Services</p>
-                        <a href="#" class="view-btn">View Sample</a>
+                        <a href="#" class="view-project">View Project →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Before & After Section -->
-    <section class="before-after">
+    <!-- 5. How It Works Process Section -->
+    <section class="process" id="process">
         <div class="container">
-            <div class="before-after-content">
-                <h2>This Is What We Do</h2>
-                <p>We take outdated, underperforming websites and transform them into modern, mobile-friendly sites that actually bring in customers.</p>
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="process-icon">🔍</div>
+                    <h3>I Find Your Business</h3>
+                    <p>I research your business, competitors, and customers to understand what makes you unique.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">🎨</div>
+                    <h3>I Build Your Sample</h3>
+                    <p>Within 48 hours, you'll have a custom website mockup — completely free, no strings attached.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">✅</div>
+                    <h3>You Review & Approve</h3>
+                    <p>Love it? Hate it? Want changes? We refine it until it's perfect.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">🚀</div>
+                    <h3>We Go Live</h3>
+                    <p>Your new website goes live, optimized for Google, and ready to bring in customers.</p>
+                </div>
             </div>
-            <div class="comparison-grid">
-                <div class="before-mockup">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="before-content">
+        </div>
+    </section>
+
+    <!-- 6. Before & After Case Study -->
+    <section class="case-study">
+        <div class="container">
+            <div class="case-study-content">
+                <h2>Real Results. Real Businesses.</h2>
+                <p>We transform outdated websites into modern, customer-converting machines.</p>
+            </div>
+            <div class="comparison-container">
+                <div class="before-after-card">
+                    <div class="before-site">
                         <h3>WELCOME TO BOB'S PLUMBING!!!</h3>
-                        <p class="blink">*** CLICK HERE FOR DEALS ***</p>
-                        <p>WE HAVE BEEN SERVING THE COMMUNITY FOR OVER 20 YEARS!!!</p>
-                        <p style="background: yellow; color: red;">CALL NOW!!!</p>
-                        <p>Our website was built in 2008 and we never updated it...</p>
-                        <p class="blink">EMERGENCY SERVICE AVAILABLE</p>
-                        <p>Email us at: bobsplumbing@hotmail.com</p>
-                        <p>Or call: 555-OLD-PIPE</p>
+                        <div class="under-construction">🚧 UNDER CONSTRUCTION 🚧</div>
+                        <p>WE HAVE BEEN IN BUSINESS SINCE 1985!!!</p>
+                        <p>CALL US AT 555-PLUMBER</p>
+                        <p style="font-size: 10px;">Best viewed in Internet Explorer 6</p>
+                        <p style="background: lime; color: red;">CLICK HERE FOR DEALS!!!</p>
+                        <p>Email: plumber@aol.com</p>
+                        <div style="background: yellow; color: blue;">Visitor Counter: 00147</div>
                     </div>
                 </div>
-                <div class="after-mockup">
-                    <div class="browser-frame">
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                        <div class="browser-dot"></div>
-                    </div>
-                    <div class="after-content">
+                <div class="before-after-card">
+                    <div class="after-site">
                         <h3>🔧 Professional Plumbing Services</h3>
                         <p>24/7 Emergency Services • Licensed & Insured</p>
                         <p>Fast, reliable plumbing solutions for your home or business. Get your free estimate today.</p>
-                        <div class="cta-button">Get Free Quote</div>
+                        <a href="#" class="cta-btn" style="margin-top: 1rem;">Get Free Quote</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <div class="container">
-            <h2 class="section-title">What's Included</h2>
-            <div class="pricing-grid">
-                <!-- Starter Package -->
-                <div class="pricing-card">
-                    <h3>Starter Package</h3>
-                    <div class="price">$99</div>
-                    <div class="price-period">per month</div>
-                    <ul class="feature-list">
-                        <li>Custom Website Design</li>
-                        <li>Web Hosting & SSL Certificate</li>
-                        <li>Mobile Responsive</li>
-                        <li>2 Website Updates/Month</li>
-                        <li>Google Business Profile Setup</li>
-                        <li>Basic Contact Forms</li>
-                        <li>Social Media Links</li>
-                    </ul>
+            <div class="stats-comparison">
+                <div class="stat-item">
+                    <div><span class="stat-before">12s</span> → <span class="stat-after">1.2s</span></div>
+                    <div>Page Load Time</div>
                 </div>
-
-                <!-- Growth Package (Featured) -->
-                <div class="pricing-card featured">
-                    <h3>Growth Package</h3>
-                    <div class="price">$149</div>
-                    <div class="price-period">per month</div>
-                    <ul class="feature-list">
-                        <li>Everything in Starter Package</li>
-                        <li>Monthly SEO Blog Post</li>
-                        <li>Google Business Optimization</li>
-                        <li>Review Management Setup</li>
-                        <li>Basic Analytics Dashboard</li>
-                        <li>Local SEO Optimization</li>
-                        <li>5 Website Updates/Month</li>
-                    </ul>
+                <div class="stat-item">
+                    <div><span class="stat-before">15</span> → <span class="stat-after">98</span></div>
+                    <div>Mobile Score</div>
                 </div>
-
-                <!-- Pro Package -->
-                <div class="pricing-card">
-                    <h3>Pro Package</h3>
-                    <div class="price">$199</div>
-                    <div class="price-period">per month</div>
-                    <ul class="feature-list">
-                        <li>Everything in Growth Package</li>
-                        <li>Weekly Blog Posts (4/month)</li>
-                        <li>Social Media Graphics (4/month)</li>
-                        <li>Email Capture & Newsletter Setup</li>
-                        <li>Monthly Performance Report</li>
-                        <li>Priority Support</li>
-                        <li>Unlimited Minor Updates</li>
-                    </ul>
+                <div class="stat-item">
+                    <div><span class="stat-before">2</span> → <span class="stat-after">15</span></div>
+                    <div>Monthly Calls</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Table -->
+    <!-- 7. Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">Robbie built us a website in 2 days that looks better than what my friend paid $5,000 for. Incredible value.</p>
+                    <div class="testimonial-author">Maria S., Owner</div>
+                    <div class="author-role">Boca Raton Salon <span class="beta-badge">BETA CLIENT</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">We've been getting calls from Google since the new site went up. Should've done this years ago.</p>
+                    <div class="testimonial-author">Tom R., Plumbing Contractor</div>
+                    <div class="author-role">West Palm Beach <span class="beta-badge">BETA CLIENT</span></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">No contracts, no BS. Robbie just delivers. The monthly SEO updates are icing on the cake.</p>
+                    <div class="testimonial-author">James K., Auto Repair</div>
+                    <div class="author-role">Fort Lauderdale <span class="beta-badge">BETA CLIENT</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$99</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>Custom Website Design</li>
+                        <li>Mobile Responsive</li>
+                        <li>Web Hosting & SSL</li>
+                        <li>Google Business Setup</li>
+                        <li>Contact Forms</li>
+                        <li>2 Updates/Month</li>
+                        <li>Basic Support</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <h3>Growth</h3>
+                    <div class="price">$149</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>Everything in Starter</li>
+                        <li>Monthly SEO Blog Post</li>
+                        <li>Local SEO Optimization</li>
+                        <li>Review Management</li>
+                        <li>Analytics Dashboard</li>
+                        <li>5 Updates/Month</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">$199</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>Everything in Growth</li>
+                        <li>Weekly Blog Posts</li>
+                        <li>Social Media Graphics</li>
+                        <li>Email Newsletter Setup</li>
+                        <li>Monthly Reports</li>
+                        <li>Unlimited Updates</li>
+                        <li>24/7 Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Started</a>
+                </div>
+            </div>
+            <p class="pricing-disclaimer">No contracts. Cancel anytime.</p>
+        </div>
+    </section>
+
+    <!-- 9. Comparison Table -->
     <section class="comparison">
         <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
+            <h2 class="section-title">Why Us?</h2>
             <div class="comparison-table">
                 <table>
                     <thead>
                         <tr>
                             <th></th>
-                            <th class="highlight">Us ($99/mo)</th>
-                            <th>Web Agency ($3,000+)</th>
-                            <th>DIY (Wix/Squarespace)</th>
+                            <th class="highlight">Us</th>
+                            <th>Web Agency</th>
+                            <th>DIY</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Upfront Cost</strong></td>
-                            <td class="highlight"><span class="checkmark">✓</span> $0</td>
-                            <td><span class="crossmark">✗</span> $3,000-10,000</td>
-                            <td><span class="checkmark">✓</span> $0</td>
+                            <td class="highlight"><span class="check">✓</span> $0</td>
+                            <td><span class="cross">✗</span> $3,000-10,000</td>
+                            <td><span class="check">✓</span> $0</td>
                         </tr>
                         <tr>
                             <td><strong>Monthly Cost</strong></td>
                             <td class="highlight">$99-199</td>
-                            <td>$100-300</td>
+                            <td>$100-300+</td>
                             <td>$16-50</td>
                         </tr>
                         <tr>
                             <td><strong>Custom Design</strong></td>
-                            <td class="highlight"><span class="checkmark">✓</span> Yes</td>
-                            <td><span class="checkmark">✓</span> Yes</td>
-                            <td><span class="crossmark">✗</span> Template</td>
+                            <td class="highlight"><span class="check">✓</span> Yes</td>
+                            <td><span class="check">✓</span> Yes</td>
+                            <td><span class="cross">✗</span> Template Only</td>
                         </tr>
                         <tr>
                             <td><strong>SEO Included</strong></td>
-                            <td class="highlight"><span class="checkmark">✓</span> Yes</td>
-                            <td>Sometimes</td>
-                            <td><span class="crossmark">✗</span> No</td>
+                            <td class="highlight"><span class="check">✓</span> Yes</td>
+                            <td><span class="cross">✗</span> Extra Cost</td>
+                            <td><span class="cross">✗</span> Basic Only</td>
                         </tr>
                         <tr>
                             <td><strong>Turnaround</strong></td>
-                            <td class="highlight"><span class="checkmark">✓</span> 48-72 hrs</td>
-                            <td><span class="crossmark">✗</span> 4-8 weeks</td>
-                            <td><span class="crossmark">✗</span> You do it</td>
+                            <td class="highlight"><span class="check">✓</span> 48-72 hours</td>
+                            <td><span class="cross">✗</span> 4-8 weeks</td>
+                            <td><span class="cross">✗</span> DIY</td>
                         </tr>
                         <tr>
                             <td><strong>Ongoing Support</strong></td>
-                            <td class="highlight"><span class="checkmark">✓</span> Unlimited</td>
-                            <td>Limited</td>
-                            <td><span class="crossmark">✗</span> None</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Google Business Setup</strong></td>
-                            <td class="highlight"><span class="checkmark">✓</span> Included</td>
-                            <td>Extra cost</td>
-                            <td><span class="crossmark">✗</span> No</td>
+                            <td class="highlight"><span class="check">✓</span> Unlimited</td>
+                            <td><span class="cross">✗</span> Limited</td>
+                            <td><span class="cross">✗</span> None</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1253,144 +1480,211 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
+    <!-- 10. FAQ Accordion -->
+    <section class="faq" id="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <details>
-                        <summary>How long does it take to get my website live?</summary>
-                        <div class="faq-answer">
-                            Most sites go live within 48-72 hours. We handle everything — design, hosting, domain setup.
-                        </div>
-                    </details>
+                    <button class="faq-question">
+                        How long does it take to get my website live?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most sites go live within 48-72 hours. We handle everything — design, hosting, domain setup, and optimization.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <details>
-                        <summary>Can I cancel anytime?</summary>
-                        <div class="faq-answer">
-                            Absolutely. No contracts, no cancellation fees. We earn your business every month.
-                        </div>
-                    </details>
+                    <button class="faq-question">
+                        Can I cancel anytime?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. No contracts, no cancellation fees. We earn your business every month by delivering results.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <details>
-                        <summary>Do I need to provide content?</summary>
-                        <div class="faq-answer">
-                            Nope. We write all the copy, source professional images, and design everything. Just tell us about your business.
-                        </div>
-                    </details>
+                    <button class="faq-question">
+                        Do I need to provide content?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nope. We write all the copy, source professional images, and design everything. Just tell us about your business and we handle the rest.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <details>
-                        <summary>What if I already have a website?</summary>
-                        <div class="faq-answer">
-                            We'll rebuild it from scratch with modern design, faster loading, and mobile optimization. We handle the migration.
-                        </div>
-                    </details>
+                    <button class="faq-question">
+                        What if I already have a website?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We'll rebuild it from scratch with modern design, faster loading, and mobile optimization. We handle the migration seamlessly.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <details>
-                        <summary>Do you help with Google rankings?</summary>
-                        <div class="faq-answer">
-                            Yes! Our Growth and Pro packages include SEO optimization to help you rank higher in local searches.
-                        </div>
-                    </details>
+                    <button class="faq-question">
+                        Do you help with Google rankings?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Our Growth and Pro packages include comprehensive SEO optimization to help you rank higher in local searches and attract more customers.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <details>
-                        <summary>What's included in the monthly fee?</summary>
-                        <div class="faq-answer">
-                            Hosting, SSL security, updates, edits, and ongoing support. No hidden fees.
-                        </div>
-                    </details>
+                    <button class="faq-question">
+                        What's included in the monthly fee?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Hosting, SSL security, regular updates, content edits, ongoing support, and SEO optimization. No hidden fees, ever.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- 11. Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <h2>Let's Talk About Your Business</h2>
-            <p>I'll create a custom sample website specifically for your business - completely free, no strings attached. See exactly what your new professional website could look like.</p>
-            <div class="cta-buttons">
-                <a href="mailto:robertgetsyouleads@gmail.com?subject=Free Website Sample Request" class="cta-btn">Get My Free Sample</a>
-                <a href="tel:5743337083" class="cta-btn secondary">Call Robbie Now</a>
+            <h2 class="section-title">Ready to Get Started? Let's Talk.</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/placeholder" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="business">Business Name</label>
+                                <input type="text" id="business" name="business" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell me about your business</label>
+                            <textarea id="message" name="message" placeholder="What type of business do you have? What services do you offer? Any specific features you need?" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-btn">Get My Free Sample</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:5743337083" style="color: #1A2B4A; text-decoration: none;">(574) 333-7083</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:robertgetsyouleads@gmail.com" style="color: #1A2B4A; text-decoration: none;">robertgetsyouleads@gmail.com</a>
+                    </div>
+                    <div class="response-time">
+                        ⚡ I typically respond within 2 hours
+                    </div>
+                    <div class="map-placeholder">
+                        📍 Serving South Florida
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form">
-        <div class="container">
-            <h2 class="section-title">Ready to Get Started?</h2>
-            <div class="form-container">
-                <form action="https://formspree.io/f/placeholder" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="business-name">Business Name</label>
-                            <input type="text" id="business-name" name="business-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="your-name">Your Name</label>
-                            <input type="text" id="your-name" name="your-name" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="business-info">Tell us about your business</label>
-                        <textarea id="business-info" name="business-info" placeholder="What type of business do you have? What services do you offer? Any specific features you need?" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Get My Free Sample Website</button>
-                </form>
-                <p style="text-align: center; margin-top: 1.5rem; color: #718096; font-size: 1.1rem;">
-                    Or call Robbie directly at <a href="tel:5743337083" style="color: #E8725A; font-weight: 600;">(574) 333-7083</a> 
-                    or email <a href="mailto:robertgetsyouleads@gmail.com" style="color: #E8725A; font-weight: 600;">robertgetsyouleads@gmail.com</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- 12. Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <h4>Contact Information</h4>
-                    <p>Robbie Brady</p>
-                    <p><a href="tel:5743337083">(574) 333-7083</a></p>
-                    <p><a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a></p>
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:5743337083">(574) 333-7083</a></li>
+                        <li><a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a></li>
+                        <li>South Florida</li>
+                    </ul>
                 </div>
                 <div>
                     <h4>Service Areas</h4>
-                    <p>Boca Raton, FL</p>
-                    <p>West Palm Beach, FL</p>
-                    <p>Fort Lauderdale, FL</p>
-                    <p>Delray Beach, FL</p>
+                    <ul class="footer-links">
+                        <li>Boca Raton</li>
+                        <li>West Palm Beach</li>
+                        <li>Fort Lauderdale</li>
+                        <li>Delray Beach</li>
+                        <li>Boynton Beach</li>
+                        <li>Jupiter</li>
+                    </ul>
                 </div>
                 <div>
                     <h4>Services</h4>
-                    <p>Website Design</p>
-                    <p>Local SEO</p>
-                    <p>Google Business Optimization</p>
-                    <p>Monthly Website Maintenance</p>
+                    <ul class="footer-links">
+                        <li>Web Design</li>
+                        <li>Local SEO</li>
+                        <li>Google Business</li>
+                        <li>Website Maintenance</li>
+                    </ul>
                 </div>
             </div>
-            <p style="border-top: 1px solid #4a5568; padding-top: 2rem; margin-top: 2rem; opacity: 0.7;">
-                © 2026 Robbie Gets You Leads. "I build websites that get you more customers, not just compliments."
-            </p>
+            <div class="footer-bottom">
+                <p>© 2026 Robbie Gets You Leads</p>
+                <p class="footer-tagline">Websites that work as hard as you do.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animations
+        document.querySelectorAll('.result-item, .portfolio-card, .process-step, .testimonial-card, .fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
