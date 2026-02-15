@@ -3,83 +3,817 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Julian Salon - Premier Hair Styling & Beauty Services</title>
-    <meta name="description" content="Stephen Julian Salon - Expert hair styling, cuts, and beauty services. Personalized attention and premium results for every client.">
+    <title>Stephen Julian Salon | Elevate Your Style | South Florida</title>
+    <meta name="description" content="Stephen Julian Salon - Modern, edgy hair studio in South Florida. Precision cuts, creative color, and avant-garde styling. Book your appointment today.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary-color: #8b5cf6; --primary-dark: #7c3aed; --white: #ffffff; --text-dark: #1e293b; --background-light: #faf5ff; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn-primary { background: var(--primary-color); color: var(--white); padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 600; }
-        .hero { background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: var(--white); min-height: 100vh; display: flex; align-items: center; text-align: center; }
-        .section { padding: 5rem 0; }
-        .footer { background: var(--text-dark); color: var(--white); padding: 3rem 0; text-align: center; }
-        h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .service-card { background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gold: #C9A96E;
+            --dark-gold: #B8935A;
+            --charcoal: #1A1A1A;
+            --light-gray: #F8F8F8;
+            --medium-gray: #CCCCCC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .cta-btn {
+            background: var(--black);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--black);
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .cta-btn:hover {
+            background: var(--white);
+            color: var(--black);
+            border-color: var(--black);
+        }
+
+        .cta-btn.gold {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--black);
+        }
+
+        .cta-btn.gold:hover {
+            background: var(--dark-gold);
+            border-color: var(--dark-gold);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(201, 169, 110, 0.1));
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--black);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+        }
+
+        .signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover img {
+            filter: grayscale(0%) contrast(1);
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid var(--gold);
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover::after {
+            top: 10px;
+            left: 10px;
+            right: -10px;
+            bottom: -10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+            font-weight: 400;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 0;
+        }
+
+        .service-card {
+            background: var(--black);
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid var(--charcoal);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.1), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-weight: 400;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .service-price {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background: var(--black);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .gallery-content {
+            padding: 2rem;
+        }
+
+        .gallery-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .gallery-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .contact-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item h4 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .booking-card {
+            background: var(--black);
+            border: 2px solid var(--gold);
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .booking-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--gold), var(--white), var(--gold));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .booking-card:hover::before {
+            opacity: 1;
+        }
+
+        .booking-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .booking-card p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .consultation-note {
+            background: rgba(201, 169, 110, 0.1);
+            border: 1px solid var(--gold);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .consultation-note h4 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .consultation-note ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .consultation-note li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .consultation-note li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            text-align: center;
+            border-top: 1px solid var(--charcoal);
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .footer-credit {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--charcoal);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .footer-credit a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .about-image::after {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="container">
-            <h1>Elevate Your Style at Stephen Julian Salon</h1>
-            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Premium hair styling and beauty services with personalized attention for every client.</p>
-            <a href="mailto:stephenjuliansalon@gmail.com" class="btn-primary">Book Appointment</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Stephen Julian</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="cta-btn">Book Now</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <div class="section" style="background: var(--background-light);">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Style</h1>
+            <p class="hero-subtitle">Modern Hair Studio</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-btn gold">Book Consultation</a>
+                <a href="#services" class="cta-btn">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Our Salon Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>✂️ Hair Cuts & Styling</h3>
-                    <p>Expert cuts and styling tailored to your individual style and personality.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>The Art of Modern Hair</h2>
+                    <p>At Stephen Julian Salon, we don't just cut hair—we sculpt masterpieces. Our avant-garde approach combines precision technique with bold creativity, delivering looks that are both timeless and cutting-edge.</p>
+                    <p>Every client is a canvas, every cut a work of art. We believe in pushing boundaries, challenging conventions, and creating styles that make a statement as bold as you are.</p>
+                    <p>This isn't just a salon—it's a studio where hair becomes high fashion.</p>
+                    <div class="signature">— Stephen Julian</div>
                 </div>
-                <div class="service-card">
-                    <h3>🎨 Hair Color Services</h3>
-                    <p>Professional coloring, highlights, and color corrections using premium products.</p>
-                </div>
-                <div class="service-card">
-                    <h3>💇‍♀️ Blowouts & Updos</h3>
-                    <p>Beautiful blowouts and elegant updos for any occasion or special event.</p>
-                </div>
-                <div class="service-card">
-                    <h3>✨ Hair Treatments</h3>
-                    <p>Nourishing treatments to restore health, shine, and vitality to your hair.</p>
-                </div>
-                <div class="service-card">
-                    <h3>👰 Special Event Styling</h3>
-                    <p>Bridal and special event hair styling to make your day unforgettable.</p>
-                </div>
-                <div class="service-card">
-                    <h3>💎 Consultation Services</h3>
-                    <p>Personalized consultations to find the perfect look for your lifestyle.</p>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800" alt="Modern hair styling">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <div class="container" style="text-align: center;">
-            <h2>Experience the Stephen Julian Difference</h2>
-            <p style="margin: 2rem 0; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">At Stephen Julian Salon, we believe every client deserves personalized attention and exceptional results. Our passion is helping you look and feel your absolute best.</p>
-            
-            <h3 style="margin-top: 3rem;">Book Your Appointment</h3>
-            <p style="margin: 1rem 0; font-size: 1.1rem;">📧 <a href="mailto:stephenjuliansalon@gmail.com" style="color: var(--primary-color); font-weight: 600;">stephenjuliansalon@gmail.com</a></p>
-            <p>Professional hair care with a personal touch</p>
-            <a href="mailto:stephenjuliansalon@gmail.com" class="btn-primary" style="margin-top: 2rem;">Contact Stephen</a>
-        </div>
-    </div>
-
-    <div class="footer">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
-            <h3>Stephen Julian Salon</h3>
-            <p>Premium hair styling and beauty services</p>
-            <p>📧 stephenjuliansalon@gmail.com</p>
-            <p style="margin-top: 2rem; font-size: 0.9rem; color: #9ca3af;">Website designed by <a href="https://robbiegetstoyouleads.com" style="color: #f59e0b;">RobbieGetsYouLeads.com</a></p>
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Precision Cuts</h3>
+                    <p>Architectural cuts that define modern sophistication. Every angle calculated, every line deliberate.</p>
+                    <div class="service-price">From $120</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Creative Color</h3>
+                    <p>Bold color concepts that challenge the ordinary. From subtle refinement to dramatic transformation.</p>
+                    <div class="service-price">From $180</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Highlights & Lowlights</h3>
+                    <p>Dimensional color work that adds depth and movement. Precision placement for maximum impact.</p>
+                    <div class="service-price">From $160</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h3>Hair Treatments</h3>
+                    <p>Restorative treatments using premium products. Repair, strengthen, and revitalize.</p>
+                    <div class="service-price">From $85</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Styling & Blowouts</h3>
+                    <p>Professional styling for any occasion. From sleek and modern to textured and edgy.</p>
+                    <div class="service-price">From $65</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">👑</div>
+                    <h3>Special Occasions</h3>
+                    <p>Editorial-quality styling for events, photoshoots, and special moments that demand perfection.</p>
+                    <div class="service-price">From $150</div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--black);">Portfolio</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <h4>Geometric Precision</h4>
+                        <p>Sharp angles meet soft textures in this modern interpretation of the classic bob.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <h4>Color Architecture</h4>
+                        <p>Strategic color placement creates depth and dimension in this editorial-inspired look.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <h4>Avant-Garde Styling</h4>
+                        <p>Pushing creative boundaries with sculptural shapes and innovative techniques.</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-content">
+                        <h4>Textural Contrast</h4>
+                        <p>Playing with texture and movement to create dynamic, multi-dimensional styles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Book Your Transformation</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Studio Information</h3>
+                    
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p><a href="tel:5615550301">(561) 555-0301</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Location</h4>
+                        <p>South Florida<br>By appointment only</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Hours</h4>
+                        <p>Tuesday - Saturday<br>
+                           10:00am - 7:00pm<br>
+                           Closed Sunday & Monday</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Consultation</h4>
+                        <p>Complimentary consultations<br>
+                           for first-time clients<br>
+                           Advanced booking required</p>
+                    </div>
+                </div>
+                
+                <div class="booking-card">
+                    <h3>Ready to Elevate Your Style?</h3>
+                    <p>Book your consultation with South Florida's most innovative hair artist. Let's create something extraordinary together.</p>
+                    
+                    <div class="consultation-note">
+                        <h4>What to Expect:</h4>
+                        <ul>
+                            <li>In-depth style consultation</li>
+                            <li>Professional hair analysis</li>
+                            <li>Personalized treatment plan</li>
+                            <li>Color and cut recommendations</li>
+                            <li>Styling and maintenance guidance</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <a href="tel:5615550301" class="cta-btn gold" style="margin-bottom: 1rem; display: block;">Call (561) 555-0301</a>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Appointments available Tuesday - Saturday</p>
+                    </div>
+                    
+                    <div style="border-top: 1px solid var(--gold); padding-top: 1.5rem; margin-top: 2rem;">
+                        <p style="font-size: 0.9rem; opacity: 0.8; font-style: italic;">
+                            "Every appointment is a collaboration between artist and muse. Come ready to be transformed."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Stephen Julian Salon</h3>
+                <p>Modern Hair Studio • South Florida</p>
+                <p>📞 <a href="tel:5615550301">(561) 555-0301</a></p>
+                <p>Where Hair Becomes High Fashion</p>
+            </div>
+            
+            <div class="footer-credit">
+                <p>Website by <a href="https://robbiegetstoyouleads.com" target="_blank">Robbie Gets You Leads</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
