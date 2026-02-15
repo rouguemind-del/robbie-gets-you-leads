@@ -6,6 +6,9 @@
     <title>See What We Can Build For Your Business | Robbie Gets You Leads</title>
     <meta name="description" content="Browse 9 sample websites we've built for local businesses. See what your new professional website could look like.">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -14,351 +17,312 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8fafc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #1B2A4A;
+            background: #FAFAF7;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
+            background: linear-gradient(135deg, #FAFAF7 0%, #F5F3F0 100%);
+            background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            position: relative;
+            padding: 120px 0;
             text-align: center;
         }
 
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(250, 250, 247, 0.95) 0%, rgba(245, 243, 240, 0.9) 100%);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
         .header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            color: #1B2A4A;
+        }
+
+        .header .subheading {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: #E8725A;
+            font-weight: 600;
+            font-style: italic;
         }
 
         .header p {
             font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
+            color: #4A5568;
+            max-width: 700px;
             margin: 0 auto;
+            line-height: 1.8;
         }
 
-        /* Portfolio Grid */
-        .portfolio {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2d3748;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .card {
+        /* About Robbie Section */
+        .about-robbie {
+            padding: 100px 0;
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        .about-robbie h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: #1B2A4A;
         }
 
-        .card-image {
-            height: 200px;
+        .about-robbie p {
+            font-size: 1.3rem;
+            color: #4A5568;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 0;
+            background: #FAFAF7;
+        }
+
+        .how-it-works h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #1B2A4A;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            background: #E8725A;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .business-name {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #2d3748;
-        }
-
-        .business-type {
-            color: #718096;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .view-btn {
-            background: #667eea;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .view-btn:hover {
-            background: #5a67d8;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .pricing-card {
-            background: #f8fafc;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: border-color 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            border-color: #667eea;
-        }
-
-        .pricing-card.featured {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: #667eea;
-            transform: scale(1.05);
-        }
-
-        .pricing-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-period {
-            opacity: 0.7;
-            margin-bottom: 2rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            text-align: left;
-        }
-
-        .feature-list li {
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .feature-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #48bb78;
-            font-weight: bold;
-        }
-
-        .pricing-card.featured .feature-list li:before {
-            color: #68d391;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-btn {
-            background: #e53e3e;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
             font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.3s ease;
+            margin: 0 auto 1.5rem;
         }
 
-        .cta-btn:hover {
-            background: #c53030;
-        }
-
-        .cta-btn.secondary {
-            background: transparent;
-            border: 2px solid white;
-        }
-
-        .cta-btn.secondary:hover {
-            background: white;
-            color: #2d3748;
-        }
-
-        /* Footer */
-        .footer {
-            background: #2d3748;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer h4 {
+        .step h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
-            color: #e2e8f0;
+            color: #1B2A4A;
         }
 
-        .footer p, .footer a {
-            color: #a0aec0;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: white;
+        .step p {
+            color: #4A5568;
+            font-size: 1.1rem;
         }
 
         /* Stats Banner */
         .stats-banner {
-            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            background: linear-gradient(135deg, #1B2A4A 0%, #2D3748 100%);
             color: white;
-            padding: 60px 0;
+            padding: 80px 0;
         }
 
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 3rem;
             text-align: center;
         }
 
         .stat-item h3 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #68d391;
+            margin-bottom: 1rem;
+            color: #D4A853;
         }
 
         .stat-item p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             opacity: 0.9;
+            line-height: 1.6;
         }
 
-        /* Before & After Section */
-        .before-after {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-
-        .before-after-content {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .before-after h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2d3748;
-        }
-
-        .before-after p {
-            font-size: 1.2rem;
-            color: #718096;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-
-        .before-mockup {
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 0;
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .mockup-browser {
-            background: #e2e8f0;
-            padding: 8px 12px;
+        .section-title {
+            text-align: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 4rem;
+            color: #1B2A4A;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(27, 42, 74, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(27, 42, 74, 0.15);
+        }
+
+        /* Browser Mockup Frame */
+        .browser-frame {
+            background: #E2E8F0;
+            padding: 12px 16px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .browser-dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: #a0aec0;
+            background: #CBD5E0;
+        }
+
+        .browser-dot:nth-child(1) { background: #FC8181; }
+        .browser-dot:nth-child(2) { background: #F6E05E; }
+        .browser-dot:nth-child(3) { background: #68D391; }
+
+        .card-image {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .business-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #1B2A4A;
+        }
+
+        .business-type {
+            color: #718096;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .view-btn {
+            background: #E8725A;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .view-btn:hover {
+            background: #D63E2B;
+            transform: translateY(-2px);
+        }
+
+        /* Before & After Section */
+        .before-after {
+            padding: 100px 0;
+            background: #FAFAF7;
+        }
+
+        .before-after-content {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .before-after h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: #1B2A4A;
+        }
+
+        .before-after p {
+            font-size: 1.3rem;
+            color: #4A5568;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        .before-mockup, .after-mockup {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(27, 42, 74, 0.12);
         }
 
         .before-content {
@@ -366,11 +330,11 @@
             background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
             background-size: 400% 400%;
             animation: gradient 3s ease infinite;
-            padding: 20px;
+            padding: 30px;
             color: #000;
             font-family: 'Comic Sans MS', cursive;
             text-align: center;
-            min-height: 300px;
+            min-height: 320px;
         }
 
         @keyframes gradient {
@@ -382,14 +346,14 @@
         .before-content h3 {
             color: red;
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-shadow: 2px 2px 0px yellow;
         }
 
         .before-content p {
             color: blue;
             font-size: 14px;
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
         .before-content .blink {
@@ -404,61 +368,205 @@
             100% { opacity: 1; }
         }
 
-        .after-mockup {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
         .after-content {
-            background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);
+            background: linear-gradient(135deg, #E8725A 0%, #D63E2B 100%);
             color: white;
-            padding: 40px 20px;
+            padding: 50px 30px;
             text-align: center;
-            min-height: 300px;
+            min-height: 320px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .after-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
         .after-content p {
-            margin-bottom: 1rem;
-            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .after-content .cta-button {
-            background: #e53e3e;
-            color: white;
-            padding: 12px 24px;
+            background: #D4A853;
+            color: #1B2A4A;
+            padding: 16px 32px;
             border: none;
-            border-radius: 6px;
+            border-radius: 50px;
             font-weight: 600;
             margin-top: 20px;
             display: inline-block;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .after-content .cta-button:hover {
+            background: #B8941A;
+            transform: translateY(-2px);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: white;
+            padding: 100px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .pricing-card {
+            background: #FAFAF7;
+            border: 2px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: #E8725A;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(232, 114, 90, 0.1);
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #E8725A 0%, #D63E2B 100%);
+            color: white;
+            border-color: #E8725A;
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.08) translateY(-5px);
+        }
+
+        .pricing-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: #E8725A;
+        }
+
+        .pricing-card.featured .price {
+            color: white;
+        }
+
+        .price-period {
+            opacity: 0.8;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .feature-list li {
+            padding: 0.8rem 0;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .pricing-card.featured .feature-list li:before {
+            color: #D4A853;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            background: #FAFAF7;
+            padding: 100px 0;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(27, 42, 74, 0.08);
+            margin-top: 4rem;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #E2E8F0;
+            font-size: 1.05rem;
+        }
+
+        .comparison-table th {
+            background: #1B2A4A;
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #FAFAF7;
+        }
+
+        .comparison-table .highlight {
+            background: #E8725A;
+            color: white;
+        }
+
+        .checkmark {
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .crossmark {
+            color: #E53E3E;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
         /* FAQ Section */
         .faq {
             background: white;
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .faq-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .faq-item {
-            margin-bottom: 1rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
             overflow: hidden;
         }
 
@@ -467,18 +575,19 @@
         }
 
         .faq-item summary {
-            padding: 1.5rem;
-            background: #f8fafc;
+            padding: 2rem;
+            background: #FAFAF7;
             cursor: pointer;
             font-weight: 600;
-            font-size: 1.1rem;
-            color: #2d3748;
+            font-size: 1.2rem;
+            color: #1B2A4A;
             border: none;
             outline: none;
+            transition: background 0.3s ease;
         }
 
         .faq-item summary:hover {
-            background: #edf2f7;
+            background: #F5F3F0;
         }
 
         .faq-item summary::marker {
@@ -492,8 +601,8 @@
         .faq-item summary::after {
             content: "+";
             float: right;
-            font-size: 1.5rem;
-            color: #667eea;
+            font-size: 1.8rem;
+            color: #E8725A;
         }
 
         .faq-item[open] summary::after {
@@ -501,76 +610,86 @@
         }
 
         .faq-answer {
-            padding: 1.5rem;
-            color: #4a5568;
-            line-height: 1.6;
+            padding: 2rem;
+            color: #4A5568;
+            line-height: 1.7;
+            font-size: 1.1rem;
         }
 
-        /* Comparison Table */
-        .comparison {
-            background: #f8fafc;
-            padding: 80px 0;
-        }
-
-        .comparison-table {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 3rem;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .comparison-table th {
-            background: #667eea;
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #1B2A4A 0%, #2D3748 100%);
             color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #E8725A;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
             font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
 
-        .comparison-table tr:nth-child(even) {
-            background: #f8fafc;
+        .cta-btn:hover {
+            background: #D63E2B;
+            transform: translateY(-2px);
         }
 
-        .comparison-table .highlight {
-            background: #667eea;
-            color: white;
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid white;
         }
 
-        .checkmark {
-            color: #48bb78;
-            font-weight: bold;
-        }
-
-        .crossmark {
-            color: #e53e3e;
-            font-weight: bold;
+        .cta-btn.secondary:hover {
+            background: white;
+            color: #1B2A4A;
         }
 
         /* Contact Form */
         .contact-form {
             background: white;
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .form-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         .contact-form form {
             display: grid;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .form-group {
@@ -581,59 +700,95 @@
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .form-group label {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             font-weight: 600;
-            color: #2d3748;
+            color: #1B2A4A;
+            font-size: 1.1rem;
         }
 
         .form-group input,
         .form-group textarea {
-            padding: 0.75rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 6px;
+            padding: 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #E8725A;
         }
 
         .form-group textarea {
-            min-height: 120px;
+            min-height: 140px;
             resize: vertical;
         }
 
         .submit-btn {
-            background: #667eea;
+            background: #E8725A;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            justify-self: center;
         }
 
         .submit-btn:hover {
-            background: #5a67d8;
+            background: #D63E2B;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1B2A4A;
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer h4 {
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 1.5rem;
+            color: #D4A853;
+            font-size: 1.3rem;
+        }
+
+        .footer p, .footer a {
+            color: #CBD5E0;
+            text-decoration: none;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .footer a:hover {
+            color: #E8725A;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .grid {
@@ -668,7 +823,15 @@
 
             .comparison-table th,
             .comparison-table td {
-                padding: 0.5rem;
+                padding: 1rem;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 20px;
             }
         }
     </style>
@@ -677,10 +840,45 @@
     <!-- Header Section -->
     <div class="header">
         <div class="container">
-            <h1>See What We Can Build For Your Business</h1>
-            <p>Professional websites that turn visitors into customers. Browse our portfolio of local business websites and imagine what yours could look like.</p>
+            <div class="header-content">
+                <h1>See What We Can Build For Your Business</h1>
+                <p class="subheading">Hey, I'm Robbie. I build beautiful websites for local businesses in South Florida — and I'd love to build yours.</p>
+                <p>Professional websites that turn visitors into customers. Browse our portfolio of local business websites and imagine what yours could look like.</p>
+            </div>
         </div>
     </div>
+
+    <!-- About Robbie Section -->
+    <section class="about-robbie">
+        <div class="container">
+            <h2>About Robbie</h2>
+            <p>I'm a South Florida-based web designer who believes every local business deserves a website that works as hard as they do. No big agency overhead. No long contracts. Just great websites at honest prices.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>I build you a free sample</h3>
+                    <p>Tell me about your business and I'll create a custom sample website just for you - completely free, no strings attached.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>You tell me what you think</h3>
+                    <p>Review your sample site and let me know what you'd like to change. We'll work together to get it perfect.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>We go live in 48 hours</h3>
+                    <p>Once you're happy with everything, your new professional website goes live within 48 hours. That's it!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Stats Banner -->
     <section class="stats-banner">
@@ -713,6 +911,11 @@
             <div class="grid">
                 <!-- Sample Site 1: Plumber -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);">
                         <div>
                             <div>🔧 Professional Plumbing Services</div>
@@ -728,6 +931,11 @@
 
                 <!-- Sample Site 2: Landscaping -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
                         <div>
                             <div>🌳 Premium Landscaping</div>
@@ -743,6 +951,11 @@
 
                 <!-- Sample Site 3: Auto Repair -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);">
                         <div>
                             <div>🚗 Expert Auto Repair</div>
@@ -758,6 +971,11 @@
 
                 <!-- Sample Site 4: Hair Salon -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #ed64a6 0%, #d53f8c 100%);">
                         <div>
                             <div>💇‍♀️ Modern Hair Studio</div>
@@ -773,6 +991,11 @@
 
                 <!-- Sample Site 5: Roofing -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);">
                         <div>
                             <div>🏠 Professional Roofing</div>
@@ -788,6 +1011,11 @@
 
                 <!-- Sample Site 6: Pool Service -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
                         <div>
                             <div>🏊‍♂️ Crystal Clear Pools</div>
@@ -803,6 +1031,11 @@
 
                 <!-- Sample Site 7: Bakery -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);">
                         <div>
                             <div>🥐 Artisan Bakery</div>
@@ -818,6 +1051,11 @@
 
                 <!-- Sample Site 8: Dental -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #4fd1c7 0%, #38b2ac 100%);">
                         <div>
                             <div>🦷 Family Dentistry</div>
@@ -833,6 +1071,11 @@
 
                 <!-- Sample Site 9: Cleaning -->
                 <div class="card">
+                    <div class="browser-frame">
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                        <div class="browser-dot"></div>
+                    </div>
                     <div class="card-image" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
                         <div>
                             <div>✨ Elite Cleaning</div>
@@ -858,7 +1101,7 @@
             </div>
             <div class="comparison-grid">
                 <div class="before-mockup">
-                    <div class="mockup-browser">
+                    <div class="browser-frame">
                         <div class="browser-dot"></div>
                         <div class="browser-dot"></div>
                         <div class="browser-dot"></div>
@@ -875,7 +1118,7 @@
                     </div>
                 </div>
                 <div class="after-mockup">
-                    <div class="mockup-browser">
+                    <div class="browser-frame">
                         <div class="browser-dot"></div>
                         <div class="browser-dot"></div>
                         <div class="browser-dot"></div>
@@ -1070,7 +1313,7 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Want a Free Sample for YOUR Business?</h2>
+            <h2>Let's Talk About Your Business</h2>
             <p>I'll create a custom sample website specifically for your business - completely free, no strings attached. See exactly what your new professional website could look like.</p>
             <div class="cta-buttons">
                 <a href="mailto:robertgetsyouleads@gmail.com?subject=Free Website Sample Request" class="cta-btn">Get My Free Sample</a>
@@ -1111,9 +1354,9 @@
                     </div>
                     <button type="submit" class="submit-btn">Get My Free Sample Website</button>
                 </form>
-                <p style="text-align: center; margin-top: 1rem; color: #718096;">
-                    Or call Robbie directly at <a href="tel:5743337083" style="color: #667eea;">(574) 333-7083</a> 
-                    or email <a href="mailto:robertgetsyouleads@gmail.com" style="color: #667eea;">robertgetsyouleads@gmail.com</a>
+                <p style="text-align: center; margin-top: 1.5rem; color: #718096; font-size: 1.1rem;">
+                    Or call Robbie directly at <a href="tel:5743337083" style="color: #E8725A; font-weight: 600;">(574) 333-7083</a> 
+                    or email <a href="mailto:robertgetsyouleads@gmail.com" style="color: #E8725A; font-weight: 600;">robertgetsyouleads@gmail.com</a>
                 </p>
             </div>
         </div>
