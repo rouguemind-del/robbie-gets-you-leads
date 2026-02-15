@@ -89,7 +89,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.9)), url('https://images.unsplash.com/photo-1486754735734-325b5831c3ad?w=1400');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1200');
             background-size: cover;
             background-position: center;
             color: white;
@@ -239,6 +239,14 @@
         .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
         }
 
         .service-icon {
@@ -653,6 +661,7 @@
             
             <div class="services-grid">
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800" alt="Mechanic working on vehicle" loading="lazy">
                     <div class="service-icon">🛑</div>
                     <h3>Brake Repair & Service</h3>
                     <p>Complete brake system service including pads, rotors, calipers, and fluid changes. Your safety is our top priority with every brake job.</p>
@@ -671,6 +680,7 @@
                 </div>
                 
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800" alt="Car engine repair" loading="lazy">
                     <div class="service-icon">🔧</div>
                     <h3>Engine Diagnostics & Repair</h3>
                     <p>Advanced computer diagnostics to pinpoint engine problems quickly. Professional repairs that get you back on the road reliably.</p>
@@ -734,7 +744,7 @@
                 </div>
                 
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1632823469937-75b7ebf64ab2?w=600" alt="Professional auto mechanic working" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800" alt="Clean professional auto shop" loading="lazy">
                 </div>
             </div>
         </div>

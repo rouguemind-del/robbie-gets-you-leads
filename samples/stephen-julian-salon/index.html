@@ -304,6 +304,19 @@
             transform: translateY(-5px);
         }
 
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.2);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover img {
+            filter: grayscale(0%) contrast(1);
+        }
+
         .service-icon {
             font-size: 3rem;
             margin-bottom: 1.5rem;
@@ -384,7 +397,9 @@
         /* Contact Section */
         .contact {
             padding: 6rem 0;
-            background: var(--charcoal);
+            background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=800');
+            background-size: cover;
+            background-position: center;
             color: var(--white);
         }
 
@@ -664,6 +679,7 @@
                 </div>
                 
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800" alt="Hair coloring process" loading="lazy">
                     <div class="service-icon">🎨</div>
                     <h3>Creative Color</h3>
                     <p>Bold color concepts that challenge the ordinary. From subtle refinement to dramatic transformation.</p>

@@ -88,7 +88,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(41, 128, 185, 0.9), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1558618666-fbd7c2c3cd5e?w=1400');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200');
             background-size: cover;
             background-position: center;
             color: white;
@@ -208,6 +208,14 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: all 0.3s ease;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
         }
 
         .service-card:hover {
@@ -363,7 +371,9 @@
         /* Contact Section */
         .contact {
             padding: 100px 0;
-            background: #2980B9;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800');
+            background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
         }
@@ -557,6 +567,7 @@
             
             <div class="services-grid">
                 <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800" alt="Pipe repair service" loading="lazy">
                     <div class="service-icon">🚨</div>
                     <h3>Emergency Repairs</h3>
                     <p>Burst pipes, major leaks, and urgent plumbing issues. Available 24/7 with rapid response times to minimize damage to your home.</p>
@@ -638,7 +649,7 @@
                 </div>
                 
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600" alt="Professional plumber working" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800" alt="Plumber with tools" loading="lazy">
                 </div>
             </div>
         </div>
