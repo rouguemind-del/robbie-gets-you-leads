@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean & Comfort Co. | Professional Cleaning Services</title>
+<meta name="description" content="Clean & Comfort Co. provides premium residential and commercial cleaning services. Say bye to dust and grime with our trusted, professional team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--teal:#5BA4A4;--teal-dark:#4A8F8F;--teal-light:#E8F4F4;--warm-white:#FFFAF7;--gold:#C9A96E;--gold-light:#D4BA8A;--gray-50:#F8F8F8;--gray-100:#F0EEEB;--gray-200:#E0DEDA;--gray-400:#A09C97;--gray-600:#6B6560;--gray-800:#3A3530;--gray-900:#2A2520;--font-heading:'DM Serif Display',Georgia,serif;--font-body:'Inter',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--gray-800);background:var(--warm-white);line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* Fade-up animation */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Buttons */
+.btn{display:inline-block;padding:14px 32px;border-radius:6px;font-family:var(--font-body);font-weight:600;font-size:.95rem;letter-spacing:.3px;transition:all .3s ease;cursor:pointer;border:none}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 25px rgba(91,164,164,.35)}
+.btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+.btn-outline:hover{background:#fff;color:var(--teal)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 25px rgba(201,169,110,.35)}
+
+/* Navigation */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:all .3s ease}
+nav.scrolled{background:rgba(255,250,247,.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,.06);padding:12px 0}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-heading);font-size:1.4rem;color:#fff;transition:color .3s}
+nav.scrolled .nav-logo{color:var(--gray-900)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.9);font-size:.9rem;font-weight:500;transition:color .3s}
+nav.scrolled .nav-links a{color:var(--gray-600)}
+nav.scrolled .nav-links a:hover{color:var(--teal)}
+.nav-links .btn{padding:10px 24px;font-size:.85rem}
+nav.scrolled .nav-links .btn-outline{border-color:var(--teal);color:var(--teal)}
+nav.scrolled .nav-links .btn-outline:hover{background:var(--teal);color:#fff}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-toggle span{width:24px;height:2px;background:#fff;transition:all .3s}
+nav.scrolled .nav-toggle span{background:var(--gray-800)}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#2A3530}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80') center/cover no-repeat;opacity:.35}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(42,53,48,.85) 0%,rgba(91,164,164,.4) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:780px;padding:120px 24px 80px}
+.hero-badge{display:inline-block;padding:8px 20px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:50px;color:rgba(255,255,255,.9);font-size:.8rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:28px}
+.hero h1{font-family:var(--font-heading);font-size:clamp(2.8rem,6vw,4.5rem);color:#fff;line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--gold)}
+.hero .tagline{font-size:clamp(1.1rem,2.5vw,1.4rem);color:rgba(255,255,255,.85);font-weight:300;margin-bottom:12px;letter-spacing:.5px}
+.hero .subtitle{font-size:1rem;color:rgba(255,255,255,.65);max-width:560px;margin:0 auto 40px;line-height:1.8}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* Section styling */
+section{padding:100px 0}
+.section-label{display:inline-block;color:var(--teal);font-size:.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.section-title{font-family:var(--font-heading);font-size:clamp(2rem,4vw,2.8rem);color:var(--gray-900);line-height:1.25;margin-bottom:16px}
+.section-subtitle{font-size:1.05rem;color:var(--gray-600);max-width:600px;line-height:1.8}
+.section-header{text-align:center;margin-bottom:64px}
+.section-header .section-subtitle{margin:0 auto}
+
+/* Services */
+.services{background:var(--gray-50)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.service-card{background:#fff;border-radius:16px;padding:40px 32px;transition:all .4s ease;border:1px solid var(--gray-200)}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.08);border-color:var(--teal-light)}
+.service-icon{width:56px;height:56px;background:var(--teal-light);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.service-icon svg{width:28px;height:28px;stroke:var(--teal);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-family:var(--font-heading);font-size:1.3rem;color:var(--gray-900);margin-bottom:12px}
+.service-card p{font-size:.92rem;color:var(--gray-600);line-height:1.8}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-image{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3}
+.about-image img{width:100%;height:100%;object-fit:cover}
+.about-image::after{content:'';position:absolute;inset:0;border-radius:20px;border:2px solid var(--teal);opacity:.15}
+.about-badge{position:absolute;bottom:24px;left:24px;background:var(--teal);color:#fff;padding:16px 24px;border-radius:12px;text-align:center}
+.about-badge .number{font-family:var(--font-heading);font-size:2rem;line-height:1}
+.about-badge .text{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;opacity:.9;margin-top:4px}
+.about-content .section-subtitle{max-width:none;margin-bottom:24px}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.about-value{display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--gray-800);font-weight:500}
+.about-value .check{width:24px;height:24px;background:var(--teal-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.about-value .check svg{width:14px;height:14px;stroke:var(--teal);fill:none;stroke-width:2.5}
+
+/* Why Choose Us */
+.why{background:var(--gray-50)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+.why-item{display:flex;gap:20px;padding:32px;background:#fff;border-radius:14px;border:1px solid var(--gray-200);transition:all .3s}
+.why-item:hover{border-color:var(--teal-light);box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.why-number{font-family:var(--font-heading);font-size:2rem;color:var(--teal);opacity:.4;line-height:1;flex-shrink:0}
+.why-item h3{font-size:1.05rem;font-weight:600;color:var(--gray-900);margin-bottom:6px}
+.why-item p{font-size:.88rem;color:var(--gray-600);line-height:1.7}
+
+/* How It Works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;position:relative}
+.steps::before{content:'';position:absolute;top:40px;left:calc(16.66% + 24px);right:calc(16.66% + 24px);height:2px;background:var(--gray-200)}
+.step{text-align:center;position:relative}
+.step-num{width:80px;height:80px;background:var(--warm-white);border:2px solid var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:var(--font-heading);font-size:1.6rem;color:var(--teal);position:relative;z-index:2}
+.step h3{font-family:var(--font-heading);font-size:1.2rem;color:var(--gray-900);margin-bottom:8px}
+.step p{font-size:.9rem;color:var(--gray-600);max-width:260px;margin:0 auto;line-height:1.7}
+
+/* Testimonials */
+.testimonials{background:var(--gray-50)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.testimonial{background:#fff;padding:36px 32px;border-radius:16px;border:1px solid var(--gray-200)}
+.stars{display:flex;gap:4px;margin-bottom:16px}
+.stars svg{width:18px;height:18px;fill:var(--gold);stroke:none}
+.testimonial blockquote{font-size:.95rem;color:var(--gray-600);line-height:1.85;font-style:italic;margin-bottom:20px}
+.testimonial-author{font-weight:600;font-size:.9rem;color:var(--gray-900)}
+.testimonial-role{font-size:.8rem;color:var(--gray-400)}
+
+/* Pricing CTA */
+.pricing-cta{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dark) 100%);color:#fff;text-align:center}
+.pricing-cta .section-title{color:#fff}
+.pricing-cta .section-subtitle{color:rgba(255,255,255,.8);margin:0 auto 36px}
+.pricing-features{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.pricing-feature{font-size:.92rem;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:8px}
+.pricing-feature svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.5}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info h3{font-family:var(--font-heading);font-size:1.6rem;color:var(--gray-900);margin-bottom:16px}
+.contact-info p{color:var(--gray-600);margin-bottom:32px;line-height:1.8}
+.contact-detail{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.contact-detail .icon{width:48px;height:48px;background:var(--teal-light);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-detail .icon svg{width:22px;height:22px;stroke:var(--teal);fill:none;stroke-width:1.8}
+.contact-detail .label{font-size:.8rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:1px}
+.contact-detail .value{font-weight:600;color:var(--gray-900);font-size:1rem}
+.contact-form{background:var(--gray-50);padding:40px;border-radius:20px}
+.contact-form h3{font-family:var(--font-heading);font-size:1.4rem;color:var(--gray-900);margin-bottom:24px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.85rem;font-weight:500;color:var(--gray-800);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1px solid var(--gray-200);border-radius:10px;font-family:var(--font-body);font-size:.92rem;color:var(--gray-800);background:#fff;transition:border-color .3s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--teal)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* Discount Banner */
+.discount-bar{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);text-align:center;padding:14px 24px}
+.discount-bar p{font-size:.9rem;color:#fff;font-weight:500}
+.discount-bar a{color:#fff;text-decoration:underline;font-weight:700}
+
+/* Footer */
+footer{background:var(--gray-900);color:rgba(255,255,255,.7);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:var(--font-heading);font-size:1.5rem;color:#fff;margin-bottom:12px}
+.footer-desc{font-size:.88rem;line-height:1.8;max-width:340px}
+footer h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.88rem;color:rgba(255,255,255,.6);transition:color .3s}
+.footer-links a:hover{color:var(--teal)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-bottom p{font-size:.82rem;color:rgba(255,255,255,.4)}
+.social-links{display:flex;gap:12px}
+.social-links a{width:40px;height:40px;background:rgba(255,255,255,.08);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.social-links a:hover{background:var(--teal)}
+.social-links a svg{width:18px;height:18px;fill:#fff}
+
+/* Responsive */
+@media(max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .steps{grid-template-columns:1fr;gap:32px}
+  .steps::before{display:none}
+  .why-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:var(--warm-white);flex-direction:column;padding:80px 32px 32px;gap:20px;transition:right .3s;box-shadow:-10px 0 30px rgba(0,0,0,.1)}
+  .nav-links.open{right:0}
+  .nav-links a{color:var(--gray-800)!important;font-size:1rem}
+  .nav-links .btn-outline{border-color:var(--teal)!important;color:var(--teal)!important}
+  .nav-toggle{display:flex}
+  section{padding:70px 0}
+  .about-values{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero-buttons{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Discount Banner -->
+<div class="discount-bar">
+<p>Special Offer: Get 10% off premium cleaning products at <a href="https://athosliving.com/discount/CleanComfort10" target="_blank" rel="noopener">Athos Living</a></p>
+</div>
+
+<!-- Navigation -->
+<nav id="navbar">
+<div class="container">
+<a href="#" class="nav-logo">Clean & Comfort Co.</a>
+<div class="nav-links" id="navLinks">
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#how-it-works">Process</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact" class="btn btn-outline">Get a Quote</a>
+</div>
+<div class="nav-toggle" id="navToggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+<span></span><span></span><span></span>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content fade-up">
+<div class="hero-badge">Professional Cleaning Services</div>
+<h1>Clean & <span>Comfort</span> Co.</h1>
+<p class="tagline">Say Bye to Dust and Grime</p>
+<p class="subtitle">Premium residential and commercial cleaning services that transform your spaces into spotless, comfortable environments you deserve.</p>
+<div class="hero-buttons">
+<a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+<a href="#services" class="btn btn-outline">Our Services</a>
+</div>
+</div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+<div class="container">
+<div class="section-header fade-up">
+<div class="section-label">What We Offer</div>
+<h2 class="section-title">Our Cleaning Services</h2>
+<p class="section-subtitle">Comprehensive cleaning solutions tailored to your unique needs, delivered with care and attention to detail.</p>
+</div>
+<div class="services-grid">
+<div class="service-card fade-up">
+<div class="service-icon">
+<svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+</div>
+<h3>Residential Cleaning</h3>
+<p>Regular home cleaning, deep cleaning sessions, and recurring schedules to keep your living spaces fresh and inviting every day.</p>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon">
+<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+</div>
+<h3>Commercial Cleaning</h3>
+<p>Professional cleaning for offices, retail spaces, and commercial environments that leaves a lasting impression on clients and employees.</p>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon">
+<svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+</div>
+<h3>Move-In/Move-Out Cleaning</h3>
+<p>Thorough top-to-bottom cleaning for transitions, making spaces landlord-ready and tenant-fresh for a seamless handover.</p>
+</div>
+<div class="service-card fade-up">
+<div class="service-icon">
+<svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+</div>
+<h3>Post-Construction Cleaning</h3>
+<p>Complete debris removal, dust cleanup, and a final polish after renovation projects to reveal the beauty of your new space.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+<div class="container">
+<div class="about-grid">
+<div class="about-image fade-up">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Clean modern home interior" loading="lazy">
+<div class="about-badge">
+<div class="number">13+</div>
+<div class="text">Years of Service</div>
+</div>
+</div>
+<div class="about-content fade-up">
+<div class="section-label">About Us</div>
+<h2 class="section-title">Creating Clean, Comfortable Spaces Since 2011</h2>
+<p class="section-subtitle">Founded by Kaye Adams, Clean & Comfort Co. has been transforming homes and businesses across the community for over thirteen years. What started as a passion for creating clean, comfortable environments has grown into a trusted cleaning service relied upon by both residential and commercial clients.</p>
+<p class="section-subtitle" style="margin-top:16px">We believe every space deserves the highest standard of care. Our dedicated team brings professionalism, reliability, and genuine attention to detail to every job we take on.</p>
+<div class="about-values">
+<div class="about-value"><div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Trusted Since 2011</div>
+<div class="about-value"><div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Fully Insured</div>
+<div class="about-value"><div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Eco-Friendly Options</div>
+<div class="about-value"><div class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Satisfaction Guaranteed</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why" id="why">
+<div class="container">
+<div class="section-header fade-up">
+<div class="section-label">Why Choose Us</div>
+<h2 class="section-title">The Clean & Comfort Difference</h2>
+<p class="section-subtitle">We go above and beyond to deliver an exceptional cleaning experience every single time.</p>
+</div>
+<div class="why-grid">
+<div class="why-item fade-up">
+<div class="why-number">01</div>
+<div><h3>13+ Years of Experience</h3><p>Over a decade of professional cleaning expertise, serving residential and commercial clients with consistent quality.</p></div>
+</div>
+<div class="why-item fade-up">
+<div class="why-number">02</div>
+<div><h3>Fully Insured & Bonded</h3><p>Complete peace of mind knowing your property is protected with our comprehensive insurance coverage.</p></div>
+</div>
+<div class="why-item fade-up">
+<div class="why-number">03</div>
+<div><h3>Eco-Friendly Products</h3><p>Safe for your family, pets, and the environment. Green cleaning options available upon request.</p></div>
+</div>
+<div class="why-item fade-up">
+<div class="why-number">04</div>
+<div><h3>Satisfaction Guaranteed</h3><p>Your happiness is our priority. If you are not completely satisfied, we will make it right at no extra cost.</p></div>
+</div>
+<div class="why-item fade-up">
+<div class="why-number">05</div>
+<div><h3>Flexible Scheduling</h3><p>One-time, weekly, bi-weekly, or monthly services. We work around your schedule for maximum convenience.</p></div>
+</div>
+<div class="why-item fade-up">
+<div class="why-number">06</div>
+<div><h3>Trusted & Reliable</h3><p>Background-checked, trained professionals who treat your space with the respect and care it deserves.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- How It Works -->
+<section id="how-it-works">
+<div class="container">
+<div class="section-header fade-up">
+<div class="section-label">How It Works</div>
+<h2 class="section-title">Three Simple Steps</h2>
+<p class="section-subtitle">Getting your space professionally cleaned has never been easier.</p>
+</div>
+<div class="steps">
+<div class="step fade-up">
+<div class="step-num">1</div>
+<h3>Book Your Service</h3>
+<p>Request a free quote online or give us a call. We will tailor a cleaning plan to your specific needs and budget.</p>
+</div>
+<div class="step fade-up">
+<div class="step-num">2</div>
+<h3>We Clean</h3>
+<p>Our trained team arrives on time with all supplies and equipment, delivering a thorough, detail-oriented clean.</p>
+</div>
+<div class="step fade-up">
+<div class="step-num">3</div>
+<h3>You Relax</h3>
+<p>Come home or walk into your business and enjoy a spotless, fresh, and comfortable space. It is that simple.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+<div class="container">
+<div class="section-header fade-up">
+<div class="section-label">Testimonials</div>
+<h2 class="section-title">What Our Clients Say</h2>
+<p class="section-subtitle">Real feedback from homeowners and business owners who trust Clean & Comfort Co.</p>
+</div>
+<div class="testimonials-grid">
+<div class="testimonial fade-up">
+<div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+<blockquote>"Clean & Comfort Co. has been cleaning our home for over two years now. The team is always punctual, thorough, and incredibly professional. Our house has never looked better."</blockquote>
+<div class="testimonial-author">Sarah M.</div>
+<div class="testimonial-role">Residential Client</div>
+</div>
+<div class="testimonial fade-up">
+<div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+<blockquote>"We hired them for a post-construction cleanup and were blown away. Every surface was spotless, every corner accounted for. Highly recommend for any renovation project."</blockquote>
+<div class="testimonial-author">James T.</div>
+<div class="testimonial-role">Homeowner</div>
+</div>
+<div class="testimonial fade-up">
+<div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+<blockquote>"As a property manager, I need reliable move-out cleaning. Kaye and her team deliver consistently perfect results. My tenants always comment on how fresh the units feel."</blockquote>
+<div class="testimonial-author">Linda R.</div>
+<div class="testimonial-role">Property Manager</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pricing CTA -->
+<section class="pricing-cta" id="pricing">
+<div class="container">
+<div class="section-header fade-up">
+<div class="section-label" style="color:rgba(255,255,255,.7)">Pricing</div>
+<h2 class="section-title">Custom Pricing for Every Space</h2>
+<p class="section-subtitle">Every home and business is different. We provide free, no-obligation quotes tailored to your space size, service type, and frequency.</p>
+</div>
+<div class="pricing-features fade-up">
+<div class="pricing-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Free Estimates</div>
+<div class="pricing-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>No Hidden Fees</div>
+<div class="pricing-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Competitive Rates</div>
+<div class="pricing-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Flexible Plans</div>
+</div>
+<div class="fade-up">
+<a href="#contact" class="btn btn-gold">Request Your Free Quote</a>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<div class="container">
+<div class="contact-grid">
+<div class="contact-info fade-up">
+<div class="section-label">Get In Touch</div>
+<h3>Ready for a Cleaner Space?</h3>
+<p>Contact us today for a free consultation and quote. We would love to learn about your cleaning needs and show you the Clean & Comfort difference.</p>
+<div class="contact-detail">
+<div class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+<div><div class="label">Phone</div><div class="value">(555) 123-4567</div></div>
+</div>
+<div class="contact-detail">
+<div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<div><div class="label">Email</div><div class="value">info@cleanandcomfort.co</div></div>
+</div>
+<div class="contact-detail">
+<a href="https://www.facebook.com/CleanComfortCo" target="_blank" rel="noopener" style="display:contents">
+<div class="icon"><svg viewBox="0 0 24 24" fill="var(--teal)" stroke="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+<div><div class="label">Facebook</div><div class="value">Follow Us on Facebook</div></div>
+</a>
+</div>
+</div>
+<div class="contact-form fade-up">
+<h3>Request a Free Quote</h3>
+<form onsubmit="event.preventDefault();alert('Thank you! We will be in touch within 24 hours.')">
+<div class="form-row">
+<div class="form-group"><label>First Name</label><input type="text" placeholder="Your first name" required></div>
+<div class="form-group"><label>Last Name</label><input type="text" placeholder="Your last name" required></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 000-0000" required></div>
+<div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+</div>
+<div class="form-group">
+<label>Service Needed</label>
+<select required>
+<option value="">Select a service...</option>
+<option>Residential Cleaning</option>
+<option>Commercial Cleaning</option>
+<option>Move-In/Move-Out Cleaning</option>
+<option>Post-Construction Cleaning</option>
+</select>
+</div>
+<div class="form-group"><label>Tell Us About Your Space</label><textarea placeholder="Approximate size, number of rooms, any special requests..."></textarea></div>
+<button type="submit" class="btn btn-primary" style="width:100%">Send Quote Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand">Clean & Comfort Co.</div>
+<p class="footer-desc">Premium cleaning services for homes and businesses. Creating clean, comfortable spaces since 2011. Founded and operated by Kaye Adams.</p>
+</div>
+<div>
+<h4>Services</h4>
+<ul class="footer-links">
+<li><a href="#services">Residential Cleaning</a></li>
+<li><a href="#services">Commercial Cleaning</a></li>
+<li><a href="#services">Move-In/Move-Out</a></li>
+<li><a href="#services">Post-Construction</a></li>
+</ul>
+</div>
+<div>
+<h4>Company</h4>
+<ul class="footer-links">
+<li><a href="#about">About Us</a></li>
+<li><a href="#testimonials">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="https://athosliving.com/discount/CleanComfort10" target="_blank" rel="noopener">Partner Discounts</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>2025 Clean & Comfort Co. All rights reserved. Established 2011.</p>
+<div class="social-links">
+<a href="https://www.facebook.com/CleanComfortCo" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Scroll-based nav styling
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+
+// Fade-up on scroll
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+</script>
+</body>
+</html>
