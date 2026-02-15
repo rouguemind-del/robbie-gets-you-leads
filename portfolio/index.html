@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See What We Can Build For Your Business | Robbie Gets You Leads</title>
+    <meta name="description" content="Browse 9 sample websites we've built for local businesses. See what your new professional website could look like.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Portfolio Grid */
+        .portfolio {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .business-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .business-type {
+            color: #718096;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .view-btn {
+            background: #667eea;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .view-btn:hover {
+            background: #5a67d8;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: #667eea;
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+            transform: scale(1.05);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            opacity: 0.7;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .pricing-card.featured .feature-list li:before {
+            color: #68d391;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #e53e3e;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #c53030;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: white;
+            color: #2d3748;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer h4 {
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+
+        .footer p, .footer a {
+            color: #a0aec0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="container">
+            <h1>See What We Can Build For Your Business</h1>
+            <p>Professional websites that turn visitors into customers. Browse our portfolio of local business websites and imagine what yours could look like.</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Sample Websites We've Built</h2>
+            <div class="grid">
+                <!-- Sample Site 1: Plumber -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);">
+                        <div>
+                            <div>🔧 Professional Plumbing Services</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">24/7 Emergency Services</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Boca Elite Plumbing</h3>
+                        <p class="business-type">Plumbing Services</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 2: Landscaping -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);">
+                        <div>
+                            <div>🌳 Premium Landscaping</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Design • Install • Maintain</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Green Valley Landscapes</h3>
+                        <p class="business-type">Landscaping Services</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 3: Auto Repair -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);">
+                        <div>
+                            <div>🚗 Expert Auto Repair</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Honest • Fast • Reliable</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Mike's Auto Center</h3>
+                        <p class="business-type">Automotive Repair</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 4: Hair Salon -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #ed64a6 0%, #d53f8c 100%);">
+                        <div>
+                            <div>💇‍♀️ Modern Hair Studio</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Cut • Color • Style</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Bella Hair Lounge</h3>
+                        <p class="business-type">Hair Salon</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 5: Roofing -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);">
+                        <div>
+                            <div>🏠 Professional Roofing</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Licensed • Insured • Guaranteed</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Pinnacle Roofing Co.</h3>
+                        <p class="business-type">Roofing Services</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 6: Pool Service -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
+                        <div>
+                            <div>🏊‍♂️ Crystal Clear Pools</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Clean • Maintain • Repair</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">AquaBlue Pool Service</h3>
+                        <p class="business-type">Pool Maintenance</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 7: Bakery -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);">
+                        <div>
+                            <div>🥐 Artisan Bakery</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Fresh • Local • Delicious</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Sunrise Bakehouse</h3>
+                        <p class="business-type">Bakery & Cafe</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 8: Dental -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #4fd1c7 0%, #38b2ac 100%);">
+                        <div>
+                            <div>🦷 Family Dentistry</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Gentle • Modern • Caring</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Coastal Dental Care</h3>
+                        <p class="business-type">Dental Practice</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+
+                <!-- Sample Site 9: Cleaning -->
+                <div class="card">
+                    <div class="card-image" style="background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);">
+                        <div>
+                            <div>✨ Elite Cleaning</div>
+                            <div style="font-size: 0.9rem; margin-top: 8px; opacity: 0.8;">Residential • Commercial</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="business-name">Spotless Solutions</h3>
+                        <p class="business-type">Cleaning Services</p>
+                        <a href="#" class="view-btn">View Sample</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">What's Included</h2>
+            <div class="pricing-grid">
+                <!-- Starter Package -->
+                <div class="pricing-card">
+                    <h3>Starter Package</h3>
+                    <div class="price">$99</div>
+                    <div class="price-period">per month</div>
+                    <ul class="feature-list">
+                        <li>Custom Website Design</li>
+                        <li>Web Hosting & SSL Certificate</li>
+                        <li>Mobile Responsive</li>
+                        <li>2 Website Updates/Month</li>
+                        <li>Google Business Profile Setup</li>
+                        <li>Basic Contact Forms</li>
+                        <li>Social Media Links</li>
+                    </ul>
+                </div>
+
+                <!-- Growth Package (Featured) -->
+                <div class="pricing-card featured">
+                    <h3>Growth Package</h3>
+                    <div class="price">$149</div>
+                    <div class="price-period">per month</div>
+                    <ul class="feature-list">
+                        <li>Everything in Starter Package</li>
+                        <li>Monthly SEO Blog Post</li>
+                        <li>Google Business Optimization</li>
+                        <li>Review Management Setup</li>
+                        <li>Basic Analytics Dashboard</li>
+                        <li>Local SEO Optimization</li>
+                        <li>5 Website Updates/Month</li>
+                    </ul>
+                </div>
+
+                <!-- Pro Package -->
+                <div class="pricing-card">
+                    <h3>Pro Package</h3>
+                    <div class="price">$199</div>
+                    <div class="price-period">per month</div>
+                    <ul class="feature-list">
+                        <li>Everything in Growth Package</li>
+                        <li>Weekly Blog Posts (4/month)</li>
+                        <li>Social Media Graphics (4/month)</li>
+                        <li>Email Capture & Newsletter Setup</li>
+                        <li>Monthly Performance Report</li>
+                        <li>Priority Support</li>
+                        <li>Unlimited Minor Updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Want a Free Sample for YOUR Business?</h2>
+            <p>I'll create a custom sample website specifically for your business - completely free, no strings attached. See exactly what your new professional website could look like.</p>
+            <div class="cta-buttons">
+                <a href="mailto:robbie@robbiegetsyouleads.com?subject=Free Website Sample Request" class="cta-btn">Get My Free Sample</a>
+                <a href="tel:5613337083" class="cta-btn secondary">Call Robbie Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Contact Information</h4>
+                    <p>Robbie Brady</p>
+                    <p><a href="tel:5613337083">(561) 333-7083</a></p>
+                    <p><a href="mailto:robbie@robbiegetsyouleads.com">robbie@robbiegetsyouleads.com</a></p>
+                </div>
+                <div>
+                    <h4>Service Areas</h4>
+                    <p>Boca Raton, FL</p>
+                    <p>West Palm Beach, FL</p>
+                    <p>Fort Lauderdale, FL</p>
+                    <p>Delray Beach, FL</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <p>Website Design</p>
+                    <p>Local SEO</p>
+                    <p>Google Business Optimization</p>
+                    <p>Monthly Website Maintenance</p>
+                </div>
+            </div>
+            <p style="border-top: 1px solid #4a5568; padding-top: 2rem; margin-top: 2rem; opacity: 0.7;">
+                © 2026 Robbie Gets You Leads. "I build websites that get you more customers, not just compliments."
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
