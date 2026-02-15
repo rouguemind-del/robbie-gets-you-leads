@@ -3,162 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill Tyson's Auto Repair - Trusted Auto Service in Boynton Beach, FL</title>
-    <meta name="description" content="Bill Tyson's Auto Repair - Professional automotive repair and maintenance in Boynton Beach, Florida. Expert service you can trust. Contact Mike today!">
+    <title>Bill Tyson's Auto Repair - Honest, Fast, Reliable | Boynton Beach, FL</title>
+    <meta name="description" content="Bill Tyson's Auto Repair in Boynton Beach - ASE certified technicians providing honest auto repair services. Brake repair, oil changes, transmission, engine diagnostics, and more.">
     
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
     <style>
-        :root {
-            --primary-color: #dc2626;
-            --primary-dark: #b91c1c;
-            --secondary-color: #374151;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --background-light: #f9fafb;
-            --white: #ffffff;
-            --border-color: #e5e7eb;
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --border-radius: 8px;
-            --border-radius-lg: 12px;
-            --transition: all 0.2s ease-in-out;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
+            color: #2C3E50;
+            overflow-x: hidden;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: var(--border-radius);
-            font-weight: 500;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         /* Navigation */
-        .nav {
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(44, 62, 80, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
         }
 
-        .nav-brand h2 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin: 0;
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            color: #E74C3C;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         .nav-links {
             display: flex;
-            align-items: center;
+            list-style: none;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
-            font-weight: 500;
-            color: var(--text-dark);
             text-decoration: none;
-            transition: var(--transition);
+            color: #FFFFFF;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: #E74C3C;
         }
 
-        .nav-cta {
-            background-color: var(--primary-color);
-            color: var(--white) !important;
-            padding: 8px 16px;
-            border-radius: var(--border-radius);
+        .appointment-btn {
+            background: #E74C3C;
+            color: white !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .appointment-btn:hover {
+            background: #C0392B;
+            transform: translateY(-2px);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--text-dark) 100%);
-            color: var(--white);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.9)), url('https://images.unsplash.com/photo-1486754735734-325b5831c3ad?w=1400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
             text-align: center;
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            line-height: 1;
+            letter-spacing: 2px;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-cta {
+        .trust-badge {
+            background: linear-gradient(135deg, #E74C3C, #C0392B);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        .hero-ctas {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
+            margin-bottom: 4rem;
             flex-wrap: wrap;
         }
 
-        /* Sections */
-        section {
-            padding: 5rem 0;
+        .cta-btn {
+            background: #E74C3C;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
+        .cta-btn:hover {
+            background: #C0392B;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid #E74C3C;
+            color: #E74C3C;
+        }
+
+        .cta-btn.secondary:hover {
+            background: #E74C3C;
+            color: white;
+        }
+
+        .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            background: rgba(231, 76, 60, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(231, 76, 60, 0.3);
+            color: #E74C3C;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #F8F9FA;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3.5rem;
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7F8C8D;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #E74C3C, #C0392B);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, #E74C3C, #C0392B);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.8rem;
+            color: #2C3E50;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .service-card p {
+            color: #7F8C8D;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* About Section */
         .about {
-            background-color: var(--white);
+            padding: 100px 0;
+            background: white;
         }
 
         .about-content {
@@ -168,267 +281,556 @@
             align-items: center;
         }
 
-        .feature {
+        .about-text h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3rem;
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+
+        .about-text p {
+            color: #7F8C8D;
+            font-size: 1.1rem;
+            line-height: 1.8;
             margin-bottom: 1.5rem;
         }
 
-        .feature h4 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .services {
-            background-color: var(--background-light);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            color: var(--text-dark);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-md);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact {
-            background-color: var(--white);
-        }
-
-        .contact-content {
+        .trust-points {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #F8F9FA;
+            border-radius: 10px;
+            border-left: 4px solid #E74C3C;
+        }
+
+        .trust-icon {
+            background: #E74C3C;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .trust-item div h4 {
+            color: #2C3E50;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .trust-item div p {
+            color: #7F8C8D;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Warranty Section */
+        .warranty {
+            padding: 100px 0;
+            background: #2C3E50;
+            color: white;
+        }
+
+        .warranty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .warranty-card {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(231, 76, 60, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(231, 76, 60, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .warranty-card:hover {
+            background: rgba(231, 76, 60, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .warranty-icon {
+            background: #E74C3C;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .warranty-card h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.8rem;
+            color: #E74C3C;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Service Area */
+        .service-area {
+            padding: 100px 0;
+            background: #F8F9FA;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .area-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #E74C3C;
+        }
+
+        .area-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .area-card h4 {
+            font-family: 'Bebas Neue', cursive;
+            color: #2C3E50;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+
+        .area-card p {
+            color: #7F8C8D;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #E74C3C, #C0392B);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .contact-subtitle {
+            font-size: 1.3rem;
             margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
         .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .phone-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin: 1rem 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2C3E50;
+            color: white;
+            padding: 4rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
             margin-bottom: 2rem;
         }
 
-        .contact-icon {
-            font-size: 1.5rem;
+        .footer h4 {
+            font-family: 'Bebas Neue', cursive;
+            margin-bottom: 1.5rem;
+            color: #E74C3C;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
         }
 
-        .footer {
-            background-color: var(--text-dark);
-            color: var(--white);
-            padding: 3rem 0 1rem;
-            text-align: center;
+        .footer ul {
+            list-style: none;
         }
 
-        .footer-credit {
-            margin-top: 2rem;
+        .footer ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer ul li a {
+            color: #BDC3C7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: #E74C3C;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34495E;
             padding-top: 2rem;
-            border-top: 1px solid var(--secondary-color);
-            color: #9ca3af;
+            text-align: center;
+            color: #BDC3C7;
+        }
+
+        .website-credit {
+            margin-top: 1rem;
             font-size: 0.9rem;
         }
 
-        .footer-credit a {
-            color: var(--accent-color);
+        .website-credit a {
+            color: #E74C3C;
             text-decoration: none;
         }
 
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero-cta { flex-direction: column; align-items: center; }
-            .about-content { grid-template-columns: 1fr; }
-            .contact-content { grid-template-columns: 1fr; gap: 2rem; }
-            .services-grid { grid-template-columns: 1fr; }
-            .container { padding: 0 1rem; }
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .certifications {
+                gap: 1rem;
+            }
+
+            .cert-badge {
+                font-size: 0.8rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-points {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-number {
+                font-size: 1.8rem;
+            }
+
+            .contact h2 {
+                font-size: 2.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h2>Bill Tyson's Auto Repair</h2>
-            </div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-                <a href="tel:mike@billtysonautocenters.com" class="nav-cta">Call Mike</a>
-            </div>
-        </nav>
-        
-        <div class="hero-content">
-            <h1>Trusted Auto Repair You Can Count On</h1>
-            <p class="hero-subtitle">Professional automotive repair and maintenance in Boynton Beach, Florida. Expert service with a personal touch from Mike and his team.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Schedule Service</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">🚗 Bill Tyson's Auto Repair</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#areas">Areas</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="appointment-btn">Schedule Service</a></li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="about-content">
-                <div>
-                    <h2>About Bill Tyson's Auto Repair</h2>
-                    <p>At Bill Tyson's Auto Repair, we've been serving the Boynton Beach community with honest, reliable automotive service. Mike and our experienced team treat every vehicle like it's our own.</p>
-                    
-                    <p>We believe in building lasting relationships with our customers through quality workmanship, fair pricing, and exceptional service.</p>
-                    
-                    <div class="features">
-                        <div class="feature">
-                            <h4>✓ Honest & Transparent</h4>
-                            <p>No surprises - we explain what needs fixing and why</p>
-                        </div>
-                        <div class="feature">
-                            <h4>✓ Experienced Technicians</h4>
-                            <p>ASE-certified mechanics with years of experience</p>
-                        </div>
-                        <div class="feature">
-                            <h4>✓ Quality Parts & Work</h4>
-                            <p>We use quality parts and stand behind our work</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <img src="https://via.placeholder.com/500x400/dc2626/ffffff?text=Auto+Repair+Shop" alt="Bill Tyson's Auto Repair shop" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
-                </div>
+            <div class="trust-badge">
+                🏆 ASE CERTIFIED • FAMILY OWNED SINCE 1995
+            </div>
+            <h1>Honest, Fast, Reliable<br>Auto Repair You Can Trust</h1>
+            <p class="hero-subtitle">For nearly 30 years, Bill Tyson's Auto Repair has been Boynton Beach's most trusted auto shop. ASE certified technicians, honest pricing, and a warranty you can count on.</p>
+            
+            <div class="hero-ctas">
+                <a href="tel:5615550105" class="cta-btn">📞 Call: (561) 555-0105</a>
+                <a href="#contact" class="cta-btn secondary">Schedule Appointment</a>
+            </div>
+
+            <div class="certifications">
+                <div class="cert-badge">🏅 ASE Certified Technicians</div>
+                <div class="cert-badge">🛡️ 2-Year/24,000 Mile Warranty</div>
+                <div class="cert-badge">👨‍👩‍👧‍👦 Family Owned & Operated</div>
+                <div class="cert-badge">⭐ 5-Star Customer Reviews</div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Our Auto Repair Services</h2>
+            <h2 class="section-title">Complete Auto Repair Services</h2>
+            <p class="section-subtitle">From routine maintenance to major repairs, our ASE certified technicians keep your vehicle running safely and reliably.</p>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Engine Repair & Service</h3>
-                    <p>Complete engine diagnostics, repair, and maintenance to keep your car running smoothly.</p>
+                    <div class="service-icon">🛑</div>
+                    <h3>Brake Repair & Service</h3>
+                    <p>Complete brake system service including pads, rotors, calipers, and fluid changes. Your safety is our top priority with every brake job.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🚗</div>
+                    <div class="service-icon">🛢️</div>
+                    <h3>Oil Changes & Maintenance</h3>
+                    <p>Quick, professional oil changes using quality oil and filters. Plus complete preventive maintenance to keep your car running smoothly.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
                     <h3>Transmission Service</h3>
-                    <p>Expert transmission repair, rebuilds, and maintenance for automatic and manual transmissions.</p>
+                    <p>Expert transmission repair and maintenance services. From fluid changes to complete rebuilds, we handle all automatic and manual transmissions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Engine Diagnostics & Repair</h3>
+                    <p>Advanced computer diagnostics to pinpoint engine problems quickly. Professional repairs that get you back on the road reliably.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌡️</div>
+                    <h3>AC Repair & Service</h3>
+                    <p>Stay cool with our complete air conditioning services. AC diagnosis, repair, and recharge to keep you comfortable in Florida's heat.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">🛞</div>
-                    <h3>Brake Service & Repair</h3>
-                    <p>Complete brake service including pads, rotors, and brake system diagnostics.</p>
+                    <h3>Tire Sales & Service</h3>
+                    <p>Quality tire installation, rotation, balancing, and alignment services. We carry major tire brands to fit your budget and driving needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Nearly 30 Years of Trusted Service</h2>
+                    <p>Since 1995, Bill Tyson's Auto Repair has been the auto shop Boynton Beach families trust with their vehicles. We're not just mechanics—we're your neighbors, committed to keeping your family safe on the road.</p>
+                    
+                    <p>Our ASE certified technicians combine old-school honesty with modern diagnostic equipment. We explain what's wrong, what it'll cost, and we stand behind our work with one of the best warranties in the business.</p>
+
+                    <div class="trust-points">
+                        <div class="trust-item">
+                            <div class="trust-icon">🏅</div>
+                            <div>
+                                <h4>ASE Certified</h4>
+                                <p>Master technicians with ongoing training</p>
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">🛡️</div>
+                            <div>
+                                <h4>2-Year Warranty</h4>
+                                <p>24,000 mile nationwide warranty</p>
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">💰</div>
+                            <div>
+                                <h4>Honest Pricing</h4>
+                                <p>Fair estimates with no surprises</p>
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">👨‍👩‍👧‍👦</div>
+                            <div>
+                                <h4>Family Owned</h4>
+                                <p>Personal service for 30 years</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">❄️</div>
-                    <h3>AC & Heating Service</h3>
-                    <p>Air conditioning repair and maintenance to keep you comfortable year-round.</p>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1632823469937-75b7ebf64ab2?w=600" alt="Professional auto mechanic working" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="warranty">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Why Choose Bill Tyson's?</h2>
+            <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Three decades of experience, honest service, and the best warranty in Boynton Beach.</p>
+            
+            <div class="warranty-grid">
+                <div class="warranty-card">
+                    <div class="warranty-icon">🏆</div>
+                    <h3>Best Warranty</h3>
+                    <p>Our 2-year, 24,000-mile nationwide warranty is one of the best in the business. We stand behind our work because we do it right the first time.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">🔋</div>
-                    <h3>Electrical System Repair</h3>
-                    <p>Electrical troubleshooting, alternator, starter, and battery service.</p>
+                <div class="warranty-card">
+                    <div class="warranty-icon">💯</div>
+                    <h3>Honest Service</h3>
+                    <p>No upselling, no surprises. We'll only recommend repairs you actually need and explain everything in terms you can understand.</p>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-                    <h3>General Maintenance</h3>
-                    <p>Oil changes, tune-ups, and routine maintenance to prevent major repairs.</p>
+                <div class="warranty-card">
+                    <div class="warranty-icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Most repairs completed the same day. We know you need your vehicle, so we work efficiently without cutting corners on quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area" id="areas">
+        <div class="container">
+            <h2 class="section-title">Areas We Serve</h2>
+            <p class="section-subtitle">Proudly serving Boynton Beach and surrounding Palm Beach County communities for nearly 30 years.</p>
+            
+            <div class="areas-grid">
+                <div class="area-card">
+                    <h4>Boynton Beach</h4>
+                    <p>Our home base for 30 years</p>
+                </div>
+                <div class="area-card">
+                    <h4>Delray Beach</h4>
+                    <p>West Delray communities</p>
+                </div>
+                <div class="area-card">
+                    <h4>Lake Worth</h4>
+                    <p>All surrounding areas</p>
+                </div>
+                <div class="area-card">
+                    <h4>Greenacres</h4>
+                    <p>Residential and commercial</p>
+                </div>
+                <div class="area-card">
+                    <h4>Wellington</h4>
+                    <p>Western communities</p>
+                </div>
+                <div class="area-card">
+                    <h4>Lantana</h4>
+                    <p>Complete auto services</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div>
-                    <div class="contact-item">
-                        <div class="contact-icon">👨‍🔧</div>
-                        <div>
-                            <h4>Contact Mike</h4>
-                            <p><a href="mailto:mike@billtysonautocenters.com">mike@billtysonautocenters.com</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Boynton Beach, Florida<br>Convenient location for all of South Palm Beach County</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div>
-                            <h4>Hours</h4>
-                            <p>Monday - Friday: 7:30am - 5:30pm<br>
-                               Saturday: 8:00am - 3:00pm<br>
-                               Sunday: Closed</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">🚗</div>
-                        <div>
-                            <h4>We Service</h4>
-                            <p>All makes and models<br>
-                               Domestic and Foreign vehicles<br>
-                               Cars, Trucks, and SUVs</p>
-                        </div>
-                    </div>
+            <h2>Need Honest Auto Repair?</h2>
+            <p class="contact-subtitle">Experience the difference 30 years of honest service makes. Schedule your appointment today.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Schedule Service</h3>
+                    <div class="phone-number">(561) 555-0105</div>
+                    <p>Call to schedule your appointment or ask about our services</p>
                 </div>
                 
-                <div style="background: var(--background-light); padding: 2rem; border-radius: 12px;">
-                    <h3>Schedule Your Service</h3>
-                    <p style="margin-bottom: 1.5rem;">Need automotive repair or maintenance? Contact Mike directly for personalized service and honest advice.</p>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <a href="mailto:mike@billtysonautocenters.com" class="btn btn-primary">Email Mike</a>
-                        <p style="text-align: center; margin: 0; font-size: 0.9rem; color: var(--text-light);">
-                            Drop off available • Loaner cars • Free estimates
-                        </p>
-                    </div>
-                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px solid #fee2e2;">
-                        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Why Choose Us?</h4>
-                        <ul style="text-align: left; font-size: 0.9rem; color: var(--text-light); padding-left: 1rem;">
-                            <li>Personal attention from Mike</li>
-                            <li>Fair, upfront pricing</li>
-                            <li>Quality parts and workmanship</li>
-                            <li>Local Boynton Beach business</li>
-                        </ul>
-                    </div>
+                <div class="contact-item">
+                    <h3>📍 Visit Our Shop</h3>
+                    <p>1234 Auto Repair Blvd<br>Boynton Beach, FL 33426</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Mon-Fri: 7:30 AM - 6:00 PM<br>Sat: 8:00 AM - 4:00 PM</p>
                 </div>
+                
+                <div class="contact-item">
+                    <h3>✉️ Email Us</h3>
+                    <p>Have questions about your vehicle?</p>
+                    <a href="mailto:service@billtysonsauto.com" style="color: white; font-weight: 600; font-size: 1.1rem;">service@billtysonsauto.com</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="tel:5615550105" class="cta-btn" style="font-size: 1.2rem; padding: 1.5rem 3rem; background: white; color: #E74C3C;">🚗 Call for Honest Service</a>
             </div>
         </div>
     </section>
@@ -436,28 +838,56 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <h3>Bill Tyson's Auto Repair</h3>
-            <p>Trusted automotive service in Boynton Beach, FL</p>
-            <p>✉️ <a href="mailto:mike@billtysonautocenters.com" style="color: white;">mike@billtysonautocenters.com</a></p>
-            <p style="margin-top: 1rem;">Serving Boynton Beach • Delray Beach • Lake Worth • Wellington</p>
+            <div class="footer-content">
+                <div>
+                    <h4>🚗 Bill Tyson's Auto Repair</h4>
+                    <p>Boynton Beach's most trusted auto repair shop since 1995. ASE certified technicians providing honest, reliable service with the best warranty in town.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: #E74C3C;">"Honest. Fast. Reliable."</p>
+                </div>
+                
+                <div>
+                    <h4>Auto Services</h4>
+                    <ul>
+                        <li><a href="#services">Brake Repair & Service</a></li>
+                        <li><a href="#services">Oil Changes & Maintenance</a></li>
+                        <li><a href="#services">Transmission Service</a></li>
+                        <li><a href="#services">Engine Diagnostics</a></li>
+                        <li><a href="#services">AC Repair & Service</a></li>
+                        <li><a href="#services">Tire Sales & Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li>📞 <a href="tel:5615550105">(561) 555-0105</a></li>
+                        <li>✉️ <a href="mailto:service@billtysonsauto.com">service@billtysonsauto.com</a></li>
+                        <li>📍 1234 Auto Repair Blvd, Boynton Beach</li>
+                        <li>🏅 ASE Certified Technicians</li>
+                        <li>🛡️ 2-Year/24,000 Mile Warranty</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li>Boynton Beach</li>
+                        <li>Delray Beach</li>
+                        <li>Lake Worth</li>
+                        <li>Greenacres</li>
+                        <li>Wellington</li>
+                        <li>Lantana</li>
+                    </ul>
+                </div>
+            </div>
             
-            <div class="footer-credit">
-                <p>Professional website designed by <a href="https://robbiegetstoyouleads.com" target="_blank">RobbieGetsYouLeads.com</a></p>
+            <div class="footer-bottom">
+                <p>© 2026 Bill Tyson's Auto Repair. All rights reserved. | Family Owned Since 1995</p>
+                <div class="website-credit">
+                    Website by <a href="../../portfolio/">Robbie Gets You Leads</a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

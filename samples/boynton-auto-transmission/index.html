@@ -3,83 +3,599 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boynton Auto Repair & Transmission - Trusted Auto Service in Boynton Beach, FL</title>
-    <meta name="description" content="Boynton Auto Repair & Transmission - Expert automotive repair and transmission services in Boynton Beach, Florida. Quality service since day one.">
+    <title>Boynton Auto & Transmission - Expert Transmission Specialists | Boynton Beach, FL</title>
+    <meta name="description" content="Boynton Auto & Transmission specializes in transmission repair and service in Boynton Beach. Expert transmission technicians with 25+ years experience.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root { --primary-color: #dc2626; --primary-dark: #b91c1c; --white: #ffffff; --text-dark: #1e293b; --background-light: #fef2f2; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn-primary { background: var(--primary-color); color: var(--white); padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 600; }
-        .hero { background: linear-gradient(135deg, #374151, var(--text-dark)); color: var(--white); min-height: 100vh; display: flex; align-items: center; text-align: center; }
-        .section { padding: 5rem 0; }
-        .footer { background: var(--text-dark); color: var(--white); padding: 3rem 0; text-align: center; }
-        h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .service-card { background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(52, 73, 94, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.9rem;
+            color: #F39C12;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #F39C12;
+        }
+
+        .estimate-btn {
+            background: #F39C12;
+            color: white !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .estimate-btn:hover {
+            background: #E67E22;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(52, 73, 94, 0.95), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .specialist-badge {
+            background: linear-gradient(135deg, #F39C12, #E67E22);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #F39C12;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: #E67E22;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid #F39C12;
+            color: #F39C12;
+        }
+
+        .cta-btn.secondary:hover {
+            background: #F39C12;
+            color: white;
+        }
+
+        .experience-badges {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .exp-badge {
+            background: rgba(243, 156, 18, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+            color: #F39C12;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #F8F9FA;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.2rem;
+            color: #34495E;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7F8C8D;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #F39C12, #E67E22);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            background: linear-gradient(135deg, #F39C12, #E67E22);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6rem;
+            color: #34495E;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .service-card p {
+            color: #7F8C8D;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F39C12, #E67E22);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .phone-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin: 1rem 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #34495E;
+            color: white;
+            padding: 4rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer h4 {
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 1.5rem;
+            color: #F39C12;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer ul li a {
+            color: #BDC3C7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: #F39C12;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #5D6D7E;
+            padding-top: 2rem;
+            text-align: center;
+            color: #BDC3C7;
+        }
+
+        .website-credit {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .website-credit a {
+            color: #F39C12;
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .experience-badges {
+                gap: 1rem;
+            }
+
+            .exp-badge {
+                font-size: 0.8rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-number {
+                font-size: 1.8rem;
+            }
+
+            .contact h2 {
+                font-size: 2.8rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="hero">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <h1>Expert Auto Repair & Transmission</h1>
-            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Trusted automotive service in Boynton Beach, Florida. Specializing in transmission repair and general auto maintenance.</p>
-            <a href="mailto:bsony56@yahoo.com" class="btn-primary">Contact Us Today</a>
+            <div class="nav-container">
+                <div class="logo">⚙️ Boynton Auto & Transmission</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="estimate-btn">Free Estimate</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="section" style="background: var(--background-light);">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Our Automotive Services</h2>
+            <div class="specialist-badge">
+                ⚙️ TRANSMISSION SPECIALISTS SINCE 1998
+            </div>
+            <h1>Expert Transmission Service<br>You Can Count On</h1>
+            <p class="hero-subtitle">For over 25 years, Boynton Auto & Transmission has been Boynton Beach's trusted transmission specialists. From simple maintenance to complete rebuilds, we do it right.</p>
+            
+            <div class="hero-ctas">
+                <a href="tel:5615550106" class="cta-btn">📞 Call: (561) 555-0106</a>
+                <a href="#contact" class="cta-btn secondary">Free Diagnostic</a>
+            </div>
+
+            <div class="experience-badges">
+                <div class="exp-badge">⚙️ Transmission Specialists</div>
+                <div class="exp-badge">🛠️ 25+ Years Experience</div>
+                <div class="exp-badge">🏆 Local Family Business</div>
+                <div class="exp-badge">💯 Satisfaction Guaranteed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Expert Transmission Services</h2>
+            <p class="section-subtitle">Specializing in automatic and manual transmission repair, service, and rebuilds for all makes and models.</p>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>🔧 Transmission Repair</h3>
-                    <p>Expert transmission repair and rebuilds for automatic and manual transmissions.</p>
+                    <div class="service-icon">🔧</div>
+                    <h3>Transmission Repair</h3>
+                    <p>Expert diagnosis and repair of transmission problems. We fix what's broken without unnecessary work, saving you money.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🚗 Engine Diagnostics</h3>
-                    <p>Complete engine diagnostics and repair using the latest automotive technology.</p>
+                    <div class="service-icon">⚙️</div>
+                    <h3>Complete Rebuilds</h3>
+                    <p>When your transmission needs a complete rebuild, we use quality parts and proven techniques for long-lasting results.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🛞 Brake Service</h3>
-                    <p>Comprehensive brake repair and maintenance to keep you safe on the road.</p>
+                    <div class="service-icon">🛢️</div>
+                    <h3>Fluid Service & Maintenance</h3>
+                    <p>Regular transmission fluid changes and maintenance to prevent major problems and extend transmission life.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🔋 Electrical Systems</h3>
-                    <p>Automotive electrical repair including alternators, starters, and batteries.</p>
+                    <div class="service-icon">🔍</div>
+                    <h3>Free Diagnostics</h3>
+                    <p>Comprehensive transmission diagnostics to pinpoint problems accurately before recommending any repairs.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🛠️ General Repairs</h3>
-                    <p>Complete automotive repair services for all makes and models.</p>
+                    <div class="service-icon">🚗</div>
+                    <h3>General Auto Repair</h3>
+                    <p>Complete automotive services including brakes, engine work, electrical, and routine maintenance.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🔍 Inspections</h3>
-                    <p>Thorough vehicle inspections and preventive maintenance services.</p>
+                    <div class="service-icon">🛞</div>
+                    <h3>Clutch Repair</h3>
+                    <p>Manual transmission clutch repair and replacement. We service all types of manual transmissions and clutches.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <div class="container" style="text-align: center;">
-            <h2>About Boynton Auto Repair & Transmission</h2>
-            <p style="margin: 2rem 0; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">We've been serving the Boynton Beach community with honest, reliable automotive repair services. Our experienced team treats every vehicle with care and attention to detail.</p>
-            
-            <h3 style="margin-top: 3rem;">Get In Touch</h3>
-            <p style="margin: 1rem 0; font-size: 1.1rem;">📧 <a href="mailto:bsony56@yahoo.com" style="color: var(--primary-color); font-weight: 600;">bsony56@yahoo.com</a></p>
-            <p>📍 Boynton Beach, Florida</p>
-            <a href="mailto:bsony56@yahoo.com" class="btn-primary" style="margin-top: 2rem;">Schedule Service</a>
-        </div>
-    </div>
-
-    <div class="footer">
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <h3>Boynton Auto Repair & Transmission</h3>
-            <p>Trusted automotive service in Boynton Beach, FL</p>
-            <p>📧 bsony56@yahoo.com | Serving Boynton Beach & surrounding areas</p>
-            <p style="margin-top: 2rem; font-size: 0.9rem; color: #9ca3af;">Website designed by <a href="https://robbiegetstoyouleads.com" style="color: #f59e0b;">RobbieGetsYouLeads.com</a></p>
+            <h2>Transmission Problems? We Can Help.</h2>
+            <p class="contact-subtitle">Don't let transmission problems leave you stranded. Get expert service from Boynton Beach's transmission specialists.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Expert Service</h3>
+                    <div class="phone-number">(561) 555-0106</div>
+                    <p>Call for transmission repair and free diagnostics</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>📍 Visit Our Shop</h3>
+                    <p>5678 Transmission Way<br>Boynton Beach, FL 33426</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Mon-Fri: 8:00 AM - 5:30 PM<br>Sat: 8:00 AM - 3:00 PM</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>🔧 Free Diagnostics</h3>
+                    <p>Not sure what's wrong? We'll diagnose your transmission problem at no charge.</p>
+                    <a href="mailto:service@boyntonauto.com" style="color: white; font-weight: 600; font-size: 1.1rem;">service@boyntonauto.com</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="tel:5615550106" class="cta-btn" style="font-size: 1.2rem; padding: 1.5rem 3rem; background: white; color: #F39C12;">⚙️ Call for Expert Service</a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>⚙️ Boynton Auto & Transmission</h4>
+                    <p>Boynton Beach's trusted transmission specialists since 1998. Expert service on all automatic and manual transmissions.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: #F39C12;">"Transmission Experts Since 1998"</p>
+                </div>
+                
+                <div>
+                    <h4>Transmission Services</h4>
+                    <ul>
+                        <li><a href="#services">Transmission Repair</a></li>
+                        <li><a href="#services">Complete Rebuilds</a></li>
+                        <li><a href="#services">Fluid Service</a></li>
+                        <li><a href="#services">Free Diagnostics</a></li>
+                        <li><a href="#services">General Auto Repair</a></li>
+                        <li><a href="#services">Clutch Repair</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li>📞 <a href="tel:5615550106">(561) 555-0106</a></li>
+                        <li>✉️ <a href="mailto:service@boyntonauto.com">service@boyntonauto.com</a></li>
+                        <li>📍 5678 Transmission Way, Boynton Beach</li>
+                        <li>⚙️ Transmission Specialists</li>
+                        <li>🔧 Free Diagnostics Available</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li>Boynton Beach</li>
+                        <li>Delray Beach</li>
+                        <li>Lake Worth</li>
+                        <li>Lantana</li>
+                        <li>Ocean Ridge</li>
+                        <li>Gulf Stream</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Boynton Auto & Transmission. All rights reserved. | Transmission Specialists Since 1998</p>
+                <div class="website-credit">
+                    Website by <a href="../../portfolio/">Robbie Gets You Leads</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

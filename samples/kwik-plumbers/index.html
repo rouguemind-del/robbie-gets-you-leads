@@ -3,78 +3,792 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kwik Plumbers - Emergency Plumbing Services in West Palm Beach, FL</title>
-    <meta name="description" content="Kwik Plumbers - Fast, reliable emergency plumbing services in West Palm Beach, Florida. Drain cleaning, water heater repair, and more. Available 24/7.">
+    <title>Kwik Plumbers - 24/7 Emergency Plumbing Services | West Palm Beach, FL</title>
+    <meta name="description" content="Kwik Plumbers provides fast, reliable 24/7 emergency plumbing services in West Palm Beach and Palm Beach County. Licensed, insured, and trusted by thousands of customers.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --primary-color: #1e40af;
-            --primary-dark: #1e3a8a;
-            --white: #ffffff;
-            --text-dark: #1e293b;
-            --background-light: #f8fafc;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .btn-primary { background: var(--primary-color); color: var(--white); padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; }
-        .hero { background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); color: var(--white); min-height: 100vh; display: flex; align-items: center; text-align: center; }
-        .section { padding: 5rem 0; }
-        .footer { background: var(--text-dark); color: var(--white); padding: 3rem 0; text-align: center; }
-        h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .service-card { background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            color: #2980B9;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2C3E50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #E67E22;
+        }
+
+        .emergency-btn {
+            background: #E74C3C;
+            color: white !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(41, 128, 185, 0.9), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1558618666-fbd7c2c3cd5e?w=1400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .emergency-banner {
+            background: #E74C3C;
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            animation: emergency-flash 3s infinite;
+            display: inline-block;
+        }
+
+        @keyframes emergency-flash {
+            0%, 50% { background: #E74C3C; }
+            25%, 75% { background: #C0392B; }
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #E67E22;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: #D35400;
+            transform: translateY(-2px);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-btn.secondary:hover {
+            background: white;
+            color: #2980B9;
+        }
+
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            color: #2980B9;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: #2980B9;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #7F8C8D;
+            line-height: 1.7;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: #F8F9FA;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            color: #2980B9;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: #7F8C8D;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            background: #E67E22;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .reason-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .reason-number {
+            background: #E67E22;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .reason-card h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: #2980B9;
+            margin-bottom: 1rem;
+        }
+
+        /* Service Area */
+        .service-area {
+            padding: 100px 0;
+            background: #F8F9FA;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .area-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .area-card h4 {
+            color: #2980B9;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #2980B9;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #E67E22;
+        }
+
+        /* Footer */
+        .footer {
+            background: #34495E;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer h4 {
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 1rem;
+            color: #E67E22;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer ul li a {
+            color: #BDC3C7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: #E67E22;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #5D6D7E;
+            padding-top: 2rem;
+            text-align: center;
+            color: #BDC3C7;
+        }
+
+        .website-credit {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .website-credit a {
+            color: #E67E22;
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .trust-indicators {
+                gap: 1rem;
+            }
+
+            .trust-badge {
+                font-size: 0.8rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-number {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="hero">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <h1>Emergency Plumbing Services Available 24/7</h1>
-            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Fast, reliable plumbing solutions in West Palm Beach. No job too big or small!</p>
-            <a href="mailto:kwikrooter@comcast.net" class="btn-primary">Contact Us Now</a>
+            <div class="nav-container">
+                <div class="logo">🔧 Kwik Plumbers</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#areas">Service Areas</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="tel:5615550101" class="emergency-btn">🚨 Emergency: (561) 555-0101</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="section" style="background: var(--background-light);">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Our Plumbing Services</h2>
+            <div class="emergency-banner">
+                🚨 24/7 EMERGENCY PLUMBING SERVICES
+            </div>
+            <h1>Fast, Reliable Plumbing<br>When You Need It Most</h1>
+            <p class="hero-subtitle">Licensed, insured, and trusted by West Palm Beach homeowners for over 15 years. We're here when plumbing emergencies strike — day or night.</p>
+            
+            <div class="hero-ctas">
+                <a href="tel:5615550101" class="cta-btn">📞 Call Now: (561) 555-0101</a>
+                <a href="#contact" class="cta-btn secondary">Get Free Estimate</a>
+            </div>
+
+            <div class="trust-indicators">
+                <div class="trust-badge">⭐ Licensed & Insured</div>
+                <div class="trust-badge">🚀 30-Min Response Time</div>
+                <div class="trust-badge">🏆 15+ Years Experience</div>
+                <div class="trust-badge">💯 100% Satisfaction Guaranteed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Plumbing Services</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #7F8C8D; margin-bottom: 2rem;">From emergency repairs to routine maintenance, we handle it all with expertise and care.</p>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>🚿 Emergency Plumbing</h3>
-                    <p>24/7 emergency plumbing repairs for urgent leaks, clogs, and pipe bursts.</p>
+                    <div class="service-icon">🚨</div>
+                    <h3>Emergency Repairs</h3>
+                    <p>Burst pipes, major leaks, and urgent plumbing issues. Available 24/7 with rapid response times to minimize damage to your home.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🔧 Drain Cleaning</h3>
-                    <p>Professional drain cleaning and hydro-jetting services for all types of blockages.</p>
+                    <div class="service-icon">🚿</div>
+                    <h3>Drain Cleaning</h3>
+                    <p>Professional drain cleaning services using advanced equipment. We clear stubborn clogs and restore proper water flow quickly.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🔥 Water Heater Repair</h3>
-                    <p>Water heater installation, repair, and maintenance for gas and electric units.</p>
+                    <div class="service-icon">🔥</div>
+                    <h3>Water Heater Service</h3>
+                    <p>Installation, repair, and maintenance of traditional and tankless water heaters. Get hot water flowing again fast.</p>
                 </div>
+                
                 <div class="service-card">
-                    <h3>🏠 Residential Plumbing</h3>
-                    <p>Complete residential plumbing services for homes in West Palm Beach.</p>
+                    <div class="service-icon">🔧</div>
+                    <h3>Pipe Installation</h3>
+                    <p>New pipe installation and re-piping services. We work with all pipe materials and ensure long-lasting, reliable results.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Leak Detection</h3>
+                    <p>Advanced leak detection technology finds hidden leaks before they cause major damage. Protect your property and save money.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Sewer Line Services</h3>
+                    <p>Sewer line repair, replacement, and cleaning. We handle the dirty work so you don't have to worry about backups.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <div class="container" style="text-align: center;">
-            <h2>Contact Kwik Plumbers</h2>
-            <p style="margin: 1rem 0;">📧 <a href="mailto:kwikrooter@comcast.net">kwikrooter@comcast.net</a></p>
-            <p>📍 Serving West Palm Beach, FL and surrounding areas</p>
-            <a href="mailto:kwikrooter@comcast.net" class="btn-primary" style="margin-top: 2rem;">Get Free Estimate</a>
-        </div>
-    </div>
-
-    <div class="footer">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h3>Kwik Plumbers</h3>
-            <p>Professional plumbing services in West Palm Beach, FL</p>
-            <p style="margin-top: 2rem; font-size: 0.9rem; color: #9ca3af;">Website designed by <a href="https://robbiegetstoyouleads.com" style="color: #f59e0b;">RobbieGetsYouLeads.com</a></p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>West Palm Beach's Most Trusted Plumbers</h2>
+                    <p>For over 15 years, Kwik Plumbers has been the go-to plumbing service for homeowners throughout West Palm Beach and Palm Beach County. We've built our reputation on fast response times, honest pricing, and quality workmanship.</p>
+                    
+                    <p>Whether you're dealing with a plumbing emergency or planning a bathroom renovation, our licensed and insured technicians have the expertise to get the job done right the first time.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Licensed & Insured</strong><br>
+                                Fully licensed Florida contractors
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div>
+                                <strong>24/7 Emergency Service</strong><br>
+                                Available when you need us most
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <div>
+                                <strong>Upfront Pricing</strong><br>
+                                No hidden fees or surprises
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🏆</div>
+                            <div>
+                                <strong>Satisfaction Guaranteed</strong><br>
+                                We stand behind our work
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600" alt="Professional plumber working" loading="lazy">
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Kwik Plumbers?</h2>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-number">1</div>
+                    <h3>Lightning-Fast Response</h3>
+                    <p>We understand plumbing emergencies can't wait. That's why we guarantee a 30-minute response time for emergency calls throughout West Palm Beach.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-number">2</div>
+                    <h3>Honest, Upfront Pricing</h3>
+                    <p>No surprises, no hidden fees. We provide detailed estimates before starting any work, so you know exactly what you're paying for.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-number">3</div>
+                    <h3>Expert Technicians</h3>
+                    <p>Our team consists of licensed, insured professionals with years of experience handling everything from simple repairs to complex installations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area" id="areas">
+        <div class="container">
+            <h2 class="section-title">Areas We Serve</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #7F8C8D; margin-bottom: 2rem;">Proudly serving West Palm Beach and surrounding Palm Beach County communities</p>
+            
+            <div class="areas-grid">
+                <div class="area-card">
+                    <h4>West Palm Beach</h4>
+                    <p>Downtown & Surrounding Areas</p>
+                </div>
+                <div class="area-card">
+                    <h4>Palm Beach Gardens</h4>
+                    <p>Residential & Commercial</p>
+                </div>
+                <div class="area-card">
+                    <h4>Wellington</h4>
+                    <p>All Neighborhoods</p>
+                </div>
+                <div class="area-card">
+                    <h4>Jupiter</h4>
+                    <p>Coastal Communities</p>
+                </div>
+                <div class="area-card">
+                    <h4>Boca Raton</h4>
+                    <p>North Boca Areas</p>
+                </div>
+                <div class="area-card">
+                    <h4>Delray Beach</h4>
+                    <p>Western Communities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Ready for Fast, Professional Service?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Don't let plumbing problems disrupt your day. Call Kwik Plumbers now for immediate assistance.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Emergency Line</h3>
+                    <div class="phone-number">(561) 555-0101</div>
+                    <p>Available 24/7 for emergencies</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>✉️ Get Free Estimate</h3>
+                    <p>Email us your plumbing needs</p>
+                    <a href="mailto:info@kwikplumbers.com" style="color: #E67E22; font-weight: 600;">info@kwikplumbers.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>📍 Service Area</h3>
+                    <p>West Palm Beach &<br>Palm Beach County</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Licensed & Insured FL Contractors</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="tel:5615550101" class="cta-btn" style="font-size: 1.2rem; padding: 1.5rem 3rem;">📞 Call Now for Emergency Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>🔧 Kwik Plumbers</h4>
+                    <p>West Palm Beach's most trusted plumbing service. Licensed, insured, and available 24/7 for all your plumbing needs.</p>
+                </div>
+                
+                <div>
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Emergency Repairs</a></li>
+                        <li><a href="#services">Drain Cleaning</a></li>
+                        <li><a href="#services">Water Heater Service</a></li>
+                        <li><a href="#services">Pipe Installation</a></li>
+                        <li><a href="#services">Leak Detection</a></li>
+                        <li><a href="#services">Sewer Line Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📞 <a href="tel:5615550101">(561) 555-0101</a></li>
+                        <li>✉️ <a href="mailto:info@kwikplumbers.com">info@kwikplumbers.com</a></li>
+                        <li>📍 West Palm Beach, FL</li>
+                        <li>🕐 24/7 Emergency Service</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li>West Palm Beach</li>
+                        <li>Palm Beach Gardens</li>
+                        <li>Wellington</li>
+                        <li>Jupiter</li>
+                        <li>Boca Raton</li>
+                        <li>Delray Beach</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Kwik Plumbers. All rights reserved. | Licensed Florida Plumbing Contractor</p>
+                <div class="website-credit">
+                    Website by <a href="../../portfolio/">Robbie Gets You Leads</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
