@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robbie Gets You Leads | Affordable Websites for Local Businesses</title>
-    <meta name="description" content="Professional websites for local businesses starting at $299. Plumbers, electricians, landscapers, salons & more. South Florida web design & digital marketing. Free sample site — no strings attached.">
+    <meta name="description" content="Professional websites for local businesses starting at $149/mo. Plumbers, electricians, landscapers, salons & more. South Florida web design & digital marketing. Free sample site — no strings attached.">
     
     <meta property="og:title" content="Robbie Gets You Leads | Affordable Websites for Local Businesses">
-    <meta property="og:description" content="Professional websites for local businesses starting at $299. Free sample site — no strings attached.">
+    <meta property="og:description" content="Professional websites for local businesses starting at $149/mo. Free sample site — no strings attached.">
     <meta property="og:url" content="https://rouguemind-del.github.io/robbie-gets-you-leads/">
     
     <script type="application/ld+json">
@@ -163,7 +163,16 @@
 
         /* ── PRICING ── */
         .pricing { padding: 5rem 0; background: #fff; }
+        .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; font-family: 'Inter', sans-serif; }
+        .billing-toggle span { font-weight: 500; color: #718096; transition: color .3s; }
+        .billing-toggle span.active { color: #1A2B4A; font-weight: 600; }
+        .toggle-switch { width: 56px; height: 30px; background: #E8725A; border-radius: 15px; position: relative; cursor: pointer; transition: background .3s; }
+        .toggle-switch::after { content: ''; position: absolute; width: 24px; height: 24px; background: #fff; border-radius: 50%; top: 3px; left: 3px; transition: transform .3s; }
+        .toggle-switch.annual::after { transform: translateX(26px); }
+        .save-badge { background: #E8725A; color: #fff; font-size: .75rem; font-weight: 600; padding: .2rem .6rem; border-radius: 10px; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; margin-top: 3rem; }
+        .onetime-card { max-width: 420px; margin: 3rem auto 0; }
+        .onetime-card .price-card { border: 2px solid #e2e8f0; }
         .price-card {
             background: #FAFAF7; border: 2px solid #E2E8F0; border-radius: 20px;
             padding: 2.8rem 2.2rem; text-align: center; position: relative;
@@ -287,7 +296,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Your Business Deserves a Website That <span>Actually Works</span></h1>
-                <p class="hero-sub">Professional, modern websites for plumbers, electricians, landscapers, salons, auto shops &amp; more — starting at just <strong>$299</strong>. Serving South Florida and beyond.</p>
+                <p class="hero-sub">Professional, modern websites for plumbers, electricians, landscapers, salons, auto shops &amp; more — starting at just <strong>$149/mo</strong>. Serving South Florida and beyond.</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">Get a Free Sample Site</a>
                     <a href="#work" class="btn btn-outline">See Our Work</a>
@@ -491,49 +500,72 @@
         <div class="container">
             <h2 class="section-title">Simple, Transparent Pricing</h2>
             <p class="section-sub">No contracts. No hidden fees. Cancel anytime.</p>
+            <div class="billing-toggle">
+                <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+                <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()"></div>
+                <span class="toggle-label" id="annualLabel">Annual</span>
+                <span class="save-badge">Save 10%</span>
+            </div>
             <div class="pricing-grid">
                 <div class="price-card fade-up">
-                    <h3>One-Time Site</h3>
-                    <div class="price-amount">$299</div>
-                    <div class="price-period">one-time payment</div>
+                    <h3>Starter</h3>
+                    <div class="price-amount" data-monthly="$149" data-annual="$134">$149</div>
+                    <div class="price-period" data-monthly="per month" data-annual="per month, billed annually">per month</div>
                     <ul class="feat-list">
                         <li>Custom Website Design</li>
                         <li>Mobile Responsive</li>
+                        <li>Hosting &amp; SSL Included</li>
                         <li>Contact Forms</li>
                         <li>Google-Optimized</li>
-                        <li>48-Hour Delivery</li>
-                        <li>1 Round of Revisions</li>
+                        <li>Monthly Edits</li>
                     </ul>
                     <a href="#contact" class="price-cta">Get Started</a>
                 </div>
                 <div class="price-card pop fade-up">
                     <div class="pop-badge">MOST POPULAR</div>
                     <h3>Growth</h3>
-                    <div class="price-amount">$149</div>
-                    <div class="price-period">per month</div>
+                    <div class="price-amount" data-monthly="$249" data-annual="$224">$249</div>
+                    <div class="price-period" data-monthly="per month" data-annual="per month, billed annually">per month</div>
                     <ul class="feat-list">
-                        <li>Everything in One-Time</li>
-                        <li>Hosting &amp; SSL Included</li>
-                        <li>Monthly SEO Blog Post</li>
+                        <li>Everything in Starter</li>
+                        <li>SEO Optimization</li>
                         <li>Google Business Setup</li>
+                        <li>Monthly Content Updates</li>
                         <li>Review Management</li>
+                        <li>Analytics Dashboard</li>
                         <li>5 Updates/Month</li>
-                        <li>Priority Support</li>
                     </ul>
                     <a href="#contact" class="price-cta">Get Started</a>
                 </div>
                 <div class="price-card fade-up">
                     <h3>Pro</h3>
-                    <div class="price-amount">$199</div>
-                    <div class="price-period">per month</div>
+                    <div class="price-amount" data-monthly="$349" data-annual="$314">$349</div>
+                    <div class="price-period" data-monthly="per month" data-annual="per month, billed annually">per month</div>
                     <ul class="feat-list">
                         <li>Everything in Growth</li>
                         <li>Weekly Blog Posts</li>
-                        <li>Social Media Graphics</li>
-                        <li>Email Newsletter Setup</li>
+                        <li>Social Media Integration</li>
+                        <li>Ad Management</li>
                         <li>Monthly Performance Reports</li>
                         <li>Unlimited Updates</li>
-                        <li>24/7 Priority Support</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="price-cta">Get Started</a>
+                </div>
+            </div>
+            <div class="onetime-card fade-up">
+                <div class="price-card">
+                    <h3>One-Time Build</h3>
+                    <div class="price-amount">$799</div>
+                    <div class="price-period">one-time payment</div>
+                    <ul class="feat-list">
+                        <li>Custom Website Design</li>
+                        <li>Mobile Responsive</li>
+                        <li>Contact Forms</li>
+                        <li>Google-Optimized</li>
+                        <li>1 Year Hosting Included</li>
+                        <li>2 Rounds of Revisions</li>
+                        <li>Then $49/mo for hosting &amp; maintenance</li>
                     </ul>
                     <a href="#contact" class="price-cta">Get Started</a>
                 </div>
@@ -658,6 +690,22 @@
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
         document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // Billing toggle
+        let isAnnual = false;
+        function toggleBilling() {
+            isAnnual = !isAnnual;
+            document.getElementById('billingToggle').classList.toggle('annual', isAnnual);
+            document.getElementById('monthlyLabel').classList.toggle('active', !isAnnual);
+            document.getElementById('annualLabel').classList.toggle('active', isAnnual);
+            const key = isAnnual ? 'annual' : 'monthly';
+            document.querySelectorAll('.price-amount[data-monthly]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + key);
+            });
+            document.querySelectorAll('.price-period[data-monthly]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + key);
+            });
+        }
     </script>
 </body>
 </html>
