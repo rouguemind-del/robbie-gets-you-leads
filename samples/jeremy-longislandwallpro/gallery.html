@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Work | Long Island Wall Pro</title>
 <meta name="description" content="Browse 30+ years of professional drywall, painting, and restoration projects by Long Island Wall Pro across Suffolk County and the Hamptons.">
+<link rel="canonical" href="https://rouguemind-del.github.io/robbie-gets-you-leads/samples/jeremy-longislandwallpro/gallery.html">
+<meta property="og:title" content="Our Work | Long Island Wall Pro Gallery">
+<meta property="og:description" content="Browse 30+ years of professional drywall, painting, and restoration projects by Long Island Wall Pro across Suffolk County.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rouguemind-del.github.io/robbie-gets-you-leads/samples/jeremy-longislandwallpro/gallery.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Work | Long Island Wall Pro Gallery">
+<meta name="twitter:description" content="Browse 30+ years of professional drywall, painting, and restoration projects by Long Island Wall Pro across Suffolk County.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -135,7 +144,10 @@ nav a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:
       <a href="index.html#contact">Contact</a>
       <a href="tel:+16316404117" class="nav-cta">📞 (631) 640-4117</a>
     </nav>
-    <div class="hamburger" onclick="toggleMobileNav()">
+    <a href="https://www.facebook.com/share/181agb8Jpu/" target="_blank" rel="noopener" aria-label="Follow us on Facebook" style="color:#fff;font-size:1.3rem;margin-left:12px;" title="Facebook">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <div class="hamburger" role="button" aria-label="Open navigation menu" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </div>
   </div>
@@ -144,7 +156,7 @@ nav a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:
 <!-- Mobile Nav -->
 <div class="mobile-nav" id="mobileNav" onclick="closeMobileNav()">
   <div class="mobile-nav-content" onclick="event.stopPropagation()">
-    <button class="close-nav" onclick="closeMobileNav()">✕</button>
+    <button class="close-nav" aria-label="Close navigation menu" onclick="closeMobileNav()">✕</button>
     <a href="index.html">Home</a>
     <a href="gallery.html">Our Work</a>
     <a href="index.html#services">Services</a>
@@ -198,6 +210,14 @@ nav a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:
       <a href="index.html#contact">Contact</a>
     </div>
     <div class="footer-phone">Call Us: <a href="tel:+16316404117">(631) 640-4117</a></div>
+    <div style="margin-bottom:12px;">
+      <span style="font-size:.85rem;color:rgba(255,255,255,.6);">Follow Us</span><br>
+      <a href="https://www.facebook.com/share/181agb8Jpu/" target="_blank" rel="noopener" style="color:var(--gold);font-size:.9rem;display:inline-flex;align-items:center;gap:6px;margin-top:4px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+    <p style="font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:12px;">Long Island Wall Pro — Professional Drywall &amp; Painting · (631) 640-4117 · Suffolk County, NY</p>
     <div class="footer-copy">&copy; 2026 Long Island Wall Pro. All rights reserved. Serving Suffolk County &amp; The Hamptons.</div>
   </div>
 </footer>
@@ -209,10 +229,10 @@ nav a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
-  <div class="lb-close" onclick="closeLightbox()">✕</div>
-  <div class="lb-arrow lb-prev" onclick="navLightbox(-1)">‹</div>
-  <div class="lb-arrow lb-next" onclick="navLightbox(1)">›</div>
-  <img id="lbImg" src="" alt="Project photo">
+  <div class="lb-close" role="button" aria-label="Close lightbox" onclick="closeLightbox()">✕</div>
+  <div class="lb-arrow lb-prev" role="button" aria-label="Previous photo" onclick="navLightbox(-1)">‹</div>
+  <div class="lb-arrow lb-next" role="button" aria-label="Next photo" onclick="navLightbox(1)">›</div>
+  <img id="lbImg" src="" alt="Professional drywall and painting project by Long Island Wall Pro">
   <div class="lb-counter" id="lbCounter"></div>
 </div>
 
@@ -253,12 +273,26 @@ const photos=[
 "window-trim.jpg"
 ];
 
+const altMap={
+  "baby-painter.jpg":"Family business - next generation painter",
+  "bathroom-renovation.jpg":"Professional bathroom renovation",
+  "commercial-project.jpg":"Commercial drywall project",
+  "dining-room-finished.jpg":"Luxury dining room finish",
+  "dining-room-finished-2.jpg":"Luxury dining room finish - alternate view",
+  "dining-open-floor.jpg":"Open floor plan dining room project",
+  "hallway-crown-molding.jpg":"Custom hallway crown molding",
+  "large-wall-repair.jpg":"Large wall repair project",
+  "window-trim.jpg":"Window trim installation"
+};
+function getAlt(filename){return altMap[filename]||"Professional drywall and painting project by Long Island Wall Pro";}
+
 const grid=document.getElementById('galleryGrid');
 photos.forEach((p,i)=>{
   const div=document.createElement('div');
   div.className='gallery-item';
   div.onclick=()=>openLightbox(i);
-  const img=`<img src="photos/${p}" alt="Project photo" loading="lazy"${p==='baby-painter.jpg'?' style="object-position:center 20%"':''}><div class="zoom-icon">⤢</div>`;
+  const alt=getAlt(p);
+  const img=`<img src="photos/${p}" alt="${alt}" loading="lazy"${p==='baby-painter.jpg'?' style="object-position:center 20%"':''}><div class="zoom-icon" aria-hidden="true">⤢</div>`;
   div.innerHTML=img;
   grid.appendChild(div);
 });
@@ -291,6 +325,7 @@ function navLightbox(d){
 }
 function updateLightbox(){
   lbImg.src='photos/'+photos[currentIdx];
+  lbImg.alt=getAlt(photos[currentIdx]);
   lbCounter.textContent=(currentIdx+1)+' / '+photos.length;
 }
 
