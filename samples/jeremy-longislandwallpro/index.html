@@ -140,6 +140,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            position: relative;
         }
         
         .logo {
@@ -180,11 +181,20 @@
             padding: 0.5rem 0;
         }
         
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
             justify-content: center;
+            margin: 0;
+            padding: 0;
         }
         
         .nav-links a {
@@ -196,6 +206,74 @@
         }
         
         .nav-links a:hover {
+            background-color: #1e3a5f;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #2c5282;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mobile-nav-links li {
+            border-bottom: 1px solid #1e3a5f;
+        }
+        
+        .mobile-nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav-links a:hover {
             background-color: #1e3a5f;
         }
         
@@ -533,9 +611,11 @@
             }
             
             .nav-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
             }
             
             .hero h1 {
@@ -585,7 +665,7 @@
     </header>
 
     <nav>
-        <div class="container">
+        <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#emergency">Emergency</a></li>
@@ -594,6 +674,23 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#emergency">Emergency</a></li>
+                    <li><a href="#portfolio">Our Work</a></li>
+                    <li><a href="#areas">Service Areas</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -1048,6 +1145,23 @@
     </footer>
 
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
