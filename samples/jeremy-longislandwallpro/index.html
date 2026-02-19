@@ -129,10 +129,13 @@
         
         /* Header */
         header {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            background: linear-gradient(135deg, #2c4a6b 0%, #3d5a7a 100%);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
         .header-content {
@@ -158,15 +161,17 @@
         .phone {
             font-size: 1.2rem;
             font-weight: bold;
-            color: #d4af37;
+            color: #f5f1e8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         
         .emergency {
-            background-color: #e53e3e;
+            background-color: #c53030;
             padding: 0.5rem 1rem;
             border-radius: 25px;
             font-size: 0.9rem;
             animation: pulse 2s infinite;
+            border: 2px solid #f5f1e8;
         }
         
         @keyframes pulse {
@@ -177,7 +182,7 @@
         
         /* Navigation */
         nav {
-            background-color: #2c5282;
+            background-color: #3d5a7a;
             padding: 0.5rem 0;
         }
         
@@ -206,7 +211,7 @@
         }
         
         .nav-links a:hover {
-            background-color: #1e3a5f;
+            background-color: #2c4a6b;
         }
         
         /* Hamburger Menu */
@@ -246,7 +251,7 @@
             top: 100%;
             left: 0;
             width: 100%;
-            background-color: #2c5282;
+            background-color: #3d5a7a;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             z-index: 1000;
         }
@@ -262,7 +267,7 @@
         }
         
         .mobile-nav-links li {
-            border-bottom: 1px solid #1e3a5f;
+            border-bottom: 1px solid #2c4a6b;
         }
         
         .mobile-nav-links a {
@@ -274,17 +279,18 @@
         }
         
         .mobile-nav-links a:hover {
-            background-color: #1e3a5f;
+            background-color: #2c4a6b;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(30, 58, 95, 0.8), rgba(44, 82, 130, 0.8)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(44, 74, 107, 0.85), rgba(61, 90, 122, 0.85)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 6rem 0;
+            margin-top: 0;
         }
         
         .hero h1 {
@@ -328,7 +334,7 @@
         
         .btn-primary {
             background-color: #d4af37;
-            color: #1e3a5f;
+            color: #2c4a6b;
         }
         
         .btn-primary:hover {
@@ -344,7 +350,7 @@
         
         .btn-secondary:hover {
             background-color: white;
-            color: #1e3a5f;
+            color: #2c4a6b;
         }
         
         /* Services Section */
@@ -357,7 +363,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #1e3a5f;
+            color: #2c4a6b;
         }
         
         .services-grid {
@@ -381,7 +387,7 @@
         }
         
         .service-card h3 {
-            color: #1e3a5f;
+            color: #2c4a6b;
             margin-bottom: 1rem;
             font-size: 1.3rem;
         }
@@ -489,7 +495,7 @@
         }
         
         .area-card h3 {
-            color: #1e3a5f;
+            color: #2c4a6b;
             margin-bottom: 1rem;
         }
         
@@ -523,7 +529,7 @@
         /* Contact Section */
         .contact {
             padding: 4rem 0;
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            background: linear-gradient(135deg, #2c4a6b 0%, #3d5a7a 100%);
             color: white;
         }
         
@@ -548,7 +554,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: bold;
-            color: #1e3a5f;
+            color: #2c4a6b;
         }
         
         .form-group input,
@@ -974,7 +980,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
-                <p style="font-size: 1.1rem; color: #1e3a5f; font-weight: bold;">Ready to transform your space?</p>
+                <p style="font-size: 1.1rem; color: #2c4a6b; font-weight: bold;">Ready to transform your space?</p>
                 <a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">Get Your Free Estimate</a>
             </div>
         </div>
@@ -995,7 +1001,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: #f8f9fa; border-radius: 10px;">
-                <h4 style="color: #1e3a5f; margin-bottom: 1rem;">Complete Coverage Across Suffolk County</h4>
+                <h4 style="color: #2c4a6b; margin-bottom: 1rem;">Complete Coverage Across Suffolk County</h4>
                 <p style="margin-bottom: 1rem;">From Setauket to Hauppauge, from Port Jefferson to Lake Ronkonkoma - we bring professional drywall, painting, and restoration services to your community.</p>
                 <p style="font-weight: bold; color: #d4af37;">Call (631) 640-4117 for service in your area!</p>
             </div>
@@ -1027,7 +1033,7 @@
                     </ul>
                     
                     <div style="background: #f8f9fa; padding: 1.5rem; border-left: 4px solid #d4af37; margin-top: 2rem;">
-                        <h5 style="color: #1e3a5f; margin-bottom: 0.5rem;">Union Training Advantage</h5>
+                        <h5 style="color: #2c4a6b; margin-bottom: 0.5rem;">Union Training Advantage</h5>
                         <p style="margin: 0; font-style: italic;">Our Local 1486 union training means rigorous standards, proper techniques, and professional accountability on every project. You get commercial-grade quality for your home or business.</p>
                     </div>
                 </div>
