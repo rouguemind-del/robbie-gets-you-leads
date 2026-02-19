@@ -1,262 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Real estate lead generation strategies, tips, and guides for agents. Learn how to find seller leads, reduce costs, and grow your business.">
-    <title>Real Estate Lead Generation Blog - Robbie Gets You Leads</title>
-    <link rel="stylesheet" href="../style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Robbie Gets You Leads</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#FFF9F5;color:#1A2B4A}
+h1,h2,h3{font-family:'DM Serif Display',serif}
+a{text-decoration:none;color:inherit}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:100;background:#fff;padding:0 24px;transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'DM Serif Display',serif;font-size:1.25rem;color:#1A2B4A}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.9rem;font-weight:500;color:#1A2B4A;transition:color .2s}
+.nav-links a:hover{color:#E8725A}
+.hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+.hamburger span{display:block;width:24px;height:2px;background:#1A2B4A;transition:.3s}
+.mobile-menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;padding:16px 24px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.mobile-menu a{display:block;padding:12px 0;font-weight:500;border-bottom:1px solid #eee}
+.mobile-menu.open{display:block}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+
+/* Hero */
+.hero{background:#1A2B4A;padding:72px 24px 64px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#E8725A;border-radius:2px}
+.hero h1{color:#fff;font-size:2.4rem;margin-bottom:12px}
+.hero p{color:rgba(255,255,255,.75);font-size:1.1rem;max-width:540px;margin:auto}
+
+/* Cards */
+.cards{max-width:1100px;margin:48px auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px}
+.card{background:#fff;border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,43,74,.1)}
+.card-body{padding:28px}
+.badge{display:inline-block;background:#E8725A;color:#fff;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;padding:4px 10px;border-radius:20px;margin-bottom:14px}
+.card h3{font-size:1.2rem;line-height:1.35;margin-bottom:10px}
+.card h3 a:hover{color:#E8725A}
+.card .excerpt{font-size:.9rem;color:#5a6a7a;line-height:1.6;margin-bottom:16px}
+.card .meta{font-size:.78rem;color:#8a96a3;display:flex;gap:16px}
+
+/* CTA sections */
+.cta-section{max-width:700px;margin:56px auto;padding:40px 32px;text-align:center;border-radius:12px}
+.cta-newsletter{background:#1A2B4A;color:#fff}
+.cta-newsletter h2{color:#fff;margin-bottom:8px}
+.cta-newsletter p{color:rgba(255,255,255,.7);margin-bottom:20px}
+.cta-leads{background:#fff;border:2px solid #E8725A}
+.cta-leads h2{margin-bottom:8px}
+.cta-leads p{color:#5a6a7a;margin-bottom:20px}
+.btn{display:inline-block;padding:12px 32px;border-radius:8px;font-weight:600;font-size:.95rem;transition:opacity .2s}
+.btn-coral{background:#E8725A;color:#fff}
+.btn-coral:hover{opacity:.88}
+.btn-outline{border:2px solid #E8725A;color:#E8725A}
+.btn-outline:hover{background:#E8725A;color:#fff}
+
+/* Footer */
+footer{background:#1A2B4A;color:rgba(255,255,255,.7);text-align:center;padding:40px 24px;font-size:.85rem;line-height:1.8}
+footer a{color:#E8725A}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav">
-                <div class="logo">
-                    <h1><a href="../index.html">🎯 Robbie Gets You Leads</a></h1>
-                </div>
-                <div class="contact">
-                    <a href="mailto:robertgetsyouleads@gmail.com" class="contact-link">Contact</a>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Blog Header Section -->
-    <section class="blog-header">
-        <div class="container">
-            <h1>Real Estate Lead Generation Resources</h1>
-            <p class="blog-subtitle">Strategies, tips, and guides to help you find more seller leads, reduce costs, and grow your business.</p>
-        </div>
-    </section>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../" class="brand">Robbie Gets You Leads</a>
+    <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../portfolio/">Portfolio</a></li>
+      <li><a href="../leads/">Lead Lists</a></li>
+      <li><a href="mailto:robertgetsyouleads@gmail.com">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../">Home</a>
+    <a href="../portfolio/">Portfolio</a>
+    <a href="../leads/">Lead Lists</a>
+    <a href="mailto:robertgetsyouleads@gmail.com">Contact</a>
+  </div>
+</nav>
 
-    <!-- Blog Articles Grid -->
-    <section class="blog-grid">
-        <div class="container">
-            <div class="articles-grid">
-                
-                <!-- Article 1 -->
-                <article class="article-card">
-                    <div class="article-content">
-                        <span class="article-category">Lead Generation</span>
-                        <h2><a href="cheap-seller-leads-without-zillow.html">How to Get Seller Leads Without Paying for Zillow</a></h2>
-                        <p class="article-excerpt">Discover how top real estate agents find cheap seller leads without paying Zillow's expensive fees. Learn 5 proven alternative sources that cost 80% less.</p>
-                        <div class="article-meta">
-                            <span class="read-time">6 min read</span>
-                            <span class="publish-date">Feb 14, 2026</span>
-                        </div>
-                    </div>
-                </article>
+<section class="hero">
+  <h1>Real Estate Lead Generation Resources</h1>
+  <p>Actionable strategies and insights to help agents and investors find better leads for less.</p>
+</section>
 
-                <!-- Article 2 -->
-                <article class="article-card">
-                    <div class="article-content">
-                        <span class="article-category">Lead Comparison</span>
-                        <h2><a href="expired-listings-vs-fsbo-leads.html">Expired Listings vs FSBO: Which Leads Convert Better?</a></h2>
-                        <p class="article-excerpt">Compare expired listing leads vs FSBO prospects. Discover which converts better, costs less, and provides higher ROI for real estate agents.</p>
-                        <div class="article-meta">
-                            <span class="read-time">7 min read</span>
-                            <span class="publish-date">Feb 14, 2026</span>
-                        </div>
-                    </div>
-                </article>
+<div class="cards">
 
-                <!-- Article 3 -->
-                <article class="article-card">
-                    <div class="article-content">
-                        <span class="article-category">Cost Analysis</span>
-                        <h2><a href="real-estate-lead-cost-2026.html">The Real Cost of Buying Real Estate Leads in 2026</a></h2>
-                        <p class="article-excerpt">Complete breakdown of Zillow, Realtor.com, BoldLeads, and alternative lead sources. Discover hidden fees and get realistic ROI comparisons.</p>
-                        <div class="article-meta">
-                            <span class="read-time">8 min read</span>
-                            <span class="publish-date">Feb 14, 2026</span>
-                        </div>
-                    </div>
-                </article>
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Lead Generation</span>
+      <h3><a href="cheap-seller-leads-without-zillow.html">How to Get Seller Leads Without Paying for Zillow</a></h3>
+      <p class="excerpt">Discover proven, budget-friendly channels that deliver motivated seller leads without relying on expensive platforms like Zillow Premier Agent.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>6 min read</span></div>
+    </div>
+  </article>
 
-                <!-- Article 4 -->
-                <article class="article-card">
-                    <div class="article-content">
-                        <span class="article-category">Off-Market</span>
-                        <h2><a href="off-market-listing-leads-guide.html">How Top Agents Find Off-Market Listings Before Anyone Else</a></h2>
-                        <p class="article-excerpt">Learn the proven strategies top agents use to find off-market listing opportunities. Probate, pre-foreclosure, and exclusive lead sources revealed.</p>
-                        <div class="article-meta">
-                            <span class="read-time">7 min read</span>
-                            <span class="publish-date">Feb 14, 2026</span>
-                        </div>
-                    </div>
-                </article>
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Lead Comparison</span>
+      <h3><a href="expired-listings-vs-fsbo-leads.html">Expired Listings vs FSBO: Which Leads Convert Better?</a></h3>
+      <p class="excerpt">A head-to-head breakdown of expired listings and FSBO leads, including conversion rates, costs, and the best scripts for each.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>7 min read</span></div>
+    </div>
+  </article>
 
-                <!-- Article 5 -->
-                <article class="article-card">
-                    <div class="article-content">
-                        <span class="article-category">Free Strategies</span>
-                        <h2><a href="free-seller-leads-real-estate.html">5 Free Ways to Generate Seller Leads This Month</a></h2>
-                        <p class="article-excerpt">Generate quality seller leads without spending money on platforms. Door knocking, social media, and content strategies that actually work in 2026.</p>
-                        <div class="article-meta">
-                            <span class="read-time">6 min read</span>
-                            <span class="publish-date">Feb 14, 2026</span>
-                        </div>
-                    </div>
-                </article>
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Cost Analysis</span>
+      <h3><a href="real-estate-lead-cost-2026.html">The Real Cost of Buying Real Estate Leads in 2026</a></h3>
+      <p class="excerpt">We break down what agents actually pay per lead across every major platform and reveal where your budget goes the furthest.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>8 min read</span></div>
+    </div>
+  </article>
 
-            </div>
-        </div>
-    </section>
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Off-Market</span>
+      <h3><a href="off-market-listing-leads-guide.html">How Top Agents Find Off-Market Listings Before Anyone Else</a></h3>
+      <p class="excerpt">The tactics and data sources top-producing agents use to uncover off-market deals before they ever hit the MLS.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>7 min read</span></div>
+    </div>
+  </article>
 
-    <!-- Newsletter CTA -->
-    <section class="blog-newsletter-cta">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Get Weekly Lead Generation Tips</h2>
-                <p>Join hundreds of agents getting actionable lead generation strategies, market insights, and cost-saving tips delivered to your inbox.</p>
-                <a href="https://the-listings-edge.beehiiv.com/" target="_blank" class="btn btn-primary btn-large">Subscribe to The Listing Edge</a>
-                <p class="newsletter-note">Free weekly newsletter • Unsubscribe anytime • No spam</p>
-            </div>
-        </div>
-    </section>
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Free Strategies</span>
+      <h3><a href="free-seller-leads-real-estate.html">5 Free Ways to Generate Seller Leads This Month</a></h3>
+      <p class="excerpt">No ad spend required. Five actionable methods you can start today to attract homeowners ready to sell.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>6 min read</span></div>
+    </div>
+  </article>
 
-    <!-- Sample CTA -->
-    <section class="blog-sample-cta">
-        <div class="container">
-            <div class="sample-content">
-                <h2>Ready to Try Skip-Traced Lead Lists?</h2>
-                <p>Get a free sample of 100 expired listings, FSBOs, or pre-foreclosure leads from your market. See the quality difference for yourself.</p>
-                <a href="mailto:robertgetsyouleads@gmail.com?subject=Free Sample Request - Blog Reader" class="btn btn-primary btn-large">Get Free Sample List</a>
-                <p class="sample-note">Sample delivered within 24 hours • No credit card required</p>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>🎯 Robbie Gets You Leads</h3>
-                    <p>Done-for-you real estate lead lists</p>
-                </div>
-                <div class="footer-contact">
-                    <p><strong>Email:</strong> <a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a></p>
-                    <p><strong>Markets:</strong> DFW, Houston, Phoenix, Atlanta, San Antonio, Tampa</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Robbie Gets You Leads. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<section class="cta-section cta-newsletter">
+  <h2>The Listings Edge Newsletter</h2>
+  <p>Weekly lead gen tips, market data, and scripts delivered to your inbox.</p>
+  <a href="https://the-listings-edge.beehiiv.com/" class="btn btn-coral" target="_blank">Subscribe Free</a>
+</section>
 
-    <style>
-        .blog-header {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-        }
+<section class="cta-section cta-leads">
+  <h2>Ready-to-Work Lead Lists</h2>
+  <p>Skip-traced, verified seller leads delivered as clean spreadsheets. Updated weekly.</p>
+  <a href="../leads/" class="btn btn-outline">Browse Lead Lists</a>
+</section>
 
-        .blog-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+<footer>
+  <p><a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a> | (574) 333-7083</p>
+  <p>Robbie Gets You Leads</p>
+</footer>
 
-        .blog-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .blog-grid {
-            padding: 80px 0;
-        }
-
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .article-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .article-category {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .article-card h2 {
-            margin: 0 0 1rem 0;
-            font-size: 1.25rem;
-        }
-
-        .article-card h2 a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .article-card h2 a:hover {
-            color: #667eea;
-        }
-
-        .article-excerpt {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .blog-newsletter-cta {
-            background: #f8f9fa;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .blog-sample-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .blog-header h1 {
-                font-size: 2rem;
-            }
-            
-            .articles-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .article-card {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>10)});
+document.getElementById('hamburger').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('open')});
+</script>
 </body>
 </html>

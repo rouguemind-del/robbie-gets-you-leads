@@ -3,520 +3,709 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get targeted real estate seller lead lists for your market. Fresh data, skip-traced phone numbers, email addresses. Serving DFW, Houston, Phoenix, Atlanta, San Antonio & Tampa. Starting at $29.">
-    <title>Real Estate Lead Lists for Agents | Robbie Gets You Leads - Fresh Seller Leads</title>
+    <title>Robbie Gets You Leads | Affordable Websites for Local Businesses</title>
+    <meta name="description" content="Professional websites for local businesses starting at $149/mo. Plumbers, electricians, landscapers, salons & more. South Florida web design & digital marketing. Free sample site — no strings attached.">
     
-    <!-- Schema Markup -->
+    <meta property="og:title" content="Robbie Gets You Leads | Affordable Websites for Local Businesses">
+    <meta property="og:description" content="Professional websites for local businesses starting at $149/mo. Free sample site — no strings attached.">
+    <meta property="og:url" content="https://rouguemind-del.github.io/robbie-gets-you-leads/">
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Robbie Gets You Leads",
-      "description": "Real estate lead lists and digital marketing for agents",
+      "description": "Web design and digital marketing for local businesses",
       "url": "https://rouguemind-del.github.io/robbie-gets-you-leads/",
       "telephone": "+1-574-333-7083",
+      "email": "robertgetsyouleads@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "South Florida",
         "addressRegion": "FL",
         "addressCountry": "US"
-      }
+      },
+      "priceRange": "$$"
     }
     </script>
-    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #1A2B4A;
+            background: #FAFAF7;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── NAV ── */
+        .navbar {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(250,250,247,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(26,43,74,0.1);
+            transition: box-shadow .3s;
+        }
+        .navbar.scrolled { box-shadow: 0 4px 20px rgba(26,43,74,0.1); }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem; max-width: 1200px; margin: 0 auto;
+        }
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.6rem; color: #1A2B4A; text-decoration: none;
+        }
+        .nav-links { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: #1A2B4A; font-weight: 500; transition: color .3s; }
+        .nav-links a:hover { color: #E8725A; }
+        .nav-cta {
+            background: #E8725A; color: #fff !important;
+            padding: .7rem 1.6rem; border-radius: 25px; font-weight: 600;
+        }
+        .nav-cta:hover { background: #D63E2B; }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            background: linear-gradient(135deg, #1A2B4A 0%, #0f1d35 100%);
+            color: #fff; text-align: center; padding-top: 80px;
+        }
+        .hero-content { max-width: 860px; margin: 0 auto; }
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.8rem; font-weight: 400; line-height: 1.15; margin-bottom: 1.5rem;
+        }
+        .hero h1 span { color: #E8725A; }
+        .hero-sub {
+            font-size: 1.25rem; opacity: .92; margin-bottom: 2.5rem; line-height: 1.6;
+        }
+        .hero-cta { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+        .btn {
+            display: inline-block; padding: 1rem 2.2rem; border-radius: 50px;
+            font-size: 1.05rem; font-weight: 600; text-decoration: none;
+            transition: all .3s; border: 2px solid transparent; cursor: pointer;
+        }
+        .btn-primary { background: #E8725A; color: #fff; border-color: #E8725A; }
+        .btn-primary:hover { background: #D63E2B; border-color: #D63E2B; transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }
+        .btn-outline:hover { background: #fff; color: #1A2B4A; border-color: #fff; }
+        .trust-strip { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .trust-badge {
+            background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+            padding: .8rem 1.4rem; border-radius: 10px; font-size: .85rem; font-weight: 600;
+        }
+
+        /* ── STATS ── */
+        .stats-bar { padding: 4rem 0; background: #fff; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; text-align: center; }
+        .stat-num { font-family: 'DM Serif Display',serif; font-size: 2.8rem; color: #E8725A; }
+        .stat-label { font-size: 1rem; color: #4A5568; font-weight: 500; margin-top: .3rem; }
+
+        /* ── SERVICES ── */
+        .services { padding: 5rem 0; background: #F0EFEB; }
+        .section-title {
+            text-align: center; font-family: 'DM Serif Display',serif;
+            font-size: 2.8rem; margin-bottom: 1rem; color: #1A2B4A;
+        }
+        .section-sub { text-align: center; color: #4A5568; font-size: 1.15rem; margin-bottom: 3rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 2rem; }
+        .service-card {
+            background: #fff; padding: 2.5rem 2rem; border-radius: 16px;
+            box-shadow: 0 6px 24px rgba(26,43,74,.06); text-align: center;
+            transition: transform .3s, box-shadow .3s;
+        }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(26,43,74,.12); }
+        .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: .6rem; }
+        .service-card p { color: #4A5568; font-size: .95rem; }
+
+        /* ── PORTFOLIO ── */
+        .portfolio { padding: 5rem 0; background: #fff; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(340px,1fr)); gap: 2.5rem; }
+        .p-card {
+            background: #fff; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 8px 30px rgba(26,43,74,.07); transition: transform .3s, box-shadow .3s;
+        }
+        .p-card:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(26,43,74,.13); }
+        .p-thumb {
+            height: 200px; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            padding: 1.5rem; color: #fff; font-weight: 600;
+        }
+        .p-thumb .name { font-size: 1.15rem; margin-bottom: .3rem; }
+        .p-thumb .tagline { font-size: .8rem; opacity: .9; }
+        .p-info { padding: 1.5rem 2rem; }
+        .p-info h3 { font-size: 1.2rem; margin-bottom: .3rem; }
+        .p-info .type { color: #718096; font-size: .85rem; text-transform: uppercase; letter-spacing: .5px; font-weight: 600; margin-bottom: .8rem; }
+        .p-info a { color: #E8725A; text-decoration: none; font-weight: 600; }
+        .p-info a:hover { color: #D63E2B; }
+        .portfolio-cta { text-align: center; margin-top: 3rem; }
+
+        /* ── TESTIMONIALS ── */
+        .testimonials { padding: 5rem 0; background: #F0EFEB; }
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 2rem; margin-top: 3rem; }
+        .test-card {
+            background: #fff; padding: 2.5rem; border-radius: 16px;
+            box-shadow: 0 6px 24px rgba(26,43,74,.06); position: relative;
+        }
+        .test-card .quote { font-size: 2.5rem; color: #E8725A; position: absolute; top: .8rem; left: 1.5rem; }
+        .stars { color: #D4A853; font-size: 1.1rem; margin-bottom: .8rem; }
+        .test-text { font-style: italic; font-size: 1.05rem; color: #4A5568; line-height: 1.7; margin: 1.5rem 0 1rem; }
+        .test-author { font-weight: 700; }
+        .test-role { color: #718096; font-size: .85rem; }
+        .beta { background: #E8725A; color: #fff; font-size: .65rem; padding: .15rem .5rem; border-radius: 4px; margin-left: .4rem; vertical-align: middle; }
+
+        /* ── PRICING ── */
+        .pricing { padding: 5rem 0; background: #fff; }
+        .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; font-family: 'Inter', sans-serif; }
+        .billing-toggle span { font-weight: 500; color: #718096; transition: color .3s; }
+        .billing-toggle span.active { color: #1A2B4A; font-weight: 600; }
+        .toggle-switch { width: 56px; height: 30px; background: #E8725A; border-radius: 15px; position: relative; cursor: pointer; transition: background .3s; }
+        .toggle-switch::after { content: ''; position: absolute; width: 24px; height: 24px; background: #fff; border-radius: 50%; top: 3px; left: 3px; transition: transform .3s; }
+        .toggle-switch.annual::after { transform: translateX(26px); }
+        .save-badge { background: #E8725A; color: #fff; font-size: .75rem; font-weight: 600; padding: .2rem .6rem; border-radius: 10px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; margin-top: 3rem; }
+        .onetime-card { max-width: 420px; margin: 3rem auto 0; }
+        .onetime-card .price-card { border: 2px solid #e2e8f0; }
+        .price-card {
+            background: #FAFAF7; border: 2px solid #E2E8F0; border-radius: 20px;
+            padding: 2.8rem 2.2rem; text-align: center; position: relative;
+            transition: all .3s;
+        }
+        .price-card:hover { border-color: #E8725A; transform: translateY(-4px); box-shadow: 0 12px 36px rgba(232,114,90,.1); }
+        .price-card.pop { background: linear-gradient(135deg,#E8725A,#D63E2B); color: #fff; border-color: #E8725A; transform: scale(1.04); }
+        .pop-badge {
+            position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+            background: #D4A853; color: #1A2B4A; padding: .4rem 1.4rem; border-radius: 20px;
+            font-weight: 700; font-size: .85rem;
+        }
+        .price-card h3 { font-family: 'DM Serif Display',serif; font-size: 1.6rem; margin-bottom: .8rem; }
+        .price-amount { font-size: 3rem; font-weight: 800; color: #E8725A; }
+        .price-card.pop .price-amount { color: #fff; }
+        .price-period { opacity: .8; margin-bottom: 1.8rem; }
+        .feat-list { list-style: none; text-align: left; margin-bottom: 2rem; }
+        .feat-list li { padding: .5rem 0 .5rem 1.8rem; position: relative; }
+        .feat-list li::before { content: "✓"; position: absolute; left: 0; color: #48BB78; font-weight: bold; }
+        .price-card.pop .feat-list li::before { color: #D4A853; }
+        .price-cta {
+            background: #E8725A; color: #fff; padding: .9rem 2rem; border: none;
+            border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;
+            transition: all .3s;
+        }
+        .price-cta:hover { background: #D63E2B; }
+        .price-card.pop .price-cta { background: #fff; color: #E8725A; }
+        .pricing-note { text-align: center; margin-top: 2rem; color: #718096; font-style: italic; }
+
+        /* ── CONTACT ── */
+        .contact { padding: 5rem 0; background: #F0EFEB; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+        .contact-form {
+            background: #fff; padding: 2.5rem; border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(26,43,74,.06);
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.2rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: .4rem; font-weight: 600; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: .9rem; border: 2px solid #E2E8F0; border-radius: 8px;
+            font-size: 1rem; font-family: inherit; transition: border-color .3s;
+        }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #E8725A; }
+        .form-group textarea { min-height: 110px; resize: vertical; }
+        .contact-info h3 { font-family: 'DM Serif Display',serif; font-size: 1.6rem; margin-bottom: 1.5rem; }
+        .ci-item { margin-bottom: 1.5rem; }
+        .ci-item strong { color: #E8725A; }
+        .ci-item a { color: #1A2B4A; text-decoration: none; }
+        .response-badge { background: #E8725A; color: #fff; padding: 1rem; border-radius: 8px; font-size: .9rem; margin-top: 1.5rem; }
+
+        /* ── FOOTER ── */
+        .footer { background: #1A2B4A; color: #fff; padding: 3.5rem 0 1.5rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 2.5rem; margin-bottom: 2.5rem; }
+        .footer h4 { font-family: 'DM Serif Display',serif; margin-bottom: 1rem; color: #D4A853; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: .6rem; }
+        .footer-links a { color: #CBD5E0; text-decoration: none; transition: color .3s; }
+        .footer-links a:hover { color: #E8725A; }
+        .footer-bottom { border-top: 1px solid #4A5568; padding-top: 1.5rem; text-align: center; color: #CBD5E0; }
+        .footer-tagline { font-style: italic; margin-top: .4rem; opacity: .8; }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:768px){
+            .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,.1); gap: 0; }
+            .nav-links.active { display: flex; }
+            .nav-links li { padding: .75rem 0; border-bottom: 1px solid #eee; }
+            .nav-links li:last-child { border: none; }
+            .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 10; }
+            .hamburger span { width: 25px; height: 3px; background: #1A2B4A; border-radius: 2px; transition: .3s; }
+            .hero h1 { font-size: 2.4rem; }
+            .hero-sub { font-size: 1.1rem; }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 280px; text-align: center; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+            .stat-num { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .price-card.pop { transform: none; }
+            .test-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .trust-strip { gap: 1rem; }
+            .trust-badge { font-size: .75rem; padding: .6rem 1rem; }
+            .container { padding: 0 16px; }
+            .nav-container { padding: 1rem; }
+        }
+        @media(max-width:480px){
+            .hero h1 { font-size: 2rem; }
+            .stats-grid { gap: 1rem; }
+            .stat-num { font-size: 1.8rem; }
+        }
+
+        /* scroll animations */
+        .fade-up { opacity: 0; transform: translateY(25px); transition: all .6s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav">
-                <div class="logo">
-                    <div>Robbie Gets You Leads</div>
-                </div>
-                <div class="contact">
-                    <a href="mailto:robertgetsyouleads@gmail.com" class="contact-link">Contact</a>
-                </div>
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Robbie Gets You Leads</a>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
             </div>
+            <ul class="nav-links" onclick="this.classList.remove('active')"
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Portfolio</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="leads/">Lead Lists</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="#contact" class="nav-cta">Free Sample Site</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Skip the $300/Month Software.<br>Get Ready-to-Call Lead Lists Instead.</h1>
-                <p class="hero-subtitle">Done-for-you seller lead lists delivered to your inbox. Skip-traced expired listings, FSBOs, pre-foreclosures, and probate leads for DFW, Houston, Phoenix, Atlanta, San Antonio, Tampa, and growing.</p>
-                
-                <div class="hero-benefits">
-                    <div class="benefit">No monthly subscriptions</div>
-                    <div class="benefit">Skip-traced with phone numbers</div>
-                    <div class="benefit">Ready to call immediately</div>
-                    <div class="benefit">Your specific market</div>
+                <h1>Your Business Deserves a Website That <span>Actually Works</span></h1>
+                <p class="hero-sub">Professional, modern websites for plumbers, electricians, landscapers, salons, auto shops &amp; more — starting at just <strong>$149/mo</strong>. Serving South Florida and beyond.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get a Free Sample Site</a>
+                    <a href="#work" class="btn btn-outline">See Our Work</a>
                 </div>
-
-                <div class="cta-buttons">
-                    <a href="#free-sample" class="btn btn-primary">Get Free Sample List</a>
-                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                <div class="trust-strip">
+                    <div class="trust-badge">⚡ 48-Hour Turnaround</div>
+                    <div class="trust-badge">📱 100% Mobile Responsive</div>
+                    <div class="trust-badge">🔒 No Contracts</div>
+                    <div class="trust-badge">📍 South Florida Local</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
+    <!-- STATS -->
+    <section class="stats-bar">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Get seller leads in 3 simple steps</p>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Tell Us Your Market</h3>
-                        <p>Select your area (DFW, Houston, Phoenix, Atlanta, San Antonio, Tampa) and the type of leads you want: expired listings, FSBOs, pre-foreclosures, or probate.</p>
+            <div class="stats-grid">
+                <div class="fade-up"><div class="stat-num">9+</div><div class="stat-label">Sites Built</div></div>
+                <div class="fade-up"><div class="stat-num">48hr</div><div class="stat-label">Avg Turnaround</div></div>
+                <div class="fade-up"><div class="stat-num">$0</div><div class="stat-label">Upfront Cost</div></div>
+                <div class="fade-up"><div class="stat-num">5★</div><div class="stat-label">Client Rating</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-sub">Everything your local business needs to get found online and win more customers.</p>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="service-icon">🎨</div>
+                    <h3>Website Design</h3>
+                    <p>Custom, mobile-first websites that look great and convert visitors into paying customers. No templates — every site is built from scratch.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">🔍</div>
+                    <h3>Local SEO</h3>
+                    <p>Get found on Google when customers search for your services. We optimize your site, Google Business Profile, and local directories.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">📈</div>
+                    <h3>Digital Marketing</h3>
+                    <p>From Google Ads to social media, we drive targeted traffic to your business. More eyeballs, more calls, more revenue.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">🎯</div>
+                    <h3>Lead Generation</h3>
+                    <p>Turn your website into a lead machine with optimized contact forms, click-to-call buttons, and conversion-focused design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="work">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-sub">Real sample sites built for real local businesses. Click to see them live.</p>
+            <div class="portfolio-grid">
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Kwik Plumbers</div>
+                        <div class="tagline">24/7 Emergency Plumbing</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Kwik Plumbers</h3>
+                        <div class="type">Plumbing • West Palm Beach</div>
+                        <a href="samples/kwik-plumbers/">View Live Site →</a>
                     </div>
                 </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>We Build Your List</h3>
-                        <p>Our team pulls fresh data from multiple sources, skip-traces for accurate phone numbers, and formats everything perfectly for your CRM or calling system.</p>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Delcon Electric</div>
+                        <div class="tagline">Licensed Electrical Contractors</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Delcon Electric</h3>
+                        <div class="type">Electrical • Delray Beach</div>
+                        <a href="samples/delcon-electric/">View Live Site →</a>
                     </div>
                 </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Start Calling & Closing</h3>
-                        <p>Get your completed list delivered within 24-48 hours via email. Every lead includes name, address, phone number, and available email addresses.</p>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Duffy's Tree &amp; Landscape</div>
+                        <div class="tagline">Beautiful Landscapes, Expert Care</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Duffy's Tree &amp; Landscape</h3>
+                        <div class="type">Landscaping • Lake Worth</div>
+                        <a href="samples/duffys-tree-landscape/">View Live Site →</a>
+                    </div>
+                </div>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Organized Pool Service</div>
+                        <div class="tagline">Crystal Clear Pools, Year Round</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Organized Pool Service</h3>
+                        <div class="type">Pool Maintenance • South Florida</div>
+                        <a href="samples/organized-pool-service/">View Live Site →</a>
+                    </div>
+                </div>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Bill Tyson's Auto Repair</div>
+                        <div class="tagline">Honest Auto Repair Since 1985</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Bill Tyson's Auto Repair</h3>
+                        <div class="type">Auto Repair • Boynton Beach</div>
+                        <a href="samples/bill-tysons-auto-repair/">View Live Site →</a>
+                    </div>
+                </div>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Boca Certified Plumbing</div>
+                        <div class="tagline">Certified &amp; Trusted Plumbing Pros</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Boca Certified Plumbing</h3>
+                        <div class="type">Plumbing • Boca Raton</div>
+                        <a href="samples/boca-certified-plumbing/">View Live Site →</a>
+                    </div>
+                </div>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Boynton Auto Transmission</div>
+                        <div class="tagline">Transmission Specialists</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Boynton Auto Transmission</h3>
+                        <div class="type">Auto Repair • Boynton Beach</div>
+                        <a href="samples/boynton-auto-transmission/">View Live Site →</a>
+                    </div>
+                </div>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800');background-size:cover;background-position:center;">
+                        <div class="name">The Color Cove Hair Salon</div>
+                        <div class="tagline">Where Color Comes to Life</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>The Color Cove Hair Salon</h3>
+                        <div class="type">Salon • Fort Lauderdale</div>
+                        <a href="samples/color-cove-hair-salon/">View Live Site →</a>
+                    </div>
+                </div>
+                <div class="p-card fade-up">
+                    <div class="p-thumb" style="background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800');background-size:cover;background-position:center;">
+                        <div class="name">Stephen Julian Salon</div>
+                        <div class="tagline">Luxury Hair Experience</div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Stephen Julian Salon</h3>
+                        <div class="type">Salon • South Florida</div>
+                        <a href="samples/stephen-julian-salon/">View Live Site →</a>
                     </div>
                 </div>
             </div>
+            <div class="portfolio-cta">
+                <a href="portfolio/" class="btn btn-primary">View Full Portfolio</a>
+            </div>
         </div>
     </section>
 
-    <!-- Lead Magnet Section -->
-    <section class="lead-magnet" id="lead-magnet">
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
         <div class="container">
-            <div class="magnet-content">
-                <h2>FREE GUIDE: Top 10 Zip Codes for Seller Leads in 2026</h2>
-                <p>Discover the highest-converting zip codes across DFW, Houston, Phoenix, Atlanta, San Antonio & Tampa. This exclusive guide reveals where smart agents are focusing their prospecting efforts for maximum ROI.</p>
-                
-                <div class="magnet-benefits">
-                    <div class="benefit">Market data & conversion rates</div>
-                    <div class="benefit">Top performing neighborhoods</div>
-                    <div class="benefit">Average home values & profit margins</div>
-                    <div class="benefit">Trend analysis for 2026</div>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="test-grid">
+                <div class="test-card fade-up">
+                    <div class="quote">&ldquo;</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="test-text">Robbie built us a website in 2 days that looks better than what my friend paid $5,000 for. Incredible value.</p>
+                    <div class="test-author">Maria S., Owner</div>
+                    <div class="test-role">Boca Raton Salon <span class="beta">BETA CLIENT</span></div>
                 </div>
-
-                <!-- Beehiiv Subscribe Form -->
-                <div class="subscribe-form">
-                    <iframe src="https://embeds.beehiiv.com/the-listings-edge?slim=true" data-test-id="beehiiv-embed" width="100%" height="320" frameborder="0" scrolling="no" style="border-radius: 12px; background-color: white; margin: 0; padding: 0;"></iframe>
+                <div class="test-card fade-up">
+                    <div class="quote">&ldquo;</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="test-text">We've been getting calls from Google since the new site went up. Should've done this years ago.</p>
+                    <div class="test-author">Tom R., Plumbing Contractor</div>
+                    <div class="test-role">West Palm Beach <span class="beta">BETA CLIENT</span></div>
                 </div>
-                
-                <p class="magnet-note">Get instant access to the PDF guide + join 500+ agents getting weekly market insights</p>
+                <div class="test-card fade-up">
+                    <div class="quote">&ldquo;</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="test-text">No contracts, no BS. Robbie just delivers. The monthly SEO updates are icing on the cake.</p>
+                    <div class="test-author">James K., Auto Repair</div>
+                    <div class="test-role">Fort Lauderdale <span class="beta">BETA CLIENT</span></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Results/Case Study Section -->
-    <section class="results-section">
-        <div class="container">
-            <h2 class="section-title">Here's What We've Done in Our First 2 Weeks</h2>
-            <p class="section-subtitle">Real results from real estate agents using our lead lists</p>
-            
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-number">226</div>
-                    <div class="result-label">Targeted emails delivered across 6 major markets</div>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">6</div>
-                    <div class="result-label">Major markets served: DFW, Houston, Phoenix, Atlanta, San Antonio & Tampa</div>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">15-25%</div>
-                    <div class="result-label">Average open rates on cold outreach campaigns</div>
-                </div>
-            </div>
-            
-            <div class="results-testimonial">
-                <p>"The quality of these leads is incredible. In just two weeks, I've seen higher engagement than I got in months with my previous lead provider."</p>
-                <cite>— Sarah M., Dallas Agent (Beta Client)</cite>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
+    <!-- PRICING -->
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <p class="section-subtitle">No contracts. No software to learn. Just quality leads.</p>
-            
-            <!-- One-Time Lists -->
-            <div class="pricing-category">
-                <h3>One-Time Lead Lists</h3>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h4>Starter</h4>
-                        <div class="price">$29</div>
-                        <div class="price-detail">50 leads</div>
-                        <ul class="features">
-                            <li>One-time list delivery</li>
-                            <li>Skip-traced phone numbers</li>
-                            <li>48-hour delivery</li>
-                            <li>Excel/CSV format</li>
-                            <li>Perfect for testing our quality</li>
-                        </ul>
-                        <a href="mailto:robertgetsyouleads@gmail.com?subject=Starter List Order&body=I'd like to order a Starter List (50 leads). My market: [ENTER YOUR CITY/AREA] and lead type: [expired/FSBO/pre-foreclosure/probate]" class="btn btn-outline">Order Now</a>
-                    </div>
-                    
-                    <div class="pricing-card featured">
-                        <div class="badge">Most Popular</div>
-                        <h4>Growth</h4>
-                        <div class="price">$59</div>
-                        <div class="price-detail">150 leads</div>
-                        <ul class="features">
-                            <li>One-time list delivery</li>
-                            <li>Skip-traced phone numbers</li>
-                            <li>24-hour delivery</li>
-                            <li>Excel/CSV format</li>
-                            <li>Email addresses included</li>
-                            <li>Best value per lead</li>
-                        </ul>
-                        <a href="mailto:robertgetsyouleads@gmail.com?subject=Growth List Order&body=I'd like to order a Growth List (150 leads). My market: [ENTER YOUR CITY/AREA] and lead type: [expired/FSBO/pre-foreclosure/probate]" class="btn btn-primary">Order Now</a>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h4>Pro</h4>
-                        <div class="price">$99</div>
-                        <div class="price-detail">500 leads</div>
-                        <ul class="features">
-                            <li>One-time list delivery</li>
-                            <li>Skip-traced phone numbers</li>
-                            <li>Same-day delivery</li>
-                            <li>Multiple formats</li>
-                            <li>Email addresses included</li>
-                            <li>Custom filters available</li>
-                        </ul>
-                        <a href="mailto:robertgetsyouleads@gmail.com?subject=Pro List Order&body=I'd like to order a Pro List (500 leads). My market: [ENTER YOUR CITY/AREA] and lead type: [expired/FSBO/pre-foreclosure/probate]" class="btn btn-outline">Order Now</a>
-                    </div>
+            <p class="section-sub">No contracts. No hidden fees. Cancel anytime.</p>
+            <div class="billing-toggle">
+                <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+                <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()"></div>
+                <span class="toggle-label" id="annualLabel">Annual</span>
+                <span class="save-badge">Save 10%</span>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card fade-up">
+                    <h3>Starter</h3>
+                    <div class="price-amount" data-monthly="$149" data-annual="$134">$149</div>
+                    <div class="price-period" data-monthly="per month" data-annual="per month, billed annually">per month</div>
+                    <ul class="feat-list">
+                        <li>Custom Website Design</li>
+                        <li>Mobile Responsive</li>
+                        <li>Hosting &amp; SSL Included</li>
+                        <li>Contact Forms</li>
+                        <li>Google-Optimized</li>
+                        <li>Monthly Edits</li>
+                    </ul>
+                    <a href="#contact" class="price-cta">Get Started</a>
+                </div>
+                <div class="price-card pop fade-up">
+                    <div class="pop-badge">MOST POPULAR</div>
+                    <h3>Growth</h3>
+                    <div class="price-amount" data-monthly="$249" data-annual="$224">$249</div>
+                    <div class="price-period" data-monthly="per month" data-annual="per month, billed annually">per month</div>
+                    <ul class="feat-list">
+                        <li>Everything in Starter</li>
+                        <li>SEO Optimization</li>
+                        <li>Google Business Setup</li>
+                        <li>Monthly Content Updates</li>
+                        <li>Review Management</li>
+                        <li>Analytics Dashboard</li>
+                        <li>5 Updates/Month</li>
+                    </ul>
+                    <a href="#contact" class="price-cta">Get Started</a>
+                </div>
+                <div class="price-card fade-up">
+                    <h3>Pro</h3>
+                    <div class="price-amount" data-monthly="$349" data-annual="$314">$349</div>
+                    <div class="price-period" data-monthly="per month" data-annual="per month, billed annually">per month</div>
+                    <ul class="feat-list">
+                        <li>Everything in Growth</li>
+                        <li>Weekly Blog Posts</li>
+                        <li>Social Media Integration</li>
+                        <li>Ad Management</li>
+                        <li>Monthly Performance Reports</li>
+                        <li>Unlimited Updates</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="price-cta">Get Started</a>
                 </div>
             </div>
-
-            <!-- Monthly Subscription Plans -->
-            <div class="pricing-category">
-                <h3>Monthly Subscription Plans</h3>
-                <p class="category-subtitle">For agents who need consistent lead flow</p>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h4>Fresh Weekly</h4>
-                        <div class="price">$47<span class="period">/month</span></div>
-                        <div class="price-detail">Fresh leads weekly</div>
-                        <ul class="features">
-                            <li>Weekly lead deliveries</li>
-                            <li>1 market focus</li>
-                            <li>Skip-traced phone numbers</li>
-                            <li>Email support</li>
-                            <li>Cancel anytime</li>
-                        </ul>
-                        <a href="mailto:robertgetsyouleads@gmail.com?subject=Fresh Weekly Plan&body=I'd like to start the Fresh Weekly subscription. My market: [ENTER YOUR CITY/AREA] and preferred lead type: [expired/FSBO/pre-foreclosure/probate]" class="btn btn-outline">Start Plan</a>
-                    </div>
-                    
-                    <div class="pricing-card featured">
-                        <div class="badge">Best Value</div>
-                        <h4>Growth</h4>
-                        <div class="price">$97<span class="period">/month</span></div>
-                        <div class="price-detail">Multiple markets</div>
-                        <ul class="features">
-                            <li>Bi-weekly lead deliveries</li>
-                            <li>Up to 3 markets</li>
-                            <li>Multiple lead types</li>
-                            <li>Priority support</li>
-                            <li>Custom filters</li>
-                            <li>DNC scrubbing included</li>
-                        </ul>
-                        <a href="mailto:robertgetsyouleads@gmail.com?subject=Growth Plan&body=I'd like to start the Growth subscription. My markets: [ENTER YOUR CITIES/AREAS] and preferred lead types: [expired/FSBO/pre-foreclosure/probate]" class="btn btn-primary">Start Plan</a>
-                    </div>
-                    
-                    <div class="pricing-card">
-                        <h4>Enterprise</h4>
-                        <div class="price">$197<span class="period">/month</span></div>
-                        <div class="price-detail">Unlimited access</div>
-                        <ul class="features">
-                            <li>Unlimited lead requests</li>
-                            <li>All markets available</li>
-                            <li>All lead types</li>
-                            <li>Same-day delivery</li>
-                            <li>Dedicated support</li>
-                            <li>Custom reporting</li>
-                        </ul>
-                        <a href="mailto:robertgetsyouleads@gmail.com?subject=Enterprise Plan&body=I'd like to start the Enterprise subscription. Please contact me to discuss my specific needs." class="btn btn-outline">Start Plan</a>
-                    </div>
+            <div class="onetime-card fade-up">
+                <div class="price-card">
+                    <h3>One-Time Build</h3>
+                    <div class="price-amount">$799</div>
+                    <div class="price-period">one-time payment</div>
+                    <ul class="feat-list">
+                        <li>Custom Website Design</li>
+                        <li>Mobile Responsive</li>
+                        <li>Contact Forms</li>
+                        <li>Google-Optimized</li>
+                        <li>3 Months Hosting Included</li>
+                        <li>2 Rounds of Revisions</li>
+                        <li>Then $99/mo for hosting &amp; maintenance</li>
+                    </ul>
+                    <a href="#contact" class="price-cta">Get Started</a>
                 </div>
             </div>
+            <p class="pricing-note">All plans include a free sample site before you pay a dime.</p>
         </div>
     </section>
 
-    <!-- Free Sample CTA -->
-    <section class="free-sample" id="free-sample">
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
         <div class="container">
-            <div class="sample-content">
-                <h2>See The Quality For Yourself</h2>
-                <p>Get a free sample of 100 leads from your market. No credit card required.</p>
-                
-                <form class="sample-form">
-                    <div class="form-group">
-                        <label for="market">Your Market/City:</label>
-                        <select id="market" name="market" required>
-                            <option value="">Select your market...</option>
-                            <option value="DFW">Dallas-Fort Worth (DFW)</option>
-                            <option value="Houston">Houston</option>
-                            <option value="Phoenix">Phoenix</option>
-                            <option value="Atlanta">Atlanta</option>
-                            <option value="San Antonio">San Antonio</option>
-                            <option value="Tampa">Tampa</option>
-                            <option value="Other">Other (specify in message)</option>
-                        </select>
+            <h2 class="section-title">Let's Build Your Website</h2>
+            <p class="section-sub">Tell us about your business and we'll send you a free sample site — no strings attached.</p>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form action="https://formsubmit.co/robertgetsyouleads@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Lead - Robbie Gets You Leads Homepage">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://rouguemind-del.github.io/robbie-gets-you-leads/#contact">
+                        <input type="text" name="_honey" style="display:none">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="business">Business Name</label>
+                                <input type="text" id="business" name="business" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell us about your business</label>
+                            <textarea id="message" name="message" placeholder="What services do you offer? Where are you located? Any specific features you need?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;border:none;font-family:inherit;">Get My Free Sample Site</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="ci-item">
+                        <strong>📞 Phone</strong><br>
+                        <a href="tel:5743337083">(574) 333-7083</a>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="lead-type">Lead Type:</label>
-                        <select id="lead-type" name="lead-type" required>
-                            <option value="">Select lead type...</option>
-                            <option value="Expired Listings">Expired Listings</option>
-                            <option value="FSBO">For Sale By Owner (FSBO)</option>
-                            <option value="Pre-Foreclosure">Pre-Foreclosure</option>
-                            <option value="Probate">Probate</option>
-                            <option value="Vacant">Vacant Properties</option>
-                        </select>
+                    <div class="ci-item">
+                        <strong>✉️ Email</strong><br>
+                        <a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a>
                     </div>
-                    
-                    <button type="button" onclick="requestSample()" class="btn btn-primary btn-large">Get Free Sample List</button>
-                </form>
-                
-                <p class="sample-note">We'll email you a sample within 24 hours. No spam, no follow-up calls unless you want them.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything you need to know about our lead lists</p>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How fresh are the leads?</h3>
-                    <p>Our leads are pulled fresh weekly from multiple data sources. Expired listings are typically 30-90 days old, FSBOs are current active listings, and pre-foreclosure/probate leads are updated monthly from court records.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>What information is included with each lead?</h3>
-                    <p>Every lead includes: property owner name, property address, phone number (skip-traced), email address (when available), property details, and lead source type. We also include last known good contact date when possible.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Do you scrub against the Do Not Call list?</h3>
-                    <p>Yes, all our monthly subscription plans include automatic DNC scrubbing. For one-time lists, we can add DNC scrubbing for an additional $5 per list upon request.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>What markets do you cover?</h3>
-                    <p>We currently serve DFW, Houston, Phoenix, Atlanta, San Antonio, and Tampa markets. We're expanding to new markets monthly based on demand. Contact us if you need a different market.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>Can I request specific zip codes or neighborhoods?</h3>
-                    <p>Absolutely! For Pro lists and all subscription plans, we can filter by specific zip codes, price ranges, property types, or neighborhoods. Just include your preferences in your order.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3>What's your refund policy?</h3>
-                    <p>We offer a 7-day satisfaction guarantee. If you're not happy with the quality or accuracy of your leads, we'll refund your purchase or provide replacement leads at no charge.</p>
+                    <div class="ci-item">
+                        <strong>📍 Location</strong><br>
+                        South Florida &amp; Beyond
+                    </div>
+                    <div class="response-badge">⚡ I typically respond within 2 hours</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Beta Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Early Results from Beta Clients</h2>
-            <p class="section-subtitle">We're just getting started, but here's what our first clients are saying</p>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial beta-testimonial">
-                    <div class="testimonial-content">
-                        <p>"Results coming soon from our beta clients! I'm testing the expired listings in Phoenix and the quality looks promising. Will update with conversion numbers next month."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Amanda R.</strong> - Phoenix Agent (Beta Client)
-                        <div class="beta-badge">Early Access</div>
-                    </div>
-                </div>
-                
-                <div class="testimonial beta-testimonial">
-                    <div class="testimonial-content">
-                        <p>"Just started with the Houston FSBO list. The phone numbers are incredibly accurate so far - 9 out of 10 calls connected. Results coming soon from our beta testing phase."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Marcus T.</strong> - Houston Realtor (Beta Client)
-                        <div class="beta-badge">Early Access</div>
-                    </div>
-                </div>
-                
-                <div class="testimonial beta-testimonial">
-                    <div class="testimonial-content">
-                        <p>"Finally found a lead service that doesn't require learning new software! The DFW market data is exactly what I needed. Results coming soon from our beta clients."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Jessica L.</strong> - DFW Agent (Beta Client)
-                        <div class="beta-badge">Early Access</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="blog-section">
-        <div class="container">
-            <h2 class="section-title">Lead Generation Resources</h2>
-            <p class="section-subtitle">Strategies and insights to help you find more seller leads and grow your business</p>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-category">Lead Generation</span>
-                        <h3><a href="blog/cheap-seller-leads-without-zillow.html">How to Get Seller Leads Without Paying for Zillow</a></h3>
-                        <p>Discover 5 proven alternative sources that cost 80% less than Zillow Premier Agent.</p>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-category">Lead Comparison</span>
-                        <h3><a href="blog/expired-listings-vs-fsbo-leads.html">Expired Listings vs FSBO: Which Converts Better?</a></h3>
-                        <p>Compare conversion rates, ROI, and time investment for each lead type.</p>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-category">Cost Analysis</span>
-                        <h3><a href="blog/real-estate-lead-cost-2026.html">The Real Cost of Buying Real Estate Leads in 2026</a></h3>
-                        <p>Complete breakdown of platform costs including hidden fees most agents don't know about.</p>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-category">Off-Market</span>
-                        <h3><a href="blog/off-market-listing-leads-guide.html">How Top Agents Find Off-Market Listings Before Anyone Else</a></h3>
-                        <p>Proven strategies for finding probate, pre-foreclosure, and exclusive listing opportunities.</p>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-content">
-                        <span class="blog-category">Free Strategies</span>
-                        <h3><a href="blog/free-seller-leads-real-estate.html">5 Free Ways to Generate Seller Leads This Month</a></h3>
-                        <p>Generate quality seller leads without spending money on expensive platforms.</p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="blog-cta">
-                <a href="blog/index.html" class="btn btn-secondary">View All Articles</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Stop Wasting Money on Software?</h2>
-                <p>Join hundreds of agents who've ditched expensive platforms for simple, effective lead lists.</p>
-                <div class="cta-buttons">
-                    <a href="#free-sample" class="btn btn-primary btn-large">Get Free Sample</a>
-                    <a href="mailto:robertgetsyouleads@gmail.com?subject=Ready to Get Started&body=I'm ready to start getting quality leads. Please contact me to discuss my needs." class="btn btn-secondary">Get Started Today</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-signup">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Get Free Weekly Market Insights</h2>
-                <p>Join hundreds of agents getting actionable market data, listing strategies, and lead generation tips delivered to your inbox every week.</p>
-                <a href="https://the-listings-edge.beehiiv.com/" target="_blank" class="btn btn-primary btn-large">Subscribe to The Listing Edge</a>
-                <p class="newsletter-note">Free weekly newsletter • Unsubscribe anytime • No spam</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Robbie Gets You Leads</h3>
-                    <p>Done-for-you real estate lead lists</p>
+            <div class="footer-grid">
+                <div>
+                    <h4>Robbie Gets You Leads</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:5743337083">(574) 333-7083</a></li>
+                        <li><a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a></li>
+                        <li>South Florida &amp; Beyond</li>
+                    </ul>
                 </div>
-                <div class="footer-contact">
-                    <p><strong>Phone:</strong> <a href="tel:5743337083">(574) 333-7083</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a></p>
-                    <p><strong>Markets:</strong> DFW, Houston, Phoenix, Atlanta, San Antonio, Tampa</p>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Web Design</a></li>
+                        <li><a href="#services">Local SEO</a></li>
+                        <li><a href="#services">Digital Marketing</a></li>
+                        <li><a href="#services">Lead Generation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="portfolio/">Full Portfolio</a></li>
+                        <li><a href="leads/">Real Estate Lead Lists</a></li>
+                        <li><a href="blog/">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Service Areas</h4>
+                    <ul class="footer-links">
+                        <li>Boca Raton</li>
+                        <li>West Palm Beach</li>
+                        <li>Fort Lauderdale</li>
+                        <li>Delray Beach</li>
+                        <li>Boynton Beach</li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Robbie Gets You Leads. All rights reserved.</p>
+                <p class="footer-tagline">Websites that work as hard as you do.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        function requestSample() {
-            const market = document.getElementById('market').value;
-            const leadType = document.getElementById('lead-type').value;
-            
-            if (!market || !leadType) {
-                alert('Please select both your market and lead type.');
-                return;
-            }
-            
-            const subject = encodeURIComponent('Free Sample Request');
-            const body = encodeURIComponent(`I'd like to request a free sample of 100 leads.
-
-Market: ${market}
-Lead Type: ${leadType}
-
-Please send me the sample list to get started!`);
-            
-            window.location.href = `mailto:robertgetsyouleads@gmail.com?subject=${subject}&body=${body}`;
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
         });
+        // Scroll animations
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+        // Billing toggle
+        let isAnnual = false;
+        function toggleBilling() {
+            isAnnual = !isAnnual;
+            document.getElementById('billingToggle').classList.toggle('annual', isAnnual);
+            document.getElementById('monthlyLabel').classList.toggle('active', !isAnnual);
+            document.getElementById('annualLabel').classList.toggle('active', isAnnual);
+            const key = isAnnual ? 'annual' : 'monthly';
+            document.querySelectorAll('.price-amount[data-monthly]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + key);
+            });
+            document.querySelectorAll('.price-period[data-monthly]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + key);
+            });
+        }
     </script>
 </body>
 </html>

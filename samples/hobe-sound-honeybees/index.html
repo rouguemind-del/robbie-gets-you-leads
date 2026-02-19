@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hobe Sound Honeybees LLC | Live Bee Removal &amp; Relocation</title>
+<meta name="description" content="Professional live bee removal, relocation, and agricultural exemptions in the Treasure Coast. Hobe Sound Honeybees LLC - insured, humane, local.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#D4A017;--gold-light:#F4C430;--brown:#5C4033;--brown-light:#7A5C4F;--cream:#FFF8F0;--cream-dark:#F5EBE0;--white:#FFFFFF;--text:#3B2F2F;--text-light:#6B5B4F}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden;background:var(--white)}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* Fade-up animation */
+.fade-up{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;transition:background 0.3s,box-shadow 0.3s}
+nav.scrolled{background:rgba(255,255,255,0.97);box-shadow:0 2px 20px rgba(0,0,0,0.08)}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--brown);letter-spacing:0.5px}
+.nav-links{display:flex;gap:1.8rem;align-items:center}
+.nav-links a{font-size:0.85rem;font-weight:500;color:var(--brown);letter-spacing:0.3px;transition:color 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--white) !important;padding:0.5rem 1.2rem;border-radius:50px;font-weight:600;transition:background 0.3s,transform 0.2s}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=1920&q=80') center/cover no-repeat;filter:brightness(0.35)}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(92,64,51,0.7) 0%,rgba(212,160,23,0.3) 100%)}
+.hero-content{position:relative;z-index:2;max-width:800px}
+.hero-badge{display:inline-block;background:rgba(244,196,48,0.2);border:1px solid rgba(244,196,48,0.4);color:var(--gold-light);padding:0.4rem 1.2rem;border-radius:50px;font-size:0.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.5rem,6vw,4.2rem);color:var(--white);margin-bottom:1rem;text-shadow:0 2px 40px rgba(0,0,0,0.3)}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);color:rgba(255,255,255,0.9);max-width:600px;margin:0 auto 2.5rem;font-weight:300;line-height:1.7}
+.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;border-radius:50px;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;border:none;cursor:pointer;transition:all 0.3s}
+.btn-primary{background:var(--gold);color:var(--white);box-shadow:0 4px 20px rgba(212,160,23,0.4)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 6px 30px rgba(212,160,23,0.5)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.6)}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--white)}
+
+/* Section */
+section{padding:5rem 2rem}
+.section-header{text-align:center;max-width:650px;margin:0 auto 3.5rem}
+.section-label{display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+.section-header h2{font-size:clamp(2rem,4vw,2.8rem);color:var(--brown);margin-bottom:1rem}
+.section-header p{color:var(--text-light);font-size:1.05rem;line-height:1.7}
+.container{max-width:1200px;margin:0 auto}
+
+/* Services */
+.services{background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+.service-card{background:var(--white);border-radius:16px;padding:2.5rem 2rem;box-shadow:0 4px 30px rgba(0,0,0,0.04);transition:transform 0.3s,box-shadow 0.3s;border:1px solid rgba(0,0,0,0.04)}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+.service-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+.service-icon svg{width:28px;height:28px;stroke:var(--white);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-size:1.35rem;color:var(--brown);margin-bottom:0.8rem}
+.service-card p{color:var(--text-light);font-size:0.95rem;line-height:1.7}
+.service-badge{display:inline-block;background:rgba(212,160,23,0.12);color:var(--gold);font-size:0.75rem;font-weight:700;padding:0.25rem 0.7rem;border-radius:50px;margin-top:1rem;letter-spacing:0.5px}
+
+/* About */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-image{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3}
+.about-image img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.about-image::after{content:'';position:absolute;inset:0;border-radius:20px;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.06)}
+.about-accent{position:absolute;bottom:-12px;right:-12px;width:120px;height:120px;background:var(--gold);border-radius:16px;z-index:-1}
+.about-text h2{font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--brown);margin-bottom:1.2rem}
+.about-text p{color:var(--text-light);font-size:1rem;line-height:1.8;margin-bottom:1.2rem}
+.about-stats{display:flex;gap:2.5rem;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--cream-dark)}
+.stat h4{font-size:1.8rem;color:var(--gold)}
+.stat p{font-size:0.85rem;color:var(--text-light);font-weight:500}
+
+/* Why Choose Us */
+.why{background:var(--brown);color:var(--white);position:relative;overflow:hidden}
+.why::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(212,160,23,0.15) 0%,transparent 70%);border-radius:50%}
+.why .section-label{color:var(--gold-light)}
+.why .section-header h2{color:var(--white)}
+.why .section-header p{color:rgba(255,255,255,0.7)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+.why-item{text-align:center;padding:2rem 1.5rem}
+.why-icon{width:64px;height:64px;background:rgba(244,196,48,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem}
+.why-icon svg{width:28px;height:28px;stroke:var(--gold-light);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.why-item h3{font-size:1.2rem;margin-bottom:0.6rem}
+.why-item p{color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6}
+
+/* Service Areas */
+.areas{background:var(--cream)}
+.areas-list{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;max-width:800px;margin:0 auto}
+.area-tag{background:var(--white);padding:0.7rem 1.5rem;border-radius:50px;font-size:0.95rem;font-weight:500;color:var(--brown);box-shadow:0 2px 12px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);transition:all 0.3s}
+.area-tag:hover{background:var(--gold);color:var(--white);transform:translateY(-2px)}
+
+/* Testimonials */
+.testimonials{background:var(--white)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+.testimonial-card{background:var(--cream);border-radius:16px;padding:2.5rem 2rem;position:relative}
+.testimonial-card::before{content:'\201C';position:absolute;top:1rem;left:1.5rem;font-family:'DM Serif Display',serif;font-size:4rem;color:var(--gold);opacity:0.3;line-height:1}
+.stars{display:flex;gap:2px;margin-bottom:1rem}
+.stars svg{width:18px;height:18px;fill:var(--gold);stroke:none}
+.testimonial-card blockquote{font-size:0.95rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;font-style:italic;position:relative;z-index:1}
+.testimonial-author{font-weight:600;color:var(--brown);font-size:0.9rem}
+.testimonial-location{color:var(--text-light);font-size:0.8rem}
+
+/* Contact CTA */
+.contact{background:linear-gradient(135deg,var(--brown) 0%,#3B2820 100%);color:var(--white);text-align:center;position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(212,160,23,0.1) 0%,transparent 70%);border-radius:50%}
+.contact h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem}
+.contact>div>p{color:rgba(255,255,255,0.8);font-size:1.1rem;max-width:600px;margin:0 auto 2.5rem;line-height:1.7}
+.contact-methods{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.contact-method{text-align:center}
+.contact-method span{display:block;font-size:0.8rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem}
+.contact-method a{font-size:1.1rem;font-weight:600;color:var(--gold-light);transition:color 0.3s}
+.contact-method a:hover{color:var(--white)}
+.social-links{display:flex;justify-content:center;gap:1rem;margin-top:2rem}
+.social-link{display:flex;align-items:center;gap:0.5rem;padding:0.6rem 1.2rem;border:1px solid rgba(255,255,255,0.2);border-radius:50px;color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:500;transition:all 0.3s}
+.social-link:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.4)}
+.social-link svg{width:18px;height:18px;fill:currentColor}
+
+/* Footer */
+footer{background:#2A1F1A;color:rgba(255,255,255,0.6);padding:3rem 2rem 1.5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto}
+.footer-brand h3{font-size:1.3rem;color:var(--white);margin-bottom:0.8rem}
+.footer-brand p{font-size:0.9rem;line-height:1.7}
+.footer-col h4{color:var(--white);font-size:0.95rem;margin-bottom:1rem;font-family:'Inter',sans-serif;font-weight:600}
+.footer-col p,.footer-col a{display:block;font-size:0.85rem;line-height:2;transition:color 0.3s}
+.footer-col a:hover{color:var(--gold-light)}
+.footer-bottom{max-width:1200px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;font-size:0.8rem}
+
+/* Responsive */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+}
+@media(max-width:600px){
+  section{padding:3.5rem 1.2rem}
+  .services-grid,.testimonials-grid{grid-template-columns:1fr}
+  .hero-buttons{flex-direction:column;align-items:center}
+  .about-stats{flex-direction:column;gap:1.5rem}
+  .contact-methods{flex-direction:column;gap:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Hobe Sound Honeybees</a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#areas">Areas</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="tel:8639995053" class="nav-cta">Call Now</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Insured &amp; Licensed</div>
+    <h1>Live Bee Removal &amp; Relocation in the Treasure Coast</h1>
+    <p>Protecting homes and saving bees since day one. Hobe Sound Honeybees LLC provides safe, humane honey bee removal and relocation services across South Florida.</p>
+    <div class="hero-buttons">
+      <a href="tel:8639995053" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Call (863) 999-5053
+      </a>
+      <a href="#contact" class="btn btn-outline">Request Service</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What We Do</div>
+      <h2>Our Services</h2>
+      <p>From safe bee removal to agricultural consulting, we offer comprehensive services to protect both your property and our precious pollinators.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Live Bee Removal</h3>
+        <p>Safe, humane removal of honey bee colonies from homes, businesses, and structures. We never exterminate -- every colony is carefully preserved and relocated.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Bee Relocation</h3>
+        <p>Ethical relocation of bee colonies to local apiaries where they can thrive. Every bee we remove gets a new home and continues its vital role in pollination.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Agricultural Exemptions</h3>
+        <p>We help property owners qualify for valuable agricultural tax exemptions through managed beehive placement. Save on taxes while supporting local ecosystems.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Education &amp; Workshops</h3>
+        <p>Community-focused beekeeping education, workshops, and presentations. Learn about the vital role bees play and how to coexist with these incredible pollinators.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <h3>Local Honey Sales</h3>
+        <p>Award-winning pure Florida honey harvested right here in the Treasure Coast. Our honey earned a blue ribbon at the Florida State Honey Show.</p>
+        <span class="service-badge">Blue Ribbon Winner</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image fade-up" style="position:relative">
+        <img src="jahn.jpg" alt="Jahn - Owner of Hobe Sound Honeybees LLC" loading="lazy">
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-text fade-up">
+        <div class="section-label">Our Story</div>
+        <h2>Passionate About Saving Bees</h2>
+        <p>Hobe Sound Honeybees LLC is a family-owned business built on a deep love for honey bees and a commitment to their preservation. We believe every colony deserves a chance to thrive, which is why we specialize in live removal -- never extermination.</p>
+        <p>Fully insured and deeply rooted in the Treasure Coast community, we proudly serve Hobe Sound, Stuart, Jupiter, Palm City, Port St. Lucie, and surrounding areas. Our mission is simple: protect your property while giving bees a safe new home.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <h4>100%</h4>
+            <p>Live Removal</p>
+          </div>
+          <div class="stat">
+            <h4>Insured</h4>
+            <p>Full Coverage</p>
+          </div>
+          <div class="stat">
+            <h4>Award</h4>
+            <p>State Honey Show</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">The Difference</div>
+      <h2>Why Choose Hobe Sound Honeybees</h2>
+      <p>When bees move into your space, you need a team that cares about doing it right.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item fade-up">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Fully Insured</h3>
+        <p>Complete liability coverage for your peace of mind on every job we perform.</p>
+      </div>
+      <div class="why-item fade-up">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Live Removal Only</h3>
+        <p>We never exterminate. Every bee is carefully relocated to a safe local apiary.</p>
+      </div>
+      <div class="why-item fade-up">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <h3>Award-Winning Honey</h3>
+        <p>Blue ribbon winner at the Florida State Honey Show for our locally harvested honey.</p>
+      </div>
+      <div class="why-item fade-up">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Local &amp; Trusted</h3>
+        <p>Family-owned, community-focused, and trusted by homeowners across the Treasure Coast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Areas -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Where We Serve</div>
+      <h2>Service Areas</h2>
+      <p>Providing professional bee removal and relocation services throughout Martin County, St. Lucie County, and the greater Treasure Coast region.</p>
+    </div>
+    <div class="areas-list fade-up">
+      <span class="area-tag">Hobe Sound</span>
+      <span class="area-tag">Stuart</span>
+      <span class="area-tag">Jensen Beach</span>
+      <span class="area-tag">Palm City</span>
+      <span class="area-tag">Jupiter</span>
+      <span class="area-tag">Port St. Lucie</span>
+      <span class="area-tag">Martin County</span>
+      <span class="area-tag">St. Lucie County</span>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What People Say</div>
+      <h2>Trusted by Homeowners</h2>
+      <p>Hear from property owners who chose humane bee removal with Hobe Sound Honeybees.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <blockquote>Had a large colony in our soffit that had been there for months. Hobe Sound Honeybees came out the same day, removed the entire colony alive, and even repaired the entry point. Incredibly professional and knowledgeable.</blockquote>
+        <div class="testimonial-author">Sandra M.</div>
+        <div class="testimonial-location">Stuart, FL</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <blockquote>They helped us set up hives on our property for the ag exemption, and now we get fresh local honey too. The whole process was easy and they were so helpful explaining everything. Highly recommend.</blockquote>
+        <div class="testimonial-author">David &amp; Lisa R.</div>
+        <div class="testimonial-location">Palm City, FL</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <blockquote>We had bees swarming near our pool and were worried about the kids. They came out quickly, relocated the swarm safely, and explained everything they were doing. Great people doing great work for the community.</blockquote>
+        <div class="testimonial-author">Michael T.</div>
+        <div class="testimonial-location">Hobe Sound, FL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="fade-up">Ready to Get Started?</h2>
+    <p class="fade-up">Whether you need a bee colony removed, want to learn about ag exemptions, or are looking for the best local honey in the Treasure Coast, we are here to help.</p>
+    <div class="contact-methods fade-up">
+      <div class="contact-method">
+        <span>Call Us</span>
+        <a href="tel:8639995053">(863) 999-5053</a>
+      </div>
+      <div class="contact-method">
+        <span>Email Us</span>
+        <a href="mailto:HobeSoundHoneybees@gmail.com">HobeSoundHoneybees@gmail.com</a>
+      </div>
+    </div>
+    <a href="tel:8639995053" class="btn btn-primary fade-up">Call Now for a Free Consultation</a>
+    <div class="social-links fade-up">
+      <a href="https://www.instagram.com/HobeSoundHoneybees.llc" target="_blank" rel="noopener" class="social-link">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a href="https://facebook.com/IslandHoneyBees/" target="_blank" rel="noopener" class="social-link">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Hobe Sound Honeybees LLC</h3>
+      <p>Professional live bee removal, relocation, and agricultural exemption services for the Treasure Coast. Fully insured. Award-winning honey.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>6503 SE Sylvan Pl</p>
+      <p>Hobe Sound, FL</p>
+      <a href="tel:8639995053">(863) 999-5053</a>
+      <a href="mailto:HobeSoundHoneybees@gmail.com">HobeSoundHoneybees@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <p>Hobe Sound</p>
+      <p>Stuart &amp; Jensen Beach</p>
+      <p>Palm City &amp; Jupiter</p>
+      <p>Port St. Lucie</p>
+      <p>Martin &amp; St. Lucie County</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright 2025 Hobe Sound Honeybees LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Scroll fade-up
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+
+// Nav scroll
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+</script>
+</body>
+</html>
