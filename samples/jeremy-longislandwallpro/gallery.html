@@ -14,6 +14,21 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Our Work | Long Island Wall Pro Gallery">
 <meta name="twitter:description" content="Browse 30+ years of professional drywall, painting, and restoration projects by Long Island Wall Pro across Suffolk County.">
+<meta name="keywords" content="Long Island Wall Pro gallery, drywall projects Suffolk County, painting portfolio Long Island, wall restoration photos, before after drywall repair">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Long Island Wall Pro Project Gallery",
+    "description": "Browse 30+ years of professional drywall, painting, and restoration projects across Suffolk County and Long Island.",
+    "url": "https://rouguemind-del.github.io/robbie-gets-you-leads/samples/jeremy-longislandwallpro/gallery.html",
+    "author": {
+        "@type": "LocalBusiness",
+        "name": "Long Island Wall Pro",
+        "telephone": "+16316404117"
+    }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -142,6 +157,8 @@ nav a.active::after{content:'';position:absolute;bottom:0;left:0;right:0;height:
       <a href="gallery.html" class="active">Gallery</a>
       <a href="blog.html">Blog</a>
       <a href="index.html#services">Services</a>
+      <a href="drywall-repair.html">Drywall</a>
+      <a href="painting.html">Painting</a>
       <a href="index.html#contact">Contact</a>
       <a href="tel:+16316404117" class="nav-cta">📞 (631) 640-4117</a>
     </nav>
@@ -277,17 +294,42 @@ const photos=[
 ];
 
 const altMap={
-  "baby-painter.jpg":"Family business - next generation painter",
-  "bathroom-renovation.jpg":"Professional bathroom renovation",
-  "commercial-project.jpg":"Commercial drywall project",
-  "dining-room-finished.jpg":"Luxury dining room finish",
-  "dining-room-finished-2.jpg":"Luxury dining room finish - alternate view",
-  "dining-open-floor.jpg":"Open floor plan dining room project",
-  "hallway-crown-molding.jpg":"Custom hallway crown molding",
-  "large-wall-repair.jpg":"Large wall repair project",
-  "window-trim.jpg":"Window trim installation"
+  "baby-painter.jpg":"Long Island Wall Pro family business - next generation painter Suffolk County",
+  "bathroom-renovation.jpg":"Professional bathroom renovation and painting Long Island",
+  "commercial-project.jpg":"Commercial drywall installation project Long Island",
+  "dining-room-finished.jpg":"Luxury dining room painting finish Long Island Wall Pro",
+  "dining-room-finished-2.jpg":"Dining room professional painting Long Island - alternate view",
+  "dining-open-floor.jpg":"Open floor plan dining room painting project Suffolk County",
+  "hallway-crown-molding.jpg":"Custom hallway crown molding installation Long Island",
+  "large-wall-repair.jpg":"Large drywall wall repair project Long Island",
+  "window-trim.jpg":"Professional window trim installation Suffolk County",
+  "about-commercial-drywall.jpg":"Commercial drywall project Long Island Wall Pro",
+  "038cb465-6c42-4c16-9b91-f15163f4c3eb.jpg":"Complete wall renovation project Long Island",
+  "06c7bcd8-ad6c-4d0e-99ae-bbda09115bce.jpg":"Professional drywall finishing Long Island",
+  "12583e10-ef67-471d-a055-d01c94008869.jpg":"Wall restoration and painting Long Island",
+  "13041e65-afb9-4641-ae4a-69499b490a48.jpg":"Drywall repair and skim coating Long Island",
+  "1f0fc184-1051-4817-882f-1490428fd861.jpg":"Interior painting project Suffolk County",
+  "23d098ed-4a95-420c-b1b0-15f1bfd8a6b6.jpg":"Professional wall finishing Long Island",
+  "30cce04b-f33b-4605-877d-83470df958b3.jpg":"Drywall installation project Long Island",
+  "549143a4-1537-4e77-b206-e15e424b1580.jpg":"Wall repair and restoration Suffolk County",
+  "622b988d-69c4-4e95-a3e2-d830d7f74668.jpg":"Professional painting services Long Island",
+  "65732c48-0f56-4bfa-930f-1fe8558c2d1c.jpg":"Skim coating and wall smoothing Long Island",
+  "6cc9cb54-2a73-4923-a3ad-5614fed82ca5.jpg":"Ceiling repair project Suffolk County",
+  "6d001f45-93ad-496e-beac-cedd7be8ebc7.jpg":"Drywall taping and finishing Long Island",
+  "7997ef04-d869-4bf9-afcb-56595d84b21a.jpg":"Interior wall restoration Long Island",
+  "7c77b71f-9bb0-4c0f-bb58-41522cc55ea6.jpg":"Professional painting contractor Long Island",
+  "891e8111-5ff6-4030-8de8-e536add9632b.jpg":"Interior painting project Long Island Wall Pro",
+  "95cafc8f-6530-4c23-b4f3-2f2dd11eb224.jpg":"Wall finishing and painting Suffolk County",
+  "9e410640-563d-4bfe-92f1-8bd95e8afd6f.jpg":"Drywall restoration project Long Island",
+  "aa0738f6-31b3-44ab-ad09-8adbc1a1aef9.jpg":"Professional wall repair Long Island",
+  "cead095f-0f8f-4d02-88c4-1cc15bf13a86.jpg":"Drywall and painting project Suffolk County",
+  "dfdf9fa0-07df-495a-a420-7ae436206d82.jpg":"Wall restoration and skim coating Long Island",
+  "e1aa462f-a8be-462e-b9f5-f6e8cf9e0640.jpg":"Ceiling repair and restoration Long Island",
+  "e712c81f-4446-405b-827f-fc5070ca54f0.jpg":"Drywall repair and finishing Long Island",
+  "e911221d-dee9-45a8-a50c-33afacee4bf3.jpg":"Professional wall finishing Suffolk County",
+  "efa402aa-156b-455c-b988-3bb2ecb8d165.jpg":"Wall smoothing and skim coating Long Island"
 };
-function getAlt(filename){return altMap[filename]||"Professional drywall and painting project by Long Island Wall Pro";}
+function getAlt(filename){return altMap[filename]||"Professional drywall and painting project by Long Island Wall Pro Suffolk County";}
 
 const grid=document.getElementById('galleryGrid');
 photos.forEach((p,i)=>{

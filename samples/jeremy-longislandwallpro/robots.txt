@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rouguemind-del.github.io/robbie-gets-you-leads/samples/jeremy-longislandwallpro/sitemap.xml
