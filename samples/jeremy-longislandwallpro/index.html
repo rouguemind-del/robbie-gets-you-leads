@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Island Wall Pro | Professional Drywall, Painting & Restoration | Nassau & Suffolk County</title>
+    <meta name="description" content="Long Island Wall Pro provides expert drywall repair, painting, skim coating, and complete wall restoration services in Nassau & Suffolk Counties. 24/7 emergency services available. Est. 2017.">
+    <meta name="keywords" content="drywall repair Long Island, painting contractor Nassau County, skim coating Suffolk, wall restoration, ceiling repair, flood damage repair, emergency drywall">
+    
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Long Island Wall Pro",
+        "description": "Professional drywall, painting, and wall restoration services",
+        "url": "https://longislandwallpro.com",
+        "telephone": "+16316404117",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "NY",
+            "addressLocality": "Suffolk County"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Nassau County, NY"
+            },
+            {
+                "@type": "City", 
+                "name": "Suffolk County, NY"
+            }
+        ],
+        "serviceType": ["Drywall Repair", "Painting", "Wall Restoration", "Skim Coating", "Emergency Repairs"],
+        "foundingDate": "2017",
+        "openingHours": ["Mo-Fr 09:00-17:00"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Wall and Ceiling Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Drywall Repair and Installation"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Professional Painting Services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service", 
+                        "name": "Skim Coating and Wall Restoration"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "24/7 Emergency Repair Services"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #fafafa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .phone {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .emergency {
+            background-color: #e53e3e;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #2c5282;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: #1e3a5f;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 95, 0.8), rgba(44, 82, 130, 0.8)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #d4af37;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #d4af37;
+            color: #1e3a5f;
+        }
+        
+        .btn-primary:hover {
+            background-color: #b8941f;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #1e3a5f;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3a5f;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+        
+        .service-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+        }
+        
+        /* Emergency Section */
+        .emergency-services {
+            background-color: #e53e3e;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .emergency-services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-services p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .emergency-phone {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        /* Service Areas */
+        .service-areas {
+            padding: 4rem 0;
+            background-color: #f7fafc;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .area-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .area-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            color: #2c3e50;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #1e3a5f;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        
+        .contact-info-section {
+            padding-left: 2rem;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #d4af37;
+            min-width: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info-section {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Long Island Wall Pro</div>
+                <div class="contact-info">
+                    <div class="phone">(631) 640-4117</div>
+                    <div class="emergency">24/7 Emergency</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#emergency">Emergency</a></li>
+                <li><a href="#areas">Service Areas</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Wall & Ceiling Restoration</h1>
+            <div class="hero-tagline">"You don't have to live in the Hamptons for your house to look like it does!"</div>
+            <p class="hero-description">
+                Long Island Wall Pro has been transforming homes and businesses across Nassau and Suffolk Counties since 2017. 
+                From expert drywall repair to complete wall restoration, we deliver Hampton-quality craftsmanship at honest prices.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+                <a href="tel:6316404117" class="btn btn-secondary">Call (631) 640-4117</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Expert Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Drywall Installation & Repair</h3>
+                    <p>Professional drywall installation, patching, and repairs for both residential and commercial properties. Perfect seams, smooth finishes.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Professional Painting</h3>
+                    <p>Interior and exterior painting services using premium paints and techniques. Transform any space with flawless color and finish.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Taping & Spackle</h3>
+                    <p>Expert joint compound application and sanding for seamless wall transitions. Precision work that creates perfectly smooth surfaces.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Skim Coating</h3>
+                    <p>Complete wall resurfacing to eliminate imperfections and create smooth, paint-ready surfaces throughout your property.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Wall & Ceiling Restoration</h3>
+                    <p>Complete restoration services for damaged walls and ceilings. Bringing old surfaces back to like-new condition.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🚨</div>
+                    <h3>Emergency Repairs</h3>
+                    <p>24/7 emergency services for water damage, cracks, holes, and urgent repair needs. We're here when disaster strikes.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎭</div>
+                    <h3>Custom Molding</h3>
+                    <p>Installation and repair of decorative molding, crown molding, and trim work to enhance your property's aesthetic appeal.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Flood Damage Restoration</h3>
+                    <p>Comprehensive restoration services for flood and water damage. Complete wall and ceiling rebuilds to restore your property.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Demolition Services</h3>
+                    <p>Safe and efficient demolition of walls, ceilings, and structures to prepare for your renovation or restoration project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emergency" class="emergency-services">
+        <div class="container">
+            <h2>24/7 Emergency Services Available</h2>
+            <p>Water damage? Ceiling collapse? Large holes or cracks? We respond immediately to emergency calls across Long Island.</p>
+            <div class="emergency-phone">(631) 640-4117</div>
+        </div>
+    </section>
+
+    <section id="areas" class="service-areas">
+        <div class="container">
+            <h2 class="section-title">We Proudly Serve</h2>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <h3>Nassau County</h3>
+                    <p>Complete wall and ceiling services throughout Nassau County, bringing Hampton-quality work to your neighborhood.</p>
+                </div>
+                <div class="area-card">
+                    <h3>Suffolk County</h3>
+                    <p>Expert drywall, painting, and restoration services across all of Suffolk County with same-day emergency response.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Long Island Wall Pro</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Established 2017</h3>
+                    <p>Since 2017, Long Island Wall Pro has been the trusted name in wall and ceiling restoration across Nassau and Suffolk Counties. Our commitment to quality craftsmanship and customer satisfaction has made us the go-to choice for homeowners and businesses throughout Long Island.</p>
+                    
+                    <p>We believe that every property deserves the same level of attention and quality finish you'd find in the most exclusive Hampton estates. That's why our slogan reflects our mission: "You don't have to live in the Hamptons for your house to look like it does!"</p>
+                    
+                    <p>Whether you need emergency repairs, complete wall restoration, or professional painting services, our experienced team delivers results that exceed expectations every time.</p>
+                    
+                    <h4>Why Choose Long Island Wall Pro?</h4>
+                    <ul>
+                        <li>7+ years of professional experience</li>
+                        <li>24/7 emergency response service</li>
+                        <li>Hampton-quality craftsmanship</li>
+                        <li>Fully licensed and insured</li>
+                        <li>Free estimates on all projects</li>
+                        <li>Customer satisfaction guarantee</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Professional wall restoration work" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Estimate Today</h2>
+            <div class="contact-content">
+                <form class="contact-form" action="#" method="POST">
+                    <h3>Request a Quote</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Property Address</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Needed *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="drywall-repair">Drywall Repair</option>
+                            <option value="painting">Painting</option>
+                            <option value="skim-coating">Skim Coating</option>
+                            <option value="restoration">Wall/Ceiling Restoration</option>
+                            <option value="molding">Molding Installation</option>
+                            <option value="emergency">Emergency Repair</option>
+                            <option value="flood-damage">Flood Damage Restoration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Description</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Get My Free Estimate</button>
+                </form>
+                
+                <div class="contact-info-section">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-detail">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            (631) 640-4117
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <strong>Business Hours:</strong><br>
+                            Monday - Friday: 9:00 AM - 5:00 PM<br>
+                            <strong style="color: #d4af37;">24/7 Emergency Services</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Service Areas:</strong><br>
+                            Nassau County, NY<br>
+                            Suffolk County, NY
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="contact-icon">🏆</span>
+                        <div>
+                            <strong>Established:</strong><br>
+                            2017 - 7+ Years Experience
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <span class="contact-icon">✅</span>
+                        <div>
+                            <strong>Services:</strong><br>
+                            Licensed & Insured<br>
+                            Free Estimates<br>
+                            Customer Satisfaction Guaranteed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Long Island Wall Pro. All rights reserved. | Licensed & Insured | Established 2017</p>
+            <p style="margin-top: 0.5rem; font-style: italic; color: #d4af37;">"You don't have to live in the Hamptons for your house to look like it does!"</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling (placeholder)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you within 24 hours to schedule your free estimate.');
+            this.reset();
+        });
+
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+    </script>
+</body>
+</html>
