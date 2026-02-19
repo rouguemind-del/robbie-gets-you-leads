@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Long Island Wall Pro | Drywall & Painting | Setauket, Port Jefferson, Smithtown & Suffolk County</title>
+    <title>Long Island Wall Pro | Drywall &amp; Painting | Setauket, Port Jefferson, Smithtown &amp; Suffolk County</title>
     <meta name="description" content="Long Island Wall Pro: 30+ years experience, Local 1486 Painter's/Taper's Union trained. Expert drywall repair, painting, skim coating, and complete wall restoration services in Suffolk County including Setauket, Port Jefferson, Smithtown, Centereach, Lake Ronkonkoma, Hauppauge, Commack, Farmingville, and Holtsville. 24/7 emergency services available.">
     <meta name="keywords" content="drywall repair Long Island, painting contractor Suffolk County, wall restoration Long Island, Setauket drywall contractor, Port Jefferson painting services, Smithtown wall repair, Centereach drywall, Lake Ronkonkoma contractor, Hauppauge painting, Commack wall restoration, Farmingville drywall repair, Holtsville painting contractor, skim coating Suffolk County, ceiling repair Long Island, emergency drywall repair, union trained contractor, professional painting services, flood damage restoration, crown molding installation, Local 1486 contractor">
-    
-    <!-- Schema Markup for Local Business -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -22,50 +22,17 @@
             "addressLocality": "Suffolk County"
         },
         "areaServed": [
-            {
-                "@type": "City",
-                "name": "Suffolk County, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Setauket, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Port Jefferson, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Smithtown, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Centereach, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Lake Ronkonkoma, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Hauppauge, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Commack, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Farmingville, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Holtsville, NY"
-            },
-            {
-                "@type": "City", 
-                "name": "Nassau Suffolk Border, NY"
-            }
+            {"@type": "City", "name": "Suffolk County, NY"},
+            {"@type": "City", "name": "Setauket, NY"},
+            {"@type": "City", "name": "Port Jefferson, NY"},
+            {"@type": "City", "name": "Smithtown, NY"},
+            {"@type": "City", "name": "Centereach, NY"},
+            {"@type": "City", "name": "Lake Ronkonkoma, NY"},
+            {"@type": "City", "name": "Hauppauge, NY"},
+            {"@type": "City", "name": "Commack, NY"},
+            {"@type": "City", "name": "Farmingville, NY"},
+            {"@type": "City", "name": "Holtsville, NY"},
+            {"@type": "City", "name": "Nassau Suffolk Border, NY"}
         ],
         "serviceType": ["Drywall Repair", "Painting", "Wall Restoration", "Skim Coating", "Emergency Repairs"],
         "foundingDate": "2017",
@@ -74,926 +41,565 @@
             "@type": "OfferCatalog",
             "name": "Wall and Ceiling Services",
             "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Drywall Repair and Installation"
-                    }
-                },
-                {
-                    "@type": "Offer", 
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Professional Painting Services"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service", 
-                        "name": "Skim Coating and Wall Restoration"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "24/7 Emergency Repair Services"
-                    }
-                }
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Drywall Repair and Installation"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Professional Painting Services"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Skim Coating and Wall Restoration"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "24/7 Emergency Repair Services"}}
             ]
         }
     }
     </script>
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #2c4a6b;
+            --secondary: #3d5a7a;
+            --gold: #d4af37;
+            --cta: #E8725A;
+            --cta-hover: #d4614a;
+            --bg: #fafafa;
+            --text: #333;
+            --text-light: #666;
+            --white: #fff;
+            --emergency: #dc2626;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
         }
-        
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background-color: #fafafa;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #2c4a6b 0%, #3d5a7a 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.6rem;
-            font-weight: bold;
-            color: white;
-        }
-        
-        /* Removed pulse animation for cleaner look */
-        
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+        @keyframes phonePulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.5); } 70% { box-shadow: 0 0 0 15px rgba(220,38,38,0); } }
+        @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+        @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .animate { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate.visible { opacity: 1; transform: translateY(0); }
+
+        /* Promo Banner */
+        .promo-banner { background: var(--gold); color: var(--primary); text-align: center; padding: 10px 20px; font-weight: 600; font-size: 0.95rem; animation: slideDown 0.5s ease; }
+        .promo-banner a { color: var(--primary); text-decoration: underline; }
+
         /* Navigation */
-        nav {
-            background-color: #3d5a7a;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            background-color: #2c4a6b;
-        }
-        
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0.5rem;
-            position: relative;
-        }
-        
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
-        
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-        
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-        
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: #3d5a7a;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            z-index: 1001;
-        }
-        
-        .mobile-menu.active {
-            display: block;
-        }
-        
-        .mobile-nav-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .mobile-nav-links li {
-            border-bottom: 1px solid #2c4a6b;
-        }
-        
-        .mobile-nav-links a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 1rem 20px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .mobile-nav-links a:hover {
-            background-color: #2c4a6b;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(44, 74, 107, 0.85), rgba(61, 90, 122, 0.85)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 6rem 0;
-            margin-top: 0;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .hero-tagline {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #d4af37;
-            font-style: italic;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        }
-        
-        .hero-description {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary {
-            background-color: #E8725A;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .btn-primary:hover {
-            background-color: #d65a42;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background-color: white;
-            color: #2c4a6b;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 4rem 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2c4a6b;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .service-card h3 {
-            color: #2c4a6b;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        /* Emergency services section removed for cleaner design */
-        
-        /* Portfolio Section */
-        .portfolio {
-            padding: 4rem 0;
-            background-color: white;
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .portfolio-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(30, 58, 95, 0.95));
-            color: white;
-            padding: 2rem;
-            transform: translateY(80%);
-            transition: transform 0.3s ease;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            transform: translateY(0);
-        }
-        
-        .portfolio-overlay h3 {
-            color: #d4af37;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .portfolio-overlay p {
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
+        .navbar { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; padding: 0 20px; }
+        .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+        .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary); text-decoration: none; font-weight: 700; }
+        .nav-logo span { color: var(--gold); }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; padding: 8px 0; }
+        .nav-links a:hover { color: var(--cta); }
+        .nav-phone { display: flex; align-items: center; gap: 8px; background: var(--cta); color: var(--white); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s, transform 0.2s; }
+        .nav-phone:hover { background: var(--cta-hover); transform: translateY(-1px); }
+        .hamburger { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; padding: 8px; }
+
+        /* Hero */
+        .hero { position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(44,74,107,0.55) 0%, rgba(0,0,0,0.35) 100%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 40px 20px; max-width: 800px; animation: fadeInUp 0.8s ease; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--white); margin-bottom: 16px; text-shadow: 0 2px 20px rgba(0,0,0,0.3); line-height: 1.15; }
+        .hero h1 span { color: var(--gold); }
+        .hero p { color: rgba(255,255,255,0.95); font-size: clamp(1rem, 2.5vw, 1.25rem); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s ease; cursor: pointer; border: none; min-height: 48px; }
+        .btn-primary { background: var(--cta); color: var(--white); box-shadow: 0 4px 15px rgba(232,114,90,0.4); }
+        .btn-primary:hover { background: var(--cta-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,114,90,0.5); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--primary); }
+
+        /* Trust Badges */
+        .trust-badges { background: var(--primary); padding: 28px 20px; }
+        .badges-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+        .badge-item { color: var(--white); }
+        .badge-icon { font-size: 2rem; margin-bottom: 6px; }
+        .badge-text { font-weight: 600; font-size: 0.9rem; line-height: 1.3; }
+        .badge-text span { display: block; font-weight: 400; font-size: 0.8rem; opacity: 0.8; }
+
+        /* Sections */
+        .section { padding: 80px 20px; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--primary); margin-bottom: 12px; }
+        .section-header p { color: var(--text-light); max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
+        .section-label { display: inline-block; background: rgba(212,175,55,0.15); color: var(--gold); font-weight: 600; font-size: 0.85rem; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); }
+        .about-img img { width: 100%; height: 350px; object-fit: cover; display: block; }
+        .about-text h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 16px; }
+        .about-text p { color: var(--text-light); margin-bottom: 16px; }
+        .about-stats { display: flex; gap: 30px; margin-top: 24px; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 2rem; font-weight: 800; color: var(--cta); }
+        .stat-label { font-size: 0.85rem; color: var(--text-light); }
+
+        /* Services */
+        .services-section { background: var(--white); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .service-card { background: var(--bg); border-radius: 12px; padding: 32px 24px; transition: all 0.3s ease; border: 1px solid #eee; }
+        .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+        .service-icon { font-size: 2.2rem; margin-bottom: 12px; }
+        .service-card h3 { color: var(--primary); font-size: 1.15rem; margin-bottom: 10px; }
+        .service-card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
+
+        /* Emergency Banner */
+        .emergency-banner { background: linear-gradient(135deg, var(--emergency) 0%, #b91c1c 100%); padding: 40px 20px; text-align: center; }
+        .emergency-inner { max-width: 800px; margin: 0 auto; }
+        .emergency-banner h2 { color: var(--white); font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 8px; }
+        .emergency-banner p { color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1.05rem; }
+        .emergency-phone { display: inline-flex; align-items: center; gap: 10px; background: var(--white); color: var(--emergency); padding: 16px 36px; border-radius: 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; animation: phonePulse 2s infinite; transition: transform 0.2s; }
+        .emergency-phone:hover { transform: scale(1.05); }
+
+        /* Portfolio */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .portfolio-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; }
+        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .portfolio-item:hover img { transform: scale(1.08); }
+        .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(44,74,107,0.85) 0%, transparent 60%); display: flex; align-items: flex-end; padding: 20px; opacity: 0; transition: opacity 0.3s; }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        .portfolio-overlay span { color: var(--white); font-weight: 600; font-size: 0.95rem; }
+
+        /* Testimonials */
+        .testimonials-section { background: var(--white); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .testimonial-card { background: var(--bg); border-radius: 12px; padding: 32px; border: 1px solid #eee; position: relative; }
+        .testimonial-card::before { content: '"'; position: absolute; top: 16px; left: 24px; font-size: 4rem; color: var(--gold); opacity: 0.3; font-family: serif; line-height: 1; }
+        .testimonial-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 12px; }
+        .testimonial-text { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+        .testimonial-author { font-weight: 600; color: var(--primary); font-size: 0.95rem; }
+        .testimonial-author span { font-weight: 400; color: var(--text-light); }
 
         /* Service Areas */
-        .service-areas {
-            padding: 4rem 0;
-            background-color: #f7fafc;
-        }
-        
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        
-        .area-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .area-card h3 {
-            color: #2c4a6b;
-            margin-bottom: 1rem;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 4rem 0;
-            background-color: white;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-        }
-        
-        .about-image {
-            text-align: center;
-        }
-        
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #2c4a6b 0%, #3d5a7a 100%);
-            color: white;
-        }
-        
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            color: #2c3e50;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #2c4a6b;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #d4af37;
-        }
-        
-        .contact-info-section {
-            padding-left: 2rem;
-        }
-        
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        
-        .contact-icon {
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin-right: 1rem;
-            color: #d4af37;
-            min-width: 6rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
+        .areas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+        .areas-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .area-tag { display: flex; align-items: center; gap: 8px; background: var(--white); padding: 12px 16px; border-radius: 8px; font-weight: 500; color: var(--primary); border: 1px solid #e5e7eb; transition: all 0.2s; }
+        .area-tag:hover { border-color: var(--gold); box-shadow: var(--shadow); }
+        .area-tag::before { content: '📍'; }
+        .map-container { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+        .map-container iframe { width: 100%; height: 350px; border: 0; }
+
+        /* Contact */
+        .contact-section { background: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .contact-info { display: flex; flex-direction: column; gap: 24px; }
+        .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+        .contact-icon { width: 48px; height: 48px; background: rgba(44,74,107,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .contact-item h4 { color: var(--primary); margin-bottom: 4px; }
+        .contact-item p, .contact-item a { color: var(--text-light); text-decoration: none; font-size: 0.95rem; }
+        .contact-item a:hover { color: var(--cta); }
+        .form { display: flex; flex-direction: column; gap: 16px; }
+        .form input, .form textarea, .form select { width: 100%; padding: 14px 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; font-family: inherit; transition: border-color 0.2s; background: var(--bg); min-height: 48px; }
+        .form input:focus, .form textarea:focus, .form select:focus { outline: none; border-color: var(--primary); }
+        .form textarea { resize: vertical; min-height: 120px; }
+        .btn-submit { background: var(--cta); color: var(--white); padding: 16px 32px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s; min-height: 52px; position: relative; overflow: hidden; }
+        .btn-submit::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); background-size: 200% 100%; animation: shimmer 3s infinite; }
+        .btn-submit:hover { background: var(--cta-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(232,114,90,0.4); }
+
         /* Footer */
-        footer {
-            background-color: #1a202c;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        /* Responsive Design */
+        .footer { background: var(--primary); color: rgba(255,255,255,0.8); padding: 50px 20px 20px; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 30px; }
+        .footer h3 { color: var(--white); margin-bottom: 16px; font-size: 1.1rem; }
+        .footer p { font-size: 0.9rem; line-height: 1.7; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; padding: 4px 0; display: block; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--gold); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; text-align: center; font-size: 0.85rem; }
+        .footer-phone { color: var(--gold); text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        .footer-phone:hover { text-decoration: underline; }
+
+        /* Sticky Mobile CTA */
+        .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--cta); padding: 12px 20px; text-align: center; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
+        .sticky-cta a { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+
+        /* Mobile */
         @media (max-width: 768px) {
-            header {
-                padding: 1rem 0;
-            }
-            
-            .header-content {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            
-            .logo {
-                font-size: 1.3rem;
-                color: white;
-            }
-            
-            .hamburger {
-                display: flex;
-            }
-            
-            .hamburger span {
-                width: 25px;
-                height: 3px;
-                margin: 3px 0;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-tagline {
-                font-size: 1.2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info-section {
-                padding-left: 0;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-            }
-            
-            .portfolio-item img {
-                height: 200px;
-            }
+            .nav-links { display: none; }
+            .nav-phone { display: none; }
+            .hamburger { display: block; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--white); padding: 20px; box-shadow: var(--shadow); gap: 16px; }
+            .hero { min-height: 70vh; }
+            .badges-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .about-grid, .contact-grid, .areas-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .portfolio-overlay { opacity: 1; }
+            .section { padding: 50px 20px; }
+            .about-stats { justify-content: center; }
+            .sticky-cta { display: block; }
+            body { padding-bottom: 60px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        }
+        @media (max-width: 480px) {
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .badges-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .areas-list { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Long Island Wall Pro</div>
-                <button class="hamburger" id="hamburgerBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+
+<!-- Promo Banner -->
+<div class="promo-banner">📞 Book This Week — Free Consultation for New Customers · <a href="tel:+16316404117">Call (631) 640-4117</a></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">Long Island <span>Wall Pro</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#areas">Areas</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="tel:+16316404117" class="nav-phone">📞 (631) 640-4117</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Suffolk County's Trusted <span>Drywall &amp; Painting</span> Experts</h1>
+        <p>30+ years of union-trained craftsmanship. From drywall repair to full interior painting — we deliver flawless results, every time.</p>
+        <div class="hero-btns">
+            <a href="tel:+16316404117" class="btn btn-primary">📞 Call Now — Free Estimate</a>
+            <a href="#contact" class="btn btn-outline">Request a Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Badges -->
+<div class="trust-badges">
+    <div class="badges-grid">
+        <div class="badge-item animate">
+            <div class="badge-icon">🏆</div>
+            <div class="badge-text">30+ Years Experience<span>Proven Track Record</span></div>
+        </div>
+        <div class="badge-item animate">
+            <div class="badge-icon">🔧</div>
+            <div class="badge-text">Union Trained<span>Local 1486 Certified</span></div>
+        </div>
+        <div class="badge-item animate">
+            <div class="badge-icon">🛡️</div>
+            <div class="badge-text">Licensed &amp; Insured<span>Full Coverage</span></div>
+        </div>
+        <div class="badge-item animate">
+            <div class="badge-icon">✅</div>
+            <div class="badge-text">Free Estimates<span>No Obligation</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img animate">
+                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Professional drywall and painting work" loading="lazy">
             </div>
-            
-            <div class="mobile-menu" id="mobileMenu">
-                <ul class="mobile-nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Our Work</a></li>
-                    <li><a href="#areas">Service Areas</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="about-text animate">
+                <span class="section-label">About Us</span>
+                <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--primary);margin-bottom:16px;">Craftsmanship You Can Trust</h2>
+                <p>Long Island Wall Pro brings over three decades of professional experience to every project. Trained through Local 1486 Painter's &amp; Taper's Union, we combine old-school craftsmanship with modern techniques.</p>
+                <p>Whether it's a small drywall patch, a full room repaint, or emergency water damage repair — we treat every job like it's our own home. Serving Suffolk County homeowners and businesses with pride.</p>
+                <div class="about-stats">
+                    <div class="stat"><div class="stat-num">30+</div><div class="stat-label">Years Exp.</div></div>
+                    <div class="stat"><div class="stat-num">1000+</div><div class="stat-label">Projects</div></div>
+                    <div class="stat"><div class="stat-num">5★</div><div class="stat-label">Rated</div></div>
+                </div>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <nav>
-        <div class="nav-container">
-            <ul class="nav-links">
+<!-- Services -->
+<section class="section services-section" id="services">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Our Services</span>
+            <h2>Complete Wall &amp; Ceiling Solutions</h2>
+            <p>From minor repairs to major renovations, we handle it all with expert precision.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card animate">
+                <div class="service-icon">🔨</div>
+                <h3>Drywall Repair &amp; Installation</h3>
+                <p>Holes, cracks, water damage, and full installations. Seamless repairs that blend perfectly with your existing walls.</p>
+            </div>
+            <div class="service-card animate">
+                <div class="service-icon">🎨</div>
+                <h3>Professional Painting</h3>
+                <p>Interior and exterior painting with premium materials. Clean lines, smooth finishes, and colors that transform your space.</p>
+            </div>
+            <div class="service-card animate">
+                <div class="service-icon">✨</div>
+                <h3>Skim Coating &amp; Restoration</h3>
+                <p>Complete wall resurfacing for a flawless, smooth finish. Perfect for older homes with textured or damaged walls.</p>
+            </div>
+            <div class="service-card animate">
+                <div class="service-icon">🏠</div>
+                <h3>Ceiling Repair</h3>
+                <p>Cracked, sagging, or water-stained ceilings restored to like-new condition. Popcorn ceiling removal available.</p>
+            </div>
+            <div class="service-card animate">
+                <div class="service-icon">👑</div>
+                <h3>Crown Molding &amp; Trim</h3>
+                <p>Elegant crown molding installation and trim work that adds character and value to your home.</p>
+            </div>
+            <div class="service-card animate">
+                <div class="service-icon">🚨</div>
+                <h3>24/7 Emergency Services</h3>
+                <p>Water damage, storm damage, or urgent repairs — we respond fast when you need us most. Call anytime.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Banner -->
+<section class="emergency-banner">
+    <div class="emergency-inner animate">
+        <h2>🚨 Water Damage? Cracked Ceiling? Don't Wait.</h2>
+        <p>We offer same-day emergency response across Suffolk County. Fast, reliable repairs when you need them most.</p>
+        <a href="tel:+16316404117" class="emergency-phone">📞 (631) 640-4117</a>
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section class="section" id="portfolio">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Our Work</span>
+            <h2>Recent Projects</h2>
+            <p>See the quality of our craftsmanship firsthand.</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item animate">
+                <img src="photos/e712c81f-4446-405b-827f-fc5070ca54f0.jpg" alt="Drywall repair project" loading="lazy">
+                <div class="portfolio-overlay"><span>Drywall Repair</span></div>
+            </div>
+            <div class="portfolio-item animate">
+                <img src="photos/891e8111-5ff6-4030-8de8-e536add9632b.jpg" alt="Interior painting project" loading="lazy">
+                <div class="portfolio-overlay"><span>Interior Painting</span></div>
+            </div>
+            <div class="portfolio-item animate">
+                <img src="photos/9e410640-563d-4bfe-92f1-8bd95e8afd6f.jpg" alt="Wall restoration project" loading="lazy">
+                <div class="portfolio-overlay"><span>Wall Restoration</span></div>
+            </div>
+            <div class="portfolio-item animate">
+                <img src="photos/65732c48-0f56-4bfa-930f-1fe8558c2d1c.jpg" alt="Skim coating project" loading="lazy">
+                <div class="portfolio-overlay"><span>Skim Coating</span></div>
+            </div>
+            <div class="portfolio-item animate">
+                <img src="photos/e1aa462f-a8be-462e-b9f5-f6e8cf9e0640.jpg" alt="Ceiling repair project" loading="lazy">
+                <div class="portfolio-overlay"><span>Ceiling Repair</span></div>
+            </div>
+            <div class="portfolio-item animate">
+                <img src="photos/038cb465-6c42-4c16-9b91-f15163f4c3eb.jpg" alt="Complete renovation project" loading="lazy">
+                <div class="portfolio-overlay"><span>Complete Renovation</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Testimonials</span>
+            <h2>What Our Customers Say</h2>
+            <p>Real reviews from Suffolk County homeowners.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card animate">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">Had a bathroom ceiling that was buckling from water damage. Jeremy came out same day, assessed the problem, and had the whole thing repaired and repainted within two days. You'd never know there was damage. Incredible work.</p>
+                <div class="testimonial-author">Mike R. <span>— Smithtown</span></div>
+            </div>
+            <div class="testimonial-card animate">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">We hired Long Island Wall Pro to repaint our entire first floor — living room, dining room, and hallway. The prep work was meticulous, the lines were crisp, and they left everything spotless. Best painter we've ever hired.</p>
+                <div class="testimonial-author">Linda S. <span>— Port Jefferson</span></div>
+            </div>
+            <div class="testimonial-card animate">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">A pipe burst in our basement on a Sunday night and we had drywall falling apart. Called Jeremy and he was there Monday morning. He handled the demo, patching, and finishing — total professional. Can't recommend enough.</p>
+                <div class="testimonial-author">Tom D. <span>— Centereach</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section class="section" id="areas">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Service Areas</span>
+            <h2>Serving All of Suffolk County</h2>
+            <p>Proudly serving homeowners and businesses across Long Island.</p>
+        </div>
+        <div class="areas-grid">
+            <div class="areas-list animate">
+                <div class="area-tag">Setauket</div>
+                <div class="area-tag">Port Jefferson</div>
+                <div class="area-tag">Smithtown</div>
+                <div class="area-tag">Centereach</div>
+                <div class="area-tag">Lake Ronkonkoma</div>
+                <div class="area-tag">Hauppauge</div>
+                <div class="area-tag">Commack</div>
+                <div class="area-tag">Farmingville</div>
+                <div class="area-tag">Holtsville</div>
+                <div class="area-tag">Nassau/Suffolk Border</div>
+            </div>
+            <div class="map-container animate">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d193575.0!2d-73.05!3d40.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Suffolk County service area map"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact-section" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Get In Touch</span>
+            <h2>Request a Free Estimate</h2>
+            <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info animate">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+16316404117">(631) 640-4117</a>
+                        <p>Mon–Fri 9am–5pm · Emergency 24/7</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Service Area</h4>
+                        <p>Suffolk County, Long Island, NY</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⚡</div>
+                    <div>
+                        <h4>Emergency Service</h4>
+                        <a href="tel:+16316404117">Call (631) 640-4117 — Available 24/7</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🔧</div>
+                    <div>
+                        <h4>Credentials</h4>
+                        <p>Local 1486 Union Trained · Licensed &amp; Insured</p>
+                    </div>
+                </div>
+            </div>
+            <form class="form animate" onsubmit="handleSubmit(event)">
+                <input type="text" name="name" placeholder="Your Name *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="email" name="email" placeholder="Email Address">
+                <select name="service">
+                    <option value="">Select a Service</option>
+                    <option>Drywall Repair</option>
+                    <option>Interior Painting</option>
+                    <option>Skim Coating</option>
+                    <option>Ceiling Repair</option>
+                    <option>Crown Molding</option>
+                    <option>Emergency Service</option>
+                    <option>Other</option>
+                </select>
+                <textarea name="message" placeholder="Tell us about your project..."></textarea>
+                <button type="submit" class="btn-submit">Get Your Free Estimate →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;">Long Island <span style="color:var(--gold)">Wall Pro</span></h3>
+            <p style="margin-top:8px;">30+ years of union-trained craftsmanship serving Suffolk County. Drywall, painting, and wall restoration done right.</p>
+            <p style="margin-top:16px;"><a href="tel:+16316404117" class="footer-phone">📞 (631) 640-4117</a></p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#emergency">Emergency</a></li>
-                <li><a href="#portfolio">Our Work</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#areas">Service Areas</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </nav>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Professional Wall & Ceiling Restoration</h1>
-            <div class="hero-tagline">"You don't have to live in the Hamptons for your house to look like it does!"</div>
-            <p class="hero-description">
-                Long Island Wall Pro brings 30+ years of professional experience to Suffolk County. 
-                Union-trained through Local 1486 Painter's/Taper's Union, we deliver Hampton-quality drywall, painting, and restoration services from Setauket to Hauppauge, Port Jefferson to Lake Ronkonkoma.
-            </p>
-            <div class="cta-buttons">
-                <a href="tel:6316404117" class="btn btn-primary">Call (631) 640-4117</a>
-                <a href="#contact" class="btn btn-secondary">Get Free Estimate</a>
-            </div>
+        <div>
+            <h3>Services</h3>
+            <ul class="footer-links">
+                <li><a href="#services">Drywall Repair</a></li>
+                <li><a href="#services">Interior Painting</a></li>
+                <li><a href="#services">Skim Coating</a></li>
+                <li><a href="#services">Ceiling Repair</a></li>
+                <li><a href="#services">Crown Molding</a></li>
+                <li><a href="#services">Emergency Services</a></li>
+            </ul>
         </div>
-    </section>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Long Island Wall Pro. All rights reserved. | Suffolk County, NY | <a href="tel:+16316404117" style="color:var(--gold);text-decoration:none;">(631) 640-4117</a></p>
+    </div>
+</footer>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Expert Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Drywall Installation & Repair</h3>
-                    <p>Professional drywall installation, patching, and repairs for both residential and commercial properties. Perfect seams, smooth finishes guaranteed.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Professional Painting</h3>
-                    <p>Interior and exterior painting services using premium paints and union-trained techniques. Transform any space with flawless color and finish.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Taping & Spackle</h3>
-                    <p>Expert joint compound application and sanding for seamless wall transitions. Precision work that creates perfectly smooth surfaces.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Skim Coating</h3>
-                    <p>Complete wall resurfacing to eliminate imperfections and create smooth, paint-ready surfaces throughout your property.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Wall & Ceiling Restoration</h3>
-                    <p>Complete restoration services for damaged walls and ceilings. Bringing old surfaces back to like-new condition with professional expertise.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Emergency Repairs</h3>
-                    <p>Emergency services for water damage, cracks, holes, and urgent repair needs. Professional response across Suffolk County when disaster strikes.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Custom Molding & Trim</h3>
-                    <p>Installation and repair of decorative molding, crown molding, and trim work to enhance your property's aesthetic appeal.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Flood Damage Restoration</h3>
-                    <p>Comprehensive restoration services for flood and water damage. Complete wall and ceiling rebuilds to restore your property fully.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Demolition Services</h3>
-                    <p>Safe and efficient demolition of walls, ceilings, and structures to prepare for your renovation or restoration project.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Sticky Mobile CTA -->
+<div class="sticky-cta">
+    <a href="tel:+16316404117">📞 Call Now — (631) 640-4117</a>
+</div>
 
-    <!-- Emergency services info moved to hero section for cleaner layout -->
+<script>
+// Hamburger menu
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+});
 
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Recent Projects</h2>
-            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem; color: #666;">Hampton-quality craftsmanship with 30+ years of union training</p>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="photos/e712c81f-4446-405b-827f-fc5070ca54f0.jpg" alt="Luxury dining room with red walls and wainscoting" />
-                    <div class="portfolio-overlay">
-                        <h3>Luxury Dining Room</h3>
-                        <p>Two-tone paint with custom wainscoting and crown molding</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/891e8111-5ff6-4030-8de8-e536add9632b.jpg" alt="Custom crown molding and hallway restoration" />
-                    <div class="portfolio-overlay">
-                        <h3>Crown Molding & Paint</h3>
-                        <p>Professional crown molding installation and painting</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/9e410640-563d-4bfe-92f1-8bd95e8afd6f.jpg" alt="Large commercial drywall project" />
-                    <div class="portfolio-overlay">
-                        <h3>Commercial Projects</h3>
-                        <p>Large-scale commercial drywall and ceiling work</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/65732c48-0f56-4bfa-930f-1fe8558c2d1c.jpg" alt="Modern bathroom renovation" />
-                    <div class="portfolio-overlay">
-                        <h3>Bathroom Renovation</h3>
-                        <p>Complete drywall and professional paint restoration</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/e1aa462f-a8be-462e-b9f5-f6e8cf9e0640.jpg" alt="Open floor plan renovation" />
-                    <div class="portfolio-overlay">
-                        <h3>Open Floor Plan</h3>
-                        <p>Modern open concept with seamless wall transitions</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/038cb465-6c42-4c16-9b91-f15163f4c3eb.jpg" alt="Family business with baby painter" />
-                    <div class="portfolio-overlay">
-                        <h3>Family-Owned Business</h3>
-                        <p>Three generations of professional craftsmanship</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#contact" class="btn btn-primary">View All 20+ Projects</a>
-            </div>
-        </div>
-    </section>
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('open');
+    });
+});
 
-    <section id="areas" class="service-areas">
-        <div class="container">
-            <h2 class="section-title">Service Areas Throughout Long Island</h2>
-            <div class="areas-grid">
-                <div class="area-card">
-                    <h3>Suffolk County</h3>
-                    <p><strong>Primary Service Area:</strong> Setauket, Port Jefferson, Smithtown, Centereach, Lake Ronkonkoma, Hauppauge, Commack, Farmingville, Holtsville, and surrounding Suffolk County communities.</p>
-                </div>
-                <div class="area-card">
-                    <h3>Nassau/Suffolk Border</h3>
-                    <p><strong>Border Communities:</strong> We serve the Nassau/Suffolk County border areas with the same Hampton-quality craftsmanship and emergency response.</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: #f8f9fa; border-radius: 10px;">
-                <h4 style="color: #2c4a6b; margin-bottom: 1rem;">Complete Coverage Across Suffolk County</h4>
-                <p style="margin-bottom: 1rem;">From Setauket to Hauppauge, from Port Jefferson to Lake Ronkonkoma - we bring professional drywall, painting, and restoration services to your community.</p>
-                <p style="font-weight: bold; color: #d4af37;">Call (631) 640-4117 for service in your area!</p>
-            </div>
-        </div>
-    </section>
+// Scroll animations
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Long Island Wall Pro</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>30+ Years of Professional Experience</h3>
-                    <p>Long Island Wall Pro was established in 2017, but our expertise spans over three decades. Our owner is a skilled craftsman trained through the prestigious <strong>Local 1486 Painter's/Taper's Union</strong>, bringing union-level quality and professionalism to every project.</p>
-                    
-                    <p>This combination of extensive professional experience and union training ensures that every job meets the highest industry standards. From complex commercial projects to elegant residential transformations, we have the skills and knowledge to handle any challenge.</p>
-                    
-                    <p>We believe that every property deserves the same level of attention and quality finish you'd find in the most exclusive Hampton estates. That's why our slogan reflects our mission: "You don't have to live in the Hamptons for your house to look like it does!"</p>
-                    
-                    <h4>Why Choose Long Island Wall Pro?</h4>
-                    <ul>
-                        <li><strong>30+ years of professional experience</strong></li>
-                        <li><strong>Local 1486 Painter's/Taper's Union trained</strong></li>
-                        <li>24/7 emergency response service</li>
-                        <li>Hampton-quality craftsmanship</li>
-                        <li>Fully licensed and insured</li>
-                        <li>Free estimates on all projects</li>
-                        <li>Customer satisfaction guarantee</li>
-                        <li>Family-owned and operated since 2017</li>
-                    </ul>
-                    
-                    <div style="background: #f8f9fa; padding: 1.5rem; border-left: 4px solid #d4af37; margin-top: 2rem;">
-                        <h5 style="color: #2c4a6b; margin-bottom: 0.5rem;">Union Training Advantage</h5>
-                        <p style="margin: 0; font-style: italic;">Our Local 1486 union training means rigorous standards, proper techniques, and professional accountability on every project. You get commercial-grade quality for your home or business.</p>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Professional wall restoration work" />
-                </div>
-            </div>
-        </div>
-    </section>
+document.querySelectorAll('.animate').forEach(function(el) {
+    observer.observe(el);
+});
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get Your Free Estimate Today</h2>
-            <div class="contact-content">
-                <form class="contact-form" action="#" method="POST">
-                    <h3>Request a Quote</h3>
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="address">Property Address</label>
-                        <input type="text" id="address" name="address">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service Needed *</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a Service</option>
-                            <option value="drywall-repair">Drywall Repair</option>
-                            <option value="painting">Painting</option>
-                            <option value="skim-coating">Skim Coating</option>
-                            <option value="restoration">Wall/Ceiling Restoration</option>
-                            <option value="molding">Molding Installation</option>
-                            <option value="emergency">Emergency Repair</option>
-                            <option value="flood-damage">Flood Damage Restoration</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Project Description</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Get My Free Estimate</button>
-                </form>
-                
-                <div class="contact-info-section">
-                    <h3>Contact Information</h3>
-                    
-                    <div class="contact-detail">
-                        <span class="contact-icon">Phone:</span>
-                        <div>
-                            <strong>(631) 640-4117</strong><br>
-                            <em>Call now for immediate service</em>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-detail">
-                        <span class="contact-icon">Hours:</span>
-                        <div>
-                            Monday - Friday: 9:00 AM - 5:00 PM<br>
-                            <strong style="color: #d4af37;">Emergency Services Available</strong>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-detail">
-                        <span class="contact-icon">Service Areas:</span>
-                        <div>
-                            <strong>Suffolk County:</strong> Setauket, Port Jefferson, Smithtown, Centereach, Lake Ronkonkoma, Hauppauge, Commack, Farmingville, Holtsville<br>
-                            <em>Plus Nassau/Suffolk border communities</em>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-detail">
-                        <span class="contact-icon">Experience:</span>
-                        <div>
-                            <strong>30+ Years Professional Experience</strong><br>
-                            Local 1486 Painter's/Taper's Union Trained<br>
-                            <em>Established 2017</em>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-detail">
-                        <span class="contact-icon">Guarantee:</span>
-                        <div>
-                            Licensed & Insured<br>
-                            Free Estimates<br>
-                            <strong>Customer Satisfaction Guaranteed</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Long Island Wall Pro. All rights reserved. | Licensed & Insured | Established 2017</p>
-            <p style="margin-top: 0.5rem; font-style: italic; color: #d4af37;">"You don't have to live in the Hamptons for your house to look like it does!"</p>
-        </div>
-    </footer>
-
-    <script>
-        // Hamburger menu toggle
-        const hamburger = document.getElementById('hamburgerBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Form submission handling (placeholder)
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you within 24 hours to schedule your free estimate.');
-            this.reset();
-        });
-
-        // Phone number formatting
-        document.getElementById('phone').addEventListener('input', function(e) {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-        });
-    </script>
+// Form handler
+function handleSubmit(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('.btn-submit');
+    btn.textContent = '✓ Sent! We\'ll call you soon.';
+    btn.style.background = '#22c55e';
+    setTimeout(function() {
+        btn.textContent = 'Get Your Free Estimate →';
+        btn.style.background = '';
+        e.target.reset();
+    }, 3000);
+}
+</script>
 </body>
-</html><!-- Force refresh Wed Feb 18 20:04:45 EST 2026 -->
+</html>
