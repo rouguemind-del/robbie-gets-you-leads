@@ -142,55 +142,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            position: relative;
-        }
-        
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #d4af37;
+            color: white;
         }
         
-        .contact-info {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .phone {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #f5f1e8;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-        
-        .emergency {
-            background-color: #c53030;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            animation: pulse 2s infinite;
-            border: 1px solid #f5f1e8;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+        /* Removed pulse animation for cleaner look */
         
         /* Navigation */
         nav {
@@ -346,12 +306,13 @@
         }
         
         .btn-primary {
-            background-color: #d4af37;
-            color: #2c4a6b;
+            background-color: #E8725A;
+            color: white;
+            font-weight: 600;
         }
         
         .btn-primary:hover {
-            background-color: #b8941f;
+            background-color: #d65a42;
             transform: translateY(-2px);
         }
         
@@ -405,29 +366,7 @@
             font-size: 1.3rem;
         }
         
-        /* Emergency Section */
-        .emergency-services {
-            background-color: #e53e3e;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .emergency-services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .emergency-services p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .emergency-phone {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #d4af37;
-        }
+        /* Emergency services section removed for cleaner design */
         
         /* Portfolio Section */
         .portfolio {
@@ -437,8 +376,8 @@
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         
         .portfolio-item {
@@ -620,60 +559,28 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header {
-                padding: 0.3rem 0;
+                padding: 0.8rem 0;
             }
             
             .header-content {
-                flex-direction: row;
+                display: flex;
                 justify-content: space-between;
                 align-items: center;
-                min-height: auto;
-            }
-            
-            .header-left {
-                flex: 1;
-            }
-            
-            .header-right {
-                flex-direction: row;
-                align-items: center;
-                gap: 0.3rem;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 0.2rem;
-                align-items: flex-end;
-                text-align: right;
-            }
-            
-            .phone {
-                font-size: 0.8rem;
-                line-height: 1;
-            }
-            
-            .emergency {
-                font-size: 0.6rem;
-                padding: 0.15rem 0.4rem;
-                white-space: nowrap;
-                line-height: 1;
             }
             
             .logo {
-                font-size: 1rem;
-                line-height: 1;
+                font-size: 1.2rem;
+                color: white;
             }
             
             .hamburger {
                 display: flex;
-                margin-left: 0.3rem;
-                padding: 0.2rem;
             }
             
             .hamburger span {
-                width: 18px;
-                height: 2px;
-                margin: 2px 0;
+                width: 22px;
+                height: 3px;
+                margin: 3px 0;
             }
             
             .nav-links {
@@ -703,12 +610,12 @@
             }
             
             .portfolio-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
             }
             
             .portfolio-item img {
-                height: 250px;
+                height: 200px;
             }
         }
     </style>
@@ -717,26 +624,17 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="header-left">
-                    <div class="logo">Long Island Wall Pro</div>
-                </div>
-                <div class="header-right">
-                    <div class="contact-info">
-                        <div class="phone">(631) 640-4117</div>
-                        <div class="emergency">24/7 Emergency</div>
-                    </div>
-                    <button class="hamburger" id="hamburgerBtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <div class="logo">Long Island Wall Pro</div>
+                <button class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
             
             <div class="mobile-menu" id="mobileMenu">
                 <ul class="mobile-nav-links">
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#emergency">Emergency</a></li>
                     <li><a href="#portfolio">Our Work</a></li>
                     <li><a href="#areas">Service Areas</a></li>
                     <li><a href="#about">About</a></li>
@@ -768,8 +666,12 @@
                 Union-trained through Local 1486 Painter's/Taper's Union, we deliver Hampton-quality drywall, painting, and restoration services from Setauket to Hauppauge, Port Jefferson to Lake Ronkonkoma.
             </p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
-                <a href="tel:6316404117" class="btn btn-secondary">Call (631) 640-4117</a>
+                <a href="tel:6316404117" class="btn btn-primary">Call (631) 640-4117</a>
+                <a href="#contact" class="btn btn-secondary">Get Free Estimate</a>
+            </div>
+            
+            <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.9;">
+                <strong>24/7 Emergency Services Available</strong>
             </div>
         </div>
     </section>
@@ -826,221 +728,64 @@
         </div>
     </section>
 
-    <section id="emergency" class="emergency-services">
-        <div class="container">
-            <h2>24/7 Emergency Services Available</h2>
-            <p>Water damage? Ceiling collapse? Large holes or cracks? We respond immediately to emergency calls across Long Island.</p>
-            <div class="emergency-phone">(631) 640-4117</div>
-        </div>
-    </section>
+    <!-- Emergency services info moved to hero section for cleaner layout -->
 
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Our Recent Work</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">Over 20 Projects Showcasing Hampton-Quality Craftsmanship</p>
+            <h2 class="section-title">Recent Projects</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem; color: #666;">Hampton-quality craftsmanship with 30+ years of union training</p>
             <div class="portfolio-grid">
-                <!-- Row 1 -->
-                <div class="portfolio-item">
-                    <img src="photos/891e8111-5ff6-4030-8de8-e536add9632b.jpg" alt="Custom crown molding and hallway restoration" />
-                    <div class="portfolio-overlay">
-                        <h3>Crown Molding & Paint Restoration</h3>
-                        <p>Complete hallway transformation with custom crown molding and professional painting.</p>
-                    </div>
-                </div>
-                
                 <div class="portfolio-item">
                     <img src="photos/e712c81f-4446-405b-827f-fc5070ca54f0.jpg" alt="Luxury dining room with red walls and wainscoting" />
                     <div class="portfolio-overlay">
-                        <h3>Luxury Dining Room Transformation</h3>
-                        <p>Two-tone paint design with custom wainscoting and decorative columns.</p>
+                        <h3>Luxury Dining Room</h3>
+                        <p>Two-tone paint with custom wainscoting and crown molding</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="photos/622b988d-69c4-4e95-a3e2-d830d7f74668.jpg" alt="Professional window trim and crown molding" />
+                    <img src="photos/891e8111-5ff6-4030-8de8-e536add9632b.jpg" alt="Custom crown molding and hallway restoration" />
                     <div class="portfolio-overlay">
-                        <h3>Custom Window Trim & Crown Molding</h3>
-                        <p>Precision trim work and crown molding installation with flawless finish.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/65732c48-0f56-4bfa-930f-1fe8558c2d1c.jpg" alt="Modern bathroom renovation" />
-                    <div class="portfolio-overlay">
-                        <h3>Complete Bathroom Renovation</h3>
-                        <p>Full bathroom restoration with professional drywall and custom paint.</p>
-                    </div>
-                </div>
-                
-                <!-- Row 2 -->
-                <div class="portfolio-item">
-                    <img src="photos/e1aa462f-a8be-462e-b9f5-f6e8cf9e0640.jpg" alt="Open floor plan renovation" />
-                    <div class="portfolio-overlay">
-                        <h3>Open Floor Plan Renovation</h3>
-                        <p>Modern open concept with custom paint and seamless transitions.</p>
+                        <h3>Crown Molding & Paint</h3>
+                        <p>Professional crown molding installation and painting</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
                     <img src="photos/9e410640-563d-4bfe-92f1-8bd95e8afd6f.jpg" alt="Large commercial drywall project" />
                     <div class="portfolio-overlay">
-                        <h3>Commercial Drywall Projects</h3>
-                        <p>Large-scale commercial renovations with professional equipment.</p>
+                        <h3>Commercial Projects</h3>
+                        <p>Large-scale commercial drywall and ceiling work</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="photos/06c7bcd8-ad6c-4d0e-99ae-bbda09115bce.jpg" alt="Extensive wall repair work" />
+                    <img src="photos/65732c48-0f56-4bfa-930f-1fe8558c2d1c.jpg" alt="Modern bathroom renovation" />
                     <div class="portfolio-overlay">
-                        <h3>Major Wall Restoration</h3>
-                        <p>Complete wall rebuilding and restoration after damage.</p>
+                        <h3>Bathroom Renovation</h3>
+                        <p>Complete drywall and professional paint restoration</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="photos/e1aa462f-a8be-462e-b9f5-f6e8cf9e0640.jpg" alt="Open floor plan renovation" />
+                    <div class="portfolio-overlay">
+                        <h3>Open Floor Plan</h3>
+                        <p>Modern open concept with seamless wall transitions</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
                     <img src="photos/038cb465-6c42-4c16-9b91-f15163f4c3eb.jpg" alt="Family business with baby painter" />
                     <div class="portfolio-overlay">
-                        <h3>Family-Owned & Operated</h3>
-                        <p>Multi-generational craftsmanship. We treat every project like family.</p>
-                    </div>
-                </div>
-                
-                <!-- Row 3 -->
-                <div class="portfolio-item">
-                    <img src="photos/23d098ed-4a95-420c-b1b0-15f1bfd8a6b6.jpg" alt="Elegant dining room finished project" />
-                    <div class="portfolio-overlay">
-                        <h3>Elegant Dining Room</h3>
-                        <p>Finished luxury dining space with perfect crown molding details.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/549143a4-1537-4e77-b206-e15e424b1580.jpg" alt="Professional wall and ceiling work" />
-                    <div class="portfolio-overlay">
-                        <h3>Wall & Ceiling Restoration</h3>
-                        <p>Complete structural restoration with expert finishing techniques.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/aa0738f6-31b3-44ab-ad09-8adbc1a1aef9.jpg" alt="Custom molding and trim work" />
-                    <div class="portfolio-overlay">
-                        <h3>Custom Molding & Trim</h3>
-                        <p>Detailed molding installation and decorative trim work.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/cead095f-0f8f-4d02-88c4-1cc15bf13a86.jpg" alt="Commercial ceiling project" />
-                    <div class="portfolio-overlay">
-                        <h3>Commercial Ceiling Work</h3>
-                        <p>Large-scale ceiling installation and professional finishing.</p>
-                    </div>
-                </div>
-                
-                <!-- Row 4 -->
-                <div class="portfolio-item">
-                    <img src="photos/dfdf9fa0-07df-495a-a420-7ae436206d82.jpg" alt="Wall patching and repair" />
-                    <div class="portfolio-overlay">
-                        <h3>Expert Wall Patching</h3>
-                        <p>Professional patching and repair work with seamless blending.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/e911221d-dee9-45a8-a50c-33afacee4bf3.jpg" alt="Ceiling repair and restoration" />
-                    <div class="portfolio-overlay">
-                        <h3>Ceiling Repair & Restoration</h3>
-                        <p>Complete ceiling restoration with water damage repair.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/7997ef04-d869-4bf9-afcb-56595d84b21a.jpg" alt="Bathroom renovation progress" />
-                    <div class="portfolio-overlay">
-                        <h3>Bathroom Renovation Progress</h3>
-                        <p>Step-by-step renovation showing our detailed process.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/7c77b71f-9bb0-4c0f-bb58-41522cc55ea6.jpg" alt="Kitchen and dining area work" />
-                    <div class="portfolio-overlay">
-                        <h3>Kitchen & Dining Area</h3>
-                        <p>Open concept kitchen and dining renovation with custom details.</p>
-                    </div>
-                </div>
-                
-                <!-- Row 5 -->
-                <div class="portfolio-item">
-                    <img src="photos/6cc9cb54-2a73-4923-a3ad-5614fed82ca5.jpg" alt="Living room wall restoration" />
-                    <div class="portfolio-overlay">
-                        <h3>Living Room Restoration</h3>
-                        <p>Complete living space transformation with quality paint work.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/6d001f45-93ad-496e-beac-cedd7be8ebc7.jpg" alt="Professional trim and paint work" />
-                    <div class="portfolio-overlay">
-                        <h3>Trim & Paint Excellence</h3>
-                        <p>Professional trim installation with perfect paint application.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/1f0fc184-1051-4817-882f-1490428fd861.jpg" alt="Detailed wall and ceiling finish" />
-                    <div class="portfolio-overlay">
-                        <h3>Detailed Finish Work</h3>
-                        <p>Precision finishing with attention to every detail.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/30cce04b-f33b-4605-877d-83470df958b3.jpg" alt="Custom interior painting" />
-                    <div class="portfolio-overlay">
-                        <h3>Custom Interior Painting</h3>
-                        <p>Professional interior painting with flawless color matching.</p>
-                    </div>
-                </div>
-                
-                <!-- Row 6 -->
-                <div class="portfolio-item">
-                    <img src="photos/13041e65-afb9-4641-ae4a-69499b490a48.jpg" alt="Wall preparation and priming" />
-                    <div class="portfolio-overlay">
-                        <h3>Professional Wall Prep</h3>
-                        <p>Thorough wall preparation and priming for perfect results.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/12583e10-ef67-471d-a055-d01c94008869.jpg" alt="Drywall installation and taping" />
-                    <div class="portfolio-overlay">
-                        <h3>Expert Drywall Installation</h3>
-                        <p>Professional drywall installation with seamless taping.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/95cafc8f-6530-4c23-b4f3-2f2dd11eb224.jpg" alt="Skim coating and smooth finish" />
-                    <div class="portfolio-overlay">
-                        <h3>Skim Coating Expertise</h3>
-                        <p>Professional skim coating for perfectly smooth walls.</p>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <img src="photos/efa402aa-156b-455c-b988-3bb2ecb8d165.jpg" alt="Complete room transformation" />
-                    <div class="portfolio-overlay">
-                        <h3>Complete Room Transformation</h3>
-                        <p>Full room renovation showcasing our comprehensive services.</p>
+                        <h3>Family-Owned Business</h3>
+                        <p>Three generations of professional craftsmanship</p>
                     </div>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
-                <p style="font-size: 1.1rem; color: #2c4a6b; font-weight: bold;">Ready to transform your space?</p>
-                <a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">Get Your Free Estimate</a>
+                <a href="#contact" class="btn btn-primary">View All 20+ Projects</a>
             </div>
         </div>
     </section>
