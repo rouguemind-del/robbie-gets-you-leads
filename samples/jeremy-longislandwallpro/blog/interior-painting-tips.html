@@ -32,8 +32,8 @@ a{text-decoration:none;color:inherit}
 
 .header{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.15)}
 .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
-.logo{color:#fff;font-size:1.4rem;font-weight:700;line-height:1.2}
-.logo span{color:var(--gold);display:block;font-size:.6em;font-weight:400;letter-spacing:2px;text-transform:uppercase;font-family:sans-serif}
+.logo{display:inline-block}
+.logo img{height:50px;width:auto}
 nav{display:flex;gap:24px;align-items:center}
 nav a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:600;font-family:sans-serif;transition:color .2s;position:relative;padding-bottom:4px}
 nav a:hover,nav a.active{color:#fff}
@@ -102,7 +102,7 @@ article li{margin-bottom:8px;font-size:1.05rem}
 
 <header class="header">
   <div class="header-inner">
-    <a href="../index.html" class="logo">Long Island Wall Pro<span>Est. Suffolk County</span></a>
+    <a href="../index.html" class="logo"><img src="../logo.svg" alt="Long Island Wall Pro"></a>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../gallery.html">Gallery</a>
