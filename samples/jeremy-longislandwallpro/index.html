@@ -227,6 +227,7 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .nav-phone { display: none; }
+            .nav-logo img { height: 40px; }
             .hamburger { display: block; }
             .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--white); padding: 20px; box-shadow: var(--shadow); gap: 16px; }
             .hero { min-height: 70vh; }
@@ -256,7 +257,9 @@
 <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-inner">
-        <a href="#" class="nav-logo">Long Island Wall <span style="color:var(--cta);">Pro</span></a>
+        <a href="#" class="nav-logo">
+            <img src="logo.svg" alt="Long Island Wall Pro" style="height: 50px; width: auto;">
+        </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -266,6 +269,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="tel:+16316404117" class="nav-phone">(631) 640-4117</a>
+        <a href="https://www.facebook.com/LongIslandWallPro" target="_blank" style="background: #1877f2; color: white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 8px; font-weight: bold;">f</a>
         <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
 </nav>
@@ -580,7 +584,7 @@
 
 <!-- Sticky Mobile CTA -->
 <div class="sticky-cta">
-    <a href="tel:+16316404117">Call Now — (631) 640-4117</a>
+    <a href="tel:+16316404117">Call Now</a>
 </div>
 
 <script>
