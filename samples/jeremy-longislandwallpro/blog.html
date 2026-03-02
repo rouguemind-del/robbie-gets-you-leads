@@ -130,7 +130,7 @@
             <li><a href="blog.html" class="active">Blog</a></li>
         </ul>
         <a href="tel:+16316404117" class="nav-phone">(631) 640-4117</a>
-        <a href="https://www.facebook.com/profile.php?id=100093206404117" target="_blank" style="color: #1877f2; font-size: 24px; text-decoration: none; margin-right: 8px;">
+        <a href="https://www.facebook.com/share/1AcxQDxxo9/?mibextid=wwXIfr" target="_blank" style="color: #1877f2; font-size: 24px; text-decoration: none; margin-right: 8px;" aria-label="Visit our Facebook page">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
@@ -157,8 +157,17 @@
                 <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Drywall repair tips" loading="lazy">
                 <div class="blog-card-content">
                     <h3>5 Signs Your Drywall Needs Professional Repair</h3>
-                    <p>Learn to identify when DIY fixes aren't enough and professional intervention is necessary for your drywall problems.</p>
-                    <a href="blog/drywall-repair-signs.html">Read More</a>
+                    <p class="blog-excerpt">Learn to identify when DIY fixes aren't enough and professional intervention is necessary for your drywall problems.</p>
+                    <div class="blog-full-content" style="display: none;">
+                        <p>Not all drywall problems can be fixed with a simple patch kit. Here are 5 clear signs you need professional help:</p>
+                        <p><strong>1. Large holes or cracks:</strong> Anything bigger than a nail hole requires professional tools and techniques.</p>
+                        <p><strong>2. Water damage stains:</strong> These often indicate deeper structural issues that need expert assessment.</p>
+                        <p><strong>3. Sagging or bulging walls:</strong> This suggests serious structural problems behind the drywall.</p>
+                        <p><strong>4. Recurring cracks:</strong> If cracks keep coming back, there's an underlying issue DIY can't fix.</p>
+                        <p><strong>5. Textured surfaces:</strong> Matching existing textures requires professional skill and specialized tools.</p>
+                        <p>Long Island Wall Pro has 30+ years of experience with all types of drywall repairs. Call (631) 640-4117 for expert assessment.</p>
+                    </div>
+                    <a href="#" onclick="toggleBlogContent(this); return false;">Read More</a>
                 </div>
             </div>
             
@@ -166,8 +175,15 @@
                 <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Interior painting tips" loading="lazy">
                 <div class="blog-card-content">
                     <h3>Choosing the Right Paint for Suffolk County Homes</h3>
-                    <p>Climate considerations, humidity factors, and paint selection tips for Long Island homeowners.</p>
-                    <a href="blog/paint-selection-suffolk.html">Read More</a>
+                    <p class="blog-excerpt">Climate considerations, humidity factors, and paint selection tips for Long Island homeowners.</p>
+                    <div class="blog-full-content" style="display: none;">
+                        <p>Living on Long Island means dealing with unique climate challenges that affect your paint choices. Here's what Suffolk County homeowners need to know:</p>
+                        <p><strong>Humidity Considerations:</strong> Long Island's coastal humidity requires moisture-resistant paints, especially in bathrooms and kitchens. Look for paints with mildew-resistant properties.</p>
+                        <p><strong>Temperature Fluctuations:</strong> Our changing seasons demand flexible paints that can expand and contract without cracking.</p>
+                        <p><strong>Salt Air Effects:</strong> For exterior painting, choose paints specifically formulated to resist salt air corrosion.</p>
+                        <p>Contact Long Island Wall Pro for expert paint selection and professional application. Call (631) 640-4117 for a free consultation.</p>
+                    </div>
+                    <a href="#" onclick="toggleBlogContent(this); return false;">Read More</a>
                 </div>
             </div>
             
@@ -175,8 +191,16 @@
                 <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Water damage repair" loading="lazy">
                 <div class="blog-card-content">
                     <h3>Emergency Water Damage: First Steps to Take</h3>
-                    <p>Quick action guide for homeowners dealing with unexpected water damage to walls and ceilings.</p>
-                    <a href="blog/water-damage-emergency.html">Read More</a>
+                    <p class="blog-excerpt">Quick action guide for homeowners dealing with unexpected water damage to walls and ceilings.</p>
+                    <div class="blog-full-content" style="display: none;">
+                        <p>Water damage to walls and ceilings requires immediate action to prevent further damage and mold growth. Here's your step-by-step emergency guide:</p>
+                        <p><strong>Step 1:</strong> Stop the water source immediately if possible. Turn off main water valve if needed.</p>
+                        <p><strong>Step 2:</strong> Document damage with photos for insurance purposes before touching anything.</p>
+                        <p><strong>Step 3:</strong> Remove furniture and belongings from affected areas.</p>
+                        <p><strong>Step 4:</strong> Call professionals immediately. Water damage worsens rapidly.</p>
+                        <p><strong>24/7 Emergency Service:</strong> Long Island Wall Pro responds to water damage emergencies across Suffolk County. Don't wait - call (631) 640-4117 now.</p>
+                    </div>
+                    <a href="#" onclick="toggleBlogContent(this); return false;">Read More</a>
                 </div>
             </div>
         </div>
@@ -239,6 +263,24 @@ document.querySelectorAll('.nav-links a').forEach(function(link) {
         document.getElementById('navLinks').classList.remove('open');
     });
 });
+
+// Blog content toggle function
+function toggleBlogContent(link) {
+    var blogCard = link.closest('.blog-card-content');
+    var excerpt = blogCard.querySelector('.blog-excerpt');
+    var fullContent = blogCard.querySelector('.blog-full-content');
+    
+    if (fullContent.style.display === 'none') {
+        excerpt.style.display = 'none';
+        fullContent.style.display = 'block';
+        link.textContent = 'Read Less';
+        link.closest('.blog-card').style.height = 'auto';
+    } else {
+        excerpt.style.display = 'block';
+        fullContent.style.display = 'none';
+        link.textContent = 'Read More';
+    }
+}
 </script>
 </body>
 </html>
