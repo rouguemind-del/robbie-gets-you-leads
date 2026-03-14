@@ -997,32 +997,32 @@ section {
 /* Area-Specific Hero Images - All Cleaning Related */
 .hero.west-palm-beach {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.boca-raton {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.delray-beach {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1588776814546-daab30f310ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.boynton-beach {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.jupiter {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.wellington {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1588776814546-daab30f310ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 /* Mobile floating button adjustment */
@@ -1170,7 +1170,7 @@ section {
 .hero {
     padding: 120px 0 var(--spacing-3xl);
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
     background-attachment: fixed;
     color: var(--white);
     position: relative;
