@@ -421,15 +421,19 @@ function initializeFloatingButton() {
     
     if (!floatingBtn) return;
     
-    // Add entrance animation
+    // Add entrance animation (but keep button always visible after)
     setTimeout(() => {
         floatingBtn.style.opacity = '0';
-        floatingBtn.style.transform = 'translateY(100px)';
+        floatingBtn.style.transform = 'translateY(100px) !important';
         floatingBtn.style.transition = 'all 0.6s ease';
         
         setTimeout(() => {
             floatingBtn.style.opacity = '1';
-            floatingBtn.style.transform = 'translateY(0)';
+            floatingBtn.style.transform = 'none !important';
+            // Ensure button stays visible
+            floatingBtn.style.position = 'fixed';
+            floatingBtn.style.bottom = '30px';
+            floatingBtn.style.right = '30px';
         }, 1000);
     }, 100);
     
@@ -444,23 +448,6 @@ function initializeFloatingButton() {
         }, 150);
     });
     
-    // Show/hide on scroll
-    let lastScrollY = window.scrollY;
-    let scrollTimeout;
-    
-    window.addEventListener('scroll', function() {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-            const currentScrollY = window.scrollY;
-            
-            // Hide when scrolling down rapidly, show when scrolling up or at top
-            if (currentScrollY > lastScrollY && currentScrollY > 300) {
-                floatingBtn.style.transform = 'translateY(100px)';
-            } else {
-                floatingBtn.style.transform = 'translateY(0)';
-            }
-            
-            lastScrollY = currentScrollY;
-        }, 10);
-    });
+    // Keep button always visible - no scroll hiding behavior
+    // Button stays fixed in position at all times
 }
