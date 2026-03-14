@@ -3,6 +3,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Force mobile navigation visibility
+    forceMobileNavVisibility();
+    
     // Initialize mobile navigation
     initializeMobileNav();
     
@@ -22,6 +25,37 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePhoneFormatting();
     
 });
+
+// Force Mobile Navigation Visibility
+function forceMobileNavVisibility() {
+    function checkMobileNav() {
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navContact = document.querySelector('.nav-contact');
+        
+        if (mobileToggle && navContact) {
+            // Check if screen is mobile/tablet sized
+            if (window.innerWidth <= 1024) {
+                // Force show mobile toggle
+                mobileToggle.style.display = 'flex';
+                mobileToggle.style.visibility = 'visible';
+                mobileToggle.style.opacity = '1';
+                
+                // Force hide nav contact
+                navContact.style.display = 'none';
+            } else {
+                // Desktop view
+                mobileToggle.style.display = 'none';
+                navContact.style.display = 'flex';
+            }
+        }
+    }
+    
+    // Check on load
+    checkMobileNav();
+    
+    // Check on resize
+    window.addEventListener('resize', checkMobileNav);
+}
 
 // Mobile Navigation
 function initializeMobileNav() {

@@ -894,3 +894,29 @@ section {
     white-space: nowrap;
     border: 0;
 }
+
+/* Backup Mobile Navigation - Uses viewport units */
+@media screen and (max-width: 64rem) {
+    .mobile-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+    }
+    
+    .nav-contact {
+        display: none !important;
+    }
+}
+
+/* Ultra-wide viewport fallback */
+@media screen and (max-device-width: 1024px) {
+    .mobile-toggle {
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    .nav-contact {
+        display: none !important;
+    }
+}
