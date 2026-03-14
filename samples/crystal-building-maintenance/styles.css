@@ -994,35 +994,35 @@ section {
     }
 }
 
-/* Area-Specific Hero Images */
+/* Area-Specific Hero Images - All Cleaning Related */
 .hero.west-palm-beach {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.boca-raton {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.delray-beach {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.boynton-beach {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.jupiter {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 .hero.wellington {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
 /* Mobile floating button adjustment */
@@ -1166,11 +1166,77 @@ section {
     color: var(--dark-green);
 }
 
+/* Hero Banner at Top */
+.hero-banner {
+    position: relative;
+    margin-top: 70px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(5, 150, 105, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-banner-content h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 300px;
+    }
+    
+    .hero-banner-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-banner-content p {
+        font-size: 1rem;
+    }
+}
+
 /* Section Background Colors */
 .hero {
     padding: 120px 0 var(--spacing-3xl);
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
     background-attachment: fixed;
     color: var(--white);
     position: relative;
