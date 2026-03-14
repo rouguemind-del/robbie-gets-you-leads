@@ -1170,7 +1170,7 @@ section {
 .hero {
     padding: 120px 0 var(--spacing-3xl);
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(5, 150, 105, 0.75)), 
-                url('cleaning-hero-image.jpg') center/cover;
+                url('./cleaning-hero-image.jpg?v=1') center/cover;
     background-attachment: fixed;
     color: var(--white);
     position: relative;
