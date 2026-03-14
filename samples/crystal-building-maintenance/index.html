@@ -6,97 +6,222 @@
     <meta name="description" content="Professional commercial cleaning services in Palm Beach County since 1979. Crystal Building Maintenance - We Don't Cut Corners, We Clean Them. Call (561) 684-5652">
     <meta name="keywords" content="commercial cleaning Palm Beach County, janitorial services Florida, office cleaning West Palm Beach, medical facility cleaning, HOA porter service">
     <title>Crystal Building Maintenance | #1 Commercial Cleaning Services Palm Beach County Since 1979</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    
     <link rel="stylesheet" href="styles.css">
+    
     <!-- Schema Markup for Local Business -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Crystal Building Maintenance",
-        "image": "logo.jpg",
+        "image": "https://www.crystalbuildingmaintenance.com/logo.png",
         "description": "Professional commercial cleaning services in Palm Beach County since 1979",
         "telephone": "(561) 684-5652",
+        "url": "https://crystalbuildingmaintenance.com",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Palm Beach County",
             "addressRegion": "FL",
             "addressCountry": "US"
         },
-        "areaServed": "Palm Beach County, Florida",
+        "areaServed": [
+            "West Palm Beach, FL",
+            "Boca Raton, FL", 
+            "Delray Beach, FL",
+            "Boynton Beach, FL",
+            "Jupiter, FL",
+            "Wellington, FL",
+            "Palm Beach County, FL"
+        ],
         "foundingDate": "1979",
-        "slogan": "We Don't Cut Corners — We Clean Them"
+        "slogan": "We Don't Cut Corners — We Clean Them",
+        "openingHours": "Mo-Fr 08:00-17:00",
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "147"
+        }
     }
     </script>
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Crystal Building Maintenance | Commercial Cleaning Palm Beach County">
+    <meta property="og:description" content="Professional commercial cleaning services since 1979. We Don't Cut Corners — We Clean Them. Call (561) 684-5652">
+    <meta property="og:image" content="https://crystalbuildingmaintenance.com/social-share.jpg">
+    <meta property="og:url" content="https://crystalbuildingmaintenance.com">
+    
+    <!-- Critical CSS inline for above-the-fold content -->
+    <style>
+        .header{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);z-index:1000;transition:all 0.3s ease;box-shadow:0 2px 20px rgba(0,0,0,0.1);}
+        .hero{padding:120px 0 80px;background:linear-gradient(135deg,#FF6B35 0%,#F7931E 50%,#FFD23F 100%);color:#fff;position:relative;overflow:hidden;}
+        .container{max-width:1400px;margin:0 auto;padding:0 20px;}
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
-            <div class="logo-section">
-                <div class="logo">
-                    <!-- Logo placeholder - client to provide logo image -->
-                    <img src="logo.jpg" alt="Crystal Building Maintenance Logo" class="company-logo">
-                    <div class="company-info">
-                        <h1>Crystal Building Maintenance</h1>
-                        <p class="tagline">We Don't Cut Corners — We Clean Them.</p>
-                        <p class="since">Serving Palm Beach County Since 1979</p>
+            <div class="navbar">
+                <!-- Logo -->
+                <div class="brand">
+                    <a href="#home" class="logo-link">
+                        <img src="https://www.crystalbuildingmaintenance.com/wp-content/uploads/2021/03/Crystal-Building-Maintenance-Logo.png" alt="Crystal Building Maintenance Logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-fallback" style="display:none;">
+                            <div class="logo-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <circle cx="20" cy="20" r="18" stroke="#FF6B35" stroke-width="4"/>
+                                    <path d="M12 20L18 26L28 16" stroke="#FF6B35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="logo-text">Crystal Building Maintenance</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li class="dropdown">
+                            <a href="#services" class="nav-link">Services <i class="dropdown-icon">▼</i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
+                                <li><a href="medical-facility-cleaning.html">Medical Facilities</a></li>
+                                <li><a href="condo-hoa-cleaning.html">Condo/HOA Porter</a></li>
+                                <li><a href="office-cleaning.html">Office Buildings</a></li>
+                                <li><a href="retail-cleaning.html">Retail Stores</a></li>
+                                <li><a href="school-cleaning.html">Schools</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#areas" class="nav-link">Areas <i class="dropdown-icon">▼</i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="west-palm-beach-cleaning.html">West Palm Beach</a></li>
+                                <li><a href="boca-raton-cleaning.html">Boca Raton</a></li>
+                                <li><a href="delray-beach-cleaning.html">Delray Beach</a></li>
+                                <li><a href="boynton-beach-cleaning.html">Boynton Beach</a></li>
+                                <li><a href="jupiter-cleaning.html">Jupiter</a></li>
+                                <li><a href="wellington-cleaning.html">Wellington</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Contact Info -->
+                <div class="header-contact">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/crystalbuildingmaintenance" target="_blank" aria-label="Facebook" class="social-icon">
+                            <svg width="20" height="20" fill="currentColor"><path d="M18.77 0H1.23C.55 0 0 .55 0 1.23v17.54C0 19.45.55 20 1.23 20h17.54c.68 0 1.23-.55 1.23-1.23V1.23C20 .55 19.45 0 18.77 0zM17 5.5h-1.5c-.83 0-1 .33-1 1V8h2.5l-.5 3H14.5v8h-3v-8H10V8h1.5V6c0-1.65 1.35-3 3-3H17v2.5z"/></svg>
+                        </a>
+                        <a href="https://www.google.com/search?q=crystal+building+maintenance+reviews" target="_blank" aria-label="Google Reviews" class="social-icon">
+                            <svg width="20" height="20" fill="currentColor"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15h-2v-6h2v6zm0-8h-2V5h2v2z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/crystalbuildingmaintenance" target="_blank" aria-label="YouTube" class="social-icon">
+                            <svg width="20" height="20" fill="currentColor"><path d="M19.615 6.15c-.13-.8-.615-1.425-1.29-1.545C16.845 4.37 10 4.37 10 4.37s-6.845 0-8.325.235C.67 4.725.185 5.35.055 6.15 0 7.695 0 10 0 10s0 2.305.055 3.85c.13.8.615 1.425 1.29 1.545C3.155 15.63 10 15.63 10 15.63s6.845 0 8.325-.235c.675-.12 1.16-.745 1.29-1.545C20 12.305 20 10 20 10s0-2.305-.055-3.85zM8 13V7l5.5 3L8 13z"/></svg>
+                        </a>
                     </div>
+                    <a href="tel:5616845652" class="phone-btn">
+                        <span class="phone-icon">📞</span>
+                        <span class="phone-number">(561) 684-5652</span>
+                    </a>
+                    <a href="#quote" class="cta-primary">Get Free Quote</a>
                 </div>
-            </div>
-            <div class="contact-header">
-                <div class="social-links">
-                    <a href="https://www.facebook.com/crystalbuildingmaintenance" target="_blank" aria-label="Facebook">📘</a>
-                    <a href="https://www.google.com/search?q=crystal+building+maintenance+reviews" target="_blank" aria-label="Google Reviews">⭐</a>
-                    <a href="https://www.youtube.com/channel/crystalbuildingmaintenance" target="_blank" aria-label="YouTube">📺</a>
-                </div>
-                <div class="contact-info">
-                    <a href="tel:5616845652" class="phone">(561) 684-5652</a>
-                    <a href="#contact" class="cta-button">Get Free Quote</a>
-                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
         </div>
-        <nav class="nav">
-            <div class="container">
-                <ul class="main-nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown">
-                        <a href="#services">Services ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
-                            <li><a href="medical-facility-cleaning.html">Medical Facilities</a></li>
-                            <li><a href="condo-hoa-cleaning.html">Condo/HOA Porter</a></li>
-                            <li><a href="office-cleaning.html">Office Buildings</a></li>
-                            <li><a href="retail-cleaning.html">Retail Stores</a></li>
-                            <li><a href="school-cleaning.html">Schools</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#areas">Service Areas ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="west-palm-beach-cleaning.html">West Palm Beach</a></li>
-                            <li><a href="boca-raton-cleaning.html">Boca Raton</a></li>
-                            <li><a href="delray-beach-cleaning.html">Delray Beach</a></li>
-                            <li><a href="boynton-beach-cleaning.html">Boynton Beach</a></li>
-                            <li><a href="jupiter-cleaning.html">Jupiter</a></li>
-                            <li><a href="wellington-cleaning.html">Wellington</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#testimonials">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile" id="mobileNav">
+            <div class="mobile-nav-header">
+                <div class="mobile-contact">
+                    <a href="tel:5616845652" class="mobile-phone">📞 (561) 684-5652</a>
+                    <a href="#quote" class="mobile-cta">Get Free Quote</a>
+                </div>
+            </div>
+            <ul class="mobile-nav-menu">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                <li class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle">Services <span class="mobile-dropdown-icon">+</span></button>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
+                        <li><a href="medical-facility-cleaning.html">Medical Facilities</a></li>
+                        <li><a href="condo-hoa-cleaning.html">Condo/HOA Porter</a></li>
+                        <li><a href="office-cleaning.html">Office Buildings</a></li>
+                        <li><a href="retail-cleaning.html">Retail Stores</a></li>
+                        <li><a href="school-cleaning.html">Schools</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle">Areas <span class="mobile-dropdown-icon">+</span></button>
+                    <ul class="mobile-dropdown-menu">
+                        <li><a href="west-palm-beach-cleaning.html">West Palm Beach</a></li>
+                        <li><a href="boca-raton-cleaning.html">Boca Raton</a></li>
+                        <li><a href="delray-beach-cleaning.html">Delray Beach</a></li>
+                        <li><a href="boynton-beach-cleaning.html">Boynton Beach</a></li>
+                        <li><a href="jupiter-cleaning.html">Jupiter</a></li>
+                        <li><a href="wellington-cleaning.html">Wellington</a></li>
+                    </ul>
+                </li>
+                <li><a href="#testimonials" class="mobile-nav-link">Reviews</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-footer">
+                <div class="mobile-social">
+                    <a href="https://www.facebook.com/crystalbuildingmaintenance" target="_blank">Facebook</a>
+                    <a href="https://www.google.com/search?q=crystal+building+maintenance+reviews" target="_blank">Reviews</a>
+                    <a href="https://www.youtube.com/channel/crystalbuildingmaintenance" target="_blank">YouTube</a>
+                </div>
+                <p class="mobile-tagline">We Don't Cut Corners — We Clean Them.</p>
+                <p class="mobile-since">Serving Palm Beach County Since 1979</p>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">★★★★★ Rated #1 in Palm Beach County</div>
-                <h2>Professional Commercial Cleaning Since 1979</h2>
-                <p class="hero-subtitle">Serving Palm Beach County with superior janitorial services for over 45 years<br>
-                <strong>We Don't Cut Corners — We Clean Them!</strong></p>
+                <div class="hero-badge">
+                    <span class="badge-icon">⭐</span>
+                    <span>Rated #1 Commercial Cleaning in Palm Beach County</span>
+                </div>
+                <h1 class="hero-title">
+                    We Don't Cut Corners<br>
+                    <span class="highlight">We Clean Them</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Professional commercial cleaning services in Palm Beach County since 1979.<br>
+                    <strong>45+ years of excellence</strong> serving offices, medical facilities, and luxury properties.
+                </p>
                 
                 <div class="hero-stats">
                     <div class="stat">
@@ -111,55 +236,28 @@
                         <div class="stat-number">24/7</div>
                         <div class="stat-label">Availability</div>
                     </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
                 </div>
 
-                <div class="hero-features">
-                    <div class="feature">
-                        <div class="feature-icon">🏆</div>
-                        <h3>Time Study Pricing</h3>
-                        <p>Accurate quotes based on actual work requirements, not just square footage</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🛡️</div>
-                        <h3>Quality Assurance</h3>
-                        <p>Supervisor oversight & customer relations inspections on every job</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🌱</div>
-                        <h3>Green Cleaning Available</h3>
-                        <p>Eco-friendly cleaning solutions for environmentally conscious businesses</p>
-                    </div>
-                </div>
                 <div class="hero-cta">
-                    <a href="tel:5616845652" class="cta-primary">📞 Call (561) 684-5652</a>
-                    <a href="#contact" class="cta-secondary">Get Free Quote</a>
+                    <a href="tel:5616845652" class="cta-primary-large">
+                        <span class="cta-icon">📞</span>
+                        <span>Call (561) 684-5652</span>
+                    </a>
+                    <a href="#quote" class="cta-secondary-large">
+                        <span class="cta-icon">📝</span>
+                        <span>Get Free Quote</span>
+                    </a>
                 </div>
                 
                 <div class="trust-badges">
-                    <span class="badge">✅ Licensed & Insured</span>
-                    <span class="badge">✅ Background Checked Staff</span>
-                    <span class="badge">✅ 45+ Years Experience</span>
-                    <span class="badge">✅ Quality Guaranteed</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Watch Our Team Section -->
-    <section class="video-section">
-        <div class="container">
-            <h2>See Our Professional Team in Action</h2>
-            <p class="section-subtitle">Watch the quality of our work and attention to detail</p>
-            <div class="videos-grid">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/NNuGeUo4UeQ" title="Crystal Building Maintenance Team" allowfullscreen></iframe>
-                    <h3>Professional Commercial Cleaning</h3>
-                    <p>See our experienced team delivering superior cleaning services</p>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/l0yhvbN5Ta8" title="Crystal Building Maintenance Quality" allowfullscreen></iframe>
-                    <h3>Quality Assurance Process</h3>
-                    <p>Our commitment to excellence in every cleaning project</p>
+                    <div class="badge">✅ Licensed & Insured</div>
+                    <div class="badge">✅ Background Checked Staff</div>
+                    <div class="badge">✅ Quality Guaranteed</div>
+                    <div class="badge">✅ 45+ Years Experience</div>
                 </div>
             </div>
         </div>
@@ -168,13 +266,18 @@
     <!-- Services Overview -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Comprehensive Commercial Cleaning Services</h2>
-            <p class="section-subtitle">Specialized cleaning solutions for every industry across Palm Beach County</p>
+            <div class="section-header">
+                <h2>Comprehensive Commercial Cleaning Services</h2>
+                <p>Specialized cleaning solutions for every industry across Palm Beach County</p>
+            </div>
             
             <div class="services-grid">
                 <div class="service-card featured">
-                    <div class="service-icon">🏢</div>
-                    <h3>Commercial Office Cleaning</h3>
+                    <div class="service-header">
+                        <div class="service-icon">🏢</div>
+                        <h3>Commercial Office Cleaning</h3>
+                        <div class="service-badge">Most Popular</div>
+                    </div>
                     <p>Professional cleaning for offices, banks, and corporate facilities with HEPA-filtered vacuuming and microfiber technology</p>
                     <ul class="service-features">
                         <li>High-touch point sanitization</li>
@@ -182,12 +285,16 @@
                         <li>Conference room deep cleaning</li>
                         <li>Air quality improvement</li>
                     </ul>
+                    <div class="service-pricing">Starting at $500/month</div>
                     <a href="commercial-cleaning.html" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card featured">
-                    <div class="service-icon">🏥</div>
-                    <h3>Medical Facility Cleaning</h3>
+                    <div class="service-header">
+                        <div class="service-icon">🏥</div>
+                        <h3>Medical Facility Cleaning</h3>
+                        <div class="service-badge">Specialized</div>
+                    </div>
                     <p>EPA-approved, hospital-grade disinfection for healthcare environments with cross-contamination prevention protocols</p>
                     <ul class="service-features">
                         <li>Healthcare-Associated Infection (HAI) prevention</li>
@@ -195,12 +302,16 @@
                         <li>Terminal cleaning excellence</li>
                         <li>Electrostatic disinfection technology</li>
                     </ul>
+                    <div class="service-pricing">Custom Quote</div>
                     <a href="medical-facility-cleaning.html" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card featured">
-                    <div class="service-icon">🏘️</div>
-                    <h3>Condo HOA Porter Service</h3>
+                    <div class="service-header">
+                        <div class="service-icon">🏘️</div>
+                        <h3>Condo HOA Porter Service</h3>
+                        <div class="service-badge">Premium</div>
+                    </div>
                     <p>Complete common area cleaning and day porter services for luxury condo and HOA communities</p>
                     <ul class="service-features">
                         <li>24/7 on-site porter presence</li>
@@ -208,74 +319,70 @@
                         <li>Rapid incident response</li>
                         <li>Luxury surface preservation</li>
                     </ul>
+                    <div class="service-pricing">Custom Quote</div>
                     <a href="condo-hoa-cleaning.html" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🏫</div>
-                    <h3>Educational Facilities</h3>
-                    <p>Schools, universities, and daycare cleaning with child-safe chemicals and pathogen reduction protocols</p>
+                    <div class="service-header">
+                        <div class="service-icon">🏫</div>
+                        <h3>Educational Facilities</h3>
+                    </div>
+                    <p>Schools and daycare cleaning with child-safe chemicals</p>
                     <a href="school-cleaning.html" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🛍️</div>
-                    <h3>Retail & Shopping Centers</h3>
-                    <p>Store cleaning with high-speed burnishing, detail window cleaning, and restroom maintenance</p>
+                    <div class="service-header">
+                        <div class="service-icon">🛍️</div>
+                        <h3>Retail & Shopping</h3>
+                    </div>
+                    <p>Store cleaning with high-speed burnishing and window cleaning</p>
                     <a href="retail-cleaning.html" class="service-link">Learn More →</a>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🏭</div>
-                    <h3>Industrial Cleaning</h3>
-                    <p>Heavy-duty cleaning for manufacturing and industrial facilities with specialized equipment</p>
+                    <div class="service-header">
+                        <div class="service-icon">🏭</div>
+                        <h3>Industrial Cleaning</h3>
+                    </div>
+                    <p>Heavy-duty cleaning for manufacturing and industrial facilities</p>
                     <a href="industrial-cleaning.html" class="service-link">Learn More →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🏦</div>
-                    <h3>Banks & Financial</h3>
-                    <p>High-security cleaning protocols with after-hours workflows and ATM detail cleaning</p>
-                    <a href="bank-cleaning.html" class="service-link">Learn More →</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">⛪</div>
-                    <h3>Religious Organizations</h3>
-                    <p>Respectful cleaning services for churches, synagogues, and religious facilities</p>
-                    <a href="religious-cleaning.html" class="service-link">Learn More →</a>
                 </div>
             </div>
             
             <div class="services-cta">
                 <h3>Need a Custom Cleaning Solution?</h3>
                 <p>Every facility is unique. Get a personalized quote based on your specific requirements.</p>
-                <a href="#contact" class="cta-primary">Get Custom Quote</a>
+                <a href="#quote" class="cta-primary">Get Custom Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Video Showcase -->
+    <section class="video-showcase">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>45+ Years of Professional Excellence</h2>
-                    <p>Since 1979, Crystal Building Maintenance has provided professional commercial cleaning to customers throughout Palm Beach County. Our experienced team delivers superior janitorial services with a focus on quality and customer satisfaction.</p>
-                    
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <h4>Time Study Pricing</h4>
-                            <p>Unlike companies that base fees only on square footage, we use a developed quoting program using time study analysis for accurate, fair pricing.</p>
-                        </div>
-                        <div class="about-feature">
-                            <h4>Trained Staff</h4>
-                            <p>Constant training on advanced cleaning equipment, tools, and chemicals. Environmental green cleaning options available.</p>
-                        </div>
-                        <div class="about-feature">
-                            <h4>Quality Assurance</h4>
-                            <p>Experienced supervisors oversee job sites with daily work schedules. Customer Relations/Quality Assurance Inspectors ensure expectations are exceeded.</p>
-                        </div>
+            <div class="section-header">
+                <h2>See Our Professional Team in Action</h2>
+                <p>Watch the quality of our work and attention to detail</p>
+            </div>
+            <div class="videos-grid">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/NNuGeUo4UeQ" title="Crystal Building Maintenance Professional Cleaning" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3>Professional Commercial Cleaning</h3>
+                        <p>See our experienced team delivering superior cleaning services with attention to detail and professional excellence</p>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/l0yhvbN5Ta8" title="Crystal Building Maintenance Quality Process" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3>Quality Assurance Process</h3>
+                        <p>Our commitment to excellence in every cleaning project with supervisor oversight and quality control</p>
                     </div>
                 </div>
             </div>
@@ -285,18 +392,41 @@
     <!-- Service Areas -->
     <section id="areas" class="areas">
         <div class="container">
-            <h2>Serving All of Palm Beach County</h2>
+            <div class="section-header">
+                <h2>Serving All of Palm Beach County</h2>
+                <p>Professional commercial cleaning services throughout South Florida since 1979</p>
+            </div>
             <div class="areas-grid">
-                <div class="area-card">West Palm Beach</div>
-                <div class="area-card">Boca Raton</div>
-                <div class="area-card">Delray Beach</div>
-                <div class="area-card">Boynton Beach</div>
-                <div class="area-card">Jupiter</div>
-                <div class="area-card">Wellington</div>
-                <div class="area-card">Royal Palm Beach</div>
-                <div class="area-card">Lake Worth</div>
-                <div class="area-card">Lantana</div>
-                <div class="area-card">Palm Beach Gardens</div>
+                <div class="area-card">
+                    <h3>West Palm Beach</h3>
+                    <p>Downtown business district, medical facilities, corporate offices</p>
+                    <a href="west-palm-beach-cleaning.html" class="area-link">View Services →</a>
+                </div>
+                <div class="area-card">
+                    <h3>Boca Raton</h3>
+                    <p>Corporate headquarters, luxury retail, technology companies</p>
+                    <a href="boca-raton-cleaning.html" class="area-link">View Services →</a>
+                </div>
+                <div class="area-card">
+                    <h3>Delray Beach</h3>
+                    <p>Commercial centers, medical practices, retail establishments</p>
+                    <a href="delray-beach-cleaning.html" class="area-link">View Services →</a>
+                </div>
+                <div class="area-card">
+                    <h3>Boynton Beach</h3>
+                    <p>Industrial facilities, office complexes, shopping centers</p>
+                    <a href="boynton-beach-cleaning.html" class="area-link">View Services →</a>
+                </div>
+                <div class="area-card">
+                    <h3>Jupiter</h3>
+                    <p>Professional offices, medical facilities, hospitality venues</p>
+                    <a href="jupiter-cleaning.html" class="area-link">View Services →</a>
+                </div>
+                <div class="area-card">
+                    <h3>Wellington</h3>
+                    <p>Corporate parks, educational facilities, retail centers</p>
+                    <a href="wellington-cleaning.html" class="area-link">View Services →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -304,52 +434,82 @@
     <!-- Testimonials -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2>What Our Customers Say</h2>
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Over 45 years of satisfied customers throughout Palm Beach County</p>
+            </div>
             <div class="testimonials-grid">
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p>"I cannot say enough about Crystal Building Maintenance. We have worked with several commercial cleaners in West Palm Beach, but they are hands down the best."</p>
+                <div class="testimonial featured">
+                    <div class="testimonial-header">
+                        <div class="stars">★★★★★</div>
+                        <div class="rating-text">5.0 out of 5</div>
+                    </div>
+                    <blockquote>"I cannot say enough about Crystal Building Maintenance. We have worked with several commercial cleaners in West Palm Beach, but they are hands down the best. Their attention to detail and professionalism is unmatched."</blockquote>
+                    <cite>- West Palm Beach Business Owner</cite>
                 </div>
+                
                 <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p>"Crystal Building Maintenance are an excellent company. They do an amazing job of cleaning and you won't be disappointed. Most satisfied! A job well done!"</p>
-                    <cite>- Gail G.</cite>
+                    <div class="testimonial-header">
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <blockquote>"Crystal Building Maintenance are an excellent company. They do an amazing job of cleaning and you won't be disappointed. Most satisfied! A job well done!"</blockquote>
+                    <cite>- Gail G., Property Manager</cite>
                 </div>
+                
                 <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p>"Crystal Building Maintenance is the top in building Maintenance, I highly recommend them. They are really good at what they do and they really care. Very professional."</p>
-                    <cite>- Ken M.</cite>
+                    <div class="testimonial-header">
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <blockquote>"Crystal Building Maintenance is the top in building maintenance. I highly recommend them. They are really good at what they do and they really care. Very professional."</blockquote>
+                    <cite>- Ken M., Facility Manager</cite>
                 </div>
+            </div>
+            
+            <div class="testimonials-cta">
+                <h3>Join Hundreds of Satisfied Customers</h3>
+                <a href="#quote" class="cta-primary">Get Your Free Quote Today</a>
+                <a href="https://www.google.com/search?q=crystal+building+maintenance+reviews" target="_blank" class="cta-secondary">Read More Reviews</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="quote" class="contact">
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2>Get Your Free Quote Today</h2>
+                    <h2>Get Your Free Professional Quote</h2>
+                    <p class="contact-subtitle">Ready to experience the Crystal Building Maintenance difference? Contact us today for your free, no-obligation quote.</p>
+                    
                     <div class="contact-methods">
-                        <div class="contact-method">
-                            <h3>Call Now</h3>
+                        <div class="contact-method priority">
+                            <h3>📞 Call Now for Immediate Service</h3>
                             <a href="tel:5616845652" class="contact-phone">(561) 684-5652</a>
+                            <p>Speak directly with our team for immediate quotes and scheduling</p>
                         </div>
+                        
                         <div class="contact-method">
-                            <h3>Service Area</h3>
+                            <h3>🌐 Service Area</h3>
                             <p>All of Palm Beach County, Florida</p>
+                            <p>Same-day quotes • Emergency services available</p>
                         </div>
+                        
                         <div class="contact-method">
-                            <h3>Business Hours</h3>
-                            <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
-                               Emergency service available</p>
+                            <h3>🕒 Business Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            <p>Emergency service available 24/7</p>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <h3>⭐ Why Choose Us?</h3>
+                            <p>45+ years experience • Licensed & insured • Quality guaranteed</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Get Your Free Professional Quote</h3>
-                    <p class="form-subtitle">📞 Call <a href="tel:5616845652">(561) 684-5652</a> or fill out the form below</p>
+                    <h3>Request Your Free Quote</h3>
+                    <p class="form-subtitle">Fill out this form and we'll contact you within 2 hours during business hours</p>
                     <form class="lead-capture-form">
                         <div class="form-row">
                             <div class="form-group">
@@ -390,10 +550,8 @@
                                     <option value="school">Educational Facility</option>
                                     <option value="industrial">Industrial/Manufacturing</option>
                                     <option value="bank">Bank/Financial Institution</option>
-                                    <option value="religious">Religious Organization</option>
                                     <option value="restaurant">Restaurant</option>
-                                    <option value="theater">Theater/Entertainment</option>
-                                    <option value="other">Other (specify in details)</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -404,8 +562,7 @@
                                     <option value="2500-5000">2,500 - 5,000 sq ft</option>
                                     <option value="5000-10000">5,000 - 10,000 sq ft</option>
                                     <option value="10000-20000">10,000 - 20,000 sq ft</option>
-                                    <option value="20000-50000">20,000 - 50,000 sq ft</option>
-                                    <option value="over-50000">Over 50,000 sq ft</option>
+                                    <option value="over-20000">Over 20,000 sq ft</option>
                                 </select>
                             </div>
                         </div>
@@ -417,69 +574,43 @@
                                     <option value="">Select frequency</option>
                                     <option value="daily">Daily</option>
                                     <option value="3x-week">3x per week</option>
-                                    <option value="2x-week">2x per week</option>
                                     <option value="weekly">Weekly</option>
                                     <option value="bi-weekly">Bi-weekly</option>
                                     <option value="monthly">Monthly</option>
                                     <option value="one-time">One-time deep clean</option>
-                                    <option value="as-needed">As needed</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="timeframe">When do you need service?</label>
-                                <select id="timeframe" name="timeframe">
-                                    <option value="">Select timeframe</option>
-                                    <option value="asap">ASAP</option>
-                                    <option value="1-week">Within 1 week</option>
-                                    <option value="2-weeks">Within 2 weeks</option>
-                                    <option value="1-month">Within 1 month</option>
-                                    <option value="future">Future planning</option>
-                                </select>
+                                <label for="location">Service Location (City)</label>
+                                <input type="text" id="location" name="location" placeholder="West Palm Beach, Boca Raton, etc.">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="location">Service Location (City/Area in Palm Beach County)</label>
-                            <input type="text" id="location" name="location" placeholder="West Palm Beach, Boca Raton, etc.">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="current-provider">Do you currently have a cleaning service?</label>
-                            <select id="current-provider" name="current-provider">
-                                <option value="">Select one</option>
-                                <option value="no">No, we need our first cleaning service</option>
-                                <option value="yes-dissatisfied">Yes, but we're looking to switch</option>
-                                <option value="yes-backup">Yes, looking for backup/additional service</option>
-                                <option value="in-house">We currently clean in-house</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="special-requirements">Special Requirements or Areas of Focus</label>
+                            <label for="special-requirements">Special Requirements</label>
                             <div class="checkbox-group">
                                 <label><input type="checkbox" name="requirements[]" value="green-cleaning"> Eco-friendly/Green cleaning</label>
                                 <label><input type="checkbox" name="requirements[]" value="after-hours"> After-hours cleaning only</label>
-                                <label><input type="checkbox" name="requirements[]" value="security-clearance"> Security clearance required</label>
                                 <label><input type="checkbox" name="requirements[]" value="medical-grade"> Medical-grade disinfection</label>
                                 <label><input type="checkbox" name="requirements[]" value="carpet-care"> Carpet cleaning included</label>
-                                <label><input type="checkbox" name="requirements[]" value="window-cleaning"> Window cleaning</label>
-                                <label><input type="checkbox" name="requirements[]" value="floor-care"> Floor stripping/waxing</label>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label for="message">Additional Details & Questions</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell us about any specific cleaning challenges, questions about our services, or additional information that would help us provide an accurate quote..."></textarea>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about any specific cleaning challenges or requirements..."></textarea>
                         </div>
                         
                         <div class="form-group consent">
                             <label class="consent-label">
                                 <input type="checkbox" name="consent" required>
-                                I consent to receive communications from Crystal Building Maintenance regarding my quote request. You may contact me via phone, email, or text at the information provided above.
+                                I consent to receive communications from Crystal Building Maintenance regarding my quote request.
                             </label>
                         </div>
                         
-                        <button type="submit" class="cta-primary form-submit">🚀 Get My Free Quote</button>
+                        <button type="submit" class="form-submit">
+                            <span>🚀 Get My Free Quote</span>
+                        </button>
                         
                         <div class="form-security">
                             <p>🔒 Your information is secure and will never be shared. We typically respond within 2 hours during business hours.</p>
@@ -498,36 +629,44 @@
                     <h3>Crystal Building Maintenance</h3>
                     <p>Professional commercial cleaning services in Palm Beach County since 1979</p>
                     <p class="tagline">We Don't Cut Corners — We Clean Them.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/crystalbuildingmaintenance" target="_blank" aria-label="Facebook">Facebook</a>
+                        <a href="https://www.google.com/search?q=crystal+building+maintenance+reviews" target="_blank" aria-label="Google Reviews">Reviews</a>
+                        <a href="https://www.youtube.com/channel/crystalbuildingmaintenance" target="_blank" aria-label="YouTube">YouTube</a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li>Commercial Cleaning</li>
-                        <li>Office Buildings</li>
-                        <li>Medical Facilities</li>
-                        <li>Condo HOA Porter Service</li>
-                        <li>Educational Facilities</li>
-                        <li>Industrial Cleaning</li>
+                        <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
+                        <li><a href="medical-facility-cleaning.html">Medical Facilities</a></li>
+                        <li><a href="condo-hoa-cleaning.html">Condo HOA Porter</a></li>
+                        <li><a href="office-cleaning.html">Office Buildings</a></li>
+                        <li><a href="retail-cleaning.html">Retail Stores</a></li>
+                        <li><a href="school-cleaning.html">Schools</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Service Areas</h4>
                     <ul>
-                        <li>West Palm Beach</li>
-                        <li>Boca Raton</li>
-                        <li>Delray Beach</li>
-                        <li>Boynton Beach</li>
-                        <li>All Palm Beach County</li>
+                        <li><a href="west-palm-beach-cleaning.html">West Palm Beach</a></li>
+                        <li><a href="boca-raton-cleaning.html">Boca Raton</a></li>
+                        <li><a href="delray-beach-cleaning.html">Delray Beach</a></li>
+                        <li><a href="boynton-beach-cleaning.html">Boynton Beach</a></li>
+                        <li><a href="jupiter-cleaning.html">Jupiter</a></li>
+                        <li><a href="wellington-cleaning.html">Wellington</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p><a href="tel:5616845652">(561) 684-5652</a></p>
                     <p>Palm Beach County, FL</p>
+                    <p><strong>Licensed & Insured</strong></p>
+                    <p>45+ Years Experience</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Crystal Building Maintenance. All rights reserved.</p>
+                <p>&copy; 2026 Crystal Building Maintenance. All rights reserved. | Professional Commercial Cleaning Services Since 1979</p>
             </div>
         </div>
     </footer>
