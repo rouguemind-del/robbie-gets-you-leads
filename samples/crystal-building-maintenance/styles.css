@@ -120,6 +120,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .nav-brand {
@@ -208,25 +209,30 @@ a:hover {
     color: var(--white);
 }
 
-/* Mobile Toggle */
+/* Mobile Toggle - Hamburger Menu */
 .mobile-toggle {
     display: none;
     flex-direction: column;
-    background: none;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: var(--spacing-sm);
-    gap: 4px;
+    padding: 8px;
     z-index: 1001;
+    outline: none;
+    position: relative;
 }
 
 .mobile-toggle span {
-    width: 25px;
+    width: 24px;
     height: 3px;
-    background: var(--gray-700);
-    border-radius: 2px;
-    transition: var(--transition);
+    background-color: var(--gray-900);
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
     display: block;
+    transform-origin: center;
 }
 
 .mobile-toggle.active span:nth-child(1) {
@@ -750,43 +756,40 @@ section {
     .video-grid {
         grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 768px) {
-    /* Mobile Navigation */
+    
+    /* Show mobile toggle on tablets */
+    .nav-contact {
+        display: none;
+    }
+    
+    .mobile-toggle {
+        display: flex;
+    }
+    
     .nav-menu {
         position: fixed;
-        top: 70px; /* Fixed position from top of viewport */
+        top: 70px;
         left: 0;
-        width: 100%;
+        width: 100vw;
+        height: calc(100vh - 70px);
         flex-direction: column;
         background: var(--white);
         box-shadow: var(--shadow-lg);
         padding: var(--spacing-xl);
         gap: var(--spacing-lg);
         transform: translateX(-100%);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        opacity: 0;
-        visibility: hidden;
+        transition: transform 0.3s ease;
         z-index: 999;
-        border-top: 1px solid var(--gray-200);
+        overflow-y: auto;
     }
     
     .nav-menu.active {
         transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
     }
-    
-    .nav-contact {
-        display: none !important;
-    }
-    
-    .mobile-toggle {
-        display: flex !important;
-    }
-    
-    /* Adjust hero for mobile */
+}
+
+@media (max-width: 768px) {
+    /* Mobile layout adjustments */
     .hero {
         padding: 100px 0 var(--spacing-2xl);
     }
@@ -808,7 +811,6 @@ section {
         align-items: center;
     }
     
-    /* Adjust grid layouts */
     .services-grid,
     .areas-grid,
     .testimonials-grid {
@@ -831,16 +833,10 @@ section {
         gap: var(--spacing-md);
     }
     
-    .video-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-    
     .video-container {
         min-height: 250px;
     }
     
-    /* Mobile padding adjustments */
     .container {
         padding: 0 var(--spacing-md);
     }
@@ -851,17 +847,6 @@ section {
     
     .section-header {
         margin-bottom: var(--spacing-2xl);
-    }
-}
-
-/* Additional mobile breakpoint for smaller devices */
-@media (max-width: 900px) {
-    .nav-contact {
-        display: none !important;
-    }
-    
-    .mobile-toggle {
-        display: flex !important;
     }
 }
 
@@ -882,12 +867,18 @@ section {
         width: 100%;
         text-align: center;
     }
+}
+
+/* Force mobile navigation on all mobile devices */
+@media screen and (max-width: 1024px) {
+    .nav-contact {
+        display: none !important;
+    }
     
-    /* Ensure mobile toggle is visible on very small screens */
     .mobile-toggle {
         display: flex !important;
-        position: relative;
-        z-index: 1002;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }
 
