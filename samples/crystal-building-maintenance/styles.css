@@ -217,6 +217,7 @@ a:hover {
     cursor: pointer;
     padding: var(--spacing-sm);
     gap: 4px;
+    z-index: 1001;
 }
 
 .mobile-toggle span {
@@ -225,6 +226,7 @@ a:hover {
     background: var(--gray-700);
     border-radius: 2px;
     transition: var(--transition);
+    display: block;
 }
 
 .mobile-toggle.active span:nth-child(1) {
@@ -754,7 +756,7 @@ section {
     /* Mobile Navigation */
     .nav-menu {
         position: fixed;
-        top: 100%;
+        top: 70px; /* Fixed position from top of viewport */
         left: 0;
         width: 100%;
         flex-direction: column;
@@ -762,25 +764,26 @@ section {
         box-shadow: var(--shadow-lg);
         padding: var(--spacing-xl);
         gap: var(--spacing-lg);
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
         opacity: 0;
         visibility: hidden;
         z-index: 999;
+        border-top: 1px solid var(--gray-200);
     }
     
     .nav-menu.active {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
         visibility: visible;
     }
     
     .nav-contact {
-        display: none;
+        display: none !important;
     }
     
     .mobile-toggle {
-        display: flex;
+        display: flex !important;
     }
     
     /* Adjust hero for mobile */
@@ -851,6 +854,17 @@ section {
     }
 }
 
+/* Additional mobile breakpoint for smaller devices */
+@media (max-width: 900px) {
+    .nav-contact {
+        display: none !important;
+    }
+    
+    .mobile-toggle {
+        display: flex !important;
+    }
+}
+
 @media (max-width: 480px) {
     .hero-stats {
         gap: var(--spacing-md);
@@ -867,6 +881,13 @@ section {
     .service-type {
         width: 100%;
         text-align: center;
+    }
+    
+    /* Ensure mobile toggle is visible on very small screens */
+    .mobile-toggle {
+        display: flex !important;
+        position: relative;
+        z-index: 1002;
     }
 }
 
