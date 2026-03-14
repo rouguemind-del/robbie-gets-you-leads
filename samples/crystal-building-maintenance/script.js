@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize analytics
     initializeAnalytics();
     
+    // Initialize floating button
+    initializeFloatingButton();
+    
 });
 
 // Responsive Navigation Handler
@@ -411,3 +414,53 @@ function initializeScrollAnimations() {
 
 // Initialize scroll animations
 initializeScrollAnimations();
+
+// Floating Call Button Handler
+function initializeFloatingButton() {
+    const floatingBtn = document.querySelector('.floating-call-btn');
+    
+    if (!floatingBtn) return;
+    
+    // Add entrance animation
+    setTimeout(() => {
+        floatingBtn.style.opacity = '0';
+        floatingBtn.style.transform = 'translateY(100px)';
+        floatingBtn.style.transition = 'all 0.6s ease';
+        
+        setTimeout(() => {
+            floatingBtn.style.opacity = '1';
+            floatingBtn.style.transform = 'translateY(0)';
+        }, 1000);
+    }, 100);
+    
+    // Track floating button clicks
+    floatingBtn.addEventListener('click', function() {
+        trackEvent('floating_call_button', 'engagement', 'call_now_floating');
+        
+        // Add click animation
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
+    });
+    
+    // Show/hide on scroll
+    let lastScrollY = window.scrollY;
+    let scrollTimeout;
+    
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const currentScrollY = window.scrollY;
+            
+            // Hide when scrolling down rapidly, show when scrolling up or at top
+            if (currentScrollY > lastScrollY && currentScrollY > 300) {
+                floatingBtn.style.transform = 'translateY(100px)';
+            } else {
+                floatingBtn.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollY = currentScrollY;
+        }, 10);
+    });
+}
