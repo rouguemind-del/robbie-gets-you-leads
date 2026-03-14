@@ -1169,8 +1169,8 @@ section {
 /* Section Background Colors */
 .hero {
     padding: 120px 0 var(--spacing-3xl);
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
-                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(5, 150, 105, 0.75)), 
+                url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover;
     background-attachment: fixed;
     color: var(--white);
     position: relative;
