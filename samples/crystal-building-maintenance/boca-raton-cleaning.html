@@ -6,7 +6,14 @@
     <meta name="description" content="Professional commercial cleaning services in Boca Raton, FL. Office buildings, medical facilities, retail stores. Local expertise since 1979. Call (561) 684-5652">
     <meta name="keywords" content="commercial cleaning Boca Raton, office cleaning Boca Raton FL, janitorial services Boca Raton Florida">
     <title>Commercial Cleaning Services Boca Raton FL | Crystal Building Maintenance</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup for Local Service -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -34,245 +41,270 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo-section">
-                <div class="logo">
-                    <img src="logo.jpg" alt="Crystal Building Maintenance Logo" class="company-logo">
-                    <div class="company-info">
-                        <h1>Crystal Building Maintenance</h1>
-                        <p class="tagline">We Don't Cut Corners — We Clean Them.</p>
-                        <p class="since">Serving Palm Beach County Since 1979</p>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="https://www.crystalbuildingmaintenance.com/wp-content/uploads/2021/03/Crystal-Building-Maintenance-Logo.png" alt="Crystal Building Maintenance" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-fallback" style="display:none;">
+                        <span class="brand-name">Crystal Building Maintenance</span>
                     </div>
                 </div>
-            </div>
-            <div class="contact-header">
-                <div class="social-links">
-                    <a href="https://www.facebook.com/crystalbuildingmaintenance" target="_blank" aria-label="Facebook">📘</a>
-                    <a href="https://www.google.com/search?q=crystal+building+maintenance+reviews" target="_blank" aria-label="Google Reviews">⭐</a>
-                    <a href="https://www.youtube.com/channel/crystalbuildingmaintenance" target="_blank" aria-label="YouTube">📺</a>
-                </div>
-                <div class="contact-info">
-                    <a href="tel:5616845652" class="phone">(561) 684-5652</a>
-                    <a href="index.html#contact" class="cta-button">Get Free Quote</a>
-                </div>
-            </div>
-        </div>
-        <nav class="nav">
-            <div class="container">
-                <ul class="main-nav">
+                
+                <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown">
-                        <a href="#services">Services ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
-                            <li><a href="medical-facility-cleaning.html">Medical Facilities</a></li>
-                            <li><a href="condo-hoa-cleaning.html">Condo/HOA Porter</a></li>
-                            <li><a href="office-cleaning.html">Office Buildings</a></li>
-                            <li><a href="retail-cleaning.html">Retail Stores</a></li>
-                            <li><a href="school-cleaning.html">Schools</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#areas" class="active">Service Areas ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="west-palm-beach-cleaning.html">West Palm Beach</a></li>
-                            <li><a href="boca-raton-cleaning.html" class="active">Boca Raton</a></li>
-                            <li><a href="delray-beach-cleaning.html">Delray Beach</a></li>
-                            <li><a href="boynton-beach-cleaning.html">Boynton Beach</a></li>
-                            <li><a href="jupiter-cleaning.html">Jupiter</a></li>
-                            <li><a href="wellington-cleaning.html">Wellington</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#areas">Areas</a></li>
                     <li><a href="index.html#testimonials">Reviews</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+                
+                <div class="nav-contact">
+                    <a href="tel:5616845652" class="phone-number">(561) 684-5652</a>
+                    <a href="index.html#contact" class="btn-primary">Get Free Quote</a>
+                </div>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" style="display: none;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h1>Commercial Cleaning Services Boca Raton, Florida</h1>
-            <p>Professional office cleaning, medical facility cleaning, and commercial janitorial services in Boca Raton since 1979</p>
-            <div class="hero-cta">
-                <a href="tel:5616845652" class="cta-primary">Call (561) 684-5652</a>
-                <a href="index.html#contact" class="cta-secondary">Get Free Quote</a>
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <div class="badge">45+ Years Experience</div>
+                    <div class="badge">Boca Raton Local</div>
+                    <div class="badge">Licensed & Insured</div>
+                    <div class="badge">Free Estimates</div>
+                </div>
+                
+                <h1 class="hero-title">Professional Commercial Cleaning Services in Boca Raton, FL</h1>
+                
+                <p class="hero-subtitle">
+                    Since 1979, Crystal Building Maintenance has served Boca Raton's corporate headquarters, luxury retail, and technology companies. 
+                    We specialize in high-end commercial cleaning for Boca's professional business environment.
+                    Same-day service available for executive offices and corporate facilities.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">45+</span>
+                        <span class="stat-label">Years in Boca</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Corporate Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Star Rated</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="tel:5616845652" class="btn-primary">Call (561) 684-5652</a>
+                    <a href="index.html#contact" class="btn-secondary">Get Free Quote</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Local Expertise -->
-    <section class="local-expertise">
+    <!-- Local Services Section -->
+    <section class="services">
         <div class="container">
-            <div class="expertise-intro">
-                <h2>Boca Raton's Premier Commercial Cleaning Company Since 1979</h2>
-                <p>Crystal Building Maintenance has been proudly serving the Boca Raton business community for over 45 years. Our extensive experience with the unique commercial cleaning needs of Boca Raton's diverse business landscape—from corporate headquarters to luxury retail establishments—makes us the trusted choice for professional cleaning services.</p>
-                
-                <p>Located in the heart of South Florida's business corridor, Boca Raton demands the highest standards of cleanliness and professionalism. Our team understands the sophisticated expectations of Boca Raton businesses and delivers cleaning services that reflect the city's prestigious reputation.</p>
+            <div class="section-header">
+                <h2>Commercial Cleaning Services in Boca Raton</h2>
+                <p>Elite cleaning solutions for Boca Raton's premium business environment, from corporate headquarters to luxury retail.</p>
             </div>
             
-            <div class="local-stats">
-                <div class="stat-card">
-                    <h3>45+ Years</h3>
-                    <p>Serving Boca Raton</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Corporate Headquarters</h3>
+                    <p>Executive-level cleaning for Boca Raton corporate campuses and headquarters. Premium service for executive suites and boardrooms.</p>
                 </div>
-                <div class="stat-card">
-                    <h3>150+</h3>
-                    <p>Local Business Clients</p>
+                
+                <div class="service-card">
+                    <h3>Technology Companies</h3>
+                    <p>Specialized cleaning for Boca Raton's tech sector. Clean rooms, server areas, and modern office environments with advanced equipment.</p>
                 </div>
-                <div class="stat-card">
-                    <h3>Same-Day</h3>
-                    <p>Quote Response</p>
+                
+                <div class="service-card">
+                    <h3>Luxury Retail</h3>
+                    <p>High-end retail cleaning for Boca's upscale shopping centers, boutiques, and luxury retail establishments.</p>
                 </div>
-                <div class="stat-card">
-                    <h3>100%</h3>
-                    <p>Satisfaction Guarantee</p>
+                
+                <div class="service-card">
+                    <h3>Financial Services</h3>
+                    <p>Secure cleaning protocols for Boca Raton banks, investment firms, and financial institutions with confidentiality requirements.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Medical & Dental</h3>
+                    <p>Healthcare-grade cleaning for Boca Raton medical practices, dental offices, and healthcare facilities with strict sanitation standards.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Professional Services</h3>
+                    <p>Reliable cleaning for law firms, accounting practices, and professional service offices throughout Boca Raton.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Boca Raton Areas Served -->
-    <section class="areas-served">
+    <!-- Local Areas Section -->
+    <section class="areas">
         <div class="container">
-            <h2>Boca Raton Business Districts We Serve</h2>
-            <p>Our comprehensive commercial cleaning services cover all major business areas throughout Boca Raton:</p>
+            <div class="section-header">
+                <h2>Boca Raton Business Districts We Serve</h2>
+                <p>Comprehensive commercial cleaning coverage throughout Boca Raton's premier business locations.</p>
+            </div>
             
             <div class="areas-grid">
                 <div class="area-card">
-                    <h3>Corporate Center Boca</h3>
-                    <ul>
-                        <li>Corporate headquarters buildings</li>
-                        <li>Professional office complexes</li>
-                        <li>Financial services firms</li>
-                        <li>Technology companies</li>
-                        <li>Executive suites</li>
-                    </ul>
+                    <h3>Boca Raton Corporate Center</h3>
+                    <p>Executive office buildings, corporate headquarters, and business campuses.</p>
+                </div>
+                
+                <div class="area-card">
+                    <h3>Broken Sound</h3>
+                    <p>Technology companies, professional services, and corporate office parks.</p>
+                </div>
+                
+                <div class="area-card">
+                    <h3>Town Center at Boca Raton</h3>
+                    <p>Luxury retail, restaurants, professional offices, and commercial spaces.</p>
+                </div>
+                
+                <div class="area-card">
+                    <h3>Yamato Corporate Center</h3>
+                    <p>Modern office complexes, technology firms, and professional service companies.</p>
                 </div>
                 
                 <div class="area-card">
                     <h3>Glades Road Corridor</h3>
-                    <ul>
-                        <li>Medical offices and clinics</li>
-                        <li>Specialty healthcare practices</li>
-                        <li>Outpatient surgical centers</li>
-                        <li>Dental and orthodontic offices</li>
-                    </ul>
+                    <p>Medical facilities, professional offices, and commercial business centers.</p>
                 </div>
                 
                 <div class="area-card">
-                    <h3>Town Center Area</h3>
-                    <ul>
-                        <li>Luxury retail stores</li>
-                        <li>High-end shopping centers</li>
-                        <li>Restaurants and dining venues</li>
-                        <li>Entertainment facilities</li>
-                    </ul>
-                </div>
-                
-                <div class="area-card">
-                    <h3>Yamato Road Business District</h3>
-                    <ul>
-                        <li>Industrial and manufacturing</li>
-                        <li>Distribution centers</li>
-                        <li>Research and development facilities</li>
-                        <li>Logistics operations</li>
-                    </ul>
+                    <h3>Federal Highway</h3>
+                    <p>Mixed-use commercial properties, retail centers, and professional services.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services in Boca Raton -->
-    <section class="boca-services">
+    <!-- Local Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2>Commercial Cleaning Services Tailored for Boca Raton</h2>
-            <p>We provide specialized cleaning services that meet the high standards expected by Boca Raton's business community:</p>
+            <div class="section-header">
+                <h2>What Boca Raton Businesses Say</h2>
+                <p>Corporate leaders in Boca Raton trust Crystal Building Maintenance for superior commercial cleaning.</p>
+            </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Corporate Office Cleaning</h3>
-                    <p>Premium cleaning services for Boca Raton's numerous corporate headquarters and professional office buildings, maintaining the sophisticated image your business deserves.</p>
-                    <ul class="service-features">
-                        <li>Executive suite deep cleaning</li>
-                        <li>Conference room sanitization</li>
-                        <li>Lobby and reception maintenance</li>
-                        <li>High-rise building expertise</li>
-                    </ul>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>Our Boca Raton corporate headquarters demands the highest standards. Crystal Building Maintenance consistently delivers executive-level cleaning service.</blockquote>
+                    <cite>Facilities Manager, Corporate HQ</cite>
                 </div>
                 
-                <div class="service-card">
-                    <h3>Medical Facility Cleaning</h3>
-                    <p>Specialized cleaning for Boca Raton's extensive medical community, ensuring compliance with healthcare regulations and infection control standards.</p>
-                    <ul class="service-features">
-                        <li>Hospital-grade disinfection protocols</li>
-                        <li>Surgical center cleaning</li>
-                        <li>Dental office sanitization</li>
-                        <li>Medical equipment area care</li>
-                    </ul>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>As a technology company in Boca, we need specialized cleaning for sensitive equipment areas. Crystal Building exceeds our requirements.</blockquote>
+                    <cite>IT Director, Tech Company</cite>
                 </div>
                 
-                <div class="service-card">
-                    <h3>Luxury Retail Cleaning</h3>
-                    <p>High-end cleaning services for Boca Raton's upscale retail establishments, maintaining the pristine appearance that luxury shoppers expect.</p>
-                    <ul class="service-features">
-                        <li>Boutique and showroom cleaning</li>
-                        <li>High-end fixture care</li>
-                        <li>Glass and mirror detailing</li>
-                        <li>Customer area perfection</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Technology Company Cleaning</h3>
-                    <p>Specialized cleaning for Boca Raton's growing tech sector, including clean room protocols and sensitive equipment area maintenance.</p>
-                    <ul class="service-features">
-                        <li>Clean room protocols</li>
-                        <li>Server room cleaning</li>
-                        <li>Lab and research facility care</li>
-                        <li>Anti-static procedures</li>
-                    </ul>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>Professional, reliable, and detail-oriented. The best commercial cleaning service we've used in Boca Raton.</blockquote>
+                    <cite>Office Manager, Financial Services</cite>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Local Advantages -->
-    <section class="local-advantages">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2>Why Boca Raton Businesses Choose Crystal Building Maintenance</h2>
-            <div class="advantages-grid">
-                <div class="advantage-card">
-                    <h3>Local Expertise</h3>
-                    <p>45+ years of experience serving the Boca Raton business community means we understand local expectations and requirements.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get Your Free Boca Raton Quote</h2>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h3>Call Now</h3>
+                            <a href="tel:5616845652" class="contact-phone">(561) 684-5652</a>
+                        </div>
+                        <div class="contact-method">
+                            <h3>Service Area</h3>
+                            <p>Boca Raton & All Palm Beach County</p>
+                        </div>
+                        <div class="contact-method">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Emergency service available 24/7</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="advantage-card">
-                    <h3>Luxury Standards</h3>
-                    <p>We maintain the high standards of cleanliness and professionalism that Boca Raton's upscale business environment demands.</p>
+                
+                <div class="contact-form">
+                    <h3>Request Your Boca Raton Quote</h3>
+                    <form class="quote-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="facility-type">Facility Type</label>
+                                <select id="facility-type" name="facility-type" required>
+                                    <option value="">Select facility type</option>
+                                    <option value="corporate">Corporate Headquarters</option>
+                                    <option value="office">Office Building</option>
+                                    <option value="medical">Medical Facility</option>
+                                    <option value="retail">Retail/Luxury Store</option>
+                                    <option value="tech">Technology Company</option>
+                                    <option value="financial">Financial Services</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Boca Raton Location</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., Corporate Center, Broken Sound, Town Center">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your Boca Raton cleaning needs..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Get Free Quote</button>
+                    </form>
                 </div>
-                <div class="advantage-card">
-                    <h3>Flexible Scheduling</h3>
-                    <p>After-hours and weekend cleaning schedules that work around your business operations without disruption.</p>
-                </div>
-                <div class="advantage-card">
-                    <h3>Rapid Response</h3>
-                    <p>Local Boca Raton team provides same-day emergency cleaning services and quick response to urgent needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Experience Boca Raton's Premier Commercial Cleaning Service</h2>
-            <p>Join the prestigious Boca Raton businesses that trust Crystal Building Maintenance for superior commercial cleaning services.</p>
-            <div class="cta-buttons">
-                <a href="tel:5616845652" class="cta-primary">Call (561) 684-5652</a>
-                <a href="index.html#contact" class="cta-secondary">Request Free Boca Raton Quote</a>
             </div>
         </div>
     </section>
@@ -282,35 +314,36 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Crystal Building Maintenance</h3>
-                    <p>Professional commercial cleaning services in Boca Raton, Florida since 1979</p>
+                    <h4>Crystal Building Maintenance</h4>
+                    <p>Professional commercial cleaning services in Boca Raton since 1979</p>
                     <p class="tagline">We Don't Cut Corners — We Clean Them.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Boca Raton Services</h4>
                     <ul>
-                        <li>Corporate Office Cleaning</li>
-                        <li>Medical Facility Cleaning</li>
-                        <li>Luxury Retail Cleaning</li>
+                        <li>Corporate Headquarters Cleaning</li>
                         <li>Technology Company Cleaning</li>
-                        <li>Executive Suite Cleaning</li>
-                        <li>High-rise Building Cleaning</li>
+                        <li>Luxury Retail Cleaning</li>
+                        <li>Financial Services Cleaning</li>
+                        <li>Medical Facility Cleaning</li>
+                        <li>Professional Office Cleaning</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Other Service Areas</h4>
+                    <h4>Service Areas</h4>
                     <ul>
-                        <li><a href="west-palm-beach-cleaning.html">West Palm Beach</a></li>
-                        <li><a href="delray-beach-cleaning.html">Delray Beach</a></li>
-                        <li><a href="boynton-beach-cleaning.html">Boynton Beach</a></li>
-                        <li><a href="jupiter-cleaning.html">Jupiter</a></li>
-                        <li><a href="wellington-cleaning.html">Wellington</a></li>
+                        <li>Boca Raton Corporate Center</li>
+                        <li>Broken Sound</li>
+                        <li>Town Center at Boca Raton</li>
+                        <li>Yamato Corporate Center</li>
+                        <li>All Palm Beach County</li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p><a href="tel:5616845652">(561) 684-5652</a></p>
                     <p>Boca Raton, FL</p>
+                    <p>Licensed & Insured</p>
                 </div>
             </div>
             <div class="footer-bottom">

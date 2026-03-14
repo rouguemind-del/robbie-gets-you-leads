@@ -3,8 +3,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Force mobile navigation visibility
-    forceMobileNavVisibility();
+    // Initialize responsive navigation
+    handleResponsiveNav();
     
     // Initialize mobile navigation
     initializeMobileNav();
@@ -24,37 +24,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize phone formatting
     initializePhoneFormatting();
     
+    // Initialize analytics
+    initializeAnalytics();
+    
 });
 
-// Force Mobile Navigation Visibility
-function forceMobileNavVisibility() {
-    function checkMobileNav() {
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navContact = document.querySelector('.nav-contact');
-        
+// Responsive Navigation Handler
+function handleResponsiveNav() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navContact = document.querySelector('.nav-contact');
+    
+    function updateNavVisibility() {
         if (mobileToggle && navContact) {
-            // Check if screen is mobile/tablet sized
-            if (window.innerWidth <= 1024) {
-                // Force show mobile toggle
-                mobileToggle.style.display = 'flex';
-                mobileToggle.style.visibility = 'visible';
-                mobileToggle.style.opacity = '1';
-                
-                // Force hide nav contact
-                navContact.style.display = 'none';
-            } else {
-                // Desktop view
-                mobileToggle.style.display = 'none';
-                navContact.style.display = 'flex';
-            }
+            const isMobile = window.innerWidth <= 1024;
+            
+            // Toggle visibility based on screen size
+            mobileToggle.style.display = isMobile ? 'flex' : 'none';
+            navContact.style.display = isMobile ? 'none' : 'flex';
         }
     }
     
-    // Check on load
-    checkMobileNav();
+    // Initial check
+    updateNavVisibility();
     
-    // Check on resize
-    window.addEventListener('resize', checkMobileNav);
+    // Handle window resize
+    window.addEventListener('resize', updateNavVisibility);
 }
 
 // Mobile Navigation
