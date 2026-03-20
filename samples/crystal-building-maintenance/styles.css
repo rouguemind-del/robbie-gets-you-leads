@@ -121,7 +121,7 @@ a:hover {
 }
 
 .navbar {
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-lg) 0;
 }
 
 .navbar .container {
@@ -137,7 +137,7 @@ a:hover {
 }
 
 .logo {
-    height: 70px;
+    height: 90px;
     width: auto;
 }
 
