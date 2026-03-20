@@ -255,11 +255,7 @@ a:hover {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Hero Section */
-.hero {
-    padding: 120px 0 var(--spacing-3xl);
-    background: var(--gray-50);
-}
+/* Hero Section - Background image defined later in CSS */
 
 .hero-content {
     text-align: center;
