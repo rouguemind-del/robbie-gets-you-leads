@@ -261,14 +261,17 @@ a:hover {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 var(--spacing-lg);
 }
 
 .hero-badges {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .badge {
@@ -283,9 +286,10 @@ a:hover {
 }
 
 .hero-title {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
     color: var(--white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
 }
 
 .hero-subtitle {
@@ -861,9 +865,9 @@ section {
     }
     
     .hero-badges {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--spacing-sm);
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-xl);
     }
     
     .hero-stats {
