@@ -808,6 +808,15 @@ section {
 
 /* Mobile & Tablet Responsive */
 @media (max-width: 1024px) {
+    /* Logo size adjustment for mobile */
+    .logo {
+        height: 50px;
+    }
+    
+    .navbar {
+        padding: var(--spacing-md) 0;
+    }
+    
     /* Layout adjustments */
     .hero-stats {
         gap: var(--spacing-lg);
@@ -1170,7 +1179,7 @@ section {
 .hero {
     padding: 120px 0 var(--spacing-3xl);
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(5, 150, 105, 0.75)), 
-                url('./cleaning-hero-image.jpg?v=1') center/cover;
+                url('./hero-interior-commercial.jpg') center/cover;
     background-attachment: fixed;
     color: var(--white);
     position: relative;
