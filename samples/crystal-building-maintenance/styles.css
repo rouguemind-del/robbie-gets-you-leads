@@ -267,7 +267,7 @@ a:hover {
 /* Trust Badges Section */
 .trust-badges {
     background: var(--accent-green);
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
 .badges-grid {
@@ -857,10 +857,10 @@ section {
         padding: 100px 0 var(--spacing-2xl);
     }
     
-    /* Trust badges mobile - keep 2 columns */
+    /* Trust badges mobile - keep 2x2 grid */
     .badges-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-sm);
+        gap: var(--spacing-md);
     }
     
     /* Hero stats removed from hero section */
@@ -915,10 +915,18 @@ section {
 }
 
 @media (max-width: 480px) {
-    /* Trust badges single column on very small screens */
+    /* Trust badges keep 2x2 grid even on small screens */
     .badges-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .badge-text {
+        font-size: 0.85rem;
+    }
+    
+    .badge-text span {
+        font-size: 0.75rem;
     }
     
     .services-types {
