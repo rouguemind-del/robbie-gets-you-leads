@@ -264,26 +264,40 @@ a:hover {
     padding: 0 var(--spacing-lg);
 }
 
-.hero-badges {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-2xl);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+/* Trust Badges Section */
+.trust-badges {
+    background: var(--accent-green);
+    padding: var(--spacing-2xl) 0;
 }
 
-.badge {
-    background: var(--white);
-    color: var(--gray-700);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    font-size: 0.9rem;
-    border: 1px solid var(--gray-200);
-    box-shadow: var(--shadow-sm);
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
+
+.badge-item {
+    color: var(--white);
+}
+
+.badge-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.badge-text span {
+    display: block;
+    font-weight: 400;
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: var(--spacing-xs);
+}
+
+/* Old badge styles removed - now using trust badges section */
 
 .hero-title {
     margin-bottom: var(--spacing-xl);
@@ -818,9 +832,6 @@ section {
     }
     
     /* Layout adjustments */
-    .hero-stats {
-        gap: var(--spacing-lg);
-    }
     
     .video-grid {
         grid-template-columns: 1fr;
@@ -833,6 +844,12 @@ section {
     
     .mobile-toggle {
         display: flex;
+    }
+    
+    /* Trust Badges responsive */
+    .badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
     }
     
     /* Mobile Menu Overlay */
@@ -864,17 +881,13 @@ section {
         padding: 100px 0 var(--spacing-2xl);
     }
     
-    .hero-badges {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-        margin-bottom: var(--spacing-xl);
+    /* Trust badges mobile - keep 2 columns */
+    .badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
     }
     
-    .hero-stats {
-        flex-direction: column;
-        gap: var(--spacing-lg);
-        align-items: center;
-    }
+    /* Hero stats removed from hero section */
     
     .hero-cta {
         flex-direction: column;
@@ -926,12 +939,10 @@ section {
 }
 
 @media (max-width: 480px) {
-    .hero-stats {
+    /* Trust badges single column on very small screens */
+    .badges-grid {
+        grid-template-columns: 1fr;
         gap: var(--spacing-md);
-    }
-    
-    .stat-number {
-        font-size: 1.5rem;
     }
     
     .services-types {
