@@ -1151,11 +1151,8 @@ section {
 /* Section Background Colors */
 .hero {
     padding: 120px 0 var(--spacing-3xl);
-    background-image: url('hero-office-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background: #1e293b url('hero-office-background.jpg') center/cover no-repeat;
+    min-height: 500px;
     color: var(--white);
     position: relative;
 }
