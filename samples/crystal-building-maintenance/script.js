@@ -57,16 +57,16 @@ function handleResponsiveNav() {
 // Mobile Navigation
 function initializeMobileNav() {
     const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
+    const mobileNavMenu = document.getElementById('mobileNavMenu');
     
-    if (!mobileToggle || !navMenu) return;
+    if (!mobileToggle || !mobileNavMenu) return;
     
     mobileToggle.addEventListener('click', function() {
         this.classList.toggle('active');
-        navMenu.classList.toggle('active');
+        mobileNavMenu.classList.toggle('active');
         
         // Prevent body scroll when menu is open
-        if (navMenu.classList.contains('active')) {
+        if (mobileNavMenu.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
@@ -74,20 +74,20 @@ function initializeMobileNav() {
     });
     
     // Close menu when clicking nav links
-    const navLinks = navMenu.querySelectorAll('a');
+    const navLinks = mobileNavMenu.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             mobileToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+            mobileNavMenu.classList.remove('active');
             document.body.style.overflow = '';
         });
     });
     
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (!mobileToggle.contains(event.target) && !navMenu.contains(event.target)) {
+        if (!mobileToggle.contains(event.target) && !mobileNavMenu.contains(event.target)) {
             mobileToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+            mobileNavMenu.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
@@ -96,7 +96,7 @@ function initializeMobileNav() {
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             mobileToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+            mobileNavMenu.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
