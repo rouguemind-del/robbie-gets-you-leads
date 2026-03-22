@@ -1151,8 +1151,7 @@ section {
 /* Section Background Colors */
 .hero {
     padding: 120px 0 var(--spacing-3xl);
-    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(5, 150, 105, 0.75)), 
-                      url('https://rouguemind-del.github.io/robbie-gets-you-leads/samples/crystal-building-maintenance/hero-office-background.jpg');
+    background-image: url('hero-office-background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
