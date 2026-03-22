@@ -1297,12 +1297,51 @@ section {
     padding: var(--spacing-md) var(--spacing-xl);
 }
 
+/* Service Areas List */
+.service-areas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.service-areas-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-areas-list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-areas-list a {
+    color: var(--accent-green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: var(--spacing-xs) 0;
+    display: block;
+    border-left: 3px solid transparent;
+    padding-left: var(--spacing-sm);
+}
+
+.service-areas-list a:hover {
+    color: var(--dark-green);
+    border-left-color: var(--accent-green);
+    padding-left: var(--spacing-md);
+}
+
 @media (max-width: 768px) {
     .directory-grid {
         grid-template-columns: 1fr;
     }
     
     .areas-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-areas-list {
         grid-template-columns: 1fr;
     }
     
