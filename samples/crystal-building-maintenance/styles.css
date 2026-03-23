@@ -129,11 +129,13 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width: 100%;
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo {
@@ -154,6 +156,9 @@ a:hover {
     align-items: center;
     margin: 0;
     padding: 0;
+    flex: 1;
+    justify-content: center;
+    max-width: 600px;
 }
 
 /* Ensure nav-links are visible on desktop */
@@ -183,6 +188,8 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .phone-number {
