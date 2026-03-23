@@ -796,19 +796,35 @@ section {
         display: block;
     }
     
+    .nav-links {
+        display: none;
+    }
+    
     .nav-links.open {
         display: flex !important;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
         right: 0;
-        background: var(--white);
-        padding: var(--spacing-lg);
-        box-shadow: var(--shadow-lg);
-        gap: var(--spacing-md);
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        gap: 15px;
         z-index: 9999 !important;
-        border: 2px solid var(--accent-green);
+        border-top: 3px solid #059669;
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     
     /* Trust Badges responsive */
@@ -909,59 +925,52 @@ section {
 /* Floating Call Button */
 .floating-call-btn {
     position: fixed !important;
-    bottom: 30px !important;
-    right: 30px !important;
+    bottom: 20px !important;
+    right: 20px !important;
     z-index: 1000 !important;
-    background: linear-gradient(135deg, var(--accent-green), var(--dark-green));
-    color: var(--white);
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
     border: none;
     border-radius: 50px;
-    padding: 15px 25px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 700;
     text-decoration: none;
-    display: flex;
+    display: flex !important;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(5, 150, 105, 0.4);
     transition: all 0.3s ease;
     cursor: pointer;
-    animation: pulse 2s infinite;
+    animation: pulse-call 2s infinite;
     transform: none !important;
+    min-width: 120px;
+    justify-content: center;
 }
 
 .floating-call-btn:hover {
-    background: linear-gradient(135deg, var(--dark-green), var(--accent-green));
-    color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+    background: linear-gradient(135deg, #047857, #059669);
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 25px rgba(5, 150, 105, 0.6);
 }
 
 .floating-call-btn .phone-icon {
-    width: 20px;
-    height: 20px;
-    background: currentColor;
-    border-radius: 3px;
-    position: relative;
+    font-size: 1.1rem;
+    margin-right: 2px;
 }
 
-.floating-call-btn .phone-icon::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    font-size: 18px;
-}
-
-@keyframes pulse {
+@keyframes pulse-call {
     0% {
-        box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+        box-shadow: 0 4px 20px rgba(5, 150, 105, 0.4);
     }
     50% {
-        box-shadow: 0 4px 25px rgba(5, 150, 105, 0.5);
+        box-shadow: 0 4px 30px rgba(5, 150, 105, 0.7);
+        transform: scale(1.02);
     }
     100% {
-        box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+        box-shadow: 0 4px 20px rgba(5, 150, 105, 0.4);
+        transform: scale(1);
     }
 }
 
@@ -996,15 +1005,14 @@ section {
                 url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
-/* Mobile floating button adjustment */
+/* Mobile Styles */
 @media (max-width: 768px) {
     .floating-call-btn {
-        bottom: 20px;
-        right: 20px;
-        padding: 12px 20px;
-        font-size: 1rem;
-        position: fixed !important;
-        z-index: 1001 !important;
+        bottom: 15px !important;
+        right: 15px !important;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        min-width: 100px;
     }
     
     /* Mobile hero background fix - disable fixed attachment */
