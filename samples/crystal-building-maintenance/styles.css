@@ -422,35 +422,7 @@ section {
     font-weight: 600;
 }
 
-/* Areas Section */
-.areas {
-    background: var(--white);
-}
-
-.areas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-}
-
-.area-card {
-    background: var(--gray-50);
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--gray-200);
-    transition: var(--transition);
-}
-
-.area-card:hover {
-    background: var(--white);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-}
-
-.area-card h3 {
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-md);
-}
+/* Areas Section CSS removed - now handled by sitemap only */
 
 .area-card p {
     color: var(--gray-600);
@@ -1292,40 +1264,7 @@ section {
     padding: var(--spacing-md) var(--spacing-xl);
 }
 
-/* Service Areas List */
-.service-areas-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
-}
-
-.service-areas-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.service-areas-list li {
-    margin-bottom: var(--spacing-sm);
-}
-
-.service-areas-list a {
-    color: var(--accent-green);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: var(--spacing-xs) 0;
-    display: block;
-    border-left: 3px solid transparent;
-    padding-left: var(--spacing-sm);
-}
-
-.service-areas-list a:hover {
-    color: var(--dark-green);
-    border-left-color: var(--accent-green);
-    padding-left: var(--spacing-md);
-}
+/* Service Areas List CSS removed - now handled by sitemap only */
 
 /* Location Map for Local SEO */
 .location-map {
@@ -1367,10 +1306,6 @@ section {
     }
     
     .areas-columns {
-        grid-template-columns: 1fr;
-    }
-    
-    .service-areas-list {
         grid-template-columns: 1fr;
     }
     
