@@ -59,11 +59,18 @@ function initializeMobileNav() {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     
-    if (!hamburger || !navLinks) return;
+    console.log('Mobile Nav Init:', { hamburger, navLinks });
+    
+    if (!hamburger || !navLinks) {
+        console.error('Missing elements:', { hamburger: !!hamburger, navLinks: !!navLinks });
+        return;
+    }
     
     // Toggle menu on hamburger click
     hamburger.addEventListener('click', function() {
+        console.log('Hamburger clicked, toggling nav-links');
         navLinks.classList.toggle('open');
+        console.log('Nav links classes:', navLinks.className);
     });
     
     // Close menu when clicking nav links

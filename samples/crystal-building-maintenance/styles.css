@@ -825,7 +825,7 @@ section {
     }
     
     .nav-links.open {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         position: absolute;
         top: 70px;
@@ -835,7 +835,8 @@ section {
         padding: var(--spacing-lg);
         box-shadow: var(--shadow-lg);
         gap: var(--spacing-md);
-        z-index: 999;
+        z-index: 9999 !important;
+        border: 2px solid var(--accent-green);
     }
     
     /* Trust Badges responsive */
