@@ -274,8 +274,6 @@ a:hover {
     transform: scale(1.05);
 }
 
-/* Mobile toggle styles removed - using simple hamburger icon */
-
 /* Hero Section - Background image defined later in CSS */
 
 .hero-content {
@@ -408,6 +406,18 @@ section {
     margin: 0;
 }
 
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--spacing-md);
+}
+
+.service-features li {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-sm);
+}
+
 .services-types {
     display: flex;
     flex-wrap: wrap;
@@ -445,21 +455,93 @@ section {
     font-weight: 600;
 }
 
-/* Areas Section CSS removed - now handled by sitemap only */
+/* Local Info Section */
+.local-info {
+    background: var(--white);
+    padding: var(--spacing-3xl) 0;
+}
 
-.area-card p {
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.info-card {
+    background: var(--gray-50);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--accent-green);
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-card h3 {
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-md);
+}
+
+.info-card p {
     color: var(--gray-600);
+    margin: 0;
+}
+
+/* Quote Section */
+.quote-section {
+    background: var(--gray-50);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.quote-section h2 {
     margin-bottom: var(--spacing-lg);
 }
 
-.area-card a {
-    color: var(--primary-blue);
-    font-weight: 600;
-    text-decoration: none;
+.quote-section p {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.area-card a:hover {
-    color: var(--dark-blue);
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+}
+
+.contact-item h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-900);
+}
+
+.contact-phone {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    text-decoration: none;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-phone:hover {
+    color: var(--dark-green);
 }
 
 /* Video Section */
@@ -649,17 +731,6 @@ section {
     color: var(--gray-900);
 }
 
-.contact-phone {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-blue);
-    text-decoration: none;
-}
-
-.contact-phone:hover {
-    color: var(--dark-blue);
-}
-
 .contact-method p {
     color: var(--gray-600);
     margin: 0;
@@ -789,8 +860,32 @@ section {
     color: var(--gray-500);
 }
 
-/* Mobile & Tablet Responsive */
-@media (max-width: 1024px) {
+/* FIXED RESPONSIVE BREAKPOINTS - This is the key fix */
+/* Tablet (768px to 1024px) - Keep desktop layout */
+@media (max-width: 1024px) and (min-width: 769px) {
+    /* Logo size adjustment for tablet */
+    .logo {
+        height: 50px;
+        max-width: 280px;
+    }
+    
+    .navbar {
+        padding: var(--spacing-md) 0;
+    }
+    
+    /* Keep nav-contact visible on tablets */
+    .nav-contact {
+        display: flex !important;
+    }
+    
+    /* Trust badges stay 4-column on tablets */
+    .badges-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile & Small Tablet (768px and below) - This is where mobile styles should apply */
+@media (max-width: 768px) {
     /* Logo size adjustment for mobile */
     .logo {
         height: 40px;
@@ -801,13 +896,7 @@ section {
         padding: var(--spacing-md) 0;
     }
     
-    /* Layout adjustments */
-    
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Clean Mobile Navigation (Long Island Wall Pro style) */
+    /* Mobile Navigation */
     .nav-links {
         display: none;
     }
@@ -820,16 +909,6 @@ section {
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
-    }
-    
-    .hamburger {
-        display: block !important;
-        position: relative;
-        z-index: 1001;
-    }
-    
-    .nav-links {
-        display: none;
     }
     
     .nav-links.open {
@@ -859,26 +938,16 @@ section {
         }
     }
     
-    /* Trust Badges responsive */
+    /* Trust Badges mobile - 2x2 grid */
     .badges-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
-}
-
-@media (max-width: 768px) {
+    
     /* Mobile layout adjustments */
     .hero {
         padding: 100px 0 var(--spacing-2xl);
     }
-    
-    /* Trust badges mobile - keep 2x2 grid */
-    .badges-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
-    }
-    
-    /* Hero stats removed from hero section */
     
     .hero-cta {
         flex-direction: column;
@@ -886,9 +955,9 @@ section {
     }
     
     .services-grid,
-    .areas-grid,
+    .info-grid,
     .testimonials-grid,
-    .showcase-grid {
+    .contact-info {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
@@ -908,12 +977,12 @@ section {
         gap: var(--spacing-md);
     }
     
-    .video-container {
-        min-height: 250px;
+    .video-grid {
+        grid-template-columns: 1fr;
     }
     
-    .showcase-item img {
-        height: 200px;
+    .video-container {
+        min-height: 250px;
     }
     
     .container {
@@ -1007,6 +1076,11 @@ section {
 }
 
 /* Area-Specific Hero Images - All Cleaning Related */
+.hero.atlantis {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+}
+
 .hero.west-palm-beach {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(5, 150, 105, 0.7)), 
                 url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
@@ -1037,7 +1111,7 @@ section {
                 url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
 }
 
-/* Mobile Styles */
+/* Mobile Styles for floating button */
 @media (max-width: 768px) {
     .floating-call-btn {
         bottom: 15px !important;
@@ -1049,6 +1123,7 @@ section {
     
     /* Mobile hero background fix - disable fixed attachment */
     .hero,
+    .hero.atlantis,
     .hero.west-palm-beach,
     .hero.boca-raton,
     .hero.delray-beach,
@@ -1072,19 +1147,10 @@ section {
     backdrop-filter: blur(10px);
 }
 
-/* All stat-related CSS removed */
-
 .service-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
     border-left: 4px solid var(--accent-green);
-}
-
-.area-card:hover {
-    background: var(--white);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-    border-left: 4px solid var(--accent-orange);
 }
 
 .testimonial {
@@ -1155,206 +1221,6 @@ section {
     color: var(--dark-green);
 }
 
-/* View All Buttons */
-.view-all-container {
-    text-align: center;
-    margin-top: var(--spacing-xl);
-}
-
-.btn-view-all {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--accent-green), var(--dark-green));
-    color: var(--white);
-    padding: var(--spacing-md) var(--spacing-xl);
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
-}
-
-.btn-view-all:hover {
-    background: linear-gradient(135deg, var(--dark-green), var(--accent-green));
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
-    color: var(--white);
-}
-
-/* Service Links */
-.service-link {
-    display: inline-block;
-    margin-top: var(--spacing-sm);
-    color: var(--accent-green);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.service-link:hover {
-    color: var(--dark-green);
-}
-
-/* Sitemap Styles */
-.services-directory, .areas-directory {
-    padding: var(--spacing-3xl) 0;
-    background: var(--gray-50);
-}
-
-.directory-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
-}
-
-.directory-card {
-    background: var(--white);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border-left: 4px solid var(--accent-green);
-}
-
-.directory-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.directory-card h3 a {
-    color: var(--navy);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.directory-card h3 a:hover {
-    color: var(--accent-green);
-}
-
-.areas-columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
-}
-
-.areas-column h3 {
-    color: var(--navy);
-    margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--accent-green);
-}
-
-.area-list {
-    list-style: none;
-    padding: 0;
-}
-
-.area-list li {
-    margin-bottom: var(--spacing-sm);
-}
-
-.area-list a {
-    color: var(--gray-700);
-    text-decoration: none;
-    padding: var(--spacing-xs) 0;
-    display: block;
-    transition: all 0.3s ease;
-    border-left: 3px solid transparent;
-    padding-left: var(--spacing-sm);
-}
-
-.area-list a:hover {
-    color: var(--accent-green);
-    border-left-color: var(--accent-green);
-    padding-left: var(--spacing-md);
-}
-
-.service-area-summary {
-    background: var(--white);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    margin-top: var(--spacing-xl);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--accent-green);
-}
-
-.quick-contact {
-    padding: var(--spacing-3xl) 0;
-    background: linear-gradient(135deg, var(--navy), var(--accent-green));
-    color: var(--white);
-    text-align: center;
-}
-
-.quick-contact h2, .quick-contact p {
-    color: var(--white);
-}
-
-.contact-cta {
-    margin-top: var(--spacing-xl);
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn-large {
-    font-size: 1.2rem;
-    padding: var(--spacing-md) var(--spacing-xl);
-}
-
-/* Service Areas List CSS removed - now handled by sitemap only */
-
-/* Location Map for Local SEO */
-.location-map {
-    margin-top: var(--spacing-3xl);
-    text-align: center;
-}
-
-.location-map h3 {
-    color: var(--navy);
-    margin-bottom: var(--spacing-lg);
-    font-size: 1.5rem;
-}
-
-.map-container {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    margin: 0 auto var(--spacing-lg);
-    max-width: 800px;
-}
-
-.map-container iframe {
-    display: block;
-    width: 100%;
-    height: 350px;
-}
-
-.map-description {
-    color: var(--gray-600);
-    font-size: 0.95rem;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .directory-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .areas-columns {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-cta {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 /* Section Background Colors */
 .hero {
     padding: 120px 0 var(--spacing-3xl);
@@ -1382,95 +1248,6 @@ section {
 
 .services {
     background: linear-gradient(135deg, var(--gray-50), rgba(16, 185, 129, 0.05));
-}
-
-.work-showcase {
-    background: var(--white);
-    padding: var(--spacing-3xl) 0;
-}
-
-.showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-2xl);
-}
-
-.showcase-item {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    border: 1px solid var(--gray-200);
-}
-
-.showcase-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.showcase-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.showcase-item:hover img {
-    transform: scale(1.05);
-}
-
-.showcase-content {
-    padding: var(--spacing-lg);
-}
-
-.showcase-content h3 {
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.25rem;
-}
-
-.showcase-content p {
-    color: var(--gray-600);
-    line-height: 1.6;
-    margin: 0;
-}
-
-.showcase-item:nth-child(1) {
-    border-top: 4px solid var(--accent-green);
-}
-
-.showcase-item:nth-child(2) {
-    border-top: 4px solid var(--accent-orange);
-}
-
-.showcase-item:nth-child(3) {
-    border-top: 4px solid var(--accent-teal);
-}
-
-.showcase-item:nth-child(4) {
-    border-top: 4px solid var(--primary-blue);
-}
-
-.video-section {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), var(--gray-50));
-    text-align: center;
-}
-
-.faq {
-    background: linear-gradient(135deg, var(--gray-50), rgba(13, 148, 136, 0.05));
-}
-
-/* Force hamburger visibility on all mobile devices */
-@media (max-width: 1200px) {
-    .hamburger {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        background: #059669 !important;
-        color: white !important;
-    }
 }
 
 /* Utility Classes */
