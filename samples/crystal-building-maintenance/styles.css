@@ -101,11 +101,21 @@ a:hover {
     color: var(--dark-blue);
 }
 
-/* Container */
+/* Container - but allow sitemap/quote overrides */
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+}
+
+/* OVERRIDE: Force sitemap and quote containers to be full width */
+.services-directory,
+.areas-directory,
+.quote-section {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
 }
 
 /* Full width for specific sections */
@@ -680,10 +690,10 @@ section {
 
 .contact-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
     gap: var(--spacing-xl);
-    width: 100%;
-    max-width: none;
+    width: 100% !important;
+    max-width: none !important;
 }
 
 .contact-item {
@@ -1466,14 +1476,15 @@ section {
     }
 }
 
-/* Remove ALL width constraints for sitemap AND quote sections */
+/* FORCE full width - override everything */
 .services-directory .container,
 .areas-directory .container,
 .quote-section .container,
 .contact .container {
-    max-width: none;
-    width: calc(100vw - 4rem);
-    margin: 0 2rem;
+    max-width: none !important;
+    width: 95vw !important;
+    margin: 0 auto !important;
+    padding: 0 2.5vw !important;
 }
 
 /* Force sitemap AND quote sections to use full viewport width */
