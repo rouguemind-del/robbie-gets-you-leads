@@ -52,6 +52,20 @@
     --transition: 0.2s ease-in-out;
 }
 
+/* Header Banner */
+.header-banner {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.header-banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
