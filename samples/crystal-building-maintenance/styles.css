@@ -137,8 +137,10 @@ a:hover {
 }
 
 .logo {
-    height: 90px;
+    height: 60px;
     width: auto;
+    max-width: 300px;
+    object-fit: contain;
 }
 
 .brand-name {
@@ -780,7 +782,8 @@ section {
 @media (max-width: 1024px) {
     /* Logo size adjustment for mobile */
     .logo {
-        height: 50px;
+        height: 40px;
+        max-width: 250px;
     }
     
     .navbar {
