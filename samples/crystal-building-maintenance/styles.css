@@ -217,70 +217,41 @@ a:hover {
     color: var(--white);
 }
 
-/* Desktop Navigation */
-.desktop-nav {
+/* Clean Navigation (matches Long Island Wall Pro style) */
+.nav-links {
     display: flex;
     align-items: center;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xl);
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.desktop-nav a {
+.nav-links a {
     color: var(--gray-700);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
     padding: var(--spacing-sm) 0;
     transition: color 0.3s ease;
 }
 
-.desktop-nav a:hover {
+.nav-links a:hover {
     color: var(--accent-green);
 }
 
-/* Mobile Navigation - Hidden on Desktop */
-.mobile-nav-menu {
+/* Simple Hamburger Menu */
+.hamburger {
     display: none;
-}
-
-/* Mobile Toggle - Hamburger Menu */
-.mobile-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 40px;
-    height: 40px;
-    background: transparent;
+    background: none;
     border: none;
+    font-size: 1.5rem;
     cursor: pointer;
     padding: 8px;
-    z-index: 1001;
-    outline: none;
-    position: relative;
+    color: var(--gray-700);
 }
 
-.mobile-toggle span {
-    width: 24px;
-    height: 3px;
-    background-color: var(--gray-900);
-    border-radius: 1px;
-    transition: all 0.3s ease-in-out;
-    display: block;
-    transform-origin: center;
-}
-
-.mobile-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
-
-.mobile-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
+/* Mobile toggle styles removed - using simple hamburger icon */
 
 /* Hero Section - Background image defined later in CSS */
 
@@ -840,115 +811,37 @@ section {
         grid-template-columns: 1fr;
     }
     
-    /* Mobile Navigation */
+    /* Clean Mobile Navigation (Long Island Wall Pro style) */
+    .nav-links {
+        display: none;
+    }
+    
     .nav-contact {
         display: none;
     }
     
-    .mobile-toggle {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links.open {
         display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow-lg);
+        gap: var(--spacing-md);
+        z-index: 999;
     }
     
     /* Trust Badges responsive */
     .badges-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
-    }
-    
-    /* Hide desktop nav on mobile */
-    .desktop-nav {
-        display: none;
-    }
-    
-    /* Mobile Navigation Menu */
-    .mobile-nav-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100vw;
-        height: calc(100vh - 70px);
-        background: var(--navy);
-        color: var(--white);
-        padding: var(--spacing-lg);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 999;
-        overflow-y: auto;
-        display: block;
-    }
-    
-    .mobile-nav-menu.active {
-        transform: translateX(0);
-    }
-    
-    .mobile-nav-section {
-        margin-bottom: var(--spacing-xl);
-        padding-bottom: var(--spacing-lg);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .mobile-nav-section:last-child {
-        border-bottom: none;
-    }
-    
-    .mobile-nav-section h4 {
-        color: var(--white);
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: var(--spacing-md);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    
-    .mobile-nav-section ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .mobile-nav-section li {
-        margin-bottom: var(--spacing-xs);
-    }
-    
-    .mobile-nav-section a {
-        color: rgba(255, 255, 255, 0.9);
-        text-decoration: none;
-        display: block;
-        padding: var(--spacing-xs) 0;
-        font-size: 0.95rem;
-        transition: color 0.3s ease;
-    }
-    
-    .mobile-nav-section a:hover {
-        color: var(--accent-green);
-    }
-    
-    .mobile-service-areas {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0 var(--spacing-md);
-    }
-    
-    .mobile-contact p {
-        margin: var(--spacing-xs) 0;
-        font-size: 0.95rem;
-    }
-    
-    .mobile-contact a {
-        font-weight: 600;
-        color: var(--accent-green);
-    }
-    
-    .mobile-sitemap-link {
-        display: inline-block;
-        margin-top: var(--spacing-md);
-        padding: var(--spacing-sm) var(--spacing-md);
-        background: var(--accent-green);
-        color: var(--white) !important;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.9rem;
     }
 }
 

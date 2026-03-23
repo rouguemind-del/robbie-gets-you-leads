@@ -54,50 +54,29 @@ function handleResponsiveNav() {
     window.addEventListener('resize', updateNavVisibility);
 }
 
-// Mobile Navigation
+// Clean Mobile Navigation (Long Island Wall Pro style)
 function initializeMobileNav() {
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileNavMenu = document.getElementById('mobileNavMenu');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
     
-    if (!mobileToggle || !mobileNavMenu) return;
+    if (!hamburger || !navLinks) return;
     
-    mobileToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mobileNavMenu.classList.toggle('active');
-        
-        // Prevent body scroll when menu is open
-        if (mobileNavMenu.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
     });
     
     // Close menu when clicking nav links
-    const navLinks = mobileNavMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
+    navLinks.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() {
-            mobileToggle.classList.remove('active');
-            mobileNavMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            navLinks.classList.remove('open');
         });
     });
     
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (!mobileToggle.contains(event.target) && !mobileNavMenu.contains(event.target)) {
-            mobileToggle.classList.remove('active');
-            mobileNavMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            mobileToggle.classList.remove('active');
-            mobileNavMenu.classList.remove('active');
-            document.body.style.overflow = '';
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove('open');
         }
     });
 }
