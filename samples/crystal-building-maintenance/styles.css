@@ -52,21 +52,6 @@
     --transition: 0.2s ease-in-out;
 }
 
-/* Header Banner */
-.header-banner {
-    width: 100%;
-    display: block;
-    position: relative;
-    z-index: 999;
-}
-
-.header-banner-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 100%;
-}
-
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -127,7 +112,7 @@ a:hover {
 .header {
     background: linear-gradient(135deg, var(--white), rgba(5, 150, 105, 0.02));
     box-shadow: var(--shadow-md);
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -836,7 +821,7 @@ section {
 @media (max-width: 768px) {
     /* Mobile layout adjustments */
     .hero {
-        padding: var(--spacing-2xl) 0;
+        padding: 100px 0 var(--spacing-2xl);
     }
     
     /* Trust badges mobile - keep 2x2 grid */
@@ -1332,7 +1317,7 @@ section {
 
 /* Section Background Colors */
 .hero {
-    padding: var(--spacing-3xl) 0;
+    padding: 120px 0 var(--spacing-3xl);
     background: #1e293b url('hero-office-background.jpg') center/cover no-repeat;
     min-height: 500px;
     color: var(--white);
