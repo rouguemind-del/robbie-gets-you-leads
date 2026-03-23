@@ -103,9 +103,18 @@ a:hover {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+    width: 100%;
+}
+
+/* Wider container for large screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 var(--spacing-xl);
+    }
 }
 
 /* Header */
@@ -181,6 +190,18 @@ a:hover {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
+    flex-shrink: 0;
+}
+
+/* Better navigation spacing for wide screens */
+@media (min-width: 1400px) {
+    .nav-links {
+        gap: var(--spacing-2xl);
+    }
+    
+    .nav-contact {
+        gap: var(--spacing-xl);
+    }
 }
 
 .phone-number {
@@ -514,8 +535,24 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-xl);
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+/* Better layout for wide screens */
+@media (min-width: 1400px) {
+    .contact-info {
+        max-width: 1200px;
+        gap: var(--spacing-2xl);
+    }
+    
+    .services-grid {
+        gap: var(--spacing-2xl);
+    }
+    
+    .info-grid {
+        gap: var(--spacing-2xl);
+    }
 }
 
 .contact-item {
