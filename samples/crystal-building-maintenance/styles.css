@@ -108,11 +108,12 @@ a:hover {
     padding: 0 var(--spacing-lg);
 }
 
-/* Wider containers for specific sections */
-.quote-section .container,
+/* Full width for specific sections */
 .local-info .container,
 .services .container {
-    max-width: 1300px;
+    max-width: none;
+    width: calc(100vw - 4rem);
+    margin: 0 2rem;
 }
 
 /* Header */
@@ -675,6 +676,23 @@ section {
     grid-template-columns: 1fr 1.5fr;
     gap: var(--spacing-3xl);
     align-items: start;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-xl);
+    width: 100%;
+    max-width: none;
+}
+
+.contact-item {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+    text-align: center;
 }
 
 .contact-info h2 {
@@ -1448,17 +1466,21 @@ section {
     }
 }
 
-/* Remove ALL width constraints for sitemap */
+/* Remove ALL width constraints for sitemap AND quote sections */
 .services-directory .container,
-.areas-directory .container {
+.areas-directory .container,
+.quote-section .container,
+.contact .container {
     max-width: none;
     width: calc(100vw - 4rem);
     margin: 0 2rem;
 }
 
-/* Force sitemap sections to use full viewport width */
+/* Force sitemap AND quote sections to use full viewport width */
 .services-directory,
-.areas-directory {
+.areas-directory,
+.quote-section,
+.contact {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
 }
