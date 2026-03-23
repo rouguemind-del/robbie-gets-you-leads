@@ -103,9 +103,16 @@ a:hover {
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
+}
+
+/* Wider containers for specific sections */
+.quote-section .container,
+.local-info .container,
+.services .container {
+    max-width: 1300px;
 }
 
 /* Header */
