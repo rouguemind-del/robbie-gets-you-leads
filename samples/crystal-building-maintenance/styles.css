@@ -1326,6 +1326,40 @@ section {
     padding-left: var(--spacing-md);
 }
 
+/* Location Map for Local SEO */
+.location-map {
+    margin-top: var(--spacing-3xl);
+    text-align: center;
+}
+
+.location-map h3 {
+    color: var(--navy);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.5rem;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto var(--spacing-lg);
+    max-width: 800px;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.map-description {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     .directory-grid {
         grid-template-columns: 1fr;
