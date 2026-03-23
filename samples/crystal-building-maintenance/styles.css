@@ -103,18 +103,10 @@ a:hover {
 
 /* Container */
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
     width: 100%;
-}
-
-/* Wider container for large screens */
-@media (min-width: 1600px) {
-    .container {
-        max-width: 1600px;
-        padding: 0 var(--spacing-xl);
-    }
 }
 
 /* Header */
@@ -193,16 +185,7 @@ a:hover {
     flex-shrink: 0;
 }
 
-/* Better navigation spacing for wide screens */
-@media (min-width: 1400px) {
-    .nav-links {
-        gap: var(--spacing-2xl);
-    }
-    
-    .nav-contact {
-        gap: var(--spacing-xl);
-    }
-}
+/* Navigation spacing removed for better layout */
 
 .phone-number {
     font-weight: 600;
@@ -535,24 +518,8 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-xl);
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
-}
-
-/* Better layout for wide screens */
-@media (min-width: 1400px) {
-    .contact-info {
-        max-width: 1200px;
-        gap: var(--spacing-2xl);
-    }
-    
-    .services-grid {
-        gap: var(--spacing-2xl);
-    }
-    
-    .info-grid {
-        gap: var(--spacing-2xl);
-    }
 }
 
 .contact-item {
