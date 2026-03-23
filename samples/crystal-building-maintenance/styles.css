@@ -255,12 +255,23 @@ a:hover {
 /* Simple Hamburger Menu */
 .hamburger {
     display: none;
-    background: none;
+    background: #059669;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
-    padding: 8px;
-    color: var(--gray-700);
+    padding: 12px;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    min-width: 45px;
+    min-height: 45px;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger:hover {
+    background: #047857;
+    transform: scale(1.05);
 }
 
 /* Mobile toggle styles removed - using simple hamburger icon */
@@ -802,11 +813,19 @@ section {
     }
     
     .nav-contact {
-        display: none;
+        display: none !important;
     }
     
     .hamburger {
-        display: block;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .hamburger {
+        display: block !important;
+        position: relative;
+        z-index: 1001;
     }
     
     .nav-links {
@@ -1441,6 +1460,17 @@ section {
 
 .faq {
     background: linear-gradient(135deg, var(--gray-50), rgba(13, 148, 136, 0.05));
+}
+
+/* Force hamburger visibility on all mobile devices */
+@media (max-width: 1200px) {
+    .hamburger {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background: #059669 !important;
+        color: white !important;
+    }
 }
 
 /* Utility Classes */
