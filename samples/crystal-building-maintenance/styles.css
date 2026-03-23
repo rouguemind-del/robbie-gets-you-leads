@@ -1448,17 +1448,19 @@ section {
     }
 }
 
-/* Ensure sitemap containers use full width */
+/* Remove ALL width constraints for sitemap */
 .services-directory .container,
 .areas-directory .container {
-    max-width: 1300px;
-    width: 100%;
+    max-width: none;
+    width: calc(100vw - 4rem);
+    margin: 0 2rem;
 }
 
-/* Force sitemap sections to use full width */
+/* Force sitemap sections to use full viewport width */
 .services-directory,
 .areas-directory {
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
 
 /* Ensure directory grid uses full container width */
