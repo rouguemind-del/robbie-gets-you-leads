@@ -29,60 +29,31 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo-section">
-                <div class="logo">
-                    <img src="logo.jpg" alt="Crystal Building Maintenance Logo" class="company-logo">
-                    <div class="company-info">
-                        <h1>Crystal Building Maintenance</h1>
-                        <p class="tagline">We Don't Cut Corners — We Clean Them.</p>
-                        <p class="since">Serving Palm Beach County Since 1979</p>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="crystal-building-maintenance-logo.jpg" alt="Crystal Building Maintenance" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-fallback" style="display:none;">
+                        <span class="brand-name">Crystal Building Maintenance</span>
                     </div>
                 </div>
-            </div>
-            <div class="contact-header">
-                <div class="social-links">
-                    <a href="https://www.facebook.com/crystalbuildingmaintenance" target="_blank" aria-label="Facebook">📘</a>
-                    <a href="https://www.google.com/search?q=crystal+building+maintenance+reviews" target="_blank" aria-label="Google Reviews">⭐</a>
-                    <a href="https://www.youtube.com/channel/crystalbuildingmaintenance" target="_blank" aria-label="YouTube">📺</a>
-                </div>
-                <div class="contact-info">
-                    <a href="tel:5616845652" class="phone">(561) 684-5652</a>
-                    <a href="index.html#contact" class="cta-button">Get Free Quote</a>
-                </div>
-            </div>
-        </div>
-        <nav class="nav">
-            <div class="container">
-                <ul class="main-nav">
+                
+                <ul class="nav-links" id="navLinks">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown">
-                        <a href="#services" class="active">Services ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="commercial-cleaning.html">Commercial Cleaning</a></li>
-                            <li><a href="medical-facility-cleaning.html" class="active">Medical Facilities</a></li>
-                            <li><a href="condo-hoa-cleaning.html">Condo/HOA Porter</a></li>
-                            <li><a href="office-cleaning.html">Office Buildings</a></li>
-                            <li><a href="retail-cleaning.html">Retail Stores</a></li>
-                            <li><a href="school-cleaning.html">Schools</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#areas">Service Areas ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="west-palm-beach-cleaning.html">West Palm Beach</a></li>
-                            <li><a href="boca-raton-cleaning.html">Boca Raton</a></li>
-                            <li><a href="delray-beach-cleaning.html">Delray Beach</a></li>
-                            <li><a href="boynton-beach-cleaning.html">Boynton Beach</a></li>
-                            <li><a href="jupiter-cleaning.html">Jupiter</a></li>
-                            <li><a href="wellington-cleaning.html">Wellington</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="sitemap.html">Areas</a></li>
                     <li><a href="index.html#testimonials">Reviews</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+                
+                <div class="nav-contact">
+                    <a href="tel:+15616845652" class="phone-number">(561) 684-5652</a>
+                    <a href="index.html#contact" class="btn-primary">Get Free Quote</a>
+                </div>
+                
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
             </div>
         </nav>
     </header>
