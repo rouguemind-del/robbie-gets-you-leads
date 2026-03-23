@@ -143,8 +143,18 @@ a:hover {
 
 .brand-name {
     font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--gray-900);
+    font-size: 1.4rem;
+    color: #059669;
+    text-decoration: none;
+    line-height: 1.2;
+    display: block;
+}
+
+.brand-name span {
+    display: block;
+    font-size: 1rem;
+    color: var(--gray-700);
+    font-weight: 500;
 }
 
 .nav-menu {
