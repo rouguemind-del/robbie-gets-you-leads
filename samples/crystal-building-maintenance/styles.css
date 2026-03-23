@@ -1354,12 +1354,7 @@ section {
     color: var(--accent-green);
 }
 
-.areas-columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
-}
+/* This rule is now redundant since we're overriding it below */
 
 .areas-column h3 {
     color: var(--navy);
@@ -1426,6 +1421,18 @@ section {
     padding: var(--spacing-md) var(--spacing-xl);
 }
 
+/* Desktop first - ensure full width usage */
+@media (min-width: 769px) {
+    .directory-grid {
+        grid-template-columns: repeat(3, 1fr);
+        min-height: auto;
+    }
+    
+    .areas-columns {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .directory-grid {
         grid-template-columns: 1fr;
@@ -1445,6 +1452,31 @@ section {
 .services-directory .container,
 .areas-directory .container {
     max-width: 1300px;
+    width: 100%;
+}
+
+/* Force sitemap sections to use full width */
+.services-directory,
+.areas-directory {
+    width: 100%;
+}
+
+/* Ensure directory grid uses full container width */
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    width: 100%;
+}
+
+/* Ensure areas columns use full width */
+.areas-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+    width: 100%;
 }
 
 /* Utility Classes */
