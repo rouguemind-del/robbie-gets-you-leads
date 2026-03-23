@@ -218,41 +218,25 @@ a:hover {
 }
 
 /* Mobile Toggle - Hamburger Menu */
-.mobile-toggle {
+.hamburger {
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 40px;
-    height: 40px;
-    background: transparent;
+    background: #059669;
     border: none;
+    font-size: 1.8rem;
     cursor: pointer;
-    padding: 8px;
-    z-index: 1001;
-    outline: none;
+    padding: 12px;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    min-width: 45px;
+    min-height: 45px;
     position: relative;
+    z-index: 1001;
 }
 
-.mobile-toggle span {
-    width: 24px;
-    height: 3px;
-    background-color: var(--gray-900);
-    border-radius: 1px;
-    transition: all 0.3s ease-in-out;
-    display: block;
-    transform-origin: center;
-}
-
-.mobile-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
-
-.mobile-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+.hamburger:hover {
+    background: #047857;
+    transform: scale(1.05);
 }
 
 /* Hero Section - Background image defined later in CSS */
@@ -842,8 +826,39 @@ section {
         display: none;
     }
     
-    .mobile-toggle {
-        display: flex;
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.open {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        gap: 15px;
+        z-index: 9999;
+        border-top: 3px solid #059669;
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     
     /* Trust Badges responsive */

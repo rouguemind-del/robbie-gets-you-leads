@@ -34,16 +34,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Responsive Navigation Handler
 function handleResponsiveNav() {
-    const mobileToggle = document.getElementById('mobileToggle');
+    const hamburger = document.getElementById('hamburger');
     const navContact = document.querySelector('.nav-contact');
+    const navLinks = document.getElementById('navLinks');
     
     function updateNavVisibility() {
-        if (mobileToggle && navContact) {
-            const isMobile = window.innerWidth <= 1024;
-            
-            // Toggle visibility based on screen size
-            mobileToggle.style.display = isMobile ? 'flex' : 'none';
+        const isMobile = window.innerWidth <= 768;
+        
+        if (hamburger) {
+            hamburger.style.display = isMobile ? 'block' : 'none';
+        }
+        
+        if (navContact) {
             navContact.style.display = isMobile ? 'none' : 'flex';
+        }
+        
+        if (navLinks) {
+            navLinks.style.display = isMobile ? 'none' : 'flex';
+            navLinks.classList.remove('open'); // Close mobile menu on resize
         }
     }
     
