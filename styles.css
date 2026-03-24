@@ -1618,3 +1618,70 @@ section {
     text-align: center;
     font-size: 1.5rem;
 }
+
+
+/* Long Island Wall Pro Style Service Areas */
+.areas-grid { 
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 60px !important; 
+    align-items: start !important; 
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.areas-list { 
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 16px !important; 
+}
+
+.area-tag { 
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 8px !important; 
+    background: white !important; 
+    padding: 16px 20px !important; 
+    border-radius: 8px !important; 
+    font-weight: 500 !important; 
+    color: #059669 !important; 
+    border: 1px solid #e5e7eb !important; 
+    transition: all 0.3s ease !important; 
+    text-decoration: none !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+.area-tag:hover { 
+    border-color: #047857 !important; 
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15) !important; 
+    color: #047857 !important;
+    transform: translateY(-2px) !important;
+}
+
+.map-container { 
+    border-radius: 12px !important; 
+    overflow: hidden !important; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important; 
+    border: 1px solid #e5e7eb !important;
+}
+
+.map-container iframe { 
+    width: 100% !important; 
+    height: 400px !important; 
+    border: 0 !important; 
+}
+
+@media (max-width: 768px) {
+    .areas-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .areas-list {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .map-container iframe {
+        height: 300px !important;
+    }
+}
