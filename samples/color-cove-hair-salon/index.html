@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Salon in Fort Lauderdale, FL | Color Cove Hair Salon - Color Specialists</title>
+    <meta name="description" content="Color Cove Hair Salon offers cuts, color, balayage & styling in Fort Lauderdale, FL. Premier color specialists. Call (954) 555-0201 for appointment!">
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Color Cove Hair Salon",
+      "description": "Premier hair salon specializing in color, cuts, balayage and styling in Fort Lauderdale, FL",
+      "url": "https://colorcovesalon.com",
+      "telephone": "+1-954-555-0201",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "654 Beauty Boulevard",
+        "addressLocality": "Fort Lauderdale",
+        "addressRegion": "FL",
+        "postalCode": "33301",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 26.1224,
+        "longitude": -80.1373
+      },
+      "openingHours": "Tu-Sa 09:00-19:00",
+      "priceRange": "$$$",
+      "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200",
+      "sameAs": [
+        "https://instagram.com/colorcovesalon",
+        "https://facebook.com/colorcovesalon"
+      ]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --blush-pink: #F4E4DC;
+            --rose-gold: #B76E79;
+            --cream: #FEFCF8;
+            --charcoal: #2D2926;
+            --light-rose: #E8C4CD;
+            --gold-accent: #D4AF37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--cream);
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(254, 252, 248, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--rose-gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--rose-gold);
+        }
+
+        .cta-btn {
+            background: var(--rose-gold);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: #A05668;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(244, 228, 220, 0.8), rgba(183, 110, 121, 0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: var(--rose-gold);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: var(--cream);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--rose-gold);
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(183, 110, 121, 0.2);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: var(--blush-pink);
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--charcoal);
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--rose-gold), var(--gold-accent));
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(183, 110, 121, 0.25);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--rose-gold);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-price {
+            color: var(--rose-gold);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 0;
+            background: var(--cream);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .before-after {
+            background: linear-gradient(45deg, var(--light-rose), var(--rose-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .color-transformation {
+            background: linear-gradient(135deg, #8B5A2B, #D4AF37, #B76E79);
+        }
+
+        .highlight-showcase {
+            background: linear-gradient(135deg, #C9A96E, #B76E79, #F4E4DC);
+        }
+
+        .bridal-elegance {
+            background: linear-gradient(135deg, #F4E4DC, #E8C4CD, #D4AF37);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: linear-gradient(rgba(244, 228, 220, 0.9), rgba(244, 228, 220, 0.9)), url('https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=800');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--rose-gold);
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        .contact-item h4 {
+            color: var(--rose-gold);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .contact-item a {
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--rose-gold);
+        }
+
+        .booking-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(183, 110, 121, 0.2);
+            text-align: center;
+        }
+
+        .booking-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .special-offer {
+            background: var(--light-rose);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--rose-gold);
+        }
+
+        .special-offer h4 {
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .special-offer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+
+        .footer h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--rose-gold);
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: var(--light-rose);
+            text-decoration: none;
+        }
+
+        .footer-credit {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #4A4A4A;
+            font-size: 0.9rem;
+            color: #CCCCCC;
+        }
+
+        .footer-credit a {
+            color: var(--gold-accent);
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">The Color Cove</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="cta-btn">Book Appointment</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Where Color Comes to Life</h1>
+            <p class="hero-subtitle">Fort Lauderdale's premier color specialists, creating stunning transformations in an atmosphere of luxury and elegance.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-btn">Book Your Appointment</a>
+                <a href="#services" class="cta-btn cta-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Your Hair Transformation Awaits</h2>
+                    <p>Welcome to The Color Cove, where artistry meets expertise. As <span class="highlight">Fort Lauderdale's premier color specialists</span>, we believe that beautiful hair is the foundation of confidence.</p>
+                    <p>Our master stylists combine cutting-edge color techniques with personalized service, creating looks that are uniquely you. From subtle highlights to dramatic transformations, we bring your vision to life in our luxurious salon sanctuary.</p>
+                    <p>Experience the difference that passion, precision, and premium products can make. Your hair deserves nothing less than perfection.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800" alt="Hair styling at The Color Cove">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Signature Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800" alt="Woman with styled hair" loading="lazy">
+                    <div class="service-icon">✂️</div>
+                    <h3>Precision Cuts</h3>
+                    <p>Expert cuts tailored to your face shape and lifestyle, creating the perfect foundation for your color journey.</p>
+                    <div class="service-price">Starting at $85</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Color & Highlights</h3>
+                    <p>From natural sun-kissed highlights to bold color transformations, our color artistry brings your vision to life.</p>
+                    <div class="service-price">Starting at $150</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Balayage & Ombré</h3>
+                    <p>Hand-painted color techniques for seamless, natural-looking dimension that grows out beautifully.</p>
+                    <div class="service-price">Starting at $200</div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=800" alt="Salon products" loading="lazy">
+                    <div class="service-icon">💎</div>
+                    <h3>Keratin Treatments</h3>
+                    <p>Smooth, silky hair that lasts for months. Reduce frizz and cut your styling time in half.</p>
+                    <div class="service-price">Starting at $300</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">👑</div>
+                    <h3>Hair Extensions</h3>
+                    <p>Add length, volume, or highlights instantly with our premium extension services and expert application.</p>
+                    <div class="service-price">Starting at $400</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">👰</div>
+                    <h3>Bridal Styling</h3>
+                    <p>Your perfect day deserves perfect hair. Complete bridal packages including trial runs and wedding day styling.</p>
+                    <div class="service-price">Packages from $250</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Before & After Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="before-after color-transformation">
+                        <div>
+                            <h4>Color Transformation</h4>
+                            <p>Brunette to Blonde Balayage</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="before-after highlight-showcase">
+                        <div>
+                            <h4>Highlight Perfection</h4>
+                            <p>Natural Sun-Kissed Dimension</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="before-after bridal-elegance">
+                        <div>
+                            <h4>Bridal Elegance</h4>
+                            <p>Romantic Updo & Extensions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="before-after" style="background: linear-gradient(135deg, #B76E79, #F4E4DC, #D4AF37);">
+                        <div>
+                            <h4>Ombré Magic</h4>
+                            <p>Seamless Color Blend</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Book Your Color Consultation</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Visit Our Salon</h3>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:9545550201">(954) 555-0201</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Downtown Fort Lauderdale, FL<br>Convenient parking available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">⏰</span>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Tuesday - Friday: 9:00am - 7:00pm<br>
+                               Saturday: 9:00am - 5:00pm<br>
+                               Sunday & Monday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💳</span>
+                        <div>
+                            <h4>Payment</h4>
+                            <p>Cash, Credit Cards<br>
+                               Gift certificates available<br>
+                               Complimentary consultations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-card">
+                    <h3>Ready to Transform Your Look?</h3>
+                    <p>Book your consultation with Fort Lauderdale's premier color specialists. Let us create the perfect look that's uniquely you.</p>
+                    
+                    <div class="special-offer">
+                        <h4>New Client Special</h4>
+                        <p>20% off your first color service + complimentary deep conditioning treatment</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <a href="tel:9545550201" class="cta-btn" style="margin-bottom: 1rem; display: block;">Call (954) 555-0201</a>
+                        <p style="font-size: 0.9rem; color: #666;">Walk-ins welcome when available</p>
+                    </div>
+                    
+                    <div style="border-top: 1px solid #E0E0E0; padding-top: 1.5rem; margin-top: 2rem;">
+                        <h4 style="color: var(--rose-gold); margin-bottom: 0.5rem;">What to Expect</h4>
+                        <ul style="text-align: left; font-size: 0.9rem; line-height: 1.6;">
+                            <li>Complimentary color consultation</li>
+                            <li>Professional color analysis</li>
+                            <li>Personalized maintenance plan</li>
+                            <li>Luxury salon experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>The Color Cove Hair Salon</h3>
+                <p>Fort Lauderdale's premier color specialists</p>
+                <p>📞 <a href="tel:9545550201">(954) 555-0201</a></p>
+                <p>Downtown Fort Lauderdale, Florida</p>
+                <p style="margin-top: 1rem;">Creating beautiful hair transformations since 2020</p>
+            </div>
+            
+            <div class="footer-credit">
+                <p>Website by <a href="https://robbiegetstoyouleads.com" target="_blank">Robbie Gets You Leads</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

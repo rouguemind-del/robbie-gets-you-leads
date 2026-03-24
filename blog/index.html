@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Robbie Gets You Leads</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#FFF9F5;color:#1A2B4A}
+h1,h2,h3{font-family:'DM Serif Display',serif}
+a{text-decoration:none;color:inherit}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:100;background:#fff;padding:0 24px;transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'DM Serif Display',serif;font-size:1.25rem;color:#1A2B4A}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.9rem;font-weight:500;color:#1A2B4A;transition:color .2s}
+.nav-links a:hover{color:#E8725A}
+.hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+.hamburger span{display:block;width:24px;height:2px;background:#1A2B4A;transition:.3s}
+.mobile-menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;padding:16px 24px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.mobile-menu a{display:block;padding:12px 0;font-weight:500;border-bottom:1px solid #eee}
+.mobile-menu.open{display:block}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+
+/* Hero */
+.hero{background:#1A2B4A;padding:72px 24px 64px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:4px;background:#E8725A;border-radius:2px}
+.hero h1{color:#fff;font-size:2.4rem;margin-bottom:12px}
+.hero p{color:rgba(255,255,255,.75);font-size:1.1rem;max-width:540px;margin:auto}
+
+/* Cards */
+.cards{max-width:1100px;margin:48px auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px}
+.card{background:#fff;border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,43,74,.1)}
+.card-body{padding:28px}
+.badge{display:inline-block;background:#E8725A;color:#fff;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;padding:4px 10px;border-radius:20px;margin-bottom:14px}
+.card h3{font-size:1.2rem;line-height:1.35;margin-bottom:10px}
+.card h3 a:hover{color:#E8725A}
+.card .excerpt{font-size:.9rem;color:#5a6a7a;line-height:1.6;margin-bottom:16px}
+.card .meta{font-size:.78rem;color:#8a96a3;display:flex;gap:16px}
+
+/* CTA sections */
+.cta-section{max-width:700px;margin:56px auto;padding:40px 32px;text-align:center;border-radius:12px}
+.cta-newsletter{background:#1A2B4A;color:#fff}
+.cta-newsletter h2{color:#fff;margin-bottom:8px}
+.cta-newsletter p{color:rgba(255,255,255,.7);margin-bottom:20px}
+.cta-leads{background:#fff;border:2px solid #E8725A}
+.cta-leads h2{margin-bottom:8px}
+.cta-leads p{color:#5a6a7a;margin-bottom:20px}
+.btn{display:inline-block;padding:12px 32px;border-radius:8px;font-weight:600;font-size:.95rem;transition:opacity .2s}
+.btn-coral{background:#E8725A;color:#fff}
+.btn-coral:hover{opacity:.88}
+.btn-outline{border:2px solid #E8725A;color:#E8725A}
+.btn-outline:hover{background:#E8725A;color:#fff}
+
+/* Footer */
+footer{background:#1A2B4A;color:rgba(255,255,255,.7);text-align:center;padding:40px 24px;font-size:.85rem;line-height:1.8}
+footer a{color:#E8725A}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../" class="brand">Robbie Gets You Leads</a>
+    <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../portfolio/">Portfolio</a></li>
+      <li><a href="../leads/">Lead Lists</a></li>
+      <li><a href="mailto:robertgetsyouleads@gmail.com">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../">Home</a>
+    <a href="../portfolio/">Portfolio</a>
+    <a href="../leads/">Lead Lists</a>
+    <a href="mailto:robertgetsyouleads@gmail.com">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Real Estate Lead Generation Resources</h1>
+  <p>Actionable strategies and insights to help agents and investors find better leads for less.</p>
+</section>
+
+<div class="cards">
+
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Lead Generation</span>
+      <h3><a href="cheap-seller-leads-without-zillow.html">How to Get Seller Leads Without Paying for Zillow</a></h3>
+      <p class="excerpt">Discover proven, budget-friendly channels that deliver motivated seller leads without relying on expensive platforms like Zillow Premier Agent.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>6 min read</span></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Lead Comparison</span>
+      <h3><a href="expired-listings-vs-fsbo-leads.html">Expired Listings vs FSBO: Which Leads Convert Better?</a></h3>
+      <p class="excerpt">A head-to-head breakdown of expired listings and FSBO leads, including conversion rates, costs, and the best scripts for each.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>7 min read</span></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Cost Analysis</span>
+      <h3><a href="real-estate-lead-cost-2026.html">The Real Cost of Buying Real Estate Leads in 2026</a></h3>
+      <p class="excerpt">We break down what agents actually pay per lead across every major platform and reveal where your budget goes the furthest.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>8 min read</span></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Off-Market</span>
+      <h3><a href="off-market-listing-leads-guide.html">How Top Agents Find Off-Market Listings Before Anyone Else</a></h3>
+      <p class="excerpt">The tactics and data sources top-producing agents use to uncover off-market deals before they ever hit the MLS.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>7 min read</span></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-body">
+      <span class="badge">Free Strategies</span>
+      <h3><a href="free-seller-leads-real-estate.html">5 Free Ways to Generate Seller Leads This Month</a></h3>
+      <p class="excerpt">No ad spend required. Five actionable methods you can start today to attract homeowners ready to sell.</p>
+      <div class="meta"><span>Feb 14, 2026</span><span>6 min read</span></div>
+    </div>
+  </article>
+
+</div>
+
+<section class="cta-section cta-newsletter">
+  <h2>The Listings Edge Newsletter</h2>
+  <p>Weekly lead gen tips, market data, and scripts delivered to your inbox.</p>
+  <a href="https://the-listings-edge.beehiiv.com/" class="btn btn-coral" target="_blank">Subscribe Free</a>
+</section>
+
+<section class="cta-section cta-leads">
+  <h2>Ready-to-Work Lead Lists</h2>
+  <p>Skip-traced, verified seller leads delivered as clean spreadsheets. Updated weekly.</p>
+  <a href="../leads/" class="btn btn-outline">Browse Lead Lists</a>
+</section>
+
+<footer>
+  <p><a href="mailto:robertgetsyouleads@gmail.com">robertgetsyouleads@gmail.com</a> | (574) 333-7083</p>
+  <p>Robbie Gets You Leads</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>10)});
+document.getElementById('hamburger').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('open')});
+</script>
+</body>
+</html>
