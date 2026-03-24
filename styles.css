@@ -1526,3 +1526,75 @@ section {
     white-space: nowrap;
     border: 0;
 }
+/* Sitemap Contact Section - Professional Two-Column Layout */
+.sitemap-contact {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(5, 150, 105, 0.03));
+}
+
+.sitemap-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Desktop layout - two columns */
+@media (min-width: 768px) {
+    .sitemap-contact-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+.sitemap-contact .contact-info {
+    padding: var(--spacing-lg);
+}
+
+.sitemap-contact .contact-info h2 {
+    color: var(--accent-green);
+    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+}
+
+.sitemap-contact .contact-methods {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.sitemap-contact .contact-method h3 {
+    color: var(--accent-green);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+.sitemap-contact .contact-phone {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+    margin-bottom: var(--spacing-sm);
+    transition: var(--transition);
+}
+
+.sitemap-contact .contact-phone:hover {
+    color: var(--dark-blue);
+}
+
+.sitemap-contact .quote-form {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(5, 150, 105, 0.1);
+}
+
+.sitemap-contact .quote-form h3 {
+    color: var(--accent-green);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    font-size: 1.5rem;
+}
