@@ -1533,18 +1533,38 @@ section {
 }
 
 .sitemap-contact-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
 }
 
-/* Desktop layout - two columns */
+/* Desktop layout - two columns - FORCE GRID */
 @media (min-width: 768px) {
     .sitemap-contact-grid {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
+        grid-template-columns: 1fr 1fr !important;
+        align-items: start !important;
+        display: grid !important;
+        gap: 60px !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+    }
+    
+    .sitemap-contact .contact-info {
+        padding: 30px !important;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        background: #f9f9f9;
+    }
+    
+    .sitemap-contact .quote-form {
+        background: white !important;
+        padding: 40px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+        border: 1px solid #e0e0e0 !important;
     }
 }
 
