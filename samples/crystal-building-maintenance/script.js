@@ -3,11 +3,11 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Initialize mobile navigation FIRST
+    initializeMobileNav();
+    
     // Initialize responsive navigation
     handleResponsiveNav();
-    
-    // Initialize mobile navigation
-    initializeMobileNav();
     
     // Initialize smooth scrolling
     initializeSmoothScrolling();
@@ -71,13 +71,29 @@ function initializeMobileNav() {
     
     if (!hamburger || !navLinks) {
         console.error('Missing elements:', { hamburger: !!hamburger, navLinks: !!navLinks });
+        // Try again after a short delay
+        setTimeout(initializeMobileNav, 100);
         return;
     }
     
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', function() {
+    // Ensure hamburger is visible on mobile
+    if (window.innerWidth <= 768) {
+        hamburger.style.display = 'block';
+        hamburger.style.visibility = 'visible';
+    }
+    
+    // Toggle menu on hamburger click - prevent event bubbling
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         console.log('Hamburger clicked, toggling nav-links');
         navLinks.classList.toggle('open');
+        // Force display style when open
+        if (navLinks.classList.contains('open')) {
+            navLinks.style.display = 'flex';
+        } else {
+            navLinks.style.display = 'none';
+        }
         console.log('Nav links classes:', navLinks.className);
     });
     
@@ -85,6 +101,9 @@ function initializeMobileNav() {
     navLinks.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() {
             navLinks.classList.remove('open');
+            if (window.innerWidth <= 768) {
+                navLinks.style.display = 'none';
+            }
         });
     });
     
@@ -92,6 +111,9 @@ function initializeMobileNav() {
     document.addEventListener('click', function(event) {
         if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
             navLinks.classList.remove('open');
+            if (window.innerWidth <= 768) {
+                navLinks.style.display = 'none';
+            }
         }
     });
 }
